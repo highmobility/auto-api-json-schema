@@ -1,0 +1,176 @@
+{
+    "$id": "https://high-mobility.com/schemas/charging_session",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "type": "object",
+    "properties": {
+        "public_charging_points": { "$ref": "/schemas/property/charging_point" },
+        "displayed_state_of_charge": { "$ref": "/schemas/property/percentage" },
+        "displayed_start_state_of_charge": { "$ref": "/schemas/property/percentage" },
+        "business_errors": { "$ref": "/schemas/property/string" },
+        "time_zone": { "$ref": "/schemas/property/string" },
+        "start_time": { "$ref": "/schemas/property/timestamp" },
+        "end_time": { "$ref": "/schemas/property/timestamp" },
+        "total_charging_duration": { "$ref": "/schemas/property/duration" },
+        "calculated_energy_charged": { "$ref": "/schemas/property/energy" },
+        "energy_charged": { "$ref": "/schemas/property/energy" },
+        "preconditioning_state": { "$ref": "/schemas/property/active_state" },
+        "odometer": { "$ref": "/schemas/property/length" },
+        "charging_cost": { "$ref": "/schemas/property/charging_cost" },
+        "location": { "$ref": "/schemas/property/charging_location" },
+
+        "nonce": { "$ref": "/schemas/property/nonce" },
+        "vin": { "$ref": "/schemas/property/vin" }
+    },
+    "additionalProperties": false,
+
+
+
+    "$defs": {
+        "property": {
+            "$id": "/schemas/property",
+            "type": "object",
+            "properties": {
+                "timestamp": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "failure": { "$ref": "https://gist.githubusercontent.com/doofyus/a1c290dcf40c99296c54da2fcce8962d/raw/6308e26cbf0b536a3358900f8c6009c3b8b1979c/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "https://gist.githubusercontent.com/doofyus/a1c290dcf40c99296c54da2fcce8962d/raw/6308e26cbf0b536a3358900f8c6009c3b8b1979c/custom_types.schema.json#/$defs/availability" }
+            },
+            "minProperties": 1
+        },
+
+
+        "property_active_state": {
+            "$id": "/schemas/property/active_state,
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://gist.githubusercontent.com/doofyus/a1c290dcf40c99296c54da2fcce8962d/raw/6308e26cbf0b536a3358900f8c6009c3b8b1979c/custom_types.schema.json#/$defs/active_state"
+                }
+            }
+        },
+
+        "property_bytes": {
+            "$id": "/schemas/property/bytes",
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": { "$ref": "https://gist.githubusercontent.com/doofyus/a1c290dcf40c99296c54da2fcce8962d/raw/6308e26cbf0b536a3358900f8c6009c3b8b1979c/custom_types.schema.json#/$defs/bytes" }
+            }
+        },
+
+        "property_charging_cost": {
+            "$id": "/schemas/property/charging_cost,
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://gist.githubusercontent.com/doofyus/a1c290dcf40c99296c54da2fcce8962d/raw/6308e26cbf0b536a3358900f8c6009c3b8b1979c/custom_types.schema.json#/$defs/charging_cost"
+                }
+            }
+        },
+
+        "property_charging_location": {
+            "$id": "/schemas/property/charging_location,
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://gist.githubusercontent.com/doofyus/a1c290dcf40c99296c54da2fcce8962d/raw/6308e26cbf0b536a3358900f8c6009c3b8b1979c/custom_types.schema.json#/$defs/charging_location"
+                }
+            }
+        },
+
+        "property_charging_point": {
+            "$id": "/schemas/property/charging_point,
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://gist.githubusercontent.com/doofyus/a1c290dcf40c99296c54da2fcce8962d/raw/6308e26cbf0b536a3358900f8c6009c3b8b1979c/custom_types.schema.json#/$defs/charging_point"
+                }
+            }
+        },
+
+        "property_duration": {
+            "$id": "/schemas/property/duration,
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://gist.githubusercontent.com/doofyus/00be32d1046cafae12b450957f1f1283/raw/711715a1b10d58edc3712725f9123636a6e4b6df/units.schema.json#/$defs/duration"
+                }
+            }
+        },
+
+        "property_energy": {
+            "$id": "/schemas/property/energy,
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://gist.githubusercontent.com/doofyus/00be32d1046cafae12b450957f1f1283/raw/711715a1b10d58edc3712725f9123636a6e4b6df/units.schema.json#/$defs/energy"
+                }
+            }
+        },
+
+        "property_length": {
+            "$id": "/schemas/property/length,
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://gist.githubusercontent.com/doofyus/00be32d1046cafae12b450957f1f1283/raw/711715a1b10d58edc3712725f9123636a6e4b6df/units.schema.json#/$defs/length"
+                }
+            }
+        },
+
+        "property_nonce": {
+            "$id": "/schemas/property/nonce",
+            "$ref": "/schemas/property/bytes",
+            "properties": {
+                "data": {
+                    "minItems": 9,
+                    "maxItems": 9
+                }
+            }
+        },
+
+        "property_percentage": {
+            "$id": "/schemas/property/percentage,
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://gist.githubusercontent.com/doofyus/a1c290dcf40c99296c54da2fcce8962d/raw/6308e26cbf0b536a3358900f8c6009c3b8b1979c/custom_types.schema.json#/$defs/percentage"
+                }
+            }
+        },
+
+        "property_string": {
+            "$id": "/schemas/property/string,
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "type": "string"
+                }
+            }
+        },
+
+        "property_timestamp": {
+            "$id": "/schemas/property/timestamp,
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "type": "string",
+                    "format": "date-time"
+                }
+            }
+        },
+
+        "property_vin": {
+            "$id": "/schemas/property/vin",
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "type": "string",
+                    "minLength": 17,
+                    "maxLength": 17
+                }
+            }
+        }
+    }
+}

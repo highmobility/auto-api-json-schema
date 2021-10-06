@@ -1,0 +1,348 @@
+{
+    "$id": "https://high-mobility.com/schemas/charging",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "type": "object",
+    "properties": {
+        "estimated_range": { "$ref": "/schemas/property/length" },
+        "battery_level": { "$ref": "/schemas/property/percentage" },
+        "battery_current_ac": {
+            "$ref": "/schemas/property/electric_current",
+            "deprecated": true
+        },
+        "battery_current_dc": {
+            "$ref": "/schemas/property/electric_current",
+            "deprecated": true
+        },
+        "charger_voltage_ac": {
+            "$ref": "/schemas/property/electric_potential_difference",
+            "deprecated": true
+        },
+        "charger_voltage_dc": {
+            "$ref": "/schemas/property/electric_potential_difference",
+            "deprecated": true
+        },
+        "charge_limit": { "$ref": "/schemas/property/percentage" },
+        "time_to_complete_charge": { "$ref": "/schemas/property/duration" },
+        "charging_rate_kw": {
+            "$ref": "/schemas/property/power",
+            "deprecated": true
+        },
+        "charge_port_state": { "$ref": "/schemas/property/position" },
+        "charge_mode": { "$ref": "/schemas/property/charge_mode" },
+        "max_charging_current": { "$ref": "/schemas/property/electric_current" },
+        "plug_type": { "$ref": "/schemas/property/plug_type" },
+        "charging_window_chosen": { "$ref": "/schemas/property/charging_window_chosen" },
+        "departure_times": { "$ref": "/schemas/property/departure_time" },
+        "reduction_times": { "$ref": "/schemas/property/reduction_time" },
+        "battery_temperature": { "$ref": "/schemas/property/temperature" },
+        "timers": { "$ref": "/schemas/property/timer" },
+        "plugged_in": { "$ref": "/schemas/property/plugged_in" },
+        "status": { "$ref": "/schemas/property/status" },
+        "charging_rate": { "$ref": "/schemas/property/power" },
+        "battery_current": { "$ref": "/schemas/property/electric_current" },
+        "charger_voltage": { "$ref": "/schemas/property/electric_potential_difference" },
+        "current_type": { "$ref": "/schemas/property/current_type" },
+        "max_range": { "$ref": "/schemas/property/length" },
+        "starter_battery_state": { "$ref": "/schemas/property/starter_battery_state" },
+        "smart_charging_status": { "$ref": "/schemas/property/smart_charging_status" },
+        "battery_level_at_departure": { "$ref": "/schemas/property/percentage" },
+        "preconditioning_departure_status": { "$ref": "/schemas/property/active_state" },
+        "preconditioning_immediate_status": { "$ref": "/schemas/property/active_state" },
+        "preconditioning_departure_enabled": { "$ref": "/schemas/property/enabled_state" },
+        "preconditioning_error": { "$ref": "/schemas/property/preconditioning_error" },
+        "battery_capacity": { "$ref": "/schemas/property/energy" },
+
+        "nonce": { "$ref": "/schemas/property/nonce" },
+        "vin": { "$ref": "/schemas/property/vin" }
+    },
+    "additionalProperties": false,
+
+
+
+    "$defs": {
+        "property": {
+            "$id": "/schemas/property",
+            "type": "object",
+            "properties": {
+                "timestamp": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "failure": { "$ref": "https://gist.githubusercontent.com/doofyus/a1c290dcf40c99296c54da2fcce8962d/raw/6308e26cbf0b536a3358900f8c6009c3b8b1979c/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "https://gist.githubusercontent.com/doofyus/a1c290dcf40c99296c54da2fcce8962d/raw/6308e26cbf0b536a3358900f8c6009c3b8b1979c/custom_types.schema.json#/$defs/availability" }
+            },
+            "minProperties": 1
+        },
+
+
+        "property_active_state": {
+            "$id": "/schemas/property/active_state,
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://gist.githubusercontent.com/doofyus/a1c290dcf40c99296c54da2fcce8962d/raw/6308e26cbf0b536a3358900f8c6009c3b8b1979c/custom_types.schema.json#/$defs/active_state"
+                }
+            }
+        },
+
+        "property_bytes": {
+            "$id": "/schemas/property/bytes",
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": { "$ref": "https://gist.githubusercontent.com/doofyus/a1c290dcf40c99296c54da2fcce8962d/raw/6308e26cbf0b536a3358900f8c6009c3b8b1979c/custom_types.schema.json#/$defs/bytes" }
+            }
+        },
+
+        "property_charge_mode": {
+            "$id": "/schemas/property/charge_mode,
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "type": "string",
+                    "enum": ["immediate", "timer_based", "inductive"]
+                }
+            }
+        },
+
+        "property_charging_window_chosen": {
+            "$id": "/schemas/property/charging_window_chosen,
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "type": "string",
+                    "enum": ["not_chosen", "chosen"]
+                }
+            }
+        },
+
+        "property_current_type": {
+            "$id": "/schemas/property/current_type,
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "type": "string",
+                    "enum": ["alternating_current", "direct_current"]
+                }
+            }
+        },
+
+        "property_departure_time": {
+            "$id": "/schemas/property/departure_time,
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://gist.githubusercontent.com/doofyus/a1c290dcf40c99296c54da2fcce8962d/raw/6308e26cbf0b536a3358900f8c6009c3b8b1979c/custom_types.schema.json#/$defs/departure_time"
+                }
+            }
+        },
+
+        "property_duration": {
+            "$id": "/schemas/property/duration,
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://gist.githubusercontent.com/doofyus/00be32d1046cafae12b450957f1f1283/raw/711715a1b10d58edc3712725f9123636a6e4b6df/units.schema.json#/$defs/duration"
+                }
+            }
+        },
+
+        "property_electric_current": {
+            "$id": "/schemas/property/electric_current,
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://gist.githubusercontent.com/doofyus/00be32d1046cafae12b450957f1f1283/raw/711715a1b10d58edc3712725f9123636a6e4b6df/units.schema.json#/$defs/electric_current"
+                }
+            }
+        },
+
+        "property_electric_potential_difference": {
+            "$id": "/schemas/property/electric_potential_difference,
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://gist.githubusercontent.com/doofyus/00be32d1046cafae12b450957f1f1283/raw/711715a1b10d58edc3712725f9123636a6e4b6df/units.schema.json#/$defs/electric_potential_difference"
+                }
+            }
+        },
+
+        "property_enabled_state": {
+            "$id": "/schemas/property/enabled_state,
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://gist.githubusercontent.com/doofyus/a1c290dcf40c99296c54da2fcce8962d/raw/6308e26cbf0b536a3358900f8c6009c3b8b1979c/custom_types.schema.json#/$defs/enabled_state"
+                }
+            }
+        },
+
+        "property_energy": {
+            "$id": "/schemas/property/energy,
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://gist.githubusercontent.com/doofyus/00be32d1046cafae12b450957f1f1283/raw/711715a1b10d58edc3712725f9123636a6e4b6df/units.schema.json#/$defs/energy"
+                }
+            }
+        },
+
+        "property_length": {
+            "$id": "/schemas/property/length,
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://gist.githubusercontent.com/doofyus/00be32d1046cafae12b450957f1f1283/raw/711715a1b10d58edc3712725f9123636a6e4b6df/units.schema.json#/$defs/length"
+                }
+            }
+        },
+
+        "property_nonce": {
+            "$id": "/schemas/property/nonce",
+            "$ref": "/schemas/property/bytes",
+            "properties": {
+                "data": {
+                    "minItems": 9,
+                    "maxItems": 9
+                }
+            }
+        },
+
+        "property_percentage": {
+            "$id": "/schemas/property/percentage,
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://gist.githubusercontent.com/doofyus/a1c290dcf40c99296c54da2fcce8962d/raw/6308e26cbf0b536a3358900f8c6009c3b8b1979c/custom_types.schema.json#/$defs/percentage"
+                }
+            }
+        },
+
+        "property_plug_type": {
+            "$id": "/schemas/property/plug_type,
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "type": "string",
+                    "enum": ["type_1", "type_2", "ccs", "chademo"]
+                }
+            }
+        },
+
+        "property_plugged_in": {
+            "$id": "/schemas/property/plugged_in,
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "type": "string",
+                    "enum": ["disconnected", "plugged_in"]
+                }
+            }
+        },
+
+        "property_position": {
+            "$id": "/schemas/property/position,
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://gist.githubusercontent.com/doofyus/a1c290dcf40c99296c54da2fcce8962d/raw/6308e26cbf0b536a3358900f8c6009c3b8b1979c/custom_types.schema.json#/$defs/position"
+                }
+            }
+        },
+
+        "property_power": {
+            "$id": "/schemas/property/power,
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://gist.githubusercontent.com/doofyus/00be32d1046cafae12b450957f1f1283/raw/711715a1b10d58edc3712725f9123636a6e4b6df/units.schema.json#/$defs/power"
+                }
+            }
+        },
+
+        "property_preconditioning_error": {
+            "$id": "/schemas/property/preconditioning_error,
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "type": "string",
+                    "enum": ["no_change", "not_possible_low", "not_possible_finished", "available_after_engine_restart", "general_error"]
+                }
+            }
+        },
+
+        "property_reduction_time": {
+            "$id": "/schemas/property/reduction_time,
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://gist.githubusercontent.com/doofyus/a1c290dcf40c99296c54da2fcce8962d/raw/6308e26cbf0b536a3358900f8c6009c3b8b1979c/custom_types.schema.json#/$defs/reduction_time"
+                }
+            }
+        },
+
+        "property_smart_charging_status": {
+            "$id": "/schemas/property/smart_charging_status,
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "type": "string",
+                    "enum": ["wallbox_is_active", "scc_is_active", "peak_setting_active"]
+                }
+            }
+        },
+
+        "property_starter_battery_state": {
+            "$id": "/schemas/property/starter_battery_state,
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "type": "string",
+                    "enum": ["red", "yellow", "green"]
+                }
+            }
+        },
+
+        "property_status": {
+            "$id": "/schemas/property/status,
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "type": "string",
+                    "enum": ["not_charging", "charging", "charging_complete", "initialising", "charging_paused", "charging_error", "cable_unplugged", "slow_charging", "fast_charging", "discharging", "foreign_object_detected"]
+                }
+            }
+        },
+
+        "property_temperature": {
+            "$id": "/schemas/property/temperature,
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://gist.githubusercontent.com/doofyus/00be32d1046cafae12b450957f1f1283/raw/711715a1b10d58edc3712725f9123636a6e4b6df/units.schema.json#/$defs/temperature"
+                }
+            }
+        },
+
+        "property_timer": {
+            "$id": "/schemas/property/timer,
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://gist.githubusercontent.com/doofyus/a1c290dcf40c99296c54da2fcce8962d/raw/6308e26cbf0b536a3358900f8c6009c3b8b1979c/custom_types.schema.json#/$defs/timer"
+                }
+            }
+        },
+
+        "property_vin": {
+            "$id": "/schemas/property/vin",
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "type": "string",
+                    "minLength": 17,
+                    "maxLength": 17
+                }
+            }
+        }
+    }
+}

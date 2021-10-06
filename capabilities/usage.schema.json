@@ -1,0 +1,245 @@
+{
+    "$id": "https://high-mobility.com/schemas/usage",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "type": "object",
+    "properties": {
+        "average_weekly_distance": { "$ref": "/schemas/property/length" },
+        "average_weekly_distance_long_run": { "$ref": "/schemas/property/length" },
+        "acceleration_evaluation": { "$ref": "/schemas/property/percentage" },
+        "driving_style_evaluation": { "$ref": "/schemas/property/percentage" },
+        "driving_modes_activation_periods": { "$ref": "/schemas/property/driving_mode_activation_period" },
+        "driving_modes_energy_consumptions": { "$ref": "/schemas/property/driving_mode_energy_consumption" },
+        "last_trip_energy_consumption": { "$ref": "/schemas/property/energy" },
+        "last_trip_fuel_consumption": { "$ref": "/schemas/property/volume" },
+        "mileage_after_last_trip": {
+            "$ref": "/schemas/property/length",
+            "deprecated": true
+        },
+        "last_trip_electric_portion": { "$ref": "/schemas/property/percentage" },
+        "last_trip_average_energy_recuperation": { "$ref": "/schemas/property/energy_efficiency" },
+        "last_trip_battery_remaining": { "$ref": "/schemas/property/percentage" },
+        "last_trip_date": { "$ref": "/schemas/property/timestamp" },
+        "average_fuel_consumption": { "$ref": "/schemas/property/fuel_efficiency" },
+        "current_fuel_consumption": { "$ref": "/schemas/property/fuel_efficiency" },
+        "odometer_after_last_trip": { "$ref": "/schemas/property/length" },
+        "safety_driving_score": { "$ref": "/schemas/property/percentage" },
+        "rapid_acceleration_grade": { "$ref": "/schemas/property/grade" },
+        "rapid_deceleration_grade": { "$ref": "/schemas/property/grade" },
+        "late_night_grade": { "$ref": "/schemas/property/grade" },
+        "distance_over_time": { "$ref": "/schemas/property/distance_over_time" },
+        "electric_consumption_rate_since_start": { "$ref": "/schemas/property/energy_efficiency" },
+        "electric_consumption_rate_since_reset": { "$ref": "/schemas/property/energy_efficiency" },
+        "electric_distance_last_trip": { "$ref": "/schemas/property/length" },
+        "electric_distance_since_reset": { "$ref": "/schemas/property/length" },
+        "electric_duration_last_trip": { "$ref": "/schemas/property/duration" },
+        "electric_duration_since_reset": { "$ref": "/schemas/property/duration" },
+        "fuel_consumption_rate_last_trip": { "$ref": "/schemas/property/fuel_efficiency" },
+        "fuel_consumption_rate_since_reset": { "$ref": "/schemas/property/fuel_efficiency" },
+        "average_speed_last_trip": { "$ref": "/schemas/property/speed" },
+        "average_speed_since_reset": { "$ref": "/schemas/property/speed" },
+        "fuel_distance_last_trip": { "$ref": "/schemas/property/length" },
+        "fuel_distance_since_reset": { "$ref": "/schemas/property/length" },
+        "driving_duration_last_trip": { "$ref": "/schemas/property/duration" },
+        "driving_duration_since_reset": { "$ref": "/schemas/property/duration" },
+        "eco_score_total": { "$ref": "/schemas/property/percentage" },
+        "eco_score_free_wheel": { "$ref": "/schemas/property/percentage" },
+        "eco_score_constant": { "$ref": "/schemas/property/percentage" },
+        "eco_score_bonus_range": { "$ref": "/schemas/property/length" },
+        "trip_meters": { "$ref": "/schemas/property/trip_meter" },
+
+        "nonce": { "$ref": "/schemas/property/nonce" },
+        "vin": { "$ref": "/schemas/property/vin" }
+    },
+    "additionalProperties": false,
+
+
+
+    "$defs": {
+        "property": {
+            "$id": "/schemas/property",
+            "type": "object",
+            "properties": {
+                "timestamp": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "failure": { "$ref": "https://gist.githubusercontent.com/doofyus/a1c290dcf40c99296c54da2fcce8962d/raw/6308e26cbf0b536a3358900f8c6009c3b8b1979c/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "https://gist.githubusercontent.com/doofyus/a1c290dcf40c99296c54da2fcce8962d/raw/6308e26cbf0b536a3358900f8c6009c3b8b1979c/custom_types.schema.json#/$defs/availability" }
+            },
+            "minProperties": 1
+        },
+
+
+        "property_bytes": {
+            "$id": "/schemas/property/bytes",
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": { "$ref": "https://gist.githubusercontent.com/doofyus/a1c290dcf40c99296c54da2fcce8962d/raw/6308e26cbf0b536a3358900f8c6009c3b8b1979c/custom_types.schema.json#/$defs/bytes" }
+            }
+        },
+
+        "property_distance_over_time": {
+            "$id": "/schemas/property/distance_over_time,
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://gist.githubusercontent.com/doofyus/a1c290dcf40c99296c54da2fcce8962d/raw/6308e26cbf0b536a3358900f8c6009c3b8b1979c/custom_types.schema.json#/$defs/distance_over_time"
+                }
+            }
+        },
+
+        "property_driving_mode_activation_period": {
+            "$id": "/schemas/property/driving_mode_activation_period,
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://gist.githubusercontent.com/doofyus/a1c290dcf40c99296c54da2fcce8962d/raw/6308e26cbf0b536a3358900f8c6009c3b8b1979c/custom_types.schema.json#/$defs/driving_mode_activation_period"
+                }
+            }
+        },
+
+        "property_driving_mode_energy_consumption": {
+            "$id": "/schemas/property/driving_mode_energy_consumption,
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://gist.githubusercontent.com/doofyus/a1c290dcf40c99296c54da2fcce8962d/raw/6308e26cbf0b536a3358900f8c6009c3b8b1979c/custom_types.schema.json#/$defs/driving_mode_energy_consumption"
+                }
+            }
+        },
+
+        "property_duration": {
+            "$id": "/schemas/property/duration,
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://gist.githubusercontent.com/doofyus/00be32d1046cafae12b450957f1f1283/raw/711715a1b10d58edc3712725f9123636a6e4b6df/units.schema.json#/$defs/duration"
+                }
+            }
+        },
+
+        "property_energy": {
+            "$id": "/schemas/property/energy,
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://gist.githubusercontent.com/doofyus/00be32d1046cafae12b450957f1f1283/raw/711715a1b10d58edc3712725f9123636a6e4b6df/units.schema.json#/$defs/energy"
+                }
+            }
+        },
+
+        "property_energy_efficiency": {
+            "$id": "/schemas/property/energy_efficiency,
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://gist.githubusercontent.com/doofyus/00be32d1046cafae12b450957f1f1283/raw/711715a1b10d58edc3712725f9123636a6e4b6df/units.schema.json#/$defs/energy_efficiency"
+                }
+            }
+        },
+
+        "property_fuel_efficiency": {
+            "$id": "/schemas/property/fuel_efficiency,
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://gist.githubusercontent.com/doofyus/00be32d1046cafae12b450957f1f1283/raw/711715a1b10d58edc3712725f9123636a6e4b6df/units.schema.json#/$defs/fuel_efficiency"
+                }
+            }
+        },
+
+        "property_grade": {
+            "$id": "/schemas/property/grade,
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://gist.githubusercontent.com/doofyus/a1c290dcf40c99296c54da2fcce8962d/raw/6308e26cbf0b536a3358900f8c6009c3b8b1979c/custom_types.schema.json#/$defs/grade"
+                }
+            }
+        },
+
+        "property_length": {
+            "$id": "/schemas/property/length,
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://gist.githubusercontent.com/doofyus/00be32d1046cafae12b450957f1f1283/raw/711715a1b10d58edc3712725f9123636a6e4b6df/units.schema.json#/$defs/length"
+                }
+            }
+        },
+
+        "property_nonce": {
+            "$id": "/schemas/property/nonce",
+            "$ref": "/schemas/property/bytes",
+            "properties": {
+                "data": {
+                    "minItems": 9,
+                    "maxItems": 9
+                }
+            }
+        },
+
+        "property_percentage": {
+            "$id": "/schemas/property/percentage,
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://gist.githubusercontent.com/doofyus/a1c290dcf40c99296c54da2fcce8962d/raw/6308e26cbf0b536a3358900f8c6009c3b8b1979c/custom_types.schema.json#/$defs/percentage"
+                }
+            }
+        },
+
+        "property_speed": {
+            "$id": "/schemas/property/speed,
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://gist.githubusercontent.com/doofyus/00be32d1046cafae12b450957f1f1283/raw/711715a1b10d58edc3712725f9123636a6e4b6df/units.schema.json#/$defs/speed"
+                }
+            }
+        },
+
+        "property_timestamp": {
+            "$id": "/schemas/property/timestamp,
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "type": "string",
+                    "format": "date-time"
+                }
+            }
+        },
+
+        "property_trip_meter": {
+            "$id": "/schemas/property/trip_meter,
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://gist.githubusercontent.com/doofyus/a1c290dcf40c99296c54da2fcce8962d/raw/6308e26cbf0b536a3358900f8c6009c3b8b1979c/custom_types.schema.json#/$defs/trip_meter"
+                }
+            }
+        },
+
+        "property_vin": {
+            "$id": "/schemas/property/vin",
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "type": "string",
+                    "minLength": 17,
+                    "maxLength": 17
+                }
+            }
+        },
+
+        "property_volume": {
+            "$id": "/schemas/property/volume,
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://gist.githubusercontent.com/doofyus/00be32d1046cafae12b450957f1f1283/raw/711715a1b10d58edc3712725f9123636a6e4b6df/units.schema.json#/$defs/volume"
+                }
+            }
+        }
+    }
+}

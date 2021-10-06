@@ -1,0 +1,144 @@
+{
+    "$id": "https://high-mobility.com/schemas/lights",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "type": "object",
+    "properties": {
+        "front_exterior_light": { "$ref": "/schemas/property/front_exterior_light" },
+        "rear_exterior_light": { "$ref": "/schemas/property/active_state" },
+        "ambient_light_colour": { "$ref": "/schemas/property/rgb_colour" },
+        "reverse_light": { "$ref": "/schemas/property/active_state" },
+        "emergency_brake_light": { "$ref": "/schemas/property/active_state" },
+        "fog_lights": { "$ref": "/schemas/property/light" },
+        "reading_lamps": { "$ref": "/schemas/property/reading_lamp" },
+        "interior_lights": { "$ref": "/schemas/property/light" },
+        "switch_position": { "$ref": "/schemas/property/switch_position" },
+        "parking_light_status": { "$ref": "/schemas/property/parking_light_status" },
+
+        "nonce": { "$ref": "/schemas/property/nonce" },
+        "vin": { "$ref": "/schemas/property/vin" }
+    },
+    "additionalProperties": false,
+
+
+
+    "$defs": {
+        "property": {
+            "$id": "/schemas/property",
+            "type": "object",
+            "properties": {
+                "timestamp": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "failure": { "$ref": "https://gist.githubusercontent.com/doofyus/a1c290dcf40c99296c54da2fcce8962d/raw/6308e26cbf0b536a3358900f8c6009c3b8b1979c/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "https://gist.githubusercontent.com/doofyus/a1c290dcf40c99296c54da2fcce8962d/raw/6308e26cbf0b536a3358900f8c6009c3b8b1979c/custom_types.schema.json#/$defs/availability" }
+            },
+            "minProperties": 1
+        },
+
+
+        "property_active_state": {
+            "$id": "/schemas/property/active_state,
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://gist.githubusercontent.com/doofyus/a1c290dcf40c99296c54da2fcce8962d/raw/6308e26cbf0b536a3358900f8c6009c3b8b1979c/custom_types.schema.json#/$defs/active_state"
+                }
+            }
+        },
+
+        "property_bytes": {
+            "$id": "/schemas/property/bytes",
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": { "$ref": "https://gist.githubusercontent.com/doofyus/a1c290dcf40c99296c54da2fcce8962d/raw/6308e26cbf0b536a3358900f8c6009c3b8b1979c/custom_types.schema.json#/$defs/bytes" }
+            }
+        },
+
+        "property_front_exterior_light": {
+            "$id": "/schemas/property/front_exterior_light,
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "type": "string",
+                    "enum": ["inactive", "active", "active_with_full_beam", "drl", "automatic"]
+                }
+            }
+        },
+
+        "property_light": {
+            "$id": "/schemas/property/light,
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://gist.githubusercontent.com/doofyus/a1c290dcf40c99296c54da2fcce8962d/raw/6308e26cbf0b536a3358900f8c6009c3b8b1979c/custom_types.schema.json#/$defs/light"
+                }
+            }
+        },
+
+        "property_nonce": {
+            "$id": "/schemas/property/nonce",
+            "$ref": "/schemas/property/bytes",
+            "properties": {
+                "data": {
+                    "minItems": 9,
+                    "maxItems": 9
+                }
+            }
+        },
+
+        "property_parking_light_status": {
+            "$id": "/schemas/property/parking_light_status,
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "type": "string",
+                    "enum": ["off", "left", "right", "both"]
+                }
+            }
+        },
+
+        "property_reading_lamp": {
+            "$id": "/schemas/property/reading_lamp,
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://gist.githubusercontent.com/doofyus/a1c290dcf40c99296c54da2fcce8962d/raw/6308e26cbf0b536a3358900f8c6009c3b8b1979c/custom_types.schema.json#/$defs/reading_lamp"
+                }
+            }
+        },
+
+        "property_rgb_colour": {
+            "$id": "/schemas/property/rgb_colour,
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://gist.githubusercontent.com/doofyus/a1c290dcf40c99296c54da2fcce8962d/raw/6308e26cbf0b536a3358900f8c6009c3b8b1979c/custom_types.schema.json#/$defs/rgb_colour"
+                }
+            }
+        },
+
+        "property_switch_position": {
+            "$id": "/schemas/property/switch_position,
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "type": "string",
+                    "enum": ["automatic", "dipped_headlights", "parking_light_right", "parking_light_left", "sidelights"]
+                }
+            }
+        },
+
+        "property_vin": {
+            "$id": "/schemas/property/vin",
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "type": "string",
+                    "minLength": 17,
+                    "maxLength": 17
+                }
+            }
+        }
+    }
+}

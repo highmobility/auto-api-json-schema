@@ -1,0 +1,280 @@
+{
+    "$id": "https://high-mobility.com/schemas/units.schema.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "description": "AutoAPI unit types",
+
+    "$defs": {
+        "unit": {
+            "type": "object",
+            "properties": {
+                "value": { "type": "number" }
+            }
+        },
+
+
+        "acceleration": {
+            "$ref": "#/$defs/unit",
+            "properties": {
+                "unit": {
+                    "enum": [
+                        "meters_per_second_squared",
+                        "gravity"
+                    ]
+                }
+            }
+        },
+
+        "angle": {
+            "$ref": "#/$defs/unit",
+            "properties": {
+                "unit": {
+                    "enum": [
+                        "degrees",
+                        "radians",
+                        "revolutions"
+                    ]
+                }
+            }
+        },
+
+        "angular_velocity": {
+            "$ref": "#/$defs/unit",
+            "properties": {
+                "unit": {
+                    "enum": [
+                        "revolutions_per_minute",
+                        "degrees_per_second",
+                        "radians_per_second"
+                    ]
+                }
+            }
+        },
+
+        "duration": {
+            "$ref": "#/$defs/unit",
+            "properties": {
+                "unit": {
+                    "enum": [
+                        "seconds",
+                        "minutes",
+                        "hours",
+                        "days",
+                        "weeks",
+                        "months"
+                    ]
+                }
+            }
+        },
+
+        "electric_current": {
+            "$ref": "#/$defs/unit",
+            "properties": {
+                "unit": {
+                    "enum": [
+                        "amperes",
+                        "milliamperes",
+                        "kiloamperes"
+                    ]
+                }
+            }
+        },
+
+        "electric_potential_difference": {
+            "$ref": "#/$defs/unit",
+            "properties": {
+                "unit": {
+                    "enum": [
+                        "volts",
+                        "millivolts",
+                        "kilovolts"
+                    ]
+                }
+            }
+        },
+
+        "energy": {
+            "$ref": "#/$defs/unit",
+            "properties": {
+                "unit": {
+                    "enum": [
+                        "joules",
+                        "kilojoules",
+                        "watt_hours",
+                        "kilowatt_hours"
+                    ]
+                }
+            }
+        },
+
+        "energy_efficiency": {
+            "$ref": "#/$defs/unit",
+            "properties": {
+                "unit": {
+                    "enum": [
+                        "kwh_per_100_kilometers",
+                        "miles_per_kwh"
+                    ]
+                }
+            }
+        },
+
+        "frequency": {
+            "$ref": "#/$defs/unit",
+            "properties": {
+                "unit": {
+                    "enum": [
+                        "hertz",
+                        "millihertz",
+                        "kilohertz",
+                        "megahertz",
+                        "gigahertz",
+                        "times_per_minute",
+                        "times_per_hour",
+                        "times_per_day"
+                    ]
+                }
+            }
+        },
+
+        "fuel_efficiency": {
+            "$ref": "#/$defs/unit",
+            "properties": {
+                "unit": {
+                    "enum": [
+                        "liters_per_100_kilometers",
+                        "miles_per_imperial_gallon",
+                        "miles_per_gallon"
+                    ]
+                }
+            }
+        },
+
+        "illuminance": {
+            "$ref": "#/$defs/unit",
+            "properties": {
+                "unit": {
+                    "enum": [
+                        "lux"
+                    ]
+                }
+            }
+        },
+
+        "length": {
+            "$ref": "#/$defs/unit",
+            "properties": {
+                "unit": {
+                    "enum": [
+                        "meters",
+                        "millimeters",
+                        "centimeters",
+                        "decimeters",
+                        "kilometers",
+                        "megameters",
+                        "inches",
+                        "feet",
+                        "yards",
+                        "miles",
+                        "scandinavian_miles",
+                        "nautical_miles"
+                    ]
+                }
+            }
+        },
+
+        "power": {
+            "$ref": "#/$defs/unit",
+            "properties": {
+                "unit": {
+                    "enum": [
+                        "watts",
+                        "milliwatts",
+                        "kilowatts",
+                        "megawatts",
+                        "horsepower"
+                    ]
+                }
+            }
+        },
+
+        "pressure": {
+            "$ref": "#/$defs/unit",
+            "properties": {
+                "unit": {
+                    "enum": [
+                        "pascals",
+                        "kilopascals",
+                        "inches_of_mercury",
+                        "bars",
+                        "millibars",
+                        "millimeters_of_mercury",
+                        "pounds_force_per_square_inch"
+                    ]
+                }
+            }
+        },
+
+        "speed": {
+            "$ref": "#/$defs/unit",
+            "properties": {
+                "unit": {
+                    "enum": [
+                        "meters_per_second",
+                        "kilometers_per_hour",
+                        "miles_per_hour",
+                        "knots"
+                    ]
+                }
+            }
+        },
+
+        "temperature": {
+            "$ref": "#/$defs/unit",
+            "properties": {
+                "unit": {
+                    "enum": [
+                        "kelvin",
+                        "celsius",
+                        "fahrenheit"
+                    ]
+                }
+            }
+        },
+
+        "torque": {
+            "$ref": "#/$defs/unit",
+            "properties": {
+                "unit": {
+                    "enum": [
+                        "newton_meters",
+                        "newton_millimeters",
+                        "pound_feet"
+                    ]
+                }
+            }
+        },
+
+        "volume": {
+            "$ref": "#/$defs/unit",
+            "properties": {
+                "unit": {
+                    "enum": [
+                        "liters",
+                        "milliliters",
+                        "centiliters",
+                        "deciliters",
+                        "cubic_millimeters",
+                        "cubic_centimeters",
+                        "cubic_decimeters",
+                        "cubic_meters",
+                        "cubic_inches",
+                        "cubic_feet",
+                        "fluid_ounces",
+                        "gallons",
+                        "imperial_fluid_ounces",
+                        "imperial_gallons"
+                    ]
+                }
+            }
+        }
+}
