@@ -55,7 +55,7 @@
         },
 
         "property_person_detected": {
-            "$id": "/schemas/property/person_detected,
+            "$id": "/schemas/property/person_detected",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -65,7 +65,7 @@
         },
 
         "property_seatbelt_state": {
-            "$id": "/schemas/property/seatbelt_state,
+            "$id": "/schemas/property/seatbelt_state",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {

@@ -53,7 +53,7 @@
 
 
         "property_address_component": {
-            "$id": "/schemas/property/address_component,
+            "$id": "/schemas/property/address_component",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -73,7 +73,7 @@
         },
 
         "property_coordinates": {
-            "$id": "/schemas/property/coordinates,
+            "$id": "/schemas/property/coordinates",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -83,7 +83,7 @@
         },
 
         "property_eco_driving_threshold": {
-            "$id": "/schemas/property/eco_driving_threshold,
+            "$id": "/schemas/property/eco_driving_threshold",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -93,7 +93,7 @@
         },
 
         "property_eco_level": {
-            "$id": "/schemas/property/eco_level,
+            "$id": "/schemas/property/eco_level",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -104,7 +104,7 @@
         },
 
         "property_event": {
-            "$id": "/schemas/property/event,
+            "$id": "/schemas/property/event",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -115,7 +115,7 @@
         },
 
         "property_fuel_efficiency": {
-            "$id": "/schemas/property/fuel_efficiency,
+            "$id": "/schemas/property/fuel_efficiency",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -125,7 +125,7 @@
         },
 
         "property_length": {
-            "$id": "/schemas/property/length,
+            "$id": "/schemas/property/length",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -146,7 +146,7 @@
         },
 
         "property_speed": {
-            "$id": "/schemas/property/speed,
+            "$id": "/schemas/property/speed",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -156,7 +156,7 @@
         },
 
         "property_string": {
-            "$id": "/schemas/property/string,
+            "$id": "/schemas/property/string",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -166,7 +166,7 @@
         },
 
         "property_timestamp": {
-            "$id": "/schemas/property/timestamp,
+            "$id": "/schemas/property/timestamp",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -177,7 +177,7 @@
         },
 
         "property_type": {
-            "$id": "/schemas/property/type,
+            "$id": "/schemas/property/type",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -200,7 +200,7 @@
         },
 
         "property_volume": {
-            "$id": "/schemas/property/volume,
+            "$id": "/schemas/property/volume",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {

@@ -33,7 +33,7 @@
 
 
         "property_active_state": {
-            "$id": "/schemas/property/active_state,
+            "$id": "/schemas/property/active_state",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {

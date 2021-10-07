@@ -54,7 +54,7 @@
         },
 
         "property_percentage": {
-            "$id": "/schemas/property/percentage,
+            "$id": "/schemas/property/percentage",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {

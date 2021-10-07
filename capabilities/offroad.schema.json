@@ -34,7 +34,7 @@
 
 
         "property_angle": {
-            "$id": "/schemas/property/angle,
+            "$id": "/schemas/property/angle",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -65,7 +65,7 @@
         },
 
         "property_percentage": {
-            "$id": "/schemas/property/percentage,
+            "$id": "/schemas/property/percentage",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {

@@ -43,7 +43,7 @@
 
 
         "property_active_state": {
-            "$id": "/schemas/property/active_state,
+            "$id": "/schemas/property/active_state",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -63,7 +63,7 @@
         },
 
         "property_hvac_weekday_starting_time": {
-            "$id": "/schemas/property/hvac_weekday_starting_time,
+            "$id": "/schemas/property/hvac_weekday_starting_time",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -84,7 +84,7 @@
         },
 
         "property_temperature": {
-            "$id": "/schemas/property/temperature,
+            "$id": "/schemas/property/temperature",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {

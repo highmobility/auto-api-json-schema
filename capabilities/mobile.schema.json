@@ -43,7 +43,7 @@
         },
 
         "property_connection_state": {
-            "$id": "/schemas/property/connection_state,
+            "$id": "/schemas/property/connection_state",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {

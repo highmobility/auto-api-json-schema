@@ -44,7 +44,7 @@
         },
 
         "property_illuminance": {
-            "$id": "/schemas/property/illuminance,
+            "$id": "/schemas/property/illuminance",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {

@@ -50,7 +50,7 @@
 
 
         "property_acceleration": {
-            "$id": "/schemas/property/acceleration,
+            "$id": "/schemas/property/acceleration",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -60,7 +60,7 @@
         },
 
         "property_active_state": {
-            "$id": "/schemas/property/active_state,
+            "$id": "/schemas/property/active_state",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -70,7 +70,7 @@
         },
 
         "property_angle": {
-            "$id": "/schemas/property/angle,
+            "$id": "/schemas/property/angle",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -80,7 +80,7 @@
         },
 
         "property_angular_velocity": {
-            "$id": "/schemas/property/angular_velocity,
+            "$id": "/schemas/property/angular_velocity",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -90,7 +90,7 @@
         },
 
         "property_brake_torque_vectoring": {
-            "$id": "/schemas/property/brake_torque_vectoring,
+            "$id": "/schemas/property/brake_torque_vectoring",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -110,7 +110,7 @@
         },
 
         "property_gear_mode": {
-            "$id": "/schemas/property/gear_mode,
+            "$id": "/schemas/property/gear_mode",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -121,7 +121,7 @@
         },
 
         "property_integer": {
-            "$id": "/schemas/property/integer,
+            "$id": "/schemas/property/integer",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -144,7 +144,7 @@
         },
 
         "property_percentage": {
-            "$id": "/schemas/property/percentage,
+            "$id": "/schemas/property/percentage",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -154,7 +154,7 @@
         },
 
         "property_pressure": {
-            "$id": "/schemas/property/pressure,
+            "$id": "/schemas/property/pressure",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -164,7 +164,7 @@
         },
 
         "property_vehicle_moving": {
-            "$id": "/schemas/property/vehicle_moving,
+            "$id": "/schemas/property/vehicle_moving",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {

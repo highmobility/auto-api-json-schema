@@ -35,7 +35,7 @@
 
 
         "property_active_state": {
-            "$id": "/schemas/property/active_state,
+            "$id": "/schemas/property/active_state",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -55,7 +55,7 @@
         },
 
         "property_enabled_state": {
-            "$id": "/schemas/property/enabled_state,
+            "$id": "/schemas/property/enabled_state",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -76,7 +76,7 @@
         },
 
         "property_on_off_state": {
-            "$id": "/schemas/property/on_off_state,
+            "$id": "/schemas/property/on_off_state",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {

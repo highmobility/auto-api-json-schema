@@ -39,7 +39,7 @@
 
 
         "property_active_selected_state": {
-            "$id": "/schemas/property/active_selected_state,
+            "$id": "/schemas/property/active_selected_state",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -59,7 +59,7 @@
         },
 
         "property_event_type": {
-            "$id": "/schemas/property/event_type,
+            "$id": "/schemas/property/event_type",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -70,7 +70,7 @@
         },
 
         "property_last_event_level": {
-            "$id": "/schemas/property/last_event_level,
+            "$id": "/schemas/property/last_event_level",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -81,7 +81,7 @@
         },
 
         "property_last_warning_reason": {
-            "$id": "/schemas/property/last_warning_reason,
+            "$id": "/schemas/property/last_warning_reason",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -103,7 +103,7 @@
         },
 
         "property_status": {
-            "$id": "/schemas/property/status,
+            "$id": "/schemas/property/status",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -114,7 +114,7 @@
         },
 
         "property_timestamp": {
-            "$id": "/schemas/property/timestamp,
+            "$id": "/schemas/property/timestamp",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {

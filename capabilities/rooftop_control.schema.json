@@ -48,7 +48,7 @@
         },
 
         "property_convertible_roof_state": {
-            "$id": "/schemas/property/convertible_roof_state,
+            "$id": "/schemas/property/convertible_roof_state",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -70,7 +70,7 @@
         },
 
         "property_percentage": {
-            "$id": "/schemas/property/percentage,
+            "$id": "/schemas/property/percentage",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -80,7 +80,7 @@
         },
 
         "property_sunroof_rain_event": {
-            "$id": "/schemas/property/sunroof_rain_event,
+            "$id": "/schemas/property/sunroof_rain_event",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -91,7 +91,7 @@
         },
 
         "property_sunroof_state": {
-            "$id": "/schemas/property/sunroof_state,
+            "$id": "/schemas/property/sunroof_state",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -102,7 +102,7 @@
         },
 
         "property_sunroof_tilt_state": {
-            "$id": "/schemas/property/sunroof_tilt_state,
+            "$id": "/schemas/property/sunroof_tilt_state",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {

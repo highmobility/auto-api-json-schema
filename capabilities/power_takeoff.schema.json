@@ -34,7 +34,7 @@
 
 
         "property_active_state": {
-            "$id": "/schemas/property/active_state,
+            "$id": "/schemas/property/active_state",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -54,7 +54,7 @@
         },
 
         "property_engaged": {
-            "$id": "/schemas/property/engaged,
+            "$id": "/schemas/property/engaged",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {

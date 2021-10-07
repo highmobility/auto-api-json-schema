@@ -50,7 +50,7 @@
         },
 
         "property_driving_mode": {
-            "$id": "/schemas/property/driving_mode,
+            "$id": "/schemas/property/driving_mode",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -60,7 +60,7 @@
         },
 
         "property_length": {
-            "$id": "/schemas/property/length,
+            "$id": "/schemas/property/length",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -81,7 +81,7 @@
         },
 
         "property_sport_chrono": {
-            "$id": "/schemas/property/sport_chrono,
+            "$id": "/schemas/property/sport_chrono",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -92,7 +92,7 @@
         },
 
         "property_spring_rate": {
-            "$id": "/schemas/property/spring_rate,
+            "$id": "/schemas/property/spring_rate",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {

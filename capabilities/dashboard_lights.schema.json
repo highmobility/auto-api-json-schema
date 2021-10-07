@@ -34,7 +34,7 @@
 
 
         "property_bulb_failures": {
-            "$id": "/schemas/property/bulb_failures,
+            "$id": "/schemas/property/bulb_failures",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -55,7 +55,7 @@
         },
 
         "property_dashboard_light": {
-            "$id": "/schemas/property/dashboard_light,
+            "$id": "/schemas/property/dashboard_light",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {

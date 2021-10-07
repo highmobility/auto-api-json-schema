@@ -55,7 +55,7 @@
         },
 
         "property_string": {
-            "$id": "/schemas/property/string,
+            "$id": "/schemas/property/string",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {

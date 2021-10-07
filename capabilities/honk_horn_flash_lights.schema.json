@@ -43,7 +43,7 @@
         },
 
         "property_flashers": {
-            "$id": "/schemas/property/flashers,
+            "$id": "/schemas/property/flashers",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {

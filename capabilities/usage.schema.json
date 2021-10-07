@@ -85,7 +85,7 @@
         },
 
         "property_distance_over_time": {
-            "$id": "/schemas/property/distance_over_time,
+            "$id": "/schemas/property/distance_over_time",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -95,7 +95,7 @@
         },
 
         "property_driving_mode_activation_period": {
-            "$id": "/schemas/property/driving_mode_activation_period,
+            "$id": "/schemas/property/driving_mode_activation_period",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -105,7 +105,7 @@
         },
 
         "property_driving_mode_energy_consumption": {
-            "$id": "/schemas/property/driving_mode_energy_consumption,
+            "$id": "/schemas/property/driving_mode_energy_consumption",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -115,7 +115,7 @@
         },
 
         "property_duration": {
-            "$id": "/schemas/property/duration,
+            "$id": "/schemas/property/duration",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -125,7 +125,7 @@
         },
 
         "property_energy": {
-            "$id": "/schemas/property/energy,
+            "$id": "/schemas/property/energy",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -135,7 +135,7 @@
         },
 
         "property_energy_efficiency": {
-            "$id": "/schemas/property/energy_efficiency,
+            "$id": "/schemas/property/energy_efficiency",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -145,7 +145,7 @@
         },
 
         "property_fuel_efficiency": {
-            "$id": "/schemas/property/fuel_efficiency,
+            "$id": "/schemas/property/fuel_efficiency",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -155,7 +155,7 @@
         },
 
         "property_grade": {
-            "$id": "/schemas/property/grade,
+            "$id": "/schemas/property/grade",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -165,7 +165,7 @@
         },
 
         "property_length": {
-            "$id": "/schemas/property/length,
+            "$id": "/schemas/property/length",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -186,7 +186,7 @@
         },
 
         "property_percentage": {
-            "$id": "/schemas/property/percentage,
+            "$id": "/schemas/property/percentage",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -196,7 +196,7 @@
         },
 
         "property_speed": {
-            "$id": "/schemas/property/speed,
+            "$id": "/schemas/property/speed",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -206,7 +206,7 @@
         },
 
         "property_timestamp": {
-            "$id": "/schemas/property/timestamp,
+            "$id": "/schemas/property/timestamp",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -217,7 +217,7 @@
         },
 
         "property_trip_meter": {
-            "$id": "/schemas/property/trip_meter,
+            "$id": "/schemas/property/trip_meter",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -239,7 +239,7 @@
         },
 
         "property_volume": {
-            "$id": "/schemas/property/volume,
+            "$id": "/schemas/property/volume",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {

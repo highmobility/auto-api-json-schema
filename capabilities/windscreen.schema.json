@@ -61,7 +61,7 @@
         },
 
         "property_percentage": {
-            "$id": "/schemas/property/percentage,
+            "$id": "/schemas/property/percentage",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -71,7 +71,7 @@
         },
 
         "property_timestamp": {
-            "$id": "/schemas/property/timestamp,
+            "$id": "/schemas/property/timestamp",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -94,7 +94,7 @@
         },
 
         "property_windscreen_damage": {
-            "$id": "/schemas/property/windscreen_damage,
+            "$id": "/schemas/property/windscreen_damage",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -105,7 +105,7 @@
         },
 
         "property_windscreen_needs_replacement": {
-            "$id": "/schemas/property/windscreen_needs_replacement,
+            "$id": "/schemas/property/windscreen_needs_replacement",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -116,7 +116,7 @@
         },
 
         "property_wipers_intensity": {
-            "$id": "/schemas/property/wipers_intensity,
+            "$id": "/schemas/property/wipers_intensity",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -127,7 +127,7 @@
         },
 
         "property_wipers_status": {
-            "$id": "/schemas/property/wipers_status,
+            "$id": "/schemas/property/wipers_status",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -138,7 +138,7 @@
         },
 
         "property_zone": {
-            "$id": "/schemas/property/zone,
+            "$id": "/schemas/property/zone",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {

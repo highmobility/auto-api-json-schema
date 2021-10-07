@@ -36,7 +36,7 @@
 
 
         "property_action_item": {
-            "$id": "/schemas/property/action_item,
+            "$id": "/schemas/property/action_item",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -56,7 +56,7 @@
         },
 
         "property_clear": {
-            "$id": "/schemas/property/clear,
+            "$id": "/schemas/property/clear",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -78,7 +78,7 @@
         },
 
         "property_string": {
-            "$id": "/schemas/property/string,
+            "$id": "/schemas/property/string",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -88,7 +88,7 @@
         },
 
         "property_uinteger": {
-            "$id": "/schemas/property/uinteger,
+            "$id": "/schemas/property/uinteger",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {

@@ -51,7 +51,7 @@
         },
 
         "property_ignition_state": {
-            "$id": "/schemas/property/ignition_state,
+            "$id": "/schemas/property/ignition_state",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {

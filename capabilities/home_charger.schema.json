@@ -51,7 +51,7 @@
 
 
         "property_active_state": {
-            "$id": "/schemas/property/active_state,
+            "$id": "/schemas/property/active_state",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -61,7 +61,7 @@
         },
 
         "property_authentication_mechanism": {
-            "$id": "/schemas/property/authentication_mechanism,
+            "$id": "/schemas/property/authentication_mechanism",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -72,7 +72,7 @@
         },
 
         "property_authentication_state": {
-            "$id": "/schemas/property/authentication_state,
+            "$id": "/schemas/property/authentication_state",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -93,7 +93,7 @@
         },
 
         "property_charging_status": {
-            "$id": "/schemas/property/charging_status,
+            "$id": "/schemas/property/charging_status",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -104,7 +104,7 @@
         },
 
         "property_coordinates": {
-            "$id": "/schemas/property/coordinates,
+            "$id": "/schemas/property/coordinates",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -114,7 +114,7 @@
         },
 
         "property_electric_current": {
-            "$id": "/schemas/property/electric_current,
+            "$id": "/schemas/property/electric_current",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -124,7 +124,7 @@
         },
 
         "property_enabled_state": {
-            "$id": "/schemas/property/enabled_state,
+            "$id": "/schemas/property/enabled_state",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -134,7 +134,7 @@
         },
 
         "property_network_security": {
-            "$id": "/schemas/property/network_security,
+            "$id": "/schemas/property/network_security",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -155,7 +155,7 @@
         },
 
         "property_plug_type": {
-            "$id": "/schemas/property/plug_type,
+            "$id": "/schemas/property/plug_type",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -166,7 +166,7 @@
         },
 
         "property_power": {
-            "$id": "/schemas/property/power,
+            "$id": "/schemas/property/power",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -176,7 +176,7 @@
         },
 
         "property_price_tariff": {
-            "$id": "/schemas/property/price_tariff,
+            "$id": "/schemas/property/price_tariff",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -186,7 +186,7 @@
         },
 
         "property_string": {
-            "$id": "/schemas/property/string,
+            "$id": "/schemas/property/string",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {

@@ -91,7 +91,7 @@
 
 
         "property_active_state": {
-            "$id": "/schemas/property/active_state,
+            "$id": "/schemas/property/active_state",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -101,7 +101,7 @@
         },
 
         "property_angular_velocity": {
-            "$id": "/schemas/property/angular_velocity,
+            "$id": "/schemas/property/angular_velocity",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -121,7 +121,7 @@
         },
 
         "property_check_control_message": {
-            "$id": "/schemas/property/check_control_message,
+            "$id": "/schemas/property/check_control_message",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -131,7 +131,7 @@
         },
 
         "property_confirmed_trouble_code": {
-            "$id": "/schemas/property/confirmed_trouble_code,
+            "$id": "/schemas/property/confirmed_trouble_code",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -141,7 +141,7 @@
         },
 
         "property_diesel_exhaust_filter_status": {
-            "$id": "/schemas/property/diesel_exhaust_filter_status,
+            "$id": "/schemas/property/diesel_exhaust_filter_status",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -151,7 +151,7 @@
         },
 
         "property_duration": {
-            "$id": "/schemas/property/duration,
+            "$id": "/schemas/property/duration",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -161,7 +161,7 @@
         },
 
         "property_electric_potential_difference": {
-            "$id": "/schemas/property/electric_potential_difference,
+            "$id": "/schemas/property/electric_potential_difference",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -171,7 +171,7 @@
         },
 
         "property_engine_oil_pressure_level": {
-            "$id": "/schemas/property/engine_oil_pressure_level,
+            "$id": "/schemas/property/engine_oil_pressure_level",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -182,7 +182,7 @@
         },
 
         "property_fluid_level": {
-            "$id": "/schemas/property/fluid_level,
+            "$id": "/schemas/property/fluid_level",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -192,7 +192,7 @@
         },
 
         "property_fuel_level_accuracy": {
-            "$id": "/schemas/property/fuel_level_accuracy,
+            "$id": "/schemas/property/fuel_level_accuracy",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -203,7 +203,7 @@
         },
 
         "property_length": {
-            "$id": "/schemas/property/length,
+            "$id": "/schemas/property/length",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -213,7 +213,7 @@
         },
 
         "property_low_voltage_battery_charge_level": {
-            "$id": "/schemas/property/low_voltage_battery_charge_level,
+            "$id": "/schemas/property/low_voltage_battery_charge_level",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -235,7 +235,7 @@
         },
 
         "property_oem_trouble_code_value": {
-            "$id": "/schemas/property/oem_trouble_code_value,
+            "$id": "/schemas/property/oem_trouble_code_value",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -245,7 +245,7 @@
         },
 
         "property_percentage": {
-            "$id": "/schemas/property/percentage,
+            "$id": "/schemas/property/percentage",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -255,7 +255,7 @@
         },
 
         "property_speed": {
-            "$id": "/schemas/property/speed,
+            "$id": "/schemas/property/speed",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -265,7 +265,7 @@
         },
 
         "property_temperature": {
-            "$id": "/schemas/property/temperature,
+            "$id": "/schemas/property/temperature",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -275,7 +275,7 @@
         },
 
         "property_tire_pressure": {
-            "$id": "/schemas/property/tire_pressure,
+            "$id": "/schemas/property/tire_pressure",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -285,7 +285,7 @@
         },
 
         "property_tire_pressure_status": {
-            "$id": "/schemas/property/tire_pressure_status,
+            "$id": "/schemas/property/tire_pressure_status",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -295,7 +295,7 @@
         },
 
         "property_tire_temperature": {
-            "$id": "/schemas/property/tire_temperature,
+            "$id": "/schemas/property/tire_temperature",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -305,7 +305,7 @@
         },
 
         "property_trouble_code": {
-            "$id": "/schemas/property/trouble_code,
+            "$id": "/schemas/property/trouble_code",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -327,7 +327,7 @@
         },
 
         "property_volume": {
-            "$id": "/schemas/property/volume,
+            "$id": "/schemas/property/volume",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -337,7 +337,7 @@
         },
 
         "property_wheel_rpm": {
-            "$id": "/schemas/property/wheel_rpm,
+            "$id": "/schemas/property/wheel_rpm",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {

@@ -58,7 +58,7 @@
         },
 
         "property_status": {
-            "$id": "/schemas/property/status,
+            "$id": "/schemas/property/status",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -69,7 +69,7 @@
         },
 
         "property_string": {
-            "$id": "/schemas/property/string,
+            "$id": "/schemas/property/string",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -79,7 +79,7 @@
         },
 
         "property_timestamp": {
-            "$id": "/schemas/property/timestamp,
+            "$id": "/schemas/property/timestamp",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {

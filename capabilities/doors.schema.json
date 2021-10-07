@@ -47,7 +47,7 @@
         },
 
         "property_door_position": {
-            "$id": "/schemas/property/door_position,
+            "$id": "/schemas/property/door_position",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -57,7 +57,7 @@
         },
 
         "property_lock": {
-            "$id": "/schemas/property/lock,
+            "$id": "/schemas/property/lock",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -67,7 +67,7 @@
         },
 
         "property_lock_state": {
-            "$id": "/schemas/property/lock_state,
+            "$id": "/schemas/property/lock_state",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {

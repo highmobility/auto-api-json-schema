@@ -48,7 +48,7 @@
         },
 
         "property_crash_incident": {
-            "$id": "/schemas/property/crash_incident,
+            "$id": "/schemas/property/crash_incident",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -58,7 +58,7 @@
         },
 
         "property_enabled_state": {
-            "$id": "/schemas/property/enabled_state,
+            "$id": "/schemas/property/enabled_state",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -68,7 +68,7 @@
         },
 
         "property_impact_zone": {
-            "$id": "/schemas/property/impact_zone,
+            "$id": "/schemas/property/impact_zone",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -90,7 +90,7 @@
         },
 
         "property_tipped_state": {
-            "$id": "/schemas/property/tipped_state,
+            "$id": "/schemas/property/tipped_state",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -101,7 +101,7 @@
         },
 
         "property_type": {
-            "$id": "/schemas/property/type,
+            "$id": "/schemas/property/type",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -112,7 +112,7 @@
         },
 
         "property_uinteger": {
-            "$id": "/schemas/property/uinteger,
+            "$id": "/schemas/property/uinteger",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {

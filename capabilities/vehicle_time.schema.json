@@ -54,7 +54,7 @@
         },
 
         "property_time": {
-            "$id": "/schemas/property/time,
+            "$id": "/schemas/property/time",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {

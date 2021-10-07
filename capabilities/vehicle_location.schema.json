@@ -38,7 +38,7 @@
 
 
         "property_angle": {
-            "$id": "/schemas/property/angle,
+            "$id": "/schemas/property/angle",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -58,7 +58,7 @@
         },
 
         "property_coordinates": {
-            "$id": "/schemas/property/coordinates,
+            "$id": "/schemas/property/coordinates",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -68,7 +68,7 @@
         },
 
         "property_gps_source": {
-            "$id": "/schemas/property/gps_source,
+            "$id": "/schemas/property/gps_source",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -79,7 +79,7 @@
         },
 
         "property_length": {
-            "$id": "/schemas/property/length,
+            "$id": "/schemas/property/length",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -100,7 +100,7 @@
         },
 
         "property_percentage": {
-            "$id": "/schemas/property/percentage,
+            "$id": "/schemas/property/percentage",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {

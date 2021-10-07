@@ -43,7 +43,7 @@
 
 
         "property_active_state": {
-            "$id": "/schemas/property/active_state,
+            "$id": "/schemas/property/active_state",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -53,7 +53,7 @@
         },
 
         "property_blind_spot_warning_system_coverage": {
-            "$id": "/schemas/property/blind_spot_warning_system_coverage,
+            "$id": "/schemas/property/blind_spot_warning_system_coverage",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -74,7 +74,7 @@
         },
 
         "property_lane_keep_assist_state": {
-            "$id": "/schemas/property/lane_keep_assist_state,
+            "$id": "/schemas/property/lane_keep_assist_state",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -95,7 +95,7 @@
         },
 
         "property_on_off_state": {
-            "$id": "/schemas/property/on_off_state,
+            "$id": "/schemas/property/on_off_state",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -105,7 +105,7 @@
         },
 
         "property_park_assist": {
-            "$id": "/schemas/property/park_assist,
+            "$id": "/schemas/property/park_assist",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {

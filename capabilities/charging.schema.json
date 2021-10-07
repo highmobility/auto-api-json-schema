@@ -80,7 +80,7 @@
 
 
         "property_active_state": {
-            "$id": "/schemas/property/active_state,
+            "$id": "/schemas/property/active_state",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -100,7 +100,7 @@
         },
 
         "property_charge_mode": {
-            "$id": "/schemas/property/charge_mode,
+            "$id": "/schemas/property/charge_mode",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -111,7 +111,7 @@
         },
 
         "property_charging_window_chosen": {
-            "$id": "/schemas/property/charging_window_chosen,
+            "$id": "/schemas/property/charging_window_chosen",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -122,7 +122,7 @@
         },
 
         "property_current_type": {
-            "$id": "/schemas/property/current_type,
+            "$id": "/schemas/property/current_type",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -133,7 +133,7 @@
         },
 
         "property_departure_time": {
-            "$id": "/schemas/property/departure_time,
+            "$id": "/schemas/property/departure_time",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -143,7 +143,7 @@
         },
 
         "property_duration": {
-            "$id": "/schemas/property/duration,
+            "$id": "/schemas/property/duration",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -153,7 +153,7 @@
         },
 
         "property_electric_current": {
-            "$id": "/schemas/property/electric_current,
+            "$id": "/schemas/property/electric_current",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -163,7 +163,7 @@
         },
 
         "property_electric_potential_difference": {
-            "$id": "/schemas/property/electric_potential_difference,
+            "$id": "/schemas/property/electric_potential_difference",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -173,7 +173,7 @@
         },
 
         "property_enabled_state": {
-            "$id": "/schemas/property/enabled_state,
+            "$id": "/schemas/property/enabled_state",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -183,7 +183,7 @@
         },
 
         "property_energy": {
-            "$id": "/schemas/property/energy,
+            "$id": "/schemas/property/energy",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -193,7 +193,7 @@
         },
 
         "property_length": {
-            "$id": "/schemas/property/length,
+            "$id": "/schemas/property/length",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -214,7 +214,7 @@
         },
 
         "property_percentage": {
-            "$id": "/schemas/property/percentage,
+            "$id": "/schemas/property/percentage",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -224,7 +224,7 @@
         },
 
         "property_plug_type": {
-            "$id": "/schemas/property/plug_type,
+            "$id": "/schemas/property/plug_type",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -235,7 +235,7 @@
         },
 
         "property_plugged_in": {
-            "$id": "/schemas/property/plugged_in,
+            "$id": "/schemas/property/plugged_in",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -246,7 +246,7 @@
         },
 
         "property_position": {
-            "$id": "/schemas/property/position,
+            "$id": "/schemas/property/position",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -256,7 +256,7 @@
         },
 
         "property_power": {
-            "$id": "/schemas/property/power,
+            "$id": "/schemas/property/power",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -266,7 +266,7 @@
         },
 
         "property_preconditioning_error": {
-            "$id": "/schemas/property/preconditioning_error,
+            "$id": "/schemas/property/preconditioning_error",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -277,7 +277,7 @@
         },
 
         "property_reduction_time": {
-            "$id": "/schemas/property/reduction_time,
+            "$id": "/schemas/property/reduction_time",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -287,7 +287,7 @@
         },
 
         "property_smart_charging_status": {
-            "$id": "/schemas/property/smart_charging_status,
+            "$id": "/schemas/property/smart_charging_status",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -298,7 +298,7 @@
         },
 
         "property_starter_battery_state": {
-            "$id": "/schemas/property/starter_battery_state,
+            "$id": "/schemas/property/starter_battery_state",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -309,7 +309,7 @@
         },
 
         "property_status": {
-            "$id": "/schemas/property/status,
+            "$id": "/schemas/property/status",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -320,7 +320,7 @@
         },
 
         "property_temperature": {
-            "$id": "/schemas/property/temperature,
+            "$id": "/schemas/property/temperature",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -330,7 +330,7 @@
         },
 
         "property_timer": {
-            "$id": "/schemas/property/timer,
+            "$id": "/schemas/property/timer",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {

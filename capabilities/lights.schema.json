@@ -42,7 +42,7 @@
 
 
         "property_active_state": {
-            "$id": "/schemas/property/active_state,
+            "$id": "/schemas/property/active_state",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -62,7 +62,7 @@
         },
 
         "property_front_exterior_light": {
-            "$id": "/schemas/property/front_exterior_light,
+            "$id": "/schemas/property/front_exterior_light",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -73,7 +73,7 @@
         },
 
         "property_light": {
-            "$id": "/schemas/property/light,
+            "$id": "/schemas/property/light",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -94,7 +94,7 @@
         },
 
         "property_parking_light_status": {
-            "$id": "/schemas/property/parking_light_status,
+            "$id": "/schemas/property/parking_light_status",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -105,7 +105,7 @@
         },
 
         "property_reading_lamp": {
-            "$id": "/schemas/property/reading_lamp,
+            "$id": "/schemas/property/reading_lamp",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -115,7 +115,7 @@
         },
 
         "property_rgb_colour": {
-            "$id": "/schemas/property/rgb_colour,
+            "$id": "/schemas/property/rgb_colour",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -125,7 +125,7 @@
         },
 
         "property_switch_position": {
-            "$id": "/schemas/property/switch_position,
+            "$id": "/schemas/property/switch_position",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {

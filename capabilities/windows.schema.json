@@ -67,7 +67,7 @@
         },
 
         "property_window_open_percentage": {
-            "$id": "/schemas/property/window_open_percentage,
+            "$id": "/schemas/property/window_open_percentage",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -77,7 +77,7 @@
         },
 
         "property_window_position": {
-            "$id": "/schemas/property/window_position,
+            "$id": "/schemas/property/window_position",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {

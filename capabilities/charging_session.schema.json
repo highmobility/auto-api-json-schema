@@ -46,7 +46,7 @@
 
 
         "property_active_state": {
-            "$id": "/schemas/property/active_state,
+            "$id": "/schemas/property/active_state",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -66,7 +66,7 @@
         },
 
         "property_charging_cost": {
-            "$id": "/schemas/property/charging_cost,
+            "$id": "/schemas/property/charging_cost",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -76,7 +76,7 @@
         },
 
         "property_charging_location": {
-            "$id": "/schemas/property/charging_location,
+            "$id": "/schemas/property/charging_location",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -86,7 +86,7 @@
         },
 
         "property_charging_point": {
-            "$id": "/schemas/property/charging_point,
+            "$id": "/schemas/property/charging_point",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -96,7 +96,7 @@
         },
 
         "property_duration": {
-            "$id": "/schemas/property/duration,
+            "$id": "/schemas/property/duration",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -106,7 +106,7 @@
         },
 
         "property_energy": {
-            "$id": "/schemas/property/energy,
+            "$id": "/schemas/property/energy",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -116,7 +116,7 @@
         },
 
         "property_length": {
-            "$id": "/schemas/property/length,
+            "$id": "/schemas/property/length",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -137,7 +137,7 @@
         },
 
         "property_percentage": {
-            "$id": "/schemas/property/percentage,
+            "$id": "/schemas/property/percentage",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -147,7 +147,7 @@
         },
 
         "property_string": {
-            "$id": "/schemas/property/string,
+            "$id": "/schemas/property/string",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
@@ -157,7 +157,7 @@
         },
 
         "property_timestamp": {
-            "$id": "/schemas/property/timestamp,
+            "$id": "/schemas/property/timestamp",
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
