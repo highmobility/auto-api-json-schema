@@ -67,7 +67,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://gist.githubusercontent.com/doofyus/a1c290dcf40c99296c54da2fcce8962d/raw/6308e26cbf0b536a3358900f8c6009c3b8b1979c/custom_types.schema.json#/$defs/condition_based_service"
+                    "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/main/misc/custom_types.schema.json#/$defs/condition_based_service"
                 }
             }
         },
@@ -77,7 +77,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://gist.githubusercontent.com/doofyus/00be32d1046cafae12b450957f1f1283/raw/711715a1b10d58edc3712725f9123636a6e4b6df/units.schema.json#/$defs/duration"
+                    "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/main/misc/units.schema.json#/$defs/duration"
                 }
             }
         },
@@ -87,7 +87,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://gist.githubusercontent.com/doofyus/00be32d1046cafae12b450957f1f1283/raw/711715a1b10d58edc3712725f9123636a6e4b6df/units.schema.json#/$defs/length"
+                    "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/main/misc/units.schema.json#/$defs/length"
                 }
             }
         },

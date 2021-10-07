@@ -53,7 +53,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://gist.githubusercontent.com/doofyus/a1c290dcf40c99296c54da2fcce8962d/raw/6308e26cbf0b536a3358900f8c6009c3b8b1979c/custom_types.schema.json#/$defs/person_detected"
+                    "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/main/misc/custom_types.schema.json#/$defs/person_detected"
                 }
             }
         },
@@ -63,7 +63,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://gist.githubusercontent.com/doofyus/a1c290dcf40c99296c54da2fcce8962d/raw/6308e26cbf0b536a3358900f8c6009c3b8b1979c/custom_types.schema.json#/$defs/seatbelt_state"
+                    "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/main/misc/custom_types.schema.json#/$defs/seatbelt_state"
                 }
             }
         },

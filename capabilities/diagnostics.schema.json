@@ -91,7 +91,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://gist.githubusercontent.com/doofyus/a1c290dcf40c99296c54da2fcce8962d/raw/6308e26cbf0b536a3358900f8c6009c3b8b1979c/custom_types.schema.json#/$defs/active_state"
+                    "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/main/misc/custom_types.schema.json#/$defs/active_state"
                 }
             }
         },
@@ -101,7 +101,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://gist.githubusercontent.com/doofyus/00be32d1046cafae12b450957f1f1283/raw/711715a1b10d58edc3712725f9123636a6e4b6df/units.schema.json#/$defs/angular_velocity"
+                    "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/main/misc/units.schema.json#/$defs/angular_velocity"
                 }
             }
         },
@@ -119,7 +119,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://gist.githubusercontent.com/doofyus/a1c290dcf40c99296c54da2fcce8962d/raw/6308e26cbf0b536a3358900f8c6009c3b8b1979c/custom_types.schema.json#/$defs/check_control_message"
+                    "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/main/misc/custom_types.schema.json#/$defs/check_control_message"
                 }
             }
         },
@@ -129,7 +129,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://gist.githubusercontent.com/doofyus/a1c290dcf40c99296c54da2fcce8962d/raw/6308e26cbf0b536a3358900f8c6009c3b8b1979c/custom_types.schema.json#/$defs/confirmed_trouble_code"
+                    "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/main/misc/custom_types.schema.json#/$defs/confirmed_trouble_code"
                 }
             }
         },
@@ -139,7 +139,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://gist.githubusercontent.com/doofyus/a1c290dcf40c99296c54da2fcce8962d/raw/6308e26cbf0b536a3358900f8c6009c3b8b1979c/custom_types.schema.json#/$defs/diesel_exhaust_filter_status"
+                    "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/main/misc/custom_types.schema.json#/$defs/diesel_exhaust_filter_status"
                 }
             }
         },
@@ -149,7 +149,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://gist.githubusercontent.com/doofyus/00be32d1046cafae12b450957f1f1283/raw/711715a1b10d58edc3712725f9123636a6e4b6df/units.schema.json#/$defs/duration"
+                    "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/main/misc/units.schema.json#/$defs/duration"
                 }
             }
         },
@@ -159,7 +159,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://gist.githubusercontent.com/doofyus/00be32d1046cafae12b450957f1f1283/raw/711715a1b10d58edc3712725f9123636a6e4b6df/units.schema.json#/$defs/electric_potential_difference"
+                    "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/main/misc/units.schema.json#/$defs/electric_potential_difference"
                 }
             }
         },
@@ -180,7 +180,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://gist.githubusercontent.com/doofyus/a1c290dcf40c99296c54da2fcce8962d/raw/6308e26cbf0b536a3358900f8c6009c3b8b1979c/custom_types.schema.json#/$defs/fluid_level"
+                    "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/main/misc/custom_types.schema.json#/$defs/fluid_level"
                 }
             }
         },
@@ -201,7 +201,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://gist.githubusercontent.com/doofyus/00be32d1046cafae12b450957f1f1283/raw/711715a1b10d58edc3712725f9123636a6e4b6df/units.schema.json#/$defs/length"
+                    "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/main/misc/units.schema.json#/$defs/length"
                 }
             }
         },
@@ -233,7 +233,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://gist.githubusercontent.com/doofyus/a1c290dcf40c99296c54da2fcce8962d/raw/6308e26cbf0b536a3358900f8c6009c3b8b1979c/custom_types.schema.json#/$defs/oem_trouble_code_value"
+                    "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/main/misc/custom_types.schema.json#/$defs/oem_trouble_code_value"
                 }
             }
         },
@@ -243,7 +243,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://gist.githubusercontent.com/doofyus/a1c290dcf40c99296c54da2fcce8962d/raw/6308e26cbf0b536a3358900f8c6009c3b8b1979c/custom_types.schema.json#/$defs/percentage"
+                    "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/main/misc/custom_types.schema.json#/$defs/percentage"
                 }
             }
         },
@@ -253,7 +253,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://gist.githubusercontent.com/doofyus/00be32d1046cafae12b450957f1f1283/raw/711715a1b10d58edc3712725f9123636a6e4b6df/units.schema.json#/$defs/speed"
+                    "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/main/misc/units.schema.json#/$defs/speed"
                 }
             }
         },
@@ -263,7 +263,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://gist.githubusercontent.com/doofyus/00be32d1046cafae12b450957f1f1283/raw/711715a1b10d58edc3712725f9123636a6e4b6df/units.schema.json#/$defs/temperature"
+                    "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/main/misc/units.schema.json#/$defs/temperature"
                 }
             }
         },
@@ -273,7 +273,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://gist.githubusercontent.com/doofyus/a1c290dcf40c99296c54da2fcce8962d/raw/6308e26cbf0b536a3358900f8c6009c3b8b1979c/custom_types.schema.json#/$defs/tire_pressure"
+                    "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/main/misc/custom_types.schema.json#/$defs/tire_pressure"
                 }
             }
         },
@@ -283,7 +283,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://gist.githubusercontent.com/doofyus/a1c290dcf40c99296c54da2fcce8962d/raw/6308e26cbf0b536a3358900f8c6009c3b8b1979c/custom_types.schema.json#/$defs/tire_pressure_status"
+                    "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/main/misc/custom_types.schema.json#/$defs/tire_pressure_status"
                 }
             }
         },
@@ -293,7 +293,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://gist.githubusercontent.com/doofyus/a1c290dcf40c99296c54da2fcce8962d/raw/6308e26cbf0b536a3358900f8c6009c3b8b1979c/custom_types.schema.json#/$defs/tire_temperature"
+                    "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/main/misc/custom_types.schema.json#/$defs/tire_temperature"
                 }
             }
         },
@@ -303,7 +303,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://gist.githubusercontent.com/doofyus/a1c290dcf40c99296c54da2fcce8962d/raw/6308e26cbf0b536a3358900f8c6009c3b8b1979c/custom_types.schema.json#/$defs/trouble_code"
+                    "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/main/misc/custom_types.schema.json#/$defs/trouble_code"
                 }
             }
         },
@@ -325,7 +325,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://gist.githubusercontent.com/doofyus/00be32d1046cafae12b450957f1f1283/raw/711715a1b10d58edc3712725f9123636a6e4b6df/units.schema.json#/$defs/volume"
+                    "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/main/misc/units.schema.json#/$defs/volume"
                 }
             }
         },
@@ -335,7 +335,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://gist.githubusercontent.com/doofyus/a1c290dcf40c99296c54da2fcce8962d/raw/6308e26cbf0b536a3358900f8c6009c3b8b1979c/custom_types.schema.json#/$defs/wheel_rpm"
+                    "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/main/misc/custom_types.schema.json#/$defs/wheel_rpm"
                 }
             }
         }

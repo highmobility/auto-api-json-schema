@@ -42,7 +42,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://gist.githubusercontent.com/doofyus/00be32d1046cafae12b450957f1f1283/raw/711715a1b10d58edc3712725f9123636a6e4b6df/units.schema.json#/$defs/illuminance"
+                    "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/main/misc/units.schema.json#/$defs/illuminance"
                 }
             }
         },

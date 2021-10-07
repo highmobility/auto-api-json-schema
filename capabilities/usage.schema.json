@@ -83,7 +83,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://gist.githubusercontent.com/doofyus/a1c290dcf40c99296c54da2fcce8962d/raw/6308e26cbf0b536a3358900f8c6009c3b8b1979c/custom_types.schema.json#/$defs/distance_over_time"
+                    "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/main/misc/custom_types.schema.json#/$defs/distance_over_time"
                 }
             }
         },
@@ -93,7 +93,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://gist.githubusercontent.com/doofyus/a1c290dcf40c99296c54da2fcce8962d/raw/6308e26cbf0b536a3358900f8c6009c3b8b1979c/custom_types.schema.json#/$defs/driving_mode_activation_period"
+                    "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/main/misc/custom_types.schema.json#/$defs/driving_mode_activation_period"
                 }
             }
         },
@@ -103,7 +103,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://gist.githubusercontent.com/doofyus/a1c290dcf40c99296c54da2fcce8962d/raw/6308e26cbf0b536a3358900f8c6009c3b8b1979c/custom_types.schema.json#/$defs/driving_mode_energy_consumption"
+                    "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/main/misc/custom_types.schema.json#/$defs/driving_mode_energy_consumption"
                 }
             }
         },
@@ -113,7 +113,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://gist.githubusercontent.com/doofyus/00be32d1046cafae12b450957f1f1283/raw/711715a1b10d58edc3712725f9123636a6e4b6df/units.schema.json#/$defs/duration"
+                    "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/main/misc/units.schema.json#/$defs/duration"
                 }
             }
         },
@@ -123,7 +123,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://gist.githubusercontent.com/doofyus/00be32d1046cafae12b450957f1f1283/raw/711715a1b10d58edc3712725f9123636a6e4b6df/units.schema.json#/$defs/energy"
+                    "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/main/misc/units.schema.json#/$defs/energy"
                 }
             }
         },
@@ -133,7 +133,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://gist.githubusercontent.com/doofyus/00be32d1046cafae12b450957f1f1283/raw/711715a1b10d58edc3712725f9123636a6e4b6df/units.schema.json#/$defs/energy_efficiency"
+                    "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/main/misc/units.schema.json#/$defs/energy_efficiency"
                 }
             }
         },
@@ -143,7 +143,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://gist.githubusercontent.com/doofyus/00be32d1046cafae12b450957f1f1283/raw/711715a1b10d58edc3712725f9123636a6e4b6df/units.schema.json#/$defs/fuel_efficiency"
+                    "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/main/misc/units.schema.json#/$defs/fuel_efficiency"
                 }
             }
         },
@@ -153,7 +153,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://gist.githubusercontent.com/doofyus/a1c290dcf40c99296c54da2fcce8962d/raw/6308e26cbf0b536a3358900f8c6009c3b8b1979c/custom_types.schema.json#/$defs/grade"
+                    "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/main/misc/custom_types.schema.json#/$defs/grade"
                 }
             }
         },
@@ -163,7 +163,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://gist.githubusercontent.com/doofyus/00be32d1046cafae12b450957f1f1283/raw/711715a1b10d58edc3712725f9123636a6e4b6df/units.schema.json#/$defs/length"
+                    "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/main/misc/units.schema.json#/$defs/length"
                 }
             }
         },
@@ -184,7 +184,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://gist.githubusercontent.com/doofyus/a1c290dcf40c99296c54da2fcce8962d/raw/6308e26cbf0b536a3358900f8c6009c3b8b1979c/custom_types.schema.json#/$defs/percentage"
+                    "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/main/misc/custom_types.schema.json#/$defs/percentage"
                 }
             }
         },
@@ -194,7 +194,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://gist.githubusercontent.com/doofyus/00be32d1046cafae12b450957f1f1283/raw/711715a1b10d58edc3712725f9123636a6e4b6df/units.schema.json#/$defs/speed"
+                    "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/main/misc/units.schema.json#/$defs/speed"
                 }
             }
         },
@@ -215,7 +215,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://gist.githubusercontent.com/doofyus/a1c290dcf40c99296c54da2fcce8962d/raw/6308e26cbf0b536a3358900f8c6009c3b8b1979c/custom_types.schema.json#/$defs/trip_meter"
+                    "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/main/misc/custom_types.schema.json#/$defs/trip_meter"
                 }
             }
         },
@@ -237,7 +237,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://gist.githubusercontent.com/doofyus/00be32d1046cafae12b450957f1f1283/raw/711715a1b10d58edc3712725f9123636a6e4b6df/units.schema.json#/$defs/volume"
+                    "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/main/misc/units.schema.json#/$defs/volume"
                 }
             }
         }
