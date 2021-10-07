@@ -63,8 +63,12 @@
                     "type": "string",
                     "format": "date-time"
                 },
-                "failure": { "$ref": "https://gist.githubusercontent.com/doofyus/a1c290dcf40c99296c54da2fcce8962d/raw/6308e26cbf0b536a3358900f8c6009c3b8b1979c/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "https://gist.githubusercontent.com/doofyus/a1c290dcf40c99296c54da2fcce8962d/raw/6308e26cbf0b536a3358900f8c6009c3b8b1979c/custom_types.schema.json#/$defs/availability" }
+                "failure": {
+                    "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/main/misc/custom_types.schema.json#/$defs/failure"
+                },
+                "availability": {
+                    "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/main/misc/custom_types.schema.json#/$defs/availability"
+                }
             },
             "minProperties": 1
         },
