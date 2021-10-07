@@ -5,22 +5,22 @@
 
     "$defs": {
         "active_state": {
-            "type": "enum",
+            "type": "string",
             "enum": ["inactive", "active"]
         },
 
         "active_selected_state": {
-            "type": "enum",
+            "type": "string",
             "enum": ["inactive_selected", "inactive_not_selected", "active"]
         },
 
         "axle": {
-            "type": "enum",
+            "type": "string",
             "enum": ["front", "rear"]
         },
 
         "connection_state": {
-            "type": "enum",
+            "type": "string",
             "enum": ["disconnected", "connected"]
         },
 
@@ -33,37 +33,37 @@
         },
 
         "detected": {
-            "type": "enum",
+            "type": "string",
             "enum": ["not_detected", "detected"]
         },
 
         "driving_mode": {
-            "type": "enum",
+            "type": "string",
             "enum": ["regular", "eco", "sport", "sport_plus", "ecoPlus", "comfort"]
         },
 
         "enabled_state": {
-            "type": "enum",
+            "type": "string",
             "enum": ["disabled", "enabled"]
         },
 
         "engine_type": {
-            "type": "enum",
+            "type": "string",
             "enum": ["unknown", "all_electric", "combustion_engine", "phev", "hydrogen", "hydrogen_hybrid", "petrol", "electric", "gas", "diesel", "gasoline", "cng", "lpg"]
         },
 
         "fluid_level": {
-            "type": "enum",
+            "type": "string",
             "enum": ["low", "filled", "very_low", "normal", "high", "very_high"]
         },
 
         "grade": {
-            "type": "enum",
+            "type": "string",
             "enum": ["excellent", "normal", "warning"]
         },
 
         "ignition_state": {
-            "type": "enum",
+            "type": "string",
             "enum": ["lock", "off", "accessory", "on", "start"]
         },
 
@@ -76,42 +76,42 @@
         },
 
         "location": {
-            "type": "enum",
+            "type": "string",
             "enum": ["front_left", "front_right", "rear_right", "rear_left"]
         },
 
         "location_longitudinal": {
-            "type": "enum",
+            "type": "string",
             "enum": ["front", "rear"]
         },
 
         "location_wheel": {
-            "type": "enum",
+            "type": "string",
             "enum": ["front_left", "front_right", "rear_right", "rear_left", "rear_right_outer", "rear_left_outer", "spare"]
         },
 
         "lock_state": {
-            "type": "enum",
+            "type": "string",
             "enum": ["unlocked", "locked"]
         },
 
         "lock_safety": {
-            "type": "enum",
+            "type": "string",
             "enum": ["safe", "unsafe"]
         },
 
         "muted": {
-            "type": "enum",
+            "type": "string",
             "enum": ["not_muted", "muted"]
         },
 
         "network_security": {
-            "type": "enum",
+            "type": "string",
             "enum": ["none", "wep", "wpa", "wpa2_personal"]
         },
 
         "on_off_state": {
-            "type": "enum",
+            "type": "string",
             "enum": ["off", "on"]
         },
 
@@ -120,17 +120,17 @@
         },
 
         "position": {
-            "type": "enum",
+            "type": "string",
             "enum": ["closed", "open"]
         },
 
         "seat_location": {
-            "type": "enum",
+            "type": "string",
             "enum": ["front_left", "front_right", "rear_right", "rear_left", "rear_center"]
         },
 
         "start_stop": {
-            "type": "enum",
+            "type": "string",
             "enum": ["start", "stop"]
         },
 
@@ -154,12 +154,12 @@
         },
 
         "weekday": {
-            "type": "enum",
+            "type": "string",
             "enum": ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday", "automatic"]
         },
 
         "window_location": {
-            "type": "enum",
+            "type": "string",
             "enum": ["front_left", "front_right", "rear_right", "rear_left", "hatch"]
         },
 
@@ -672,7 +672,7 @@
         },
 
         "event": {
-            "type": "enum",
+            "type": "string",
             "enum": ["ping", "trip_started", "trip_ended", "vehicle_location_changed", "authorization_changed", "tire_pressure_changed", "harsh_acceleration_triggered", "harsh_acceleration_pedal_position_triggered", "harsh_braking_triggered", "harsh_cornering_triggered", "seat_belt_triggered", "maintenance_changed", "dashboard_lights_changed", "ignition_changed", "accident_reported", "emergency_reported", "breakdown_reported", "battery_guard_warning", "engine_changed", "fleet_clearance_changed"]
         }
     }
