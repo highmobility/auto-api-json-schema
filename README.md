@@ -19,5 +19,5 @@ The _misc_ JSON Schema files are commonly used types (in capability-files) and u
 
 #### Capabilities
 
-[ADAS](../capabilities/adas.schema.json)  
-[Charging](../capabilities/charging.schema.json)
+[ADAS](/capabilities/adas.schema.json)  
+[Charging](/capabilities/charging.schema.json)
