@@ -1,0 +1,90 @@
+{
+    "$id": "https://high-mobility.com/schemas/dashboard_lights",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "type": "object",
+    "properties": {
+        "dashboard_lights": { "$ref": "/schemas/property/dashboard_light" },
+        "bulb_failures": { "$ref": "/schemas/property/bulb_failures" },
+
+        "nonce": { "$ref": "/schemas/property/nonce" },
+        "vin": { "$ref": "/schemas/property/vin" }
+    },
+    "additionalProperties": false,
+
+
+
+    "$defs": {
+        "property": {
+            "$id": "/schemas/property",
+            "type": "object",
+            "properties": {
+                "timestamp": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "failure": {
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/custom_types.schema.json#/$defs/failure"
+                },
+                "availability": {
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/custom_types.schema.json#/$defs/availability"
+                }
+            },
+            "minProperties": 1
+        },
+
+
+        "property_bulb_failures": {
+            "$id": "/schemas/property/bulb_failures",
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "type": "string",
+                    "enum": ["turn_signal_left", "turn_signal_right", "low_beam", "low_beam_left", "low_beam_right", "high_beam", "high_beam_left", "high_beam_right", "fog_light_front", "fog_light_rear", "stop", "position", "day_running", "trailer_turn", "trailer_turn_left", "trailer_turn_right", "trailer_stop", "trailer_electrical_failure", "multiple"]
+                }
+            }
+        },
+
+        "property_bytes": {
+            "$id": "/schemas/property/bytes",
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/custom_types.schema.json#/$defs/bytes"
+                }
+            }
+        },
+
+        "property_dashboard_light": {
+            "$id": "/schemas/property/dashboard_light",
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/custom_types.schema.json#/$defs/dashboard_light"
+                }
+            }
+        },
+
+        "property_nonce": {
+            "$id": "/schemas/property/nonce",
+            "$ref": "/schemas/property/bytes",
+            "properties": {
+                "data": {
+                    "minItems": 9,
+                    "maxItems": 9
+                }
+            }
+        },
+
+        "property_vin": {
+            "$id": "/schemas/property/vin",
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "type": "string",
+                    "minLength": 17,
+                    "maxLength": 17
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,212 @@
+{
+    "$id": "https://high-mobility.com/schemas/trips",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "type": "object",
+    "properties": {
+        "type": { "$ref": "/schemas/property/type" },
+        "driver_name": { "$ref": "/schemas/property/string" },
+        "description": { "$ref": "/schemas/property/string" },
+        "start_time": { "$ref": "/schemas/property/timestamp" },
+        "end_time": { "$ref": "/schemas/property/timestamp" },
+        "start_address": { "$ref": "/schemas/property/string" },
+        "end_address": { "$ref": "/schemas/property/string" },
+        "start_coordinates": { "$ref": "/schemas/property/coordinates" },
+        "end_coordinates": { "$ref": "/schemas/property/coordinates" },
+        "start_odometer": { "$ref": "/schemas/property/length" },
+        "end_odometer": { "$ref": "/schemas/property/length" },
+        "average_fuel_consumption": { "$ref": "/schemas/property/fuel_efficiency" },
+        "distance": { "$ref": "/schemas/property/length" },
+        "start_address_components": { "$ref": "/schemas/property/address_component" },
+        "end_address_components": { "$ref": "/schemas/property/address_component" },
+        "event": { "$ref": "/schemas/property/event" },
+        "eco_level": { "$ref": "/schemas/property/eco_level" },
+        "thresholds": { "$ref": "/schemas/property/eco_driving_threshold" },
+        "total_fuel_consumption": { "$ref": "/schemas/property/volume" },
+        "total_idle_fuel_consumption": { "$ref": "/schemas/property/volume" },
+        "maximum_speed": { "$ref": "/schemas/property/speed" },
+
+        "nonce": { "$ref": "/schemas/property/nonce" },
+        "vin": { "$ref": "/schemas/property/vin" }
+    },
+    "additionalProperties": false,
+
+
+
+    "$defs": {
+        "property": {
+            "$id": "/schemas/property",
+            "type": "object",
+            "properties": {
+                "timestamp": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "failure": {
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/custom_types.schema.json#/$defs/failure"
+                },
+                "availability": {
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/custom_types.schema.json#/$defs/availability"
+                }
+            },
+            "minProperties": 1
+        },
+
+
+        "property_address_component": {
+            "$id": "/schemas/property/address_component",
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/custom_types.schema.json#/$defs/address_component"
+                }
+            }
+        },
+
+        "property_bytes": {
+            "$id": "/schemas/property/bytes",
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/custom_types.schema.json#/$defs/bytes"
+                }
+            }
+        },
+
+        "property_coordinates": {
+            "$id": "/schemas/property/coordinates",
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/custom_types.schema.json#/$defs/coordinates"
+                }
+            }
+        },
+
+        "property_eco_driving_threshold": {
+            "$id": "/schemas/property/eco_driving_threshold",
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/custom_types.schema.json#/$defs/eco_driving_threshold"
+                }
+            }
+        },
+
+        "property_eco_level": {
+            "$id": "/schemas/property/eco_level",
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "type": "string",
+                    "enum": ["high", "medium"]
+                }
+            }
+        },
+
+        "property_event": {
+            "$id": "/schemas/property/event",
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "type": "string",
+                    "enum": ["harsh_braking", "harsh_acceleration", "sharp_turn", "over_rpm", "overspeed", "idling_engine_on"]
+                }
+            }
+        },
+
+        "property_fuel_efficiency": {
+            "$id": "/schemas/property/fuel_efficiency",
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/units.schema.json#/$defs/fuel_efficiency"
+                }
+            }
+        },
+
+        "property_length": {
+            "$id": "/schemas/property/length",
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/units.schema.json#/$defs/length"
+                }
+            }
+        },
+
+        "property_nonce": {
+            "$id": "/schemas/property/nonce",
+            "$ref": "/schemas/property/bytes",
+            "properties": {
+                "data": {
+                    "minItems": 9,
+                    "maxItems": 9
+                }
+            }
+        },
+
+        "property_speed": {
+            "$id": "/schemas/property/speed",
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/units.schema.json#/$defs/speed"
+                }
+            }
+        },
+
+        "property_string": {
+            "$id": "/schemas/property/string",
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "type": "string"
+                }
+            }
+        },
+
+        "property_timestamp": {
+            "$id": "/schemas/property/timestamp",
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "type": "string",
+                    "format": "date-time"
+                }
+            }
+        },
+
+        "property_type": {
+            "$id": "/schemas/property/type",
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "type": "string",
+                    "enum": ["single", "multi", "eco"]
+                }
+            }
+        },
+
+        "property_vin": {
+            "$id": "/schemas/property/vin",
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "type": "string",
+                    "minLength": 17,
+                    "maxLength": 17
+                }
+            }
+        },
+
+        "property_volume": {
+            "$id": "/schemas/property/volume",
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/units.schema.json#/$defs/volume"
+                }
+            }
+        }
+    }
+}

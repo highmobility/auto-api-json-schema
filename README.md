@@ -16,8 +16,3 @@ The schema presented here, is available to use to verify and understand the outp
 The schema-files are divided into separate files, categorized as _capabilities_ and _misc_.  
 Different _capabilities_ are described in more detail [here](https://docs.high-mobility.com/api-references/) (starting after the _Getting started_ section).  
 The _misc_ JSON Schema files are commonly used types (in capability-files) and unit types.
-
-#### Capabilities
-
-[ADAS](/capabilities/adas.schema.json)  
-[Charging](/capabilities/charging.schema.json)

@@ -1,0 +1,124 @@
+{
+    "$id": "https://high-mobility.com/schemas/vehicle_location",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "type": "object",
+    "properties": {
+        "coordinates": { "$ref": "/schemas/property/coordinates" },
+        "heading": { "$ref": "/schemas/property/angle" },
+        "altitude": { "$ref": "/schemas/property/length" },
+        "precision": { "$ref": "/schemas/property/length" },
+        "gps_source": { "$ref": "/schemas/property/gps_source" },
+        "gps_signal_strength": { "$ref": "/schemas/property/percentage" },
+
+        "nonce": { "$ref": "/schemas/property/nonce" },
+        "vin": { "$ref": "/schemas/property/vin" }
+    },
+    "additionalProperties": false,
+
+
+
+    "$defs": {
+        "property": {
+            "$id": "/schemas/property",
+            "type": "object",
+            "properties": {
+                "timestamp": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "failure": {
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/custom_types.schema.json#/$defs/failure"
+                },
+                "availability": {
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/custom_types.schema.json#/$defs/availability"
+                }
+            },
+            "minProperties": 1
+        },
+
+
+        "property_angle": {
+            "$id": "/schemas/property/angle",
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/units.schema.json#/$defs/angle"
+                }
+            }
+        },
+
+        "property_bytes": {
+            "$id": "/schemas/property/bytes",
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/custom_types.schema.json#/$defs/bytes"
+                }
+            }
+        },
+
+        "property_coordinates": {
+            "$id": "/schemas/property/coordinates",
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/custom_types.schema.json#/$defs/coordinates"
+                }
+            }
+        },
+
+        "property_gps_source": {
+            "$id": "/schemas/property/gps_source",
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "type": "string",
+                    "enum": ["dead_reckoning", "real", "none"]
+                }
+            }
+        },
+
+        "property_length": {
+            "$id": "/schemas/property/length",
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/units.schema.json#/$defs/length"
+                }
+            }
+        },
+
+        "property_nonce": {
+            "$id": "/schemas/property/nonce",
+            "$ref": "/schemas/property/bytes",
+            "properties": {
+                "data": {
+                    "minItems": 9,
+                    "maxItems": 9
+                }
+            }
+        },
+
+        "property_percentage": {
+            "$id": "/schemas/property/percentage",
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/custom_types.schema.json#/$defs/percentage"
+                }
+            }
+        },
+
+        "property_vin": {
+            "$id": "/schemas/property/vin",
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "type": "string",
+                    "minLength": 17,
+                    "maxLength": 17
+                }
+            }
+        }
+    }
+}

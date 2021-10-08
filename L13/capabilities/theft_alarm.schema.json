@@ -1,0 +1,139 @@
+{
+    "$id": "https://high-mobility.com/schemas/theft_alarm",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "type": "object",
+    "properties": {
+        "status": { "$ref": "/schemas/property/status" },
+        "interior_protection_status": { "$ref": "/schemas/property/active_selected_state" },
+        "tow_protection_status": { "$ref": "/schemas/property/active_selected_state" },
+        "last_warning_reason": { "$ref": "/schemas/property/last_warning_reason" },
+        "last_event": { "$ref": "/schemas/property/timestamp" },
+        "last_event_level": { "$ref": "/schemas/property/last_event_level" },
+        "event_type": { "$ref": "/schemas/property/event_type" },
+
+        "nonce": { "$ref": "/schemas/property/nonce" },
+        "vin": { "$ref": "/schemas/property/vin" }
+    },
+    "additionalProperties": false,
+
+
+
+    "$defs": {
+        "property": {
+            "$id": "/schemas/property",
+            "type": "object",
+            "properties": {
+                "timestamp": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "failure": {
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/custom_types.schema.json#/$defs/failure"
+                },
+                "availability": {
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/custom_types.schema.json#/$defs/availability"
+                }
+            },
+            "minProperties": 1
+        },
+
+
+        "property_active_selected_state": {
+            "$id": "/schemas/property/active_selected_state",
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/custom_types.schema.json#/$defs/active_selected_state"
+                }
+            }
+        },
+
+        "property_bytes": {
+            "$id": "/schemas/property/bytes",
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/custom_types.schema.json#/$defs/bytes"
+                }
+            }
+        },
+
+        "property_event_type": {
+            "$id": "/schemas/property/event_type",
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "type": "string",
+                    "enum": ["idle", "front_left", "front_middle", "front_right", "right", "rear_right", "rear_middle", "rear_left", "left", "unknown"]
+                }
+            }
+        },
+
+        "property_last_event_level": {
+            "$id": "/schemas/property/last_event_level",
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "type": "string",
+                    "enum": ["low", "medium", "high"]
+                }
+            }
+        },
+
+        "property_last_warning_reason": {
+            "$id": "/schemas/property/last_warning_reason",
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "type": "string",
+                    "enum": ["no_alarm", "basis_alarm", "door_front_left", "door_front_right", "door_rear_left", "door_rear_right", "hood", "trunk", "common_alm_in", "panic", "glovebox", "center_box", "rear_box", "sensor_vta", "its", "its_slv", "tps", "horn", "hold_com", "remote", "unknown"]
+                }
+            }
+        },
+
+        "property_nonce": {
+            "$id": "/schemas/property/nonce",
+            "$ref": "/schemas/property/bytes",
+            "properties": {
+                "data": {
+                    "minItems": 9,
+                    "maxItems": 9
+                }
+            }
+        },
+
+        "property_status": {
+            "$id": "/schemas/property/status",
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "type": "string",
+                    "enum": ["unarmed", "armed", "triggered"]
+                }
+            }
+        },
+
+        "property_timestamp": {
+            "$id": "/schemas/property/timestamp",
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "type": "string",
+                    "format": "date-time"
+                }
+            }
+        },
+
+        "property_vin": {
+            "$id": "/schemas/property/vin",
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "type": "string",
+                    "minLength": 17,
+                    "maxLength": 17
+                }
+            }
+        }
+    }
+}

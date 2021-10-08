@@ -1,0 +1,111 @@
+{
+    "$id": "https://high-mobility.com/schemas/wi_fi",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "type": "object",
+    "properties": {
+        "status": { "$ref": "/schemas/property/enabled_state" },
+        "network_connected": { "$ref": "/schemas/property/connection_state" },
+        "network_ssid": { "$ref": "/schemas/property/string" },
+        "network_security": { "$ref": "/schemas/property/network_security" },
+
+        "nonce": { "$ref": "/schemas/property/nonce" },
+        "vin": { "$ref": "/schemas/property/vin" }
+    },
+    "additionalProperties": false,
+
+
+
+    "$defs": {
+        "property": {
+            "$id": "/schemas/property",
+            "type": "object",
+            "properties": {
+                "timestamp": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "failure": {
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/custom_types.schema.json#/$defs/failure"
+                },
+                "availability": {
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/custom_types.schema.json#/$defs/availability"
+                }
+            },
+            "minProperties": 1
+        },
+
+
+        "property_bytes": {
+            "$id": "/schemas/property/bytes",
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/custom_types.schema.json#/$defs/bytes"
+                }
+            }
+        },
+
+        "property_connection_state": {
+            "$id": "/schemas/property/connection_state",
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/custom_types.schema.json#/$defs/connection_state"
+                }
+            }
+        },
+
+        "property_enabled_state": {
+            "$id": "/schemas/property/enabled_state",
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/custom_types.schema.json#/$defs/enabled_state"
+                }
+            }
+        },
+
+        "property_network_security": {
+            "$id": "/schemas/property/network_security",
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/custom_types.schema.json#/$defs/network_security"
+                }
+            }
+        },
+
+        "property_nonce": {
+            "$id": "/schemas/property/nonce",
+            "$ref": "/schemas/property/bytes",
+            "properties": {
+                "data": {
+                    "minItems": 9,
+                    "maxItems": 9
+                }
+            }
+        },
+
+        "property_string": {
+            "$id": "/schemas/property/string",
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "type": "string"
+                }
+            }
+        },
+
+        "property_vin": {
+            "$id": "/schemas/property/vin",
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "type": "string",
+                    "minLength": 17,
+                    "maxLength": 17
+                }
+            }
+        }
+    }
+}

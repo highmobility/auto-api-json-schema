@@ -1,0 +1,150 @@
+{
+    "$id": "https://high-mobility.com/schemas/windscreen",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "type": "object",
+    "properties": {
+        "wipers_status": { "$ref": "/schemas/property/wipers_status" },
+        "wipers_intensity": { "$ref": "/schemas/property/wipers_intensity" },
+        "windscreen_damage": { "$ref": "/schemas/property/windscreen_damage" },
+        "windscreen_zone_matrix": { "$ref": "/schemas/property/zone" },
+        "windscreen_damage_zone": { "$ref": "/schemas/property/zone" },
+        "windscreen_needs_replacement": { "$ref": "/schemas/property/windscreen_needs_replacement" },
+        "windscreen_damage_confidence": { "$ref": "/schemas/property/percentage" },
+        "windscreen_damage_detection_time": { "$ref": "/schemas/property/timestamp" },
+
+        "nonce": { "$ref": "/schemas/property/nonce" },
+        "vin": { "$ref": "/schemas/property/vin" }
+    },
+    "additionalProperties": false,
+
+
+
+    "$defs": {
+        "property": {
+            "$id": "/schemas/property",
+            "type": "object",
+            "properties": {
+                "timestamp": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "failure": {
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/custom_types.schema.json#/$defs/failure"
+                },
+                "availability": {
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/custom_types.schema.json#/$defs/availability"
+                }
+            },
+            "minProperties": 1
+        },
+
+
+        "property_bytes": {
+            "$id": "/schemas/property/bytes",
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/custom_types.schema.json#/$defs/bytes"
+                }
+            }
+        },
+
+        "property_nonce": {
+            "$id": "/schemas/property/nonce",
+            "$ref": "/schemas/property/bytes",
+            "properties": {
+                "data": {
+                    "minItems": 9,
+                    "maxItems": 9
+                }
+            }
+        },
+
+        "property_percentage": {
+            "$id": "/schemas/property/percentage",
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/custom_types.schema.json#/$defs/percentage"
+                }
+            }
+        },
+
+        "property_timestamp": {
+            "$id": "/schemas/property/timestamp",
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "type": "string",
+                    "format": "date-time"
+                }
+            }
+        },
+
+        "property_vin": {
+            "$id": "/schemas/property/vin",
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "type": "string",
+                    "minLength": 17,
+                    "maxLength": 17
+                }
+            }
+        },
+
+        "property_windscreen_damage": {
+            "$id": "/schemas/property/windscreen_damage",
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "type": "string",
+                    "enum": ["no_impact_detected", "impact_but_no_damage_detected", "damage_smaller_than_1_inch", "damage_larger_than_1_inch"]
+                }
+            }
+        },
+
+        "property_windscreen_needs_replacement": {
+            "$id": "/schemas/property/windscreen_needs_replacement",
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "type": "string",
+                    "enum": ["unknown", "no_replacement_needed", "replacement_needed"]
+                }
+            }
+        },
+
+        "property_wipers_intensity": {
+            "$id": "/schemas/property/wipers_intensity",
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "type": "string",
+                    "enum": ["level_0", "level_1", "level_2", "level_3"]
+                }
+            }
+        },
+
+        "property_wipers_status": {
+            "$id": "/schemas/property/wipers_status",
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "type": "string",
+                    "enum": ["inactive", "active", "automatic"]
+                }
+            }
+        },
+
+        "property_zone": {
+            "$id": "/schemas/property/zone",
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/custom_types.schema.json#/$defs/zone"
+                }
+            }
+        }
+    }
+}

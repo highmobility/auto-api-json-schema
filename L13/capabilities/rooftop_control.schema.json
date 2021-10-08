@@ -1,0 +1,127 @@
+{
+    "$id": "https://high-mobility.com/schemas/rooftop_control",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "type": "object",
+    "properties": {
+        "dimming": { "$ref": "/schemas/property/percentage" },
+        "position": { "$ref": "/schemas/property/percentage" },
+        "convertible_roof_state": { "$ref": "/schemas/property/convertible_roof_state" },
+        "sunroof_tilt_state": { "$ref": "/schemas/property/sunroof_tilt_state" },
+        "sunroof_state": { "$ref": "/schemas/property/sunroof_state" },
+        "sunroof_rain_event": { "$ref": "/schemas/property/sunroof_rain_event" },
+
+        "nonce": { "$ref": "/schemas/property/nonce" },
+        "vin": { "$ref": "/schemas/property/vin" }
+    },
+    "additionalProperties": false,
+
+
+
+    "$defs": {
+        "property": {
+            "$id": "/schemas/property",
+            "type": "object",
+            "properties": {
+                "timestamp": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "failure": {
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/custom_types.schema.json#/$defs/failure"
+                },
+                "availability": {
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/custom_types.schema.json#/$defs/availability"
+                }
+            },
+            "minProperties": 1
+        },
+
+
+        "property_bytes": {
+            "$id": "/schemas/property/bytes",
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/custom_types.schema.json#/$defs/bytes"
+                }
+            }
+        },
+
+        "property_convertible_roof_state": {
+            "$id": "/schemas/property/convertible_roof_state",
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "type": "string",
+                    "enum": ["closed", "open", "emergency_locked", "closed_secured", "open_secured", "hard_top_mounted", "intermediate_position", "loading_position", "loading_position_immediate"]
+                }
+            }
+        },
+
+        "property_nonce": {
+            "$id": "/schemas/property/nonce",
+            "$ref": "/schemas/property/bytes",
+            "properties": {
+                "data": {
+                    "minItems": 9,
+                    "maxItems": 9
+                }
+            }
+        },
+
+        "property_percentage": {
+            "$id": "/schemas/property/percentage",
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/custom_types.schema.json#/$defs/percentage"
+                }
+            }
+        },
+
+        "property_sunroof_rain_event": {
+            "$id": "/schemas/property/sunroof_rain_event",
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "type": "string",
+                    "enum": ["no_event", "in_stroke_position_because_of_rain", "automatically_in_stroke_position"]
+                }
+            }
+        },
+
+        "property_sunroof_state": {
+            "$id": "/schemas/property/sunroof_state",
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "type": "string",
+                    "enum": ["closed", "open", "intermediate"]
+                }
+            }
+        },
+
+        "property_sunroof_tilt_state": {
+            "$id": "/schemas/property/sunroof_tilt_state",
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "type": "string",
+                    "enum": ["closed", "tilted", "half_tilted"]
+                }
+            }
+        },
+
+        "property_vin": {
+            "$id": "/schemas/property/vin",
+            "$ref": "/schemas/property",
+            "properties": {
+                "data": {
+                    "type": "string",
+                    "minLength": 17,
+                    "maxLength": 17
+                }
+            }
+        }
+    }
+}
