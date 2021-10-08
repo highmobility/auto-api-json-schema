@@ -80,10 +80,10 @@
                     "format": "date-time"
                 },
                 "failure": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/custom_types.schema.json#/$defs/failure"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure"
                 },
                 "availability": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/custom_types.schema.json#/$defs/availability"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability"
                 }
             },
             "minProperties": 1
@@ -95,7 +95,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/custom_types.schema.json#/$defs/active_state"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/active_state"
                 }
             }
         },
@@ -105,7 +105,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/units.schema.json#/$defs/angular_velocity"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json#/$defs/angular_velocity"
                 }
             }
         },
@@ -115,7 +115,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/custom_types.schema.json#/$defs/bytes"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/bytes"
                 }
             }
         },
@@ -125,7 +125,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/custom_types.schema.json#/$defs/check_control_message"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/check_control_message"
                 }
             }
         },
@@ -135,7 +135,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/custom_types.schema.json#/$defs/confirmed_trouble_code"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/confirmed_trouble_code"
                 }
             }
         },
@@ -145,7 +145,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/custom_types.schema.json#/$defs/diesel_exhaust_filter_status"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/diesel_exhaust_filter_status"
                 }
             }
         },
@@ -155,7 +155,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/units.schema.json#/$defs/duration"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json#/$defs/duration"
                 }
             }
         },
@@ -165,7 +165,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/units.schema.json#/$defs/electric_potential_difference"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json#/$defs/electric_potential_difference"
                 }
             }
         },
@@ -186,7 +186,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/custom_types.schema.json#/$defs/fluid_level"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/fluid_level"
                 }
             }
         },
@@ -207,7 +207,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/units.schema.json#/$defs/length"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json#/$defs/length"
                 }
             }
         },
@@ -239,7 +239,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/custom_types.schema.json#/$defs/oem_trouble_code_value"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/oem_trouble_code_value"
                 }
             }
         },
@@ -249,7 +249,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/custom_types.schema.json#/$defs/percentage"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/percentage"
                 }
             }
         },
@@ -259,7 +259,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/units.schema.json#/$defs/speed"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json#/$defs/speed"
                 }
             }
         },
@@ -269,7 +269,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/units.schema.json#/$defs/temperature"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json#/$defs/temperature"
                 }
             }
         },
@@ -279,7 +279,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/custom_types.schema.json#/$defs/tire_pressure"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/tire_pressure"
                 }
             }
         },
@@ -289,7 +289,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/custom_types.schema.json#/$defs/tire_pressure_status"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/tire_pressure_status"
                 }
             }
         },
@@ -299,7 +299,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/custom_types.schema.json#/$defs/tire_temperature"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/tire_temperature"
                 }
             }
         },
@@ -309,7 +309,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/custom_types.schema.json#/$defs/trouble_code"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/trouble_code"
                 }
             }
         },
@@ -331,7 +331,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/units.schema.json#/$defs/volume"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json#/$defs/volume"
                 }
             }
         },
@@ -341,7 +341,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/custom_types.schema.json#/$defs/wheel_rpm"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/wheel_rpm"
                 }
             }
         }

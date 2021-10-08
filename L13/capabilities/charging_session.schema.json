@@ -35,10 +35,10 @@
                     "format": "date-time"
                 },
                 "failure": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/custom_types.schema.json#/$defs/failure"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure"
                 },
                 "availability": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/custom_types.schema.json#/$defs/availability"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability"
                 }
             },
             "minProperties": 1
@@ -50,7 +50,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/custom_types.schema.json#/$defs/active_state"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/active_state"
                 }
             }
         },
@@ -60,7 +60,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/custom_types.schema.json#/$defs/bytes"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/bytes"
                 }
             }
         },
@@ -70,7 +70,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/custom_types.schema.json#/$defs/charging_cost"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/charging_cost"
                 }
             }
         },
@@ -80,7 +80,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/custom_types.schema.json#/$defs/charging_location"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/charging_location"
                 }
             }
         },
@@ -90,7 +90,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/custom_types.schema.json#/$defs/charging_point"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/charging_point"
                 }
             }
         },
@@ -100,7 +100,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/units.schema.json#/$defs/duration"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json#/$defs/duration"
                 }
             }
         },
@@ -110,7 +110,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/units.schema.json#/$defs/energy"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json#/$defs/energy"
                 }
             }
         },
@@ -120,7 +120,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/units.schema.json#/$defs/length"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json#/$defs/length"
                 }
             }
         },
@@ -141,7 +141,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/custom_types.schema.json#/$defs/percentage"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/percentage"
                 }
             }
         },

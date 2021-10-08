@@ -178,7 +178,7 @@
                     "type": "enum",
                     "enum": ["longitudinal", "lateral", "front_lateral", "rear_lateral"]
                 },
-                "acceleration": { "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/units.schema.json#/$defs/acceleration" }
+                "acceleration": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json#/$defs/acceleration" }
             }
         },
 
@@ -208,7 +208,7 @@
                     "type": "enum",
                     "enum": ["trip_high", "trip", "trip_start_end", "trip_end", "unknown", "not_available", "on_change"]
                 },
-                "rate_limit": { "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/units.schema.json#/$defs/frequency" },
+                "rate_limit": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json#/$defs/frequency" },
                 "applies_per": {
                     "type": "enum",
                     "enum": ["app", "vehicle"]
@@ -257,7 +257,7 @@
             "type": "object",
             "properties": {
                 "id": { "type": "integer" },
-                "remaining_time": { "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/units.schema.json#/$defs/duration" },
+                "remaining_time": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json#/$defs/duration" },
                 "text": { "type": "string" },
                 "status": { "type": "string" }
             }
@@ -349,8 +349,8 @@
         "distance_over_time": {
             "type": "object",
             "properties": {
-                "distance": { "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/units.schema.json#/$defs/length" },
-                "time": { "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/units.schema.json#/$defs/duration" }
+                "distance": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json#/$defs/length" },
+                "time": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json#/$defs/duration" }
             }
         },
 
@@ -410,7 +410,7 @@
             "type": "object",
             "properties": {
                 "driving_mode": { "$ref": "#/$defs/driving_mode" },
-                "consumption": { "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/units.schema.json#/$defs/energy" }
+                "consumption": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json#/$defs/energy" }
             }
         },
 
@@ -566,7 +566,7 @@
             "type": "object",
             "properties": {
                 "axle": { "$ref": "#/$defs/axle" },
-                "spring_rate": { "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/units.schema.json#/$defs/torque" }
+                "spring_rate": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json#/$defs/torque" }
             }
         },
 
@@ -588,7 +588,7 @@
             "type": "object",
             "properties": {
                 "location": { "$ref": "#/$defs/location" },
-                "pressure": { "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/units.schema.json#/$defs/pressure" }
+                "pressure": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json#/$defs/pressure" }
             }
         },
 
@@ -607,7 +607,7 @@
             "type": "object",
             "properties": {
                 "location": { "$ref": "#/$defs/location" },
-                "temperature": { "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/units.schema.json#/$defs/temperature" }
+                "temperature": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json#/$defs/temperature" }
             }
         },
 
@@ -615,7 +615,7 @@
             "type": "object",
             "properties": {
                 "id": { "type": "integer" },
-                "distance": { "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/units.schema.json#/$defs/length" }
+                "distance": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json#/$defs/length" }
             }
         },
 
@@ -648,7 +648,7 @@
             "type": "object",
             "properties": {
                 "location": { "$ref": "#/$defs/location" },
-                "rpm": { "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/units.schema.json#/$defs/angular_velocity" }
+                "rpm": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json#/$defs/angular_velocity" }
             }
         },
 

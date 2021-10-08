@@ -39,10 +39,10 @@
                     "format": "date-time"
                 },
                 "failure": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/custom_types.schema.json#/$defs/failure"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure"
                 },
                 "availability": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/custom_types.schema.json#/$defs/availability"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability"
                 }
             },
             "minProperties": 1
@@ -54,7 +54,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/custom_types.schema.json#/$defs/acceleration"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/acceleration"
                 }
             }
         },
@@ -64,7 +64,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/custom_types.schema.json#/$defs/active_state"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/active_state"
                 }
             }
         },
@@ -74,7 +74,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/units.schema.json#/$defs/angle"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json#/$defs/angle"
                 }
             }
         },
@@ -84,7 +84,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/units.schema.json#/$defs/angular_velocity"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json#/$defs/angular_velocity"
                 }
             }
         },
@@ -94,7 +94,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/custom_types.schema.json#/$defs/brake_torque_vectoring"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/brake_torque_vectoring"
                 }
             }
         },
@@ -104,7 +104,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/custom_types.schema.json#/$defs/bytes"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/bytes"
                 }
             }
         },
@@ -148,7 +148,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/custom_types.schema.json#/$defs/percentage"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/percentage"
                 }
             }
         },
@@ -158,7 +158,7 @@
             "$ref": "/schemas/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/misc/units.schema.json#/$defs/pressure"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json#/$defs/pressure"
                 }
             }
         },
