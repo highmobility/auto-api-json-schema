@@ -1,37 +1,23 @@
-## Welcome to GitHub Pages
+## AutoAPI JSON Schema
 
-You can use the [editor on GitHub](https://github.com/highmobility/auto-api-json-schema/edit/main/docs/index.md) to maintain and preview the content for your website in Markdown files.
+AutoAPI is a car data protocol developed by [High Mobility](https://www.high-mobility.com).  
+It defines a common schema for different car brands, so a user of the protocol can access data from different manufacturers unified into a single schema.
+More information regarding AutoAPI can be found [here](https://github.com/highmobility/auto-api).
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+The JSON Schema is a version of the same AutoAPI protocol, but in a different format - JSON.
+More information about the JSON Schema can be found [here](https://json-schema.org).
 
-### Markdown
+### Usage
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+The schema presented here, is available to use to verify and understand the output from High Mobility's AutoAPI in JSON format.
 
-```markdown
-Syntax highlighted code block
+### Structure
 
-# Header 1
-## Header 2
-### Header 3
+The schema-files are divided into separate files, categorized as _capabilities_ and _misc_.  
+Different _capabilities_ are described in more detail [here](https://docs.high-mobility.com/api-references/) (starting after the _Getting started_ section).  
+The _misc_ JSON Schema files are commonly used types (in capability-files) and unit types.
 
-- Bulleted
-- List
+#### Capabilities
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/highmobility/auto-api-json-schema/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+[ADAS](../capabilities/adas.schema.json)
+[Charging](../capabilities/charging.schema.json)
