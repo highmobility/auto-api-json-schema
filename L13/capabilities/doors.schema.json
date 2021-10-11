@@ -3,14 +3,14 @@
     "$schema": "https://json-schema.org/draft/2019-09/schema",
     "type": "object",
     "properties": {
-        "inside_locks": { "$ref": "/schemas/property/lock" },
-        "locks": { "$ref": "/schemas/property/lock" },
-        "positions": { "$ref": "/schemas/property/door_position" },
-        "inside_locks_state": { "$ref": "/schemas/property/lock_state" },
-        "locks_state": { "$ref": "/schemas/property/lock_state" },
+        "inside_locks": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/doors.schema.json/property/lock" },
+        "locks": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/doors.schema.json/property/lock" },
+        "positions": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/doors.schema.json/property/door_position" },
+        "inside_locks_state": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/doors.schema.json/property/lock_state" },
+        "locks_state": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/doors.schema.json/property/lock_state" },
 
-        "nonce": { "$ref": "/schemas/property/nonce" },
-        "vin": { "$ref": "/schemas/property/vin" }
+        "nonce": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/doors.schema.json/property/nonce" },
+        "vin": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/doors.schema.json/property/vin" }
     },
     "additionalProperties": false,
 
@@ -18,7 +18,7 @@
 
     "$defs": {
         "property": {
-            "$id": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/doors.schema.json/property",
             "type": "object",
             "properties": {
                 "timestamp": {
@@ -26,34 +26,19 @@
                     "format": "date-time"
                 },
                 "failure": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/failure"
                 },
                 "availability": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/availability"
                 }
             },
             "minProperties": 1
         },
 
 
-        "property_bytes": {
-            "$id": "/schemas/property/bytes",
-            "$ref": "/schemas/property",
-            "properties": {
-                "data": {
-                    "type": "array",
-                    "items": {
-                        "type": "integer",
-                        "minimum": 0,
-                        "maximum": 255
-                    }
-                }
-            }
-        },
-
         "property_door_position": {
-            "$id": "/schemas/property/door_position",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/doors.schema.json/property/door_position",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/doors.schema.json/property",
             "properties": {
                 "data": {
                     "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/door_position"
@@ -62,8 +47,8 @@
         },
 
         "property_lock": {
-            "$id": "/schemas/property/lock",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/doors.schema.json/property/lock",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/doors.schema.json/property",
             "properties": {
                 "data": {
                     "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/lock"
@@ -72,8 +57,8 @@
         },
 
         "property_lock_state": {
-            "$id": "/schemas/property/lock_state",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/doors.schema.json/property/lock_state",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/doors.schema.json/property",
             "properties": {
                 "data": {
                     "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/lock_state"
@@ -82,10 +67,16 @@
         },
 
         "property_nonce": {
-            "$id": "/schemas/property/nonce",
-            "$ref": "/schemas/property/bytes",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/doors.schema.json/property/nonce",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/doors.schema.json/property/bytes",
             "properties": {
                 "data": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 255
+                    },
                     "minItems": 9,
                     "maxItems": 9
                 }
@@ -93,8 +84,8 @@
         },
 
         "property_vin": {
-            "$id": "/schemas/property/vin",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/doors.schema.json/property/vin",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/doors.schema.json/property",
             "properties": {
                 "data": {
                     "type": "string",

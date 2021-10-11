@@ -4,35 +4,35 @@
     "type": "object",
     "properties": {
         "days_to_next_service": {
-            "$ref": "/schemas/property/duration",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/maintenance.schema.json/property/duration",
             "deprecated": true
         },
         "kilometers_to_next_service": {
-            "$ref": "/schemas/property/length",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/maintenance.schema.json/property/length",
             "deprecated": true
         },
-        "cbs_reports_count": { "$ref": "/schemas/property/uinteger" },
+        "cbs_reports_count": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/maintenance.schema.json/property/uinteger" },
         "months_to_exhaust_inspection": {
-            "$ref": "/schemas/property/duration",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/maintenance.schema.json/property/duration",
             "deprecated": true
         },
-        "teleservice_availability": { "$ref": "/schemas/property/teleservice_availability" },
-        "service_distance_threshold": { "$ref": "/schemas/property/length" },
-        "service_time_threshold": { "$ref": "/schemas/property/duration" },
-        "automatic_teleservice_call_date": { "$ref": "/schemas/property/timestamp" },
-        "teleservice_battery_call_date": { "$ref": "/schemas/property/timestamp" },
-        "next_inspection_date": { "$ref": "/schemas/property/timestamp" },
-        "condition_based_services": { "$ref": "/schemas/property/condition_based_service" },
-        "brake_fluid_change_date": { "$ref": "/schemas/property/timestamp" },
-        "time_to_next_service": { "$ref": "/schemas/property/duration" },
-        "distance_to_next_service": { "$ref": "/schemas/property/length" },
-        "time_to_exhaust_inspection": { "$ref": "/schemas/property/duration" },
-        "last_ecall": { "$ref": "/schemas/property/timestamp" },
-        "distance_to_next_oil_service": { "$ref": "/schemas/property/length" },
-        "time_to_next_oil_service": { "$ref": "/schemas/property/duration" },
+        "teleservice_availability": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/maintenance.schema.json/property/teleservice_availability" },
+        "service_distance_threshold": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/maintenance.schema.json/property/length" },
+        "service_time_threshold": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/maintenance.schema.json/property/duration" },
+        "automatic_teleservice_call_date": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/maintenance.schema.json/property/timestamp" },
+        "teleservice_battery_call_date": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/maintenance.schema.json/property/timestamp" },
+        "next_inspection_date": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/maintenance.schema.json/property/timestamp" },
+        "condition_based_services": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/maintenance.schema.json/property/condition_based_service" },
+        "brake_fluid_change_date": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/maintenance.schema.json/property/timestamp" },
+        "time_to_next_service": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/maintenance.schema.json/property/duration" },
+        "distance_to_next_service": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/maintenance.schema.json/property/length" },
+        "time_to_exhaust_inspection": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/maintenance.schema.json/property/duration" },
+        "last_ecall": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/maintenance.schema.json/property/timestamp" },
+        "distance_to_next_oil_service": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/maintenance.schema.json/property/length" },
+        "time_to_next_oil_service": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/maintenance.schema.json/property/duration" },
 
-        "nonce": { "$ref": "/schemas/property/nonce" },
-        "vin": { "$ref": "/schemas/property/vin" }
+        "nonce": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/maintenance.schema.json/property/nonce" },
+        "vin": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/maintenance.schema.json/property/vin" }
     },
     "additionalProperties": false,
 
@@ -40,7 +40,7 @@
 
     "$defs": {
         "property": {
-            "$id": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/maintenance.schema.json/property",
             "type": "object",
             "properties": {
                 "timestamp": {
@@ -48,34 +48,19 @@
                     "format": "date-time"
                 },
                 "failure": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/failure"
                 },
                 "availability": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/availability"
                 }
             },
             "minProperties": 1
         },
 
 
-        "property_bytes": {
-            "$id": "/schemas/property/bytes",
-            "$ref": "/schemas/property",
-            "properties": {
-                "data": {
-                    "type": "array",
-                    "items": {
-                        "type": "integer",
-                        "minimum": 0,
-                        "maximum": 255
-                    }
-                }
-            }
-        },
-
         "property_condition_based_service": {
-            "$id": "/schemas/property/condition_based_service",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/maintenance.schema.json/property/condition_based_service",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/maintenance.schema.json/property",
             "properties": {
                 "data": {
                     "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/condition_based_service"
@@ -84,8 +69,8 @@
         },
 
         "property_duration": {
-            "$id": "/schemas/property/duration",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/maintenance.schema.json/property/duration",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/maintenance.schema.json/property",
             "properties": {
                 "data": {
                     "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json#/$defs/duration"
@@ -94,8 +79,8 @@
         },
 
         "property_length": {
-            "$id": "/schemas/property/length",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/maintenance.schema.json/property/length",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/maintenance.schema.json/property",
             "properties": {
                 "data": {
                     "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json#/$defs/length"
@@ -104,10 +89,16 @@
         },
 
         "property_nonce": {
-            "$id": "/schemas/property/nonce",
-            "$ref": "/schemas/property/bytes",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/maintenance.schema.json/property/nonce",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/maintenance.schema.json/property/bytes",
             "properties": {
                 "data": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 255
+                    },
                     "minItems": 9,
                     "maxItems": 9
                 }
@@ -115,8 +106,8 @@
         },
 
         "property_teleservice_availability": {
-            "$id": "/schemas/property/teleservice_availability",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/maintenance.schema.json/property/teleservice_availability",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/maintenance.schema.json/property",
             "properties": {
                 "data": {
                     "type": "string",
@@ -126,8 +117,8 @@
         },
 
         "property_timestamp": {
-            "$id": "/schemas/property/timestamp",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/maintenance.schema.json/property/timestamp",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/maintenance.schema.json/property",
             "properties": {
                 "data": {
                     "type": "string",
@@ -137,8 +128,8 @@
         },
 
         "property_uinteger": {
-            "$id": "/schemas/property/uinteger",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/maintenance.schema.json/property/uinteger",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/maintenance.schema.json/property",
             "properties": {
                 "data": {
                     "type": "integer",
@@ -149,8 +140,8 @@
         },
 
         "property_vin": {
-            "$id": "/schemas/property/vin",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/maintenance.schema.json/property/vin",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/maintenance.schema.json/property",
             "properties": {
                 "data": {
                     "type": "string",

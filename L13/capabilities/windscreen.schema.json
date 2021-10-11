@@ -3,17 +3,17 @@
     "$schema": "https://json-schema.org/draft/2019-09/schema",
     "type": "object",
     "properties": {
-        "wipers_status": { "$ref": "/schemas/property/wipers_status" },
-        "wipers_intensity": { "$ref": "/schemas/property/wipers_intensity" },
-        "windscreen_damage": { "$ref": "/schemas/property/windscreen_damage" },
-        "windscreen_zone_matrix": { "$ref": "/schemas/property/zone" },
-        "windscreen_damage_zone": { "$ref": "/schemas/property/zone" },
-        "windscreen_needs_replacement": { "$ref": "/schemas/property/windscreen_needs_replacement" },
-        "windscreen_damage_confidence": { "$ref": "/schemas/property/percentage" },
-        "windscreen_damage_detection_time": { "$ref": "/schemas/property/timestamp" },
+        "wipers_status": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/windscreen.schema.json/property/wipers_status" },
+        "wipers_intensity": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/windscreen.schema.json/property/wipers_intensity" },
+        "windscreen_damage": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/windscreen.schema.json/property/windscreen_damage" },
+        "windscreen_zone_matrix": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/windscreen.schema.json/property/zone" },
+        "windscreen_damage_zone": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/windscreen.schema.json/property/zone" },
+        "windscreen_needs_replacement": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/windscreen.schema.json/property/windscreen_needs_replacement" },
+        "windscreen_damage_confidence": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/windscreen.schema.json/property/percentage" },
+        "windscreen_damage_detection_time": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/windscreen.schema.json/property/timestamp" },
 
-        "nonce": { "$ref": "/schemas/property/nonce" },
-        "vin": { "$ref": "/schemas/property/vin" }
+        "nonce": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/windscreen.schema.json/property/nonce" },
+        "vin": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/windscreen.schema.json/property/vin" }
     },
     "additionalProperties": false,
 
@@ -21,7 +21,7 @@
 
     "$defs": {
         "property": {
-            "$id": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/windscreen.schema.json/property",
             "type": "object",
             "properties": {
                 "timestamp": {
@@ -29,19 +29,19 @@
                     "format": "date-time"
                 },
                 "failure": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/failure"
                 },
                 "availability": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/availability"
                 }
             },
             "minProperties": 1
         },
 
 
-        "property_bytes": {
-            "$id": "/schemas/property/bytes",
-            "$ref": "/schemas/property",
+        "property_nonce": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/windscreen.schema.json/property/nonce",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/windscreen.schema.json/property/bytes",
             "properties": {
                 "data": {
                     "type": "array",
@@ -49,16 +49,7 @@
                         "type": "integer",
                         "minimum": 0,
                         "maximum": 255
-                    }
-                }
-            }
-        },
-
-        "property_nonce": {
-            "$id": "/schemas/property/nonce",
-            "$ref": "/schemas/property/bytes",
-            "properties": {
-                "data": {
+                    },
                     "minItems": 9,
                     "maxItems": 9
                 }
@@ -66,8 +57,8 @@
         },
 
         "property_percentage": {
-            "$id": "/schemas/property/percentage",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/windscreen.schema.json/property/percentage",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/windscreen.schema.json/property",
             "properties": {
                 "data": {
                     "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/percentage"
@@ -76,8 +67,8 @@
         },
 
         "property_timestamp": {
-            "$id": "/schemas/property/timestamp",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/windscreen.schema.json/property/timestamp",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/windscreen.schema.json/property",
             "properties": {
                 "data": {
                     "type": "string",
@@ -87,8 +78,8 @@
         },
 
         "property_vin": {
-            "$id": "/schemas/property/vin",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/windscreen.schema.json/property/vin",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/windscreen.schema.json/property",
             "properties": {
                 "data": {
                     "type": "string",
@@ -99,8 +90,8 @@
         },
 
         "property_windscreen_damage": {
-            "$id": "/schemas/property/windscreen_damage",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/windscreen.schema.json/property/windscreen_damage",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/windscreen.schema.json/property",
             "properties": {
                 "data": {
                     "type": "string",
@@ -110,8 +101,8 @@
         },
 
         "property_windscreen_needs_replacement": {
-            "$id": "/schemas/property/windscreen_needs_replacement",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/windscreen.schema.json/property/windscreen_needs_replacement",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/windscreen.schema.json/property",
             "properties": {
                 "data": {
                     "type": "string",
@@ -121,8 +112,8 @@
         },
 
         "property_wipers_intensity": {
-            "$id": "/schemas/property/wipers_intensity",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/windscreen.schema.json/property/wipers_intensity",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/windscreen.schema.json/property",
             "properties": {
                 "data": {
                     "type": "string",
@@ -132,8 +123,8 @@
         },
 
         "property_wipers_status": {
-            "$id": "/schemas/property/wipers_status",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/windscreen.schema.json/property/wipers_status",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/windscreen.schema.json/property",
             "properties": {
                 "data": {
                     "type": "string",
@@ -143,8 +134,8 @@
         },
 
         "property_zone": {
-            "$id": "/schemas/property/zone",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/windscreen.schema.json/property/zone",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/windscreen.schema.json/property",
             "properties": {
                 "data": {
                     "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/zone"

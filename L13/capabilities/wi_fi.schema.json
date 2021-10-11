@@ -3,13 +3,13 @@
     "$schema": "https://json-schema.org/draft/2019-09/schema",
     "type": "object",
     "properties": {
-        "status": { "$ref": "/schemas/property/enabled_state" },
-        "network_connected": { "$ref": "/schemas/property/connection_state" },
-        "network_ssid": { "$ref": "/schemas/property/string" },
-        "network_security": { "$ref": "/schemas/property/network_security" },
+        "status": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/wi_fi.schema.json/property/enabled_state" },
+        "network_connected": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/wi_fi.schema.json/property/connection_state" },
+        "network_ssid": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/wi_fi.schema.json/property/string" },
+        "network_security": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/wi_fi.schema.json/property/network_security" },
 
-        "nonce": { "$ref": "/schemas/property/nonce" },
-        "vin": { "$ref": "/schemas/property/vin" }
+        "nonce": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/wi_fi.schema.json/property/nonce" },
+        "vin": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/wi_fi.schema.json/property/vin" }
     },
     "additionalProperties": false,
 
@@ -17,7 +17,7 @@
 
     "$defs": {
         "property": {
-            "$id": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/wi_fi.schema.json/property",
             "type": "object",
             "properties": {
                 "timestamp": {
@@ -25,34 +25,19 @@
                     "format": "date-time"
                 },
                 "failure": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/failure"
                 },
                 "availability": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/availability"
                 }
             },
             "minProperties": 1
         },
 
 
-        "property_bytes": {
-            "$id": "/schemas/property/bytes",
-            "$ref": "/schemas/property",
-            "properties": {
-                "data": {
-                    "type": "array",
-                    "items": {
-                        "type": "integer",
-                        "minimum": 0,
-                        "maximum": 255
-                    }
-                }
-            }
-        },
-
         "property_connection_state": {
-            "$id": "/schemas/property/connection_state",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/wi_fi.schema.json/property/connection_state",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/wi_fi.schema.json/property",
             "properties": {
                 "data": {
                     "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/connection_state"
@@ -61,8 +46,8 @@
         },
 
         "property_enabled_state": {
-            "$id": "/schemas/property/enabled_state",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/wi_fi.schema.json/property/enabled_state",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/wi_fi.schema.json/property",
             "properties": {
                 "data": {
                     "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/enabled_state"
@@ -71,8 +56,8 @@
         },
 
         "property_network_security": {
-            "$id": "/schemas/property/network_security",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/wi_fi.schema.json/property/network_security",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/wi_fi.schema.json/property",
             "properties": {
                 "data": {
                     "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/network_security"
@@ -81,10 +66,16 @@
         },
 
         "property_nonce": {
-            "$id": "/schemas/property/nonce",
-            "$ref": "/schemas/property/bytes",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/wi_fi.schema.json/property/nonce",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/wi_fi.schema.json/property/bytes",
             "properties": {
                 "data": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 255
+                    },
                     "minItems": 9,
                     "maxItems": 9
                 }
@@ -92,8 +83,8 @@
         },
 
         "property_string": {
-            "$id": "/schemas/property/string",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/wi_fi.schema.json/property/string",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/wi_fi.schema.json/property",
             "properties": {
                 "data": {
                     "type": "string"
@@ -102,8 +93,8 @@
         },
 
         "property_vin": {
-            "$id": "/schemas/property/vin",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/wi_fi.schema.json/property/vin",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/wi_fi.schema.json/property",
             "properties": {
                 "data": {
                     "type": "string",

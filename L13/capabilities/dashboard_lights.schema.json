@@ -3,11 +3,11 @@
     "$schema": "https://json-schema.org/draft/2019-09/schema",
     "type": "object",
     "properties": {
-        "dashboard_lights": { "$ref": "/schemas/property/dashboard_light" },
-        "bulb_failures": { "$ref": "/schemas/property/bulb_failures" },
+        "dashboard_lights": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/dashboard_lights.schema.json/property/dashboard_light" },
+        "bulb_failures": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/dashboard_lights.schema.json/property/bulb_failures" },
 
-        "nonce": { "$ref": "/schemas/property/nonce" },
-        "vin": { "$ref": "/schemas/property/vin" }
+        "nonce": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/dashboard_lights.schema.json/property/nonce" },
+        "vin": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/dashboard_lights.schema.json/property/vin" }
     },
     "additionalProperties": false,
 
@@ -15,7 +15,7 @@
 
     "$defs": {
         "property": {
-            "$id": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/dashboard_lights.schema.json/property",
             "type": "object",
             "properties": {
                 "timestamp": {
@@ -23,10 +23,10 @@
                     "format": "date-time"
                 },
                 "failure": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/failure"
                 },
                 "availability": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/availability"
                 }
             },
             "minProperties": 1
@@ -34,8 +34,8 @@
 
 
         "property_bulb_failures": {
-            "$id": "/schemas/property/bulb_failures",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/dashboard_lights.schema.json/property/bulb_failures",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/dashboard_lights.schema.json/property",
             "properties": {
                 "data": {
                     "type": "string",
@@ -44,24 +44,9 @@
             }
         },
 
-        "property_bytes": {
-            "$id": "/schemas/property/bytes",
-            "$ref": "/schemas/property",
-            "properties": {
-                "data": {
-                    "type": "array",
-                    "items": {
-                        "type": "integer",
-                        "minimum": 0,
-                        "maximum": 255
-                    }
-                }
-            }
-        },
-
         "property_dashboard_light": {
-            "$id": "/schemas/property/dashboard_light",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/dashboard_lights.schema.json/property/dashboard_light",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/dashboard_lights.schema.json/property",
             "properties": {
                 "data": {
                     "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/dashboard_light"
@@ -70,10 +55,16 @@
         },
 
         "property_nonce": {
-            "$id": "/schemas/property/nonce",
-            "$ref": "/schemas/property/bytes",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/dashboard_lights.schema.json/property/nonce",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/dashboard_lights.schema.json/property/bytes",
             "properties": {
                 "data": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 255
+                    },
                     "minItems": 9,
                     "maxItems": 9
                 }
@@ -81,8 +72,8 @@
         },
 
         "property_vin": {
-            "$id": "/schemas/property/vin",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/dashboard_lights.schema.json/property/vin",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/dashboard_lights.schema.json/property",
             "properties": {
                 "data": {
                     "type": "string",

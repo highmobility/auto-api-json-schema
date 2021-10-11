@@ -4,17 +4,17 @@
     "type": "object",
     "properties": {
         "status": {
-            "$ref": "/schemas/property/ignition_state",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/ignition.schema.json/property/ignition_state",
             "deprecated": true
         },
         "accessories_status": {
-            "$ref": "/schemas/property/ignition_state",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/ignition.schema.json/property/ignition_state",
             "deprecated": true
         },
-        "state": { "$ref": "/schemas/property/ignition_state" },
+        "state": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/ignition.schema.json/property/ignition_state" },
 
-        "nonce": { "$ref": "/schemas/property/nonce" },
-        "vin": { "$ref": "/schemas/property/vin" }
+        "nonce": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/ignition.schema.json/property/nonce" },
+        "vin": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/ignition.schema.json/property/vin" }
     },
     "additionalProperties": false,
 
@@ -22,7 +22,7 @@
 
     "$defs": {
         "property": {
-            "$id": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/ignition.schema.json/property",
             "type": "object",
             "properties": {
                 "timestamp": {
@@ -30,34 +30,19 @@
                     "format": "date-time"
                 },
                 "failure": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/failure"
                 },
                 "availability": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/availability"
                 }
             },
             "minProperties": 1
         },
 
 
-        "property_bytes": {
-            "$id": "/schemas/property/bytes",
-            "$ref": "/schemas/property",
-            "properties": {
-                "data": {
-                    "type": "array",
-                    "items": {
-                        "type": "integer",
-                        "minimum": 0,
-                        "maximum": 255
-                    }
-                }
-            }
-        },
-
         "property_ignition_state": {
-            "$id": "/schemas/property/ignition_state",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/ignition.schema.json/property/ignition_state",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/ignition.schema.json/property",
             "properties": {
                 "data": {
                     "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/ignition_state"
@@ -66,10 +51,16 @@
         },
 
         "property_nonce": {
-            "$id": "/schemas/property/nonce",
-            "$ref": "/schemas/property/bytes",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/ignition.schema.json/property/nonce",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/ignition.schema.json/property/bytes",
             "properties": {
                 "data": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 255
+                    },
                     "minItems": 9,
                     "maxItems": 9
                 }
@@ -77,8 +68,8 @@
         },
 
         "property_vin": {
-            "$id": "/schemas/property/vin",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/ignition.schema.json/property/vin",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/ignition.schema.json/property",
             "properties": {
                 "data": {
                     "type": "string",

@@ -6,26 +6,31 @@
 
     "$defs": {
         "active_state": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/active_state",
             "type": "string",
             "enum": ["inactive", "active"]
         },
 
         "active_selected_state": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/active_selected_state",
             "type": "string",
             "enum": ["inactive_selected", "inactive_not_selected", "active"]
         },
 
         "axle": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/axle",
             "type": "string",
             "enum": ["front", "rear"]
         },
 
         "connection_state": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/connection_state",
             "type": "string",
             "enum": ["disconnected", "connected"]
         },
 
         "coordinates": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/coordinates",
             "type": "object",
             "properties": {
                 "latitude": { "type": "number" },
@@ -34,41 +39,49 @@
         },
 
         "detected": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/detected",
             "type": "string",
             "enum": ["not_detected", "detected"]
         },
 
         "driving_mode": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/driving_mode",
             "type": "string",
             "enum": ["regular", "eco", "sport", "sport_plus", "ecoPlus", "comfort"]
         },
 
         "enabled_state": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/enabled_state",
             "type": "string",
             "enum": ["disabled", "enabled"]
         },
 
         "engine_type": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/engine_type",
             "type": "string",
             "enum": ["unknown", "all_electric", "combustion_engine", "phev", "hydrogen", "hydrogen_hybrid", "petrol", "electric", "gas", "diesel", "gasoline", "cng", "lpg"]
         },
 
         "fluid_level": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/fluid_level",
             "type": "string",
             "enum": ["low", "filled", "very_low", "normal", "high", "very_high"]
         },
 
         "grade": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/grade",
             "type": "string",
             "enum": ["excellent", "normal", "warning"]
         },
 
         "ignition_state": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/ignition_state",
             "type": "string",
             "enum": ["lock", "off", "accessory", "on", "start"]
         },
 
         "key_value": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/key_value",
             "type": "object",
             "properties": {
                 "key": { "type": "string" },
@@ -77,65 +90,78 @@
         },
 
         "location": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/location",
             "type": "string",
             "enum": ["front_left", "front_right", "rear_right", "rear_left"]
         },
 
         "location_longitudinal": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/location_longitudinal",
             "type": "string",
             "enum": ["front", "rear"]
         },
 
         "location_wheel": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/location_wheel",
             "type": "string",
             "enum": ["front_left", "front_right", "rear_right", "rear_left", "rear_right_outer", "rear_left_outer", "spare"]
         },
 
         "lock_state": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/lock_state",
             "type": "string",
             "enum": ["unlocked", "locked"]
         },
 
         "lock_safety": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/lock_safety",
             "type": "string",
             "enum": ["safe", "unsafe"]
         },
 
         "muted": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/muted",
             "type": "string",
             "enum": ["not_muted", "muted"]
         },
 
         "network_security": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/network_security",
             "type": "string",
             "enum": ["none", "wep", "wpa", "wpa2_personal"]
         },
 
         "on_off_state": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/on_off_state",
             "type": "string",
             "enum": ["off", "on"]
         },
 
         "percentage": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/percentage",
             "type": "number"
         },
 
         "position": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/position",
             "type": "string",
             "enum": ["closed", "open"]
         },
 
         "seat_location": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/seat_location",
             "type": "string",
             "enum": ["front_left", "front_right", "rear_right", "rear_left", "rear_center"]
         },
 
         "start_stop": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/start_stop",
             "type": "string",
             "enum": ["start", "stop"]
         },
 
         "supported_capability": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/supported_capability",
             "type": "object",
             "properties": {
                 "capability_id": { "type": "integer" },
@@ -147,6 +173,7 @@
         },
 
         "time": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/time",
             "type": "object",
             "properties": {
                 "hour": { "type": "integer" },
@@ -155,16 +182,19 @@
         },
 
         "weekday": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/weekday",
             "type": "string",
             "enum": ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday", "automatic"]
         },
 
         "window_location": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/window_location",
             "type": "string",
             "enum": ["front_left", "front_right", "rear_right", "rear_left", "hatch"]
         },
 
         "zone": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/zone",
             "type": "object",
             "properties": {
                 "horizontal": { "type": "integer" },
@@ -173,6 +203,7 @@
         },
 
         "acceleration": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/acceleration",
             "type": "object",
             "properties": {
                 "direction": {
@@ -184,6 +215,7 @@
         },
 
         "action_item": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/action_item",
             "type": "object",
             "properties": {
                 "id": { "type": "integer" },
@@ -192,6 +224,7 @@
         },
 
         "address_component": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/address_component",
             "type": "object",
             "properties": {
                 "type": {
@@ -203,6 +236,7 @@
         },
 
         "availability": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/availability",
             "type": "object",
             "properties": {
                 "update_rate": {
@@ -218,14 +252,16 @@
         },
 
         "brake_torque_vectoring": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/brake_torque_vectoring",
             "type": "object",
             "properties": {
-                "axle": { "$ref": "#/$defs/axle" },
-                "state": { "$ref": "#/$defs/state" }
+                "axle": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/axle" },
+                "state": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/state" }
             }
         },
 
         "charging_cost": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/charging_cost",
             "type": "object",
             "properties": {
                 "currency": { "type": "string" },
@@ -236,6 +272,7 @@
         },
 
         "charging_location": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/charging_location",
             "type": "object",
             "properties": {
                 "municipality": { "type": "string" },
@@ -245,6 +282,7 @@
         },
 
         "charging_point": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/charging_point",
             "type": "object",
             "properties": {
                 "city": { "type": "string" },
@@ -255,6 +293,7 @@
         },
 
         "check_control_message": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/check_control_message",
             "type": "object",
             "properties": {
                 "id": { "type": "integer" },
@@ -265,6 +304,7 @@
         },
 
         "condition_based_service": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/condition_based_service",
             "type": "object",
             "properties": {
                 "year": { "type": "integer" },
@@ -280,6 +320,7 @@
         },
 
         "confirmed_trouble_code": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/confirmed_trouble_code",
             "type": "object",
             "properties": {
                 "id": { "type": "string" },
@@ -290,6 +331,7 @@
         },
 
         "crash_incident": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/crash_incident",
             "type": "object",
             "properties": {
                 "location": {
@@ -308,28 +350,31 @@
         },
 
         "dashboard_light": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/dashboard_light",
             "type": "object",
             "properties": {
                 "name": {
                     "type": "string",
                     "enum": ["high_beam", "low_beam", "hazard_warning", "brake_failure", "hatch_open", "fuel_level", "engine_coolant_temperature", "battery_charging_condition", "engine_oil", "position_lights", "front_fog_light", "rear_fog_light", "park_heating", "engine_indicator", "service_call", "transmission_fluid_temperature", "transmission_failure", "anti_lock_brake_failure", "worn_brake_linings", "windscreen_washer_fluid", "tire_failure", "engine_oil_level", "engine_coolant_level", "steering_failure", "esc_indication", "brake_lights", "adblue_level", "fuel_filter_diff_pressure", "seat_belt", "advanced_braking", "acc", "trailer_connected", "airbag", "esc_switched_off", "lane_departure_warning_off", "air_filter_minder", "air_suspension_ride_control_fault", "all_wheel_drive_disabled", "anti_theft", "blind_spot_detection", "charge_system_fault", "check_fuel_cap", "check_fuel_fill_inlet", "check_fuel_filter", "dc_temp_warning", "dc_warning_status", "diesel_engine_idle_shutdown", "diesel_engine_warning", "diesel_exhaust_fluid_system_fault", "diesel_exhaust_over_temp", "diesel_exhaust_fluid_quality", "diesel_filter_regeneration", "diesel_particulate_filter", "diesel_pre_heat", "electric_trailer_brake_connection", "ev_battery_cell_max_volt_warning", "ev_battery_cell_min_volt_warning", "ev_battery_charge_energy_storage_warning", "ev_battery_high_level_warning", "ev_battery_high_temperature_warning", "ev_battery_insulation_resist_warning", "ev_battery_jump_level_warning", "ev_battery_low_level_warning", "ev_battery_max_volt_veh_energy_warning", "ev_battery_min_volt_veh_energy_warning", "ev_battery_over_charge_warning", "ev_battery_poor_cell_warning", "ev_battery_temp_diff_warning", "forward_collision_warning", "fuel_door_open", "hill_descent_control_fault", "hill_start_assist_warning", "hv_interlocking_status_warning", "lighting_system_failure", "malfunction_indicator", "motor_controller_temp_warning", "park_aid_malfunction", "passive_entry_passive_start", "powertrain_malfunction", "restraints_indicator_warning", "start_stop_engine_warning", "traction_control_disabled", "traction_control_active", "traction_motor_temp_warning", "tire_pressure_monitor_system_warning", "water_in_fuel", "tire_warning_front_right", "tire_warning_front_left", "tire_warning_rear_right", "tire_warning_rear_left", "tire_warning_system_error", "battery_low_warning", "brake_fluid_warning", "active_hood_fault", "active_spoiler_fault", "adjust_tire_pressure", "steering_lock_alert", "anti_pollution_failure_engine_start_impossible", "anti_pollution_system_failure", "anti_reverse_system_failing", "auto_parking_brake", "automatic_braking_deactive", "automatic_braking_system_fault", "automatic_lights_settings_failure", "keyfob_battery_alarm", "trunk_open", "check_reversing_lamp", "crossing_line_system_alert_failure", "dipped_beam_headlamps_front_left_failure", "dipped_beam_headlamps_front_right_failure", "directional_headlamps_failure", "directional_light_failure", "dsg_failing", "electric_mode_not_available", "electronic_lock_failure", "engine_control_system_failure", "engine_oil_pressure_alert", "esp_failure", "excessive_oil_temperature", "tire_front_left_flat", "tire_front_right_flat", "tire_rear_left_flat", "tire_rear_right_flat", "fog_light_front_left_failure", "fog_light_front_right_failure", "fog_light_rear_left_failure", "fog_light_rear_right_failure", "fog_light_front_fault", "door_front_left_open", "door_front_left_open_high_speed", "tire_front_left_not_monitored", "door_front_right_open", "door_front_right_open_high_speed", "tire_front_right_not_monitored", "headlights_left_failure", "headlights_right_failure", "hybrid_system_fault", "hybrid_system_fault_repaired_vehicle", "hydraulic_pressure_or_brake_fuild_insufficient", "lane_departure_fault", "limited_visibility_aids_camera", "tire_pressure_low", "maintenance_date_exceeded", "maintenance_odometer_exceeded", "other_failing_system", "parking_brake_control_failing", "parking_space_measuring_system_failure", "place_gear_to_parking", "power_steering_assitance_failure", "power_steering_failure", "preheating_deactivated_battery_too_low", "preheating_deactivated_fuel_level_too_low", "preheating_deactivated_battery_set_the_clock", "fog_light_rear_fault", "door_rear_left_open", "door_rear_left_open_high_speed", "tire_rear_left_not_monitored", "door_rear_right_open", "door_rear_right_open_high_speed", "tire_rear_right_not_monitored", "screen_rear_open", "retractable_roof_mechanism_fault", "reverse_light_left_failure", "reverse_light_right_failure", "risk_of_ice", "roof_operation_impossible_apply_parking_break", "roof_operation_impossible_apply_start_engine", "roof_operation_impossible_temperature_too_high", "seatbelt_passenger_front_right_unbuckled", "seatbelt_passenger_rear_left_unbuckled", "seatbelt_passenger_rear_center_unbuckled", "seatbelt_passenger_rear_right_unbuckled", "battery_secondary_low", "shock_sensor_failing", "side_lights_front_left_failure", "side_lights_front_right_failure", "side_lights_rear_left_failure", "side_lights_rear_right_failure", "spare_wheel_fitter_driving_aids_deactivated", "speed_control_failure", "stop_light_left_failure", "stop_light_right_failure", "suspension_failure", "suspension_failure_reduce_speed", "suspension_fault_limited_to_90kmh", "tire_pressure_sensor_failure", "trunk_open_high_speed", "trunk_window_open", "turn_signal_front_left_failure", "turn_signal_front_right_failure", "turn_signal_rear_left_failure", "turn_signal_rear_right_failure", "tire_under_inflation", "wheel_pressure_fault", "oil_change_warning", "inspection_warning"]
                 },
-                "state": { "$ref": "#/$defs/state" }
+                "state": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/state" }
             }
         },
 
         "departure_time": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/departure_time",
             "type": "object",
             "properties": {
-                "state": { "$ref": "#/$defs/state" },
+                "state": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/state" },
                 "time": {
                     "type": "object",
-                    "$ref": "#/$defs/time"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/time"
                 }
             }
         },
 
         "diesel_exhaust_filter_status": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/diesel_exhaust_filter_status",
             "type": "object",
             "properties": {
                 "status": {
@@ -348,6 +393,7 @@
         },
 
         "distance_over_time": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/distance_over_time",
             "type": "object",
             "properties": {
                 "distance": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json#/$defs/length" },
@@ -356,17 +402,19 @@
         },
 
         "door_position": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/door_position",
             "type": "object",
             "properties": {
                 "location": {
                     "type": "string",
                     "enum": ["front_left", "front_right", "rear_right", "rear_left", "all"]
                 },
-                "position": { "$ref": "#/$defs/position" }
+                "position": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/position" }
             }
         },
 
         "driver_card_present": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/driver_card_present",
             "type": "object",
             "properties": {
                 "driver_number": { "type": "integer" },
@@ -378,6 +426,7 @@
         },
 
         "driver_time_state": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/driver_time_state",
             "type": "object",
             "properties": {
                 "driver_number": { "type": "integer" },
@@ -389,6 +438,7 @@
         },
 
         "driver_working_state": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/driver_working_state",
             "type": "object",
             "properties": {
                 "driver_number": { "type": "integer" },
@@ -400,22 +450,25 @@
         },
 
         "driving_mode_activation_period": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/driving_mode_activation_period",
             "type": "object",
             "properties": {
-                "driving_mode": { "$ref": "#/$defs/driving_mode" },
+                "driving_mode": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/driving_mode" },
                 "period": { "type": "number" }
             }
         },
 
         "driving_mode_energy_consumption": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/driving_mode_energy_consumption",
             "type": "object",
             "properties": {
-                "driving_mode": { "$ref": "#/$defs/driving_mode" },
+                "driving_mode": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/driving_mode" },
                 "consumption": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json#/$defs/energy" }
             }
         },
 
         "eco_driving_threshold": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/eco_driving_threshold",
             "type": "object",
             "properties": {
                 "type": {
@@ -427,6 +480,7 @@
         },
 
         "failure": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/failure",
             "type": "object",
             "properties": {
                 "reason": {
@@ -438,6 +492,7 @@
         },
 
         "hmkit_version": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/hmkit_version",
             "type": "object",
             "properties": {
                 "major": { "type": "integer" },
@@ -447,72 +502,80 @@
         },
 
         "hvac_weekday_starting_time": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/hvac_weekday_starting_time",
             "type": "object",
             "properties": {
-                "weekday": { "$ref": "#/$defs/weekday" },
+                "weekday": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/weekday" },
                 "time": {
                     "type": "object",
-                    "$ref": "#/$defs/time"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/time"
                 }
             }
         },
 
         "lane_keep_assist_state": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/lane_keep_assist_state",
             "type": "object",
             "properties": {
                 "location": {
                     "type": "string",
                     "enum": ["left", "right"]
                 },
-                "state": { "$ref": "#/$defs/state" }
+                "state": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/state" }
             }
         },
 
         "light": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/light",
             "type": "object",
             "properties": {
-                "location": { "$ref": "#/$defs/location" },
-                "state": { "$ref": "#/$defs/state" }
+                "location": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/location" },
+                "state": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/state" }
             }
         },
 
         "lock": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/lock",
             "type": "object",
             "properties": {
-                "location": { "$ref": "#/$defs/location" },
-                "lock_state": { "$ref": "#/$defs/lock_state" }
+                "location": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/location" },
+                "lock_state": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/lock_state" }
             }
         },
 
         "oem_trouble_code_value": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/oem_trouble_code_value",
             "type": "object",
             "properties": {
                 "id": { "type": "string" },
                 "key_value": {
                     "type": "object",
-                    "$ref": "#/$defs/key_value"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/key_value"
                 }
             }
         },
 
         "park_assist": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/park_assist",
             "type": "object",
             "properties": {
-                "location": { "$ref": "#/$defs/location" },
-                "alarm": { "$ref": "#/$defs/alarm" },
-                "muted": { "$ref": "#/$defs/muted" }
+                "location": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/location" },
+                "alarm": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/alarm" },
+                "muted": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/muted" }
             }
         },
 
         "person_detected": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/person_detected",
             "type": "object",
             "properties": {
-                "location": { "$ref": "#/$defs/location" },
-                "detected": { "$ref": "#/$defs/detected" }
+                "location": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/location" },
+                "detected": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/detected" }
             }
         },
 
         "price_tariff": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/price_tariff",
             "type": "object",
             "properties": {
                 "pricing_type": {
@@ -525,25 +588,28 @@
         },
 
         "reading_lamp": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/reading_lamp",
             "type": "object",
             "properties": {
-                "location": { "$ref": "#/$defs/location" },
-                "state": { "$ref": "#/$defs/state" }
+                "location": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/location" },
+                "state": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/state" }
             }
         },
 
         "reduction_time": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/reduction_time",
             "type": "object",
             "properties": {
-                "start_stop": { "$ref": "#/$defs/start_stop" },
+                "start_stop": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/start_stop" },
                 "time": {
                     "type": "object",
-                    "$ref": "#/$defs/time"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/time"
                 }
             }
         },
 
         "rgb_colour": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/rgb_colour",
             "type": "object",
             "properties": {
                 "red": { "type": "integer" },
@@ -553,9 +619,10 @@
         },
 
         "seatbelt_state": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/seatbelt_state",
             "type": "object",
             "properties": {
-                "location": { "$ref": "#/$defs/location" },
+                "location": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/location" },
                 "fastened_state": {
                     "type": "string",
                     "enum": ["not_fastened", "fastened"]
@@ -564,14 +631,16 @@
         },
 
         "spring_rate": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/spring_rate",
             "type": "object",
             "properties": {
-                "axle": { "$ref": "#/$defs/axle" },
+                "axle": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/axle" },
                 "spring_rate": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json#/$defs/torque" }
             }
         },
 
         "timer": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/timer",
             "type": "object",
             "properties": {
                 "timer_type": {
@@ -586,17 +655,19 @@
         },
 
         "tire_pressure": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/tire_pressure",
             "type": "object",
             "properties": {
-                "location": { "$ref": "#/$defs/location" },
+                "location": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/location" },
                 "pressure": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json#/$defs/pressure" }
             }
         },
 
         "tire_pressure_status": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/tire_pressure_status",
             "type": "object",
             "properties": {
-                "location": { "$ref": "#/$defs/location" },
+                "location": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/location" },
                 "status": {
                     "type": "string",
                     "enum": ["normal", "low", "alert"]
@@ -605,14 +676,16 @@
         },
 
         "tire_temperature": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/tire_temperature",
             "type": "object",
             "properties": {
-                "location": { "$ref": "#/$defs/location" },
+                "location": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/location" },
                 "temperature": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json#/$defs/temperature" }
             }
         },
 
         "trip_meter": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/trip_meter",
             "type": "object",
             "properties": {
                 "id": { "type": "integer" },
@@ -621,6 +694,7 @@
         },
 
         "trouble_code": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/trouble_code",
             "type": "object",
             "properties": {
                 "occurrences": { "type": "integer" },
@@ -635,36 +709,40 @@
         },
 
         "webhook": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/webhook",
             "type": "object",
             "properties": {
                 "available": {
                     "type": "string",
                     "enum": ["unavailable", "available"]
                 },
-                "event": { "$ref": "#/$defs/event" }
+                "event": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/event" }
             }
         },
 
         "wheel_rpm": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/wheel_rpm",
             "type": "object",
             "properties": {
-                "location": { "$ref": "#/$defs/location" },
+                "location": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/location" },
                 "rpm": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json#/$defs/angular_velocity" }
             }
         },
 
         "window_open_percentage": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/window_open_percentage",
             "type": "object",
             "properties": {
-                "location": { "$ref": "#/$defs/location" },
+                "location": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/location" },
                 "open_percentage": { "type": "number" }
             }
         },
 
         "window_position": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/window_position",
             "type": "object",
             "properties": {
-                "location": { "$ref": "#/$defs/location" },
+                "location": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/location" },
                 "position": {
                     "type": "string",
                     "enum": ["closed", "open", "intermediate"]
@@ -673,6 +751,7 @@
         },
 
         "event": {
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/event",
             "type": "string",
             "enum": ["ping", "trip_started", "trip_ended", "vehicle_location_changed", "authorization_changed", "tire_pressure_changed", "harsh_acceleration_triggered", "harsh_acceleration_pedal_position_triggered", "harsh_braking_triggered", "harsh_cornering_triggered", "seat_belt_triggered", "maintenance_changed", "dashboard_lights_changed", "ignition_changed", "accident_reported", "emergency_reported", "breakdown_reported", "battery_guard_warning", "engine_changed", "fleet_clearance_changed"]
         }

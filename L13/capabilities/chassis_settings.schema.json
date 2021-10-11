@@ -3,17 +3,17 @@
     "$schema": "https://json-schema.org/draft/2019-09/schema",
     "type": "object",
     "properties": {
-        "driving_mode": { "$ref": "/schemas/property/driving_mode" },
-        "sport_chrono": { "$ref": "/schemas/property/sport_chrono" },
-        "current_spring_rates": { "$ref": "/schemas/property/spring_rate" },
-        "maximum_spring_rates": { "$ref": "/schemas/property/spring_rate" },
-        "minimum_spring_rates": { "$ref": "/schemas/property/spring_rate" },
-        "current_chassis_position": { "$ref": "/schemas/property/length" },
-        "maximum_chassis_position": { "$ref": "/schemas/property/length" },
-        "minimum_chassis_position": { "$ref": "/schemas/property/length" },
+        "driving_mode": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/chassis_settings.schema.json/property/driving_mode" },
+        "sport_chrono": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/chassis_settings.schema.json/property/sport_chrono" },
+        "current_spring_rates": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/chassis_settings.schema.json/property/spring_rate" },
+        "maximum_spring_rates": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/chassis_settings.schema.json/property/spring_rate" },
+        "minimum_spring_rates": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/chassis_settings.schema.json/property/spring_rate" },
+        "current_chassis_position": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/chassis_settings.schema.json/property/length" },
+        "maximum_chassis_position": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/chassis_settings.schema.json/property/length" },
+        "minimum_chassis_position": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/chassis_settings.schema.json/property/length" },
 
-        "nonce": { "$ref": "/schemas/property/nonce" },
-        "vin": { "$ref": "/schemas/property/vin" }
+        "nonce": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/chassis_settings.schema.json/property/nonce" },
+        "vin": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/chassis_settings.schema.json/property/vin" }
     },
     "additionalProperties": false,
 
@@ -21,7 +21,7 @@
 
     "$defs": {
         "property": {
-            "$id": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/chassis_settings.schema.json/property",
             "type": "object",
             "properties": {
                 "timestamp": {
@@ -29,34 +29,19 @@
                     "format": "date-time"
                 },
                 "failure": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/failure"
                 },
                 "availability": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/availability"
                 }
             },
             "minProperties": 1
         },
 
 
-        "property_bytes": {
-            "$id": "/schemas/property/bytes",
-            "$ref": "/schemas/property",
-            "properties": {
-                "data": {
-                    "type": "array",
-                    "items": {
-                        "type": "integer",
-                        "minimum": 0,
-                        "maximum": 255
-                    }
-                }
-            }
-        },
-
         "property_driving_mode": {
-            "$id": "/schemas/property/driving_mode",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/chassis_settings.schema.json/property/driving_mode",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/chassis_settings.schema.json/property",
             "properties": {
                 "data": {
                     "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/driving_mode"
@@ -65,8 +50,8 @@
         },
 
         "property_length": {
-            "$id": "/schemas/property/length",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/chassis_settings.schema.json/property/length",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/chassis_settings.schema.json/property",
             "properties": {
                 "data": {
                     "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json#/$defs/length"
@@ -75,10 +60,16 @@
         },
 
         "property_nonce": {
-            "$id": "/schemas/property/nonce",
-            "$ref": "/schemas/property/bytes",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/chassis_settings.schema.json/property/nonce",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/chassis_settings.schema.json/property/bytes",
             "properties": {
                 "data": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 255
+                    },
                     "minItems": 9,
                     "maxItems": 9
                 }
@@ -86,8 +77,8 @@
         },
 
         "property_sport_chrono": {
-            "$id": "/schemas/property/sport_chrono",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/chassis_settings.schema.json/property/sport_chrono",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/chassis_settings.schema.json/property",
             "properties": {
                 "data": {
                     "type": "string",
@@ -97,8 +88,8 @@
         },
 
         "property_spring_rate": {
-            "$id": "/schemas/property/spring_rate",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/chassis_settings.schema.json/property/spring_rate",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/chassis_settings.schema.json/property",
             "properties": {
                 "data": {
                     "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/spring_rate"
@@ -107,8 +98,8 @@
         },
 
         "property_vin": {
-            "$id": "/schemas/property/vin",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/chassis_settings.schema.json/property/vin",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/chassis_settings.schema.json/property",
             "properties": {
                 "data": {
                     "type": "string",

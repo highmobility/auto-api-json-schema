@@ -3,16 +3,16 @@
     "$schema": "https://json-schema.org/draft/2019-09/schema",
     "type": "object",
     "properties": {
-        "drivers_working_states": { "$ref": "/schemas/property/driver_working_state" },
-        "drivers_time_states": { "$ref": "/schemas/property/driver_time_state" },
-        "drivers_cards_present": { "$ref": "/schemas/property/driver_card_present" },
-        "vehicle_motion": { "$ref": "/schemas/property/detected" },
-        "vehicle_overspeed": { "$ref": "/schemas/property/vehicle_overspeed" },
-        "vehicle_direction": { "$ref": "/schemas/property/vehicle_direction" },
-        "vehicle_speed": { "$ref": "/schemas/property/speed" },
+        "drivers_working_states": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/tachograph.schema.json/property/driver_working_state" },
+        "drivers_time_states": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/tachograph.schema.json/property/driver_time_state" },
+        "drivers_cards_present": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/tachograph.schema.json/property/driver_card_present" },
+        "vehicle_motion": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/tachograph.schema.json/property/detected" },
+        "vehicle_overspeed": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/tachograph.schema.json/property/vehicle_overspeed" },
+        "vehicle_direction": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/tachograph.schema.json/property/vehicle_direction" },
+        "vehicle_speed": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/tachograph.schema.json/property/speed" },
 
-        "nonce": { "$ref": "/schemas/property/nonce" },
-        "vin": { "$ref": "/schemas/property/vin" }
+        "nonce": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/tachograph.schema.json/property/nonce" },
+        "vin": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/tachograph.schema.json/property/vin" }
     },
     "additionalProperties": false,
 
@@ -20,7 +20,7 @@
 
     "$defs": {
         "property": {
-            "$id": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/tachograph.schema.json/property",
             "type": "object",
             "properties": {
                 "timestamp": {
@@ -28,34 +28,19 @@
                     "format": "date-time"
                 },
                 "failure": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/failure"
                 },
                 "availability": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/availability"
                 }
             },
             "minProperties": 1
         },
 
 
-        "property_bytes": {
-            "$id": "/schemas/property/bytes",
-            "$ref": "/schemas/property",
-            "properties": {
-                "data": {
-                    "type": "array",
-                    "items": {
-                        "type": "integer",
-                        "minimum": 0,
-                        "maximum": 255
-                    }
-                }
-            }
-        },
-
         "property_detected": {
-            "$id": "/schemas/property/detected",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/tachograph.schema.json/property/detected",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/tachograph.schema.json/property",
             "properties": {
                 "data": {
                     "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/detected"
@@ -64,8 +49,8 @@
         },
 
         "property_driver_card_present": {
-            "$id": "/schemas/property/driver_card_present",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/tachograph.schema.json/property/driver_card_present",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/tachograph.schema.json/property",
             "properties": {
                 "data": {
                     "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/driver_card_present"
@@ -74,8 +59,8 @@
         },
 
         "property_driver_time_state": {
-            "$id": "/schemas/property/driver_time_state",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/tachograph.schema.json/property/driver_time_state",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/tachograph.schema.json/property",
             "properties": {
                 "data": {
                     "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/driver_time_state"
@@ -84,8 +69,8 @@
         },
 
         "property_driver_working_state": {
-            "$id": "/schemas/property/driver_working_state",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/tachograph.schema.json/property/driver_working_state",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/tachograph.schema.json/property",
             "properties": {
                 "data": {
                     "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/driver_working_state"
@@ -94,10 +79,16 @@
         },
 
         "property_nonce": {
-            "$id": "/schemas/property/nonce",
-            "$ref": "/schemas/property/bytes",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/tachograph.schema.json/property/nonce",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/tachograph.schema.json/property/bytes",
             "properties": {
                 "data": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 255
+                    },
                     "minItems": 9,
                     "maxItems": 9
                 }
@@ -105,8 +96,8 @@
         },
 
         "property_speed": {
-            "$id": "/schemas/property/speed",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/tachograph.schema.json/property/speed",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/tachograph.schema.json/property",
             "properties": {
                 "data": {
                     "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json#/$defs/speed"
@@ -115,8 +106,8 @@
         },
 
         "property_vehicle_direction": {
-            "$id": "/schemas/property/vehicle_direction",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/tachograph.schema.json/property/vehicle_direction",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/tachograph.schema.json/property",
             "properties": {
                 "data": {
                     "type": "string",
@@ -126,8 +117,8 @@
         },
 
         "property_vehicle_overspeed": {
-            "$id": "/schemas/property/vehicle_overspeed",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/tachograph.schema.json/property/vehicle_overspeed",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/tachograph.schema.json/property",
             "properties": {
                 "data": {
                     "type": "string",
@@ -137,8 +128,8 @@
         },
 
         "property_vin": {
-            "$id": "/schemas/property/vin",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/tachograph.schema.json/property/vin",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/tachograph.schema.json/property",
             "properties": {
                 "data": {
                     "type": "string",

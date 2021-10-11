@@ -3,15 +3,15 @@
     "$schema": "https://json-schema.org/draft/2019-09/schema",
     "type": "object",
     "properties": {
-        "dimming": { "$ref": "/schemas/property/percentage" },
-        "position": { "$ref": "/schemas/property/percentage" },
-        "convertible_roof_state": { "$ref": "/schemas/property/convertible_roof_state" },
-        "sunroof_tilt_state": { "$ref": "/schemas/property/sunroof_tilt_state" },
-        "sunroof_state": { "$ref": "/schemas/property/sunroof_state" },
-        "sunroof_rain_event": { "$ref": "/schemas/property/sunroof_rain_event" },
+        "dimming": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/rooftop_control.schema.json/property/percentage" },
+        "position": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/rooftop_control.schema.json/property/percentage" },
+        "convertible_roof_state": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/rooftop_control.schema.json/property/convertible_roof_state" },
+        "sunroof_tilt_state": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/rooftop_control.schema.json/property/sunroof_tilt_state" },
+        "sunroof_state": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/rooftop_control.schema.json/property/sunroof_state" },
+        "sunroof_rain_event": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/rooftop_control.schema.json/property/sunroof_rain_event" },
 
-        "nonce": { "$ref": "/schemas/property/nonce" },
-        "vin": { "$ref": "/schemas/property/vin" }
+        "nonce": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/rooftop_control.schema.json/property/nonce" },
+        "vin": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/rooftop_control.schema.json/property/vin" }
     },
     "additionalProperties": false,
 
@@ -19,7 +19,7 @@
 
     "$defs": {
         "property": {
-            "$id": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/rooftop_control.schema.json/property",
             "type": "object",
             "properties": {
                 "timestamp": {
@@ -27,34 +27,19 @@
                     "format": "date-time"
                 },
                 "failure": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/failure"
                 },
                 "availability": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/availability"
                 }
             },
             "minProperties": 1
         },
 
 
-        "property_bytes": {
-            "$id": "/schemas/property/bytes",
-            "$ref": "/schemas/property",
-            "properties": {
-                "data": {
-                    "type": "array",
-                    "items": {
-                        "type": "integer",
-                        "minimum": 0,
-                        "maximum": 255
-                    }
-                }
-            }
-        },
-
         "property_convertible_roof_state": {
-            "$id": "/schemas/property/convertible_roof_state",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/rooftop_control.schema.json/property/convertible_roof_state",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/rooftop_control.schema.json/property",
             "properties": {
                 "data": {
                     "type": "string",
@@ -64,10 +49,16 @@
         },
 
         "property_nonce": {
-            "$id": "/schemas/property/nonce",
-            "$ref": "/schemas/property/bytes",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/rooftop_control.schema.json/property/nonce",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/rooftop_control.schema.json/property/bytes",
             "properties": {
                 "data": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 255
+                    },
                     "minItems": 9,
                     "maxItems": 9
                 }
@@ -75,8 +66,8 @@
         },
 
         "property_percentage": {
-            "$id": "/schemas/property/percentage",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/rooftop_control.schema.json/property/percentage",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/rooftop_control.schema.json/property",
             "properties": {
                 "data": {
                     "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/percentage"
@@ -85,8 +76,8 @@
         },
 
         "property_sunroof_rain_event": {
-            "$id": "/schemas/property/sunroof_rain_event",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/rooftop_control.schema.json/property/sunroof_rain_event",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/rooftop_control.schema.json/property",
             "properties": {
                 "data": {
                     "type": "string",
@@ -96,8 +87,8 @@
         },
 
         "property_sunroof_state": {
-            "$id": "/schemas/property/sunroof_state",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/rooftop_control.schema.json/property/sunroof_state",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/rooftop_control.schema.json/property",
             "properties": {
                 "data": {
                     "type": "string",
@@ -107,8 +98,8 @@
         },
 
         "property_sunroof_tilt_state": {
-            "$id": "/schemas/property/sunroof_tilt_state",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/rooftop_control.schema.json/property/sunroof_tilt_state",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/rooftop_control.schema.json/property",
             "properties": {
                 "data": {
                     "type": "string",
@@ -118,8 +109,8 @@
         },
 
         "property_vin": {
-            "$id": "/schemas/property/vin",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/rooftop_control.schema.json/property/vin",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/rooftop_control.schema.json/property",
             "properties": {
                 "data": {
                     "type": "string",

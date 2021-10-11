@@ -4,67 +4,67 @@
     "type": "object",
     "properties": {
         "mileage": {
-            "$ref": "/schemas/property/length",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/length",
             "deprecated": true
         },
-        "engine_oil_temperature": { "$ref": "/schemas/property/temperature" },
-        "speed": { "$ref": "/schemas/property/speed" },
-        "engine_rpm": { "$ref": "/schemas/property/angular_velocity" },
-        "fuel_level": { "$ref": "/schemas/property/percentage" },
-        "estimated_range": { "$ref": "/schemas/property/length" },
-        "washer_fluid_level": { "$ref": "/schemas/property/fluid_level" },
-        "battery_voltage": { "$ref": "/schemas/property/electric_potential_difference" },
-        "adblue_level": { "$ref": "/schemas/property/percentage" },
-        "distance_since_reset": { "$ref": "/schemas/property/length" },
-        "distance_since_start": { "$ref": "/schemas/property/length" },
-        "fuel_volume": { "$ref": "/schemas/property/volume" },
-        "anti_lock_braking": { "$ref": "/schemas/property/active_state" },
-        "engine_coolant_temperature": { "$ref": "/schemas/property/temperature" },
+        "engine_oil_temperature": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/temperature" },
+        "speed": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/speed" },
+        "engine_rpm": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/angular_velocity" },
+        "fuel_level": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/percentage" },
+        "estimated_range": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/length" },
+        "washer_fluid_level": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/fluid_level" },
+        "battery_voltage": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/electric_potential_difference" },
+        "adblue_level": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/percentage" },
+        "distance_since_reset": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/length" },
+        "distance_since_start": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/length" },
+        "fuel_volume": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/volume" },
+        "anti_lock_braking": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/active_state" },
+        "engine_coolant_temperature": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/temperature" },
         "engine_total_operating_hours": {
-            "$ref": "/schemas/property/duration",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/duration",
             "deprecated": true
         },
-        "engine_total_fuel_consumption": { "$ref": "/schemas/property/volume" },
-        "brake_fluid_level": { "$ref": "/schemas/property/fluid_level" },
-        "engine_torque": { "$ref": "/schemas/property/percentage" },
-        "engine_load": { "$ref": "/schemas/property/percentage" },
-        "wheel_based_speed": { "$ref": "/schemas/property/speed" },
-        "battery_level": { "$ref": "/schemas/property/percentage" },
-        "check_control_messages": { "$ref": "/schemas/property/check_control_message" },
-        "tire_pressures": { "$ref": "/schemas/property/tire_pressure" },
-        "tire_temperatures": { "$ref": "/schemas/property/tire_temperature" },
-        "wheel_rpms": { "$ref": "/schemas/property/wheel_rpm" },
-        "trouble_codes": { "$ref": "/schemas/property/trouble_code" },
+        "engine_total_fuel_consumption": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/volume" },
+        "brake_fluid_level": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/fluid_level" },
+        "engine_torque": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/percentage" },
+        "engine_load": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/percentage" },
+        "wheel_based_speed": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/speed" },
+        "battery_level": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/percentage" },
+        "check_control_messages": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/check_control_message" },
+        "tire_pressures": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/tire_pressure" },
+        "tire_temperatures": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/tire_temperature" },
+        "wheel_rpms": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/wheel_rpm" },
+        "trouble_codes": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/trouble_code" },
         "mileage_meters": {
-            "$ref": "/schemas/property/length",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/length",
             "deprecated": true
         },
-        "odometer": { "$ref": "/schemas/property/length" },
-        "engine_total_operating_time": { "$ref": "/schemas/property/duration" },
-        "tire_pressure_statuses": { "$ref": "/schemas/property/tire_pressure_status" },
-        "brake_lining_wear_pre_warning": { "$ref": "/schemas/property/active_state" },
-        "engine_oil_life_remaining": { "$ref": "/schemas/property/percentage" },
-        "oem_trouble_code_values": { "$ref": "/schemas/property/oem_trouble_code_value" },
-        "diesel_exhaust_fluid_range": { "$ref": "/schemas/property/length" },
-        "diesel_particulate_filter_soot_level": { "$ref": "/schemas/property/percentage" },
-        "confirmed_trouble_codes": { "$ref": "/schemas/property/confirmed_trouble_code" },
-        "diesel_exhaust_filter_status": { "$ref": "/schemas/property/diesel_exhaust_filter_status" },
-        "engine_total_idle_operating_time": { "$ref": "/schemas/property/duration" },
-        "engine_oil_amount": { "$ref": "/schemas/property/volume" },
-        "engine_oil_level": { "$ref": "/schemas/property/percentage" },
-        "estimated_secondary_powertrain_range": { "$ref": "/schemas/property/length" },
-        "fuel_level_accuracy": { "$ref": "/schemas/property/fuel_level_accuracy" },
-        "tire_pressures_targets": { "$ref": "/schemas/property/tire_pressure" },
-        "tire_pressures_differences": { "$ref": "/schemas/property/tire_pressure" },
-        "backup_battery_remaining_time": { "$ref": "/schemas/property/duration" },
-        "engine_coolant_fluid_level": { "$ref": "/schemas/property/fluid_level" },
-        "engine_oil_fluid_level": { "$ref": "/schemas/property/fluid_level" },
-        "engine_oil_pressure_level": { "$ref": "/schemas/property/engine_oil_pressure_level" },
-        "engine_time_to_next_service": { "$ref": "/schemas/property/duration" },
-        "low_voltage_battery_charge_level": { "$ref": "/schemas/property/low_voltage_battery_charge_level" },
+        "odometer": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/length" },
+        "engine_total_operating_time": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/duration" },
+        "tire_pressure_statuses": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/tire_pressure_status" },
+        "brake_lining_wear_pre_warning": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/active_state" },
+        "engine_oil_life_remaining": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/percentage" },
+        "oem_trouble_code_values": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/oem_trouble_code_value" },
+        "diesel_exhaust_fluid_range": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/length" },
+        "diesel_particulate_filter_soot_level": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/percentage" },
+        "confirmed_trouble_codes": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/confirmed_trouble_code" },
+        "diesel_exhaust_filter_status": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/diesel_exhaust_filter_status" },
+        "engine_total_idle_operating_time": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/duration" },
+        "engine_oil_amount": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/volume" },
+        "engine_oil_level": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/percentage" },
+        "estimated_secondary_powertrain_range": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/length" },
+        "fuel_level_accuracy": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/fuel_level_accuracy" },
+        "tire_pressures_targets": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/tire_pressure" },
+        "tire_pressures_differences": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/tire_pressure" },
+        "backup_battery_remaining_time": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/duration" },
+        "engine_coolant_fluid_level": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/fluid_level" },
+        "engine_oil_fluid_level": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/fluid_level" },
+        "engine_oil_pressure_level": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/engine_oil_pressure_level" },
+        "engine_time_to_next_service": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/duration" },
+        "low_voltage_battery_charge_level": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/low_voltage_battery_charge_level" },
 
-        "nonce": { "$ref": "/schemas/property/nonce" },
-        "vin": { "$ref": "/schemas/property/vin" }
+        "nonce": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/nonce" },
+        "vin": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/vin" }
     },
     "additionalProperties": false,
 
@@ -72,7 +72,7 @@
 
     "$defs": {
         "property": {
-            "$id": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property",
             "type": "object",
             "properties": {
                 "timestamp": {
@@ -80,10 +80,10 @@
                     "format": "date-time"
                 },
                 "failure": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/failure"
                 },
                 "availability": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/availability"
                 }
             },
             "minProperties": 1
@@ -91,8 +91,8 @@
 
 
         "property_active_state": {
-            "$id": "/schemas/property/active_state",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/active_state",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property",
             "properties": {
                 "data": {
                     "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/active_state"
@@ -101,8 +101,8 @@
         },
 
         "property_angular_velocity": {
-            "$id": "/schemas/property/angular_velocity",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/angular_velocity",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property",
             "properties": {
                 "data": {
                     "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json#/$defs/angular_velocity"
@@ -110,24 +110,9 @@
             }
         },
 
-        "property_bytes": {
-            "$id": "/schemas/property/bytes",
-            "$ref": "/schemas/property",
-            "properties": {
-                "data": {
-                    "type": "array",
-                    "items": {
-                        "type": "integer",
-                        "minimum": 0,
-                        "maximum": 255
-                    }
-                }
-            }
-        },
-
         "property_check_control_message": {
-            "$id": "/schemas/property/check_control_message",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/check_control_message",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property",
             "properties": {
                 "data": {
                     "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/check_control_message"
@@ -136,8 +121,8 @@
         },
 
         "property_confirmed_trouble_code": {
-            "$id": "/schemas/property/confirmed_trouble_code",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/confirmed_trouble_code",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property",
             "properties": {
                 "data": {
                     "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/confirmed_trouble_code"
@@ -146,8 +131,8 @@
         },
 
         "property_diesel_exhaust_filter_status": {
-            "$id": "/schemas/property/diesel_exhaust_filter_status",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/diesel_exhaust_filter_status",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property",
             "properties": {
                 "data": {
                     "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/diesel_exhaust_filter_status"
@@ -156,8 +141,8 @@
         },
 
         "property_duration": {
-            "$id": "/schemas/property/duration",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/duration",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property",
             "properties": {
                 "data": {
                     "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json#/$defs/duration"
@@ -166,8 +151,8 @@
         },
 
         "property_electric_potential_difference": {
-            "$id": "/schemas/property/electric_potential_difference",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/electric_potential_difference",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property",
             "properties": {
                 "data": {
                     "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json#/$defs/electric_potential_difference"
@@ -176,8 +161,8 @@
         },
 
         "property_engine_oil_pressure_level": {
-            "$id": "/schemas/property/engine_oil_pressure_level",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/engine_oil_pressure_level",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property",
             "properties": {
                 "data": {
                     "type": "string",
@@ -187,8 +172,8 @@
         },
 
         "property_fluid_level": {
-            "$id": "/schemas/property/fluid_level",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/fluid_level",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property",
             "properties": {
                 "data": {
                     "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/fluid_level"
@@ -197,8 +182,8 @@
         },
 
         "property_fuel_level_accuracy": {
-            "$id": "/schemas/property/fuel_level_accuracy",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/fuel_level_accuracy",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property",
             "properties": {
                 "data": {
                     "type": "string",
@@ -208,8 +193,8 @@
         },
 
         "property_length": {
-            "$id": "/schemas/property/length",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/length",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property",
             "properties": {
                 "data": {
                     "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json#/$defs/length"
@@ -218,8 +203,8 @@
         },
 
         "property_low_voltage_battery_charge_level": {
-            "$id": "/schemas/property/low_voltage_battery_charge_level",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/low_voltage_battery_charge_level",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property",
             "properties": {
                 "data": {
                     "type": "string",
@@ -229,10 +214,16 @@
         },
 
         "property_nonce": {
-            "$id": "/schemas/property/nonce",
-            "$ref": "/schemas/property/bytes",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/nonce",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/bytes",
             "properties": {
                 "data": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 255
+                    },
                     "minItems": 9,
                     "maxItems": 9
                 }
@@ -240,8 +231,8 @@
         },
 
         "property_oem_trouble_code_value": {
-            "$id": "/schemas/property/oem_trouble_code_value",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/oem_trouble_code_value",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property",
             "properties": {
                 "data": {
                     "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/oem_trouble_code_value"
@@ -250,8 +241,8 @@
         },
 
         "property_percentage": {
-            "$id": "/schemas/property/percentage",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/percentage",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property",
             "properties": {
                 "data": {
                     "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/percentage"
@@ -260,8 +251,8 @@
         },
 
         "property_speed": {
-            "$id": "/schemas/property/speed",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/speed",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property",
             "properties": {
                 "data": {
                     "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json#/$defs/speed"
@@ -270,8 +261,8 @@
         },
 
         "property_temperature": {
-            "$id": "/schemas/property/temperature",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/temperature",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property",
             "properties": {
                 "data": {
                     "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json#/$defs/temperature"
@@ -280,8 +271,8 @@
         },
 
         "property_tire_pressure": {
-            "$id": "/schemas/property/tire_pressure",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/tire_pressure",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property",
             "properties": {
                 "data": {
                     "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/tire_pressure"
@@ -290,8 +281,8 @@
         },
 
         "property_tire_pressure_status": {
-            "$id": "/schemas/property/tire_pressure_status",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/tire_pressure_status",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property",
             "properties": {
                 "data": {
                     "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/tire_pressure_status"
@@ -300,8 +291,8 @@
         },
 
         "property_tire_temperature": {
-            "$id": "/schemas/property/tire_temperature",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/tire_temperature",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property",
             "properties": {
                 "data": {
                     "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/tire_temperature"
@@ -310,8 +301,8 @@
         },
 
         "property_trouble_code": {
-            "$id": "/schemas/property/trouble_code",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/trouble_code",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property",
             "properties": {
                 "data": {
                     "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/trouble_code"
@@ -320,8 +311,8 @@
         },
 
         "property_vin": {
-            "$id": "/schemas/property/vin",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/vin",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property",
             "properties": {
                 "data": {
                     "type": "string",
@@ -332,8 +323,8 @@
         },
 
         "property_volume": {
-            "$id": "/schemas/property/volume",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/volume",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property",
             "properties": {
                 "data": {
                     "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json#/$defs/volume"
@@ -342,8 +333,8 @@
         },
 
         "property_wheel_rpm": {
-            "$id": "/schemas/property/wheel_rpm",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property/wheel_rpm",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/diagnostics.schema.json/property",
             "properties": {
                 "data": {
                     "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/wheel_rpm"

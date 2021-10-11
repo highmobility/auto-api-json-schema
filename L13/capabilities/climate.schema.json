@@ -3,20 +3,20 @@
     "$schema": "https://json-schema.org/draft/2019-09/schema",
     "type": "object",
     "properties": {
-        "inside_temperature": { "$ref": "/schemas/property/temperature" },
-        "outside_temperature": { "$ref": "/schemas/property/temperature" },
-        "driver_temperature_setting": { "$ref": "/schemas/property/temperature" },
-        "passenger_temperature_setting": { "$ref": "/schemas/property/temperature" },
-        "hvac_state": { "$ref": "/schemas/property/active_state" },
-        "defogging_state": { "$ref": "/schemas/property/active_state" },
-        "defrosting_state": { "$ref": "/schemas/property/active_state" },
-        "ionising_state": { "$ref": "/schemas/property/active_state" },
-        "defrosting_temperature_setting": { "$ref": "/schemas/property/temperature" },
-        "hvac_weekday_starting_times": { "$ref": "/schemas/property/hvac_weekday_starting_time" },
-        "rear_temperature_setting": { "$ref": "/schemas/property/temperature" },
+        "inside_temperature": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/climate.schema.json/property/temperature" },
+        "outside_temperature": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/climate.schema.json/property/temperature" },
+        "driver_temperature_setting": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/climate.schema.json/property/temperature" },
+        "passenger_temperature_setting": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/climate.schema.json/property/temperature" },
+        "hvac_state": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/climate.schema.json/property/active_state" },
+        "defogging_state": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/climate.schema.json/property/active_state" },
+        "defrosting_state": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/climate.schema.json/property/active_state" },
+        "ionising_state": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/climate.schema.json/property/active_state" },
+        "defrosting_temperature_setting": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/climate.schema.json/property/temperature" },
+        "hvac_weekday_starting_times": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/climate.schema.json/property/hvac_weekday_starting_time" },
+        "rear_temperature_setting": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/climate.schema.json/property/temperature" },
 
-        "nonce": { "$ref": "/schemas/property/nonce" },
-        "vin": { "$ref": "/schemas/property/vin" }
+        "nonce": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/climate.schema.json/property/nonce" },
+        "vin": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/climate.schema.json/property/vin" }
     },
     "additionalProperties": false,
 
@@ -24,7 +24,7 @@
 
     "$defs": {
         "property": {
-            "$id": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/climate.schema.json/property",
             "type": "object",
             "properties": {
                 "timestamp": {
@@ -32,10 +32,10 @@
                     "format": "date-time"
                 },
                 "failure": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/failure"
                 },
                 "availability": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/availability"
                 }
             },
             "minProperties": 1
@@ -43,8 +43,8 @@
 
 
         "property_active_state": {
-            "$id": "/schemas/property/active_state",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/climate.schema.json/property/active_state",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/climate.schema.json/property",
             "properties": {
                 "data": {
                     "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/active_state"
@@ -52,24 +52,9 @@
             }
         },
 
-        "property_bytes": {
-            "$id": "/schemas/property/bytes",
-            "$ref": "/schemas/property",
-            "properties": {
-                "data": {
-                    "type": "array",
-                    "items": {
-                        "type": "integer",
-                        "minimum": 0,
-                        "maximum": 255
-                    }
-                }
-            }
-        },
-
         "property_hvac_weekday_starting_time": {
-            "$id": "/schemas/property/hvac_weekday_starting_time",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/climate.schema.json/property/hvac_weekday_starting_time",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/climate.schema.json/property",
             "properties": {
                 "data": {
                     "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/hvac_weekday_starting_time"
@@ -78,10 +63,16 @@
         },
 
         "property_nonce": {
-            "$id": "/schemas/property/nonce",
-            "$ref": "/schemas/property/bytes",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/climate.schema.json/property/nonce",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/climate.schema.json/property/bytes",
             "properties": {
                 "data": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 255
+                    },
                     "minItems": 9,
                     "maxItems": 9
                 }
@@ -89,8 +80,8 @@
         },
 
         "property_temperature": {
-            "$id": "/schemas/property/temperature",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/climate.schema.json/property/temperature",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/climate.schema.json/property",
             "properties": {
                 "data": {
                     "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json#/$defs/temperature"
@@ -99,8 +90,8 @@
         },
 
         "property_vin": {
-            "$id": "/schemas/property/vin",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/climate.schema.json/property/vin",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/climate.schema.json/property",
             "properties": {
                 "data": {
                     "type": "string",

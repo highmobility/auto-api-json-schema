@@ -3,23 +3,23 @@
     "$schema": "https://json-schema.org/draft/2019-09/schema",
     "type": "object",
     "properties": {
-        "public_charging_points": { "$ref": "/schemas/property/charging_point" },
-        "displayed_state_of_charge": { "$ref": "/schemas/property/percentage" },
-        "displayed_start_state_of_charge": { "$ref": "/schemas/property/percentage" },
-        "business_errors": { "$ref": "/schemas/property/string" },
-        "time_zone": { "$ref": "/schemas/property/string" },
-        "start_time": { "$ref": "/schemas/property/timestamp" },
-        "end_time": { "$ref": "/schemas/property/timestamp" },
-        "total_charging_duration": { "$ref": "/schemas/property/duration" },
-        "calculated_energy_charged": { "$ref": "/schemas/property/energy" },
-        "energy_charged": { "$ref": "/schemas/property/energy" },
-        "preconditioning_state": { "$ref": "/schemas/property/active_state" },
-        "odometer": { "$ref": "/schemas/property/length" },
-        "charging_cost": { "$ref": "/schemas/property/charging_cost" },
-        "location": { "$ref": "/schemas/property/charging_location" },
+        "public_charging_points": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/charging_session.schema.json/property/charging_point" },
+        "displayed_state_of_charge": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/charging_session.schema.json/property/percentage" },
+        "displayed_start_state_of_charge": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/charging_session.schema.json/property/percentage" },
+        "business_errors": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/charging_session.schema.json/property/string" },
+        "time_zone": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/charging_session.schema.json/property/string" },
+        "start_time": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/charging_session.schema.json/property/timestamp" },
+        "end_time": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/charging_session.schema.json/property/timestamp" },
+        "total_charging_duration": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/charging_session.schema.json/property/duration" },
+        "calculated_energy_charged": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/charging_session.schema.json/property/energy" },
+        "energy_charged": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/charging_session.schema.json/property/energy" },
+        "preconditioning_state": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/charging_session.schema.json/property/active_state" },
+        "odometer": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/charging_session.schema.json/property/length" },
+        "charging_cost": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/charging_session.schema.json/property/charging_cost" },
+        "location": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/charging_session.schema.json/property/charging_location" },
 
-        "nonce": { "$ref": "/schemas/property/nonce" },
-        "vin": { "$ref": "/schemas/property/vin" }
+        "nonce": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/charging_session.schema.json/property/nonce" },
+        "vin": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/charging_session.schema.json/property/vin" }
     },
     "additionalProperties": false,
 
@@ -27,7 +27,7 @@
 
     "$defs": {
         "property": {
-            "$id": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/charging_session.schema.json/property",
             "type": "object",
             "properties": {
                 "timestamp": {
@@ -35,10 +35,10 @@
                     "format": "date-time"
                 },
                 "failure": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/failure"
                 },
                 "availability": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability"
+                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/availability"
                 }
             },
             "minProperties": 1
@@ -46,8 +46,8 @@
 
 
         "property_active_state": {
-            "$id": "/schemas/property/active_state",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/charging_session.schema.json/property/active_state",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/charging_session.schema.json/property",
             "properties": {
                 "data": {
                     "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/active_state"
@@ -55,24 +55,9 @@
             }
         },
 
-        "property_bytes": {
-            "$id": "/schemas/property/bytes",
-            "$ref": "/schemas/property",
-            "properties": {
-                "data": {
-                    "type": "array",
-                    "items": {
-                        "type": "integer",
-                        "minimum": 0,
-                        "maximum": 255
-                    }
-                }
-            }
-        },
-
         "property_charging_cost": {
-            "$id": "/schemas/property/charging_cost",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/charging_session.schema.json/property/charging_cost",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/charging_session.schema.json/property",
             "properties": {
                 "data": {
                     "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/charging_cost"
@@ -81,8 +66,8 @@
         },
 
         "property_charging_location": {
-            "$id": "/schemas/property/charging_location",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/charging_session.schema.json/property/charging_location",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/charging_session.schema.json/property",
             "properties": {
                 "data": {
                     "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/charging_location"
@@ -91,8 +76,8 @@
         },
 
         "property_charging_point": {
-            "$id": "/schemas/property/charging_point",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/charging_session.schema.json/property/charging_point",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/charging_session.schema.json/property",
             "properties": {
                 "data": {
                     "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/charging_point"
@@ -101,8 +86,8 @@
         },
 
         "property_duration": {
-            "$id": "/schemas/property/duration",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/charging_session.schema.json/property/duration",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/charging_session.schema.json/property",
             "properties": {
                 "data": {
                     "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json#/$defs/duration"
@@ -111,8 +96,8 @@
         },
 
         "property_energy": {
-            "$id": "/schemas/property/energy",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/charging_session.schema.json/property/energy",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/charging_session.schema.json/property",
             "properties": {
                 "data": {
                     "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json#/$defs/energy"
@@ -121,8 +106,8 @@
         },
 
         "property_length": {
-            "$id": "/schemas/property/length",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/charging_session.schema.json/property/length",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/charging_session.schema.json/property",
             "properties": {
                 "data": {
                     "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json#/$defs/length"
@@ -131,10 +116,16 @@
         },
 
         "property_nonce": {
-            "$id": "/schemas/property/nonce",
-            "$ref": "/schemas/property/bytes",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/charging_session.schema.json/property/nonce",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/charging_session.schema.json/property/bytes",
             "properties": {
                 "data": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 255
+                    },
                     "minItems": 9,
                     "maxItems": 9
                 }
@@ -142,8 +133,8 @@
         },
 
         "property_percentage": {
-            "$id": "/schemas/property/percentage",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/charging_session.schema.json/property/percentage",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/charging_session.schema.json/property",
             "properties": {
                 "data": {
                     "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/percentage"
@@ -152,8 +143,8 @@
         },
 
         "property_string": {
-            "$id": "/schemas/property/string",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/charging_session.schema.json/property/string",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/charging_session.schema.json/property",
             "properties": {
                 "data": {
                     "type": "string"
@@ -162,8 +153,8 @@
         },
 
         "property_timestamp": {
-            "$id": "/schemas/property/timestamp",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/charging_session.schema.json/property/timestamp",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/charging_session.schema.json/property",
             "properties": {
                 "data": {
                     "type": "string",
@@ -173,8 +164,8 @@
         },
 
         "property_vin": {
-            "$id": "/schemas/property/vin",
-            "$ref": "/schemas/property",
+            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/charging_session.schema.json/property/vin",
+            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/charging_session.schema.json/property",
             "properties": {
                 "data": {
                     "type": "string",
