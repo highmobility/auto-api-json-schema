@@ -1,5 +1,5 @@
 {
-    "$id": "https://high-mobility.com/schemas/valet_mode",
+    "$id": "https://high-mobility.com/schemas/L13/valet_mode",
     "$schema": "https://json-schema.org/draft/2019-09/schema",
     "type": "object",
     "properties": {

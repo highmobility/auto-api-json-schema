@@ -1,5 +1,5 @@
 {
-    "$id": "https://high-mobility.com/schemas/trips",
+    "$id": "https://high-mobility.com/schemas/L13/trips",
     "$schema": "https://json-schema.org/draft/2019-09/schema",
     "type": "object",
     "properties": {

@@ -1,5 +1,5 @@
 {
-    "$id": "https://high-mobility.com/schemas/navi_destination",
+    "$id": "https://high-mobility.com/schemas/L13/navi_destination",
     "$schema": "https://json-schema.org/draft/2019-09/schema",
     "type": "object",
     "properties": {

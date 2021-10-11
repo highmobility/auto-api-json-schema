@@ -1,5 +1,5 @@
 {
-    "$id": "https://high-mobility.com/schemas/maintenance",
+    "$id": "https://high-mobility.com/schemas/L13/maintenance",
     "$schema": "https://json-schema.org/draft/2019-09/schema",
     "type": "object",
     "properties": {

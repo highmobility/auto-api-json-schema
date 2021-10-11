@@ -1,5 +1,5 @@
 {
-    "$id": "https://high-mobility.com/schemas/weather_conditions",
+    "$id": "https://high-mobility.com/schemas/L13/weather_conditions",
     "$schema": "https://json-schema.org/draft/2019-09/schema",
     "type": "object",
     "properties": {
