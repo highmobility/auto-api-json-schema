@@ -1,6 +1,7 @@
 {
     "$id": "https://high-mobility.com/schemas/L13/units",
     "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "type": "object",
     "description": "AutoAPI unit types",
 
     "$defs": {
