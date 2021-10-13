@@ -21,7 +21,6 @@
     "additionalProperties": false,
 
 
-
     "$defs": {
         "property": {
             "type": "object",
@@ -35,7 +34,6 @@
             },
             "minProperties": 1
         },
-
 
         "property_active_state": {
             "$ref": "#/$defs/property",

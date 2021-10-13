@@ -31,7 +31,6 @@
     "additionalProperties": false,
 
 
-
     "$defs": {
         "property": {
             "type": "object",
@@ -45,7 +44,6 @@
             },
             "minProperties": 1
         },
-
 
         "property_address_component": {
             "$ref": "#/$defs/property",

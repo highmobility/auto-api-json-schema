@@ -16,7 +16,6 @@
     "additionalProperties": false,
 
 
-
     "$defs": {
         "property": {
             "type": "object",
@@ -30,7 +29,6 @@
             },
             "minProperties": 1
         },
-
 
         "property_crash_incident": {
             "$ref": "#/$defs/property",

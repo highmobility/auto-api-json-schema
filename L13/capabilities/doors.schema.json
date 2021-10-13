@@ -15,7 +15,6 @@
     "additionalProperties": false,
 
 
-
     "$defs": {
         "property": {
             "type": "object",
@@ -29,7 +28,6 @@
             },
             "minProperties": 1
         },
-
 
         "property_door_position": {
             "$ref": "#/$defs/property",

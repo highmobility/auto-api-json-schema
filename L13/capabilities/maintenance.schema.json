@@ -37,7 +37,6 @@
     "additionalProperties": false,
 
 
-
     "$defs": {
         "property": {
             "type": "object",
@@ -51,7 +50,6 @@
             },
             "minProperties": 1
         },
-
 
         "property_condition_based_service": {
             "$ref": "#/$defs/property",
