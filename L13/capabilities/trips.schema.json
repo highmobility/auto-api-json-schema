@@ -3,30 +3,30 @@
     "$schema": "https://json-schema.org/draft/2019-09/schema",
     "type": "object",
     "properties": {
-        "type": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/trips.schema.json/property/type" },
-        "driver_name": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/trips.schema.json/property/string" },
-        "description": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/trips.schema.json/property/string" },
-        "start_time": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/trips.schema.json/property/timestamp" },
-        "end_time": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/trips.schema.json/property/timestamp" },
-        "start_address": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/trips.schema.json/property/string" },
-        "end_address": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/trips.schema.json/property/string" },
-        "start_coordinates": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/trips.schema.json/property/coordinates" },
-        "end_coordinates": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/trips.schema.json/property/coordinates" },
-        "start_odometer": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/trips.schema.json/property/length" },
-        "end_odometer": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/trips.schema.json/property/length" },
-        "average_fuel_consumption": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/trips.schema.json/property/fuel_efficiency" },
-        "distance": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/trips.schema.json/property/length" },
-        "start_address_components": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/trips.schema.json/property/address_component" },
-        "end_address_components": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/trips.schema.json/property/address_component" },
-        "event": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/trips.schema.json/property/event" },
-        "eco_level": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/trips.schema.json/property/eco_level" },
-        "thresholds": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/trips.schema.json/property/eco_driving_threshold" },
-        "total_fuel_consumption": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/trips.schema.json/property/volume" },
-        "total_idle_fuel_consumption": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/trips.schema.json/property/volume" },
-        "maximum_speed": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/trips.schema.json/property/speed" },
+        "type": { "$ref": "#/$defs/property_type" },
+        "driver_name": { "$ref": "#/$defs/property_string" },
+        "description": { "$ref": "#/$defs/property_string" },
+        "start_time": { "$ref": "#/$defs/property_timestamp" },
+        "end_time": { "$ref": "#/$defs/property_timestamp" },
+        "start_address": { "$ref": "#/$defs/property_string" },
+        "end_address": { "$ref": "#/$defs/property_string" },
+        "start_coordinates": { "$ref": "#/$defs/property_coordinates" },
+        "end_coordinates": { "$ref": "#/$defs/property_coordinates" },
+        "start_odometer": { "$ref": "#/$defs/property_length" },
+        "end_odometer": { "$ref": "#/$defs/property_length" },
+        "average_fuel_consumption": { "$ref": "#/$defs/property_fuel_efficiency" },
+        "distance": { "$ref": "#/$defs/property_length" },
+        "start_address_components": { "$ref": "#/$defs/property_address_component" },
+        "end_address_components": { "$ref": "#/$defs/property_address_component" },
+        "event": { "$ref": "#/$defs/property_event" },
+        "eco_level": { "$ref": "#/$defs/property_eco_level" },
+        "thresholds": { "$ref": "#/$defs/property_eco_driving_threshold" },
+        "total_fuel_consumption": { "$ref": "#/$defs/property_volume" },
+        "total_idle_fuel_consumption": { "$ref": "#/$defs/property_volume" },
+        "maximum_speed": { "$ref": "#/$defs/property_speed" },
 
-        "nonce": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/trips.schema.json/property/nonce" },
-        "vin": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/trips.schema.json/property/vin" }
+        "nonce": { "$ref": "#/$defs/property_nonce" },
+        "vin": { "$ref": "#/$defs/property_vin" }
     },
     "additionalProperties": false,
 
@@ -34,57 +34,48 @@
 
     "$defs": {
         "property": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/trips.schema.json/property",
             "type": "object",
             "properties": {
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
                 },
-                "failure": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/failure"
-                },
-                "availability": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/availability"
-                }
+                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
             "minProperties": 1
         },
 
 
         "property_address_component": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/trips.schema.json/property/address_component",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/trips.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/address_component"
+                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/address_component"
                 }
             }
         },
 
         "property_coordinates": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/trips.schema.json/property/coordinates",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/trips.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/coordinates"
+                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/coordinates"
                 }
             }
         },
 
         "property_eco_driving_threshold": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/trips.schema.json/property/eco_driving_threshold",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/trips.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/eco_driving_threshold"
+                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/eco_driving_threshold"
                 }
             }
         },
 
         "property_eco_level": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/trips.schema.json/property/eco_level",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/trips.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
                     "type": "string",
@@ -94,8 +85,7 @@
         },
 
         "property_event": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/trips.schema.json/property/event",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/trips.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
                     "type": "string",
@@ -105,28 +95,25 @@
         },
 
         "property_fuel_efficiency": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/trips.schema.json/property/fuel_efficiency",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/trips.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json#/$defs/fuel_efficiency"
+                    "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/fuel_efficiency"
                 }
             }
         },
 
         "property_length": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/trips.schema.json/property/length",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/trips.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json#/$defs/length"
+                    "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/length"
                 }
             }
         },
 
         "property_nonce": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/trips.schema.json/property/nonce",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/trips.schema.json/property/bytes",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
                     "type": "array",
@@ -142,18 +129,16 @@
         },
 
         "property_speed": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/trips.schema.json/property/speed",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/trips.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json#/$defs/speed"
+                    "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/speed"
                 }
             }
         },
 
         "property_string": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/trips.schema.json/property/string",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/trips.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
                     "type": "string"
@@ -162,8 +147,7 @@
         },
 
         "property_timestamp": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/trips.schema.json/property/timestamp",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/trips.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
                     "type": "string",
@@ -173,8 +157,7 @@
         },
 
         "property_type": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/trips.schema.json/property/type",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/trips.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
                     "type": "string",
@@ -184,8 +167,7 @@
         },
 
         "property_vin": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/trips.schema.json/property/vin",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/trips.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
                     "type": "string",
@@ -196,11 +178,10 @@
         },
 
         "property_volume": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/trips.schema.json/property/volume",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/trips.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json#/$defs/volume"
+                    "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/volume"
                 }
             }
         }

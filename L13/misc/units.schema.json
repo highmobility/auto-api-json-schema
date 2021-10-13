@@ -6,7 +6,6 @@
 
     "$defs": {
         "unit": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json/unit",
             "type": "object",
             "properties": {
                 "value": { "type": "number" }
@@ -15,8 +14,7 @@
 
 
         "acceleration": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json/unit/acceleration",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json/unit",
+            "$ref": "#/$defs/unit",
             "properties": {
                 "unit": {
                     "enum": [
@@ -28,8 +26,7 @@
         },
 
         "angle": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json/unit/angle",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json/unit",
+            "$ref": "#/$defs/unit",
             "properties": {
                 "unit": {
                     "enum": [
@@ -42,8 +39,7 @@
         },
 
         "angular_velocity": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json/unit/angular_velocity",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json/unit",
+            "$ref": "#/$defs/unit",
             "properties": {
                 "unit": {
                     "enum": [
@@ -56,8 +52,7 @@
         },
 
         "duration": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json/unit/duration",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json/unit",
+            "$ref": "#/$defs/unit",
             "properties": {
                 "unit": {
                     "enum": [
@@ -73,8 +68,7 @@
         },
 
         "electric_current": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json/unit/electric_current",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json/unit",
+            "$ref": "#/$defs/unit",
             "properties": {
                 "unit": {
                     "enum": [
@@ -87,8 +81,7 @@
         },
 
         "electric_potential_difference": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json/unit/electric_potential_difference",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json/unit",
+            "$ref": "#/$defs/unit",
             "properties": {
                 "unit": {
                     "enum": [
@@ -101,8 +94,7 @@
         },
 
         "energy": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json/unit/energy",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json/unit",
+            "$ref": "#/$defs/unit",
             "properties": {
                 "unit": {
                     "enum": [
@@ -116,8 +108,7 @@
         },
 
         "energy_efficiency": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json/unit/energy_efficiency",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json/unit",
+            "$ref": "#/$defs/unit",
             "properties": {
                 "unit": {
                     "enum": [
@@ -129,8 +120,7 @@
         },
 
         "frequency": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json/unit/frequency",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json/unit",
+            "$ref": "#/$defs/unit",
             "properties": {
                 "unit": {
                     "enum": [
@@ -148,8 +138,7 @@
         },
 
         "fuel_efficiency": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json/unit/fuel_efficiency",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json/unit",
+            "$ref": "#/$defs/unit",
             "properties": {
                 "unit": {
                     "enum": [
@@ -162,8 +151,7 @@
         },
 
         "illuminance": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json/unit/illuminance",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json/unit",
+            "$ref": "#/$defs/unit",
             "properties": {
                 "unit": {
                     "enum": [
@@ -174,8 +162,7 @@
         },
 
         "length": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json/unit/length",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json/unit",
+            "$ref": "#/$defs/unit",
             "properties": {
                 "unit": {
                     "enum": [
@@ -197,8 +184,7 @@
         },
 
         "power": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json/unit/power",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json/unit",
+            "$ref": "#/$defs/unit",
             "properties": {
                 "unit": {
                     "enum": [
@@ -213,8 +199,7 @@
         },
 
         "pressure": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json/unit/pressure",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json/unit",
+            "$ref": "#/$defs/unit",
             "properties": {
                 "unit": {
                     "enum": [
@@ -231,8 +216,7 @@
         },
 
         "speed": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json/unit/speed",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json/unit",
+            "$ref": "#/$defs/unit",
             "properties": {
                 "unit": {
                     "enum": [
@@ -246,8 +230,7 @@
         },
 
         "temperature": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json/unit/temperature",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json/unit",
+            "$ref": "#/$defs/unit",
             "properties": {
                 "unit": {
                     "enum": [
@@ -260,8 +243,7 @@
         },
 
         "torque": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json/unit/torque",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json/unit",
+            "$ref": "#/$defs/unit",
             "properties": {
                 "unit": {
                     "enum": [
@@ -274,8 +256,7 @@
         },
 
         "volume": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json/unit/volume",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json/unit",
+            "$ref": "#/$defs/unit",
             "properties": {
                 "unit": {
                     "enum": [

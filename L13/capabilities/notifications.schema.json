@@ -3,13 +3,13 @@
     "$schema": "https://json-schema.org/draft/2019-09/schema",
     "type": "object",
     "properties": {
-        "text": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/notifications.schema.json/property/string" },
-        "action_items": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/notifications.schema.json/property/action_item" },
-        "activated_action": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/notifications.schema.json/property/uinteger" },
-        "clear": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/notifications.schema.json/property/clear" },
+        "text": { "$ref": "#/$defs/property_string" },
+        "action_items": { "$ref": "#/$defs/property_action_item" },
+        "activated_action": { "$ref": "#/$defs/property_uinteger" },
+        "clear": { "$ref": "#/$defs/property_clear" },
 
-        "nonce": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/notifications.schema.json/property/nonce" },
-        "vin": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/notifications.schema.json/property/vin" }
+        "nonce": { "$ref": "#/$defs/property_nonce" },
+        "vin": { "$ref": "#/$defs/property_vin" }
     },
     "additionalProperties": false,
 
@@ -17,37 +17,30 @@
 
     "$defs": {
         "property": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/notifications.schema.json/property",
             "type": "object",
             "properties": {
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
                 },
-                "failure": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/failure"
-                },
-                "availability": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/availability"
-                }
+                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
             "minProperties": 1
         },
 
 
         "property_action_item": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/notifications.schema.json/property/action_item",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/notifications.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/action_item"
+                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/action_item"
                 }
             }
         },
 
         "property_clear": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/notifications.schema.json/property/clear",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/notifications.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
                     "type": "string",
@@ -57,8 +50,7 @@
         },
 
         "property_nonce": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/notifications.schema.json/property/nonce",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/notifications.schema.json/property/bytes",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
                     "type": "array",
@@ -74,8 +66,7 @@
         },
 
         "property_string": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/notifications.schema.json/property/string",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/notifications.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
                     "type": "string"
@@ -84,8 +75,7 @@
         },
 
         "property_uinteger": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/notifications.schema.json/property/uinteger",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/notifications.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
                     "type": "integer",
@@ -96,8 +86,7 @@
         },
 
         "property_vin": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/notifications.schema.json/property/vin",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/notifications.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
                     "type": "string",

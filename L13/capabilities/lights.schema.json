@@ -3,19 +3,19 @@
     "$schema": "https://json-schema.org/draft/2019-09/schema",
     "type": "object",
     "properties": {
-        "front_exterior_light": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/lights.schema.json/property/front_exterior_light" },
-        "rear_exterior_light": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/lights.schema.json/property/active_state" },
-        "ambient_light_colour": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/lights.schema.json/property/rgb_colour" },
-        "reverse_light": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/lights.schema.json/property/active_state" },
-        "emergency_brake_light": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/lights.schema.json/property/active_state" },
-        "fog_lights": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/lights.schema.json/property/light" },
-        "reading_lamps": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/lights.schema.json/property/reading_lamp" },
-        "interior_lights": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/lights.schema.json/property/light" },
-        "switch_position": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/lights.schema.json/property/switch_position" },
-        "parking_light_status": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/lights.schema.json/property/parking_light_status" },
+        "front_exterior_light": { "$ref": "#/$defs/property_front_exterior_light" },
+        "rear_exterior_light": { "$ref": "#/$defs/property_active_state" },
+        "ambient_light_colour": { "$ref": "#/$defs/property_rgb_colour" },
+        "reverse_light": { "$ref": "#/$defs/property_active_state" },
+        "emergency_brake_light": { "$ref": "#/$defs/property_active_state" },
+        "fog_lights": { "$ref": "#/$defs/property_light" },
+        "reading_lamps": { "$ref": "#/$defs/property_reading_lamp" },
+        "interior_lights": { "$ref": "#/$defs/property_light" },
+        "switch_position": { "$ref": "#/$defs/property_switch_position" },
+        "parking_light_status": { "$ref": "#/$defs/property_parking_light_status" },
 
-        "nonce": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/lights.schema.json/property/nonce" },
-        "vin": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/lights.schema.json/property/vin" }
+        "nonce": { "$ref": "#/$defs/property_nonce" },
+        "vin": { "$ref": "#/$defs/property_vin" }
     },
     "additionalProperties": false,
 
@@ -23,37 +23,30 @@
 
     "$defs": {
         "property": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/lights.schema.json/property",
             "type": "object",
             "properties": {
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
                 },
-                "failure": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/failure"
-                },
-                "availability": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/availability"
-                }
+                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
             "minProperties": 1
         },
 
 
         "property_active_state": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/lights.schema.json/property/active_state",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/lights.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/active_state"
+                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/active_state"
                 }
             }
         },
 
         "property_front_exterior_light": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/lights.schema.json/property/front_exterior_light",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/lights.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
                     "type": "string",
@@ -63,18 +56,16 @@
         },
 
         "property_light": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/lights.schema.json/property/light",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/lights.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/light"
+                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/light"
                 }
             }
         },
 
         "property_nonce": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/lights.schema.json/property/nonce",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/lights.schema.json/property/bytes",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
                     "type": "array",
@@ -90,8 +81,7 @@
         },
 
         "property_parking_light_status": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/lights.schema.json/property/parking_light_status",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/lights.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
                     "type": "string",
@@ -101,28 +91,25 @@
         },
 
         "property_reading_lamp": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/lights.schema.json/property/reading_lamp",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/lights.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/reading_lamp"
+                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/reading_lamp"
                 }
             }
         },
 
         "property_rgb_colour": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/lights.schema.json/property/rgb_colour",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/lights.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/rgb_colour"
+                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/rgb_colour"
                 }
             }
         },
 
         "property_switch_position": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/lights.schema.json/property/switch_position",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/lights.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
                     "type": "string",
@@ -132,8 +119,7 @@
         },
 
         "property_vin": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/lights.schema.json/property/vin",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/lights.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
                     "type": "string",

@@ -3,20 +3,20 @@
     "$schema": "https://json-schema.org/draft/2019-09/schema",
     "type": "object",
     "properties": {
-        "status": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/adas.schema.json/property/on_off_state" },
-        "alertness_system_status": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/adas.schema.json/property/active_state" },
-        "forward_collision_warning_system": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/adas.schema.json/property/active_state" },
-        "blind_spot_warning_state": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/adas.schema.json/property/active_state" },
-        "blind_spot_warning_system_coverage": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/adas.schema.json/property/blind_spot_warning_system_coverage" },
-        "rear_cross_warning_system": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/adas.schema.json/property/active_state" },
-        "automated_parking_brake": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/adas.schema.json/property/active_state" },
-        "lane_keep_assist_system": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/adas.schema.json/property/on_off_state" },
-        "lane_keep_assists_states": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/adas.schema.json/property/lane_keep_assist_state" },
-        "park_assists": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/adas.schema.json/property/park_assist" },
-        "blind_spot_warning_system": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/adas.schema.json/property/on_off_state" },
+        "status": { "$ref": "#/$defs/property_on_off_state" },
+        "alertness_system_status": { "$ref": "#/$defs/property_active_state" },
+        "forward_collision_warning_system": { "$ref": "#/$defs/property_active_state" },
+        "blind_spot_warning_state": { "$ref": "#/$defs/property_active_state" },
+        "blind_spot_warning_system_coverage": { "$ref": "#/$defs/property_blind_spot_warning_system_coverage" },
+        "rear_cross_warning_system": { "$ref": "#/$defs/property_active_state" },
+        "automated_parking_brake": { "$ref": "#/$defs/property_active_state" },
+        "lane_keep_assist_system": { "$ref": "#/$defs/property_on_off_state" },
+        "lane_keep_assists_states": { "$ref": "#/$defs/property_lane_keep_assist_state" },
+        "park_assists": { "$ref": "#/$defs/property_park_assist" },
+        "blind_spot_warning_system": { "$ref": "#/$defs/property_on_off_state" },
 
-        "nonce": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/adas.schema.json/property/nonce" },
-        "vin": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/adas.schema.json/property/vin" }
+        "nonce": { "$ref": "#/$defs/property_nonce" },
+        "vin": { "$ref": "#/$defs/property_vin" }
     },
     "additionalProperties": false,
 
@@ -24,37 +24,30 @@
 
     "$defs": {
         "property": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/adas.schema.json/property",
             "type": "object",
             "properties": {
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
                 },
-                "failure": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/failure"
-                },
-                "availability": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/availability"
-                }
+                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
             "minProperties": 1
         },
 
 
         "property_active_state": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/adas.schema.json/property/active_state",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/adas.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/active_state"
+                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/active_state"
                 }
             }
         },
 
         "property_blind_spot_warning_system_coverage": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/adas.schema.json/property/blind_spot_warning_system_coverage",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/adas.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
                     "type": "string",
@@ -64,18 +57,16 @@
         },
 
         "property_lane_keep_assist_state": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/adas.schema.json/property/lane_keep_assist_state",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/adas.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/lane_keep_assist_state"
+                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/lane_keep_assist_state"
                 }
             }
         },
 
         "property_nonce": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/adas.schema.json/property/nonce",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/adas.schema.json/property/bytes",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
                     "type": "array",
@@ -91,28 +82,25 @@
         },
 
         "property_on_off_state": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/adas.schema.json/property/on_off_state",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/adas.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/on_off_state"
+                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/on_off_state"
                 }
             }
         },
 
         "property_park_assist": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/adas.schema.json/property/park_assist",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/adas.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/park_assist"
+                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/park_assist"
                 }
             }
         },
 
         "property_vin": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/adas.schema.json/property/vin",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/adas.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
                     "type": "string",

@@ -3,15 +3,15 @@
     "$schema": "https://json-schema.org/draft/2019-09/schema",
     "type": "object",
     "properties": {
-        "incidents": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/crash.schema.json/property/crash_incident" },
-        "type": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/crash.schema.json/property/type" },
-        "tipped_state": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/crash.schema.json/property/tipped_state" },
-        "automatic_ecall": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/crash.schema.json/property/enabled_state" },
-        "severity": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/crash.schema.json/property/uinteger" },
-        "impact_zone": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/crash.schema.json/property/impact_zone" },
+        "incidents": { "$ref": "#/$defs/property_crash_incident" },
+        "type": { "$ref": "#/$defs/property_type" },
+        "tipped_state": { "$ref": "#/$defs/property_tipped_state" },
+        "automatic_ecall": { "$ref": "#/$defs/property_enabled_state" },
+        "severity": { "$ref": "#/$defs/property_uinteger" },
+        "impact_zone": { "$ref": "#/$defs/property_impact_zone" },
 
-        "nonce": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/crash.schema.json/property/nonce" },
-        "vin": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/crash.schema.json/property/vin" }
+        "nonce": { "$ref": "#/$defs/property_nonce" },
+        "vin": { "$ref": "#/$defs/property_vin" }
     },
     "additionalProperties": false,
 
@@ -19,47 +19,39 @@
 
     "$defs": {
         "property": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/crash.schema.json/property",
             "type": "object",
             "properties": {
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
                 },
-                "failure": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/failure"
-                },
-                "availability": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/availability"
-                }
+                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
             "minProperties": 1
         },
 
 
         "property_crash_incident": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/crash.schema.json/property/crash_incident",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/crash.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/crash_incident"
+                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/crash_incident"
                 }
             }
         },
 
         "property_enabled_state": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/crash.schema.json/property/enabled_state",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/crash.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/enabled_state"
+                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/enabled_state"
                 }
             }
         },
 
         "property_impact_zone": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/crash.schema.json/property/impact_zone",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/crash.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
                     "type": "string",
@@ -69,8 +61,7 @@
         },
 
         "property_nonce": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/crash.schema.json/property/nonce",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/crash.schema.json/property/bytes",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
                     "type": "array",
@@ -86,8 +77,7 @@
         },
 
         "property_tipped_state": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/crash.schema.json/property/tipped_state",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/crash.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
                     "type": "string",
@@ -97,8 +87,7 @@
         },
 
         "property_type": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/crash.schema.json/property/type",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/crash.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
                     "type": "string",
@@ -108,8 +97,7 @@
         },
 
         "property_uinteger": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/crash.schema.json/property/uinteger",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/crash.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
                     "type": "integer",
@@ -120,8 +108,7 @@
         },
 
         "property_vin": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/crash.schema.json/property/vin",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/crash.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
                     "type": "string",

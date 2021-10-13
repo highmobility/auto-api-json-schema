@@ -3,16 +3,16 @@
     "$schema": "https://json-schema.org/draft/2019-09/schema",
     "type": "object",
     "properties": {
-        "status": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/theft_alarm.schema.json/property/status" },
-        "interior_protection_status": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/theft_alarm.schema.json/property/active_selected_state" },
-        "tow_protection_status": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/theft_alarm.schema.json/property/active_selected_state" },
-        "last_warning_reason": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/theft_alarm.schema.json/property/last_warning_reason" },
-        "last_event": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/theft_alarm.schema.json/property/timestamp" },
-        "last_event_level": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/theft_alarm.schema.json/property/last_event_level" },
-        "event_type": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/theft_alarm.schema.json/property/event_type" },
+        "status": { "$ref": "#/$defs/property_status" },
+        "interior_protection_status": { "$ref": "#/$defs/property_active_selected_state" },
+        "tow_protection_status": { "$ref": "#/$defs/property_active_selected_state" },
+        "last_warning_reason": { "$ref": "#/$defs/property_last_warning_reason" },
+        "last_event": { "$ref": "#/$defs/property_timestamp" },
+        "last_event_level": { "$ref": "#/$defs/property_last_event_level" },
+        "event_type": { "$ref": "#/$defs/property_event_type" },
 
-        "nonce": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/theft_alarm.schema.json/property/nonce" },
-        "vin": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/theft_alarm.schema.json/property/vin" }
+        "nonce": { "$ref": "#/$defs/property_nonce" },
+        "vin": { "$ref": "#/$defs/property_vin" }
     },
     "additionalProperties": false,
 
@@ -20,37 +20,30 @@
 
     "$defs": {
         "property": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/theft_alarm.schema.json/property",
             "type": "object",
             "properties": {
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
                 },
-                "failure": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/failure"
-                },
-                "availability": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/availability"
-                }
+                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
             "minProperties": 1
         },
 
 
         "property_active_selected_state": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/theft_alarm.schema.json/property/active_selected_state",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/theft_alarm.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/active_selected_state"
+                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/active_selected_state"
                 }
             }
         },
 
         "property_event_type": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/theft_alarm.schema.json/property/event_type",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/theft_alarm.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
                     "type": "string",
@@ -60,8 +53,7 @@
         },
 
         "property_last_event_level": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/theft_alarm.schema.json/property/last_event_level",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/theft_alarm.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
                     "type": "string",
@@ -71,8 +63,7 @@
         },
 
         "property_last_warning_reason": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/theft_alarm.schema.json/property/last_warning_reason",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/theft_alarm.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
                     "type": "string",
@@ -82,8 +73,7 @@
         },
 
         "property_nonce": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/theft_alarm.schema.json/property/nonce",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/theft_alarm.schema.json/property/bytes",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
                     "type": "array",
@@ -99,8 +89,7 @@
         },
 
         "property_status": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/theft_alarm.schema.json/property/status",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/theft_alarm.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
                     "type": "string",
@@ -110,8 +99,7 @@
         },
 
         "property_timestamp": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/theft_alarm.schema.json/property/timestamp",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/theft_alarm.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
                     "type": "string",
@@ -121,8 +109,7 @@
         },
 
         "property_vin": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/theft_alarm.schema.json/property/vin",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/theft_alarm.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
                     "type": "string",

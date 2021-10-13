@@ -3,11 +3,11 @@
     "$schema": "https://json-schema.org/draft/2019-09/schema",
     "type": "object",
     "properties": {
-        "outside_light": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/light_conditions.schema.json/property/illuminance" },
-        "inside_light": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/light_conditions.schema.json/property/illuminance" },
+        "outside_light": { "$ref": "#/$defs/property_illuminance" },
+        "inside_light": { "$ref": "#/$defs/property_illuminance" },
 
-        "nonce": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/light_conditions.schema.json/property/nonce" },
-        "vin": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/light_conditions.schema.json/property/vin" }
+        "nonce": { "$ref": "#/$defs/property_nonce" },
+        "vin": { "$ref": "#/$defs/property_vin" }
     },
     "additionalProperties": false,
 
@@ -15,37 +15,30 @@
 
     "$defs": {
         "property": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/light_conditions.schema.json/property",
             "type": "object",
             "properties": {
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
                 },
-                "failure": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/failure"
-                },
-                "availability": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/availability"
-                }
+                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
             "minProperties": 1
         },
 
 
         "property_illuminance": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/light_conditions.schema.json/property/illuminance",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/light_conditions.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json#/$defs/illuminance"
+                    "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/illuminance"
                 }
             }
         },
 
         "property_nonce": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/light_conditions.schema.json/property/nonce",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/light_conditions.schema.json/property/bytes",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
                     "type": "array",
@@ -61,8 +54,7 @@
         },
 
         "property_vin": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/light_conditions.schema.json/property/vin",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/light_conditions.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
                     "type": "string",

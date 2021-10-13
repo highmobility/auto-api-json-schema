@@ -3,15 +3,15 @@
     "$schema": "https://json-schema.org/draft/2019-09/schema",
     "type": "object",
     "properties": {
-        "coordinates": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/vehicle_location.schema.json/property/coordinates" },
-        "heading": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/vehicle_location.schema.json/property/angle" },
-        "altitude": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/vehicle_location.schema.json/property/length" },
-        "precision": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/vehicle_location.schema.json/property/length" },
-        "gps_source": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/vehicle_location.schema.json/property/gps_source" },
-        "gps_signal_strength": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/vehicle_location.schema.json/property/percentage" },
+        "coordinates": { "$ref": "#/$defs/property_coordinates" },
+        "heading": { "$ref": "#/$defs/property_angle" },
+        "altitude": { "$ref": "#/$defs/property_length" },
+        "precision": { "$ref": "#/$defs/property_length" },
+        "gps_source": { "$ref": "#/$defs/property_gps_source" },
+        "gps_signal_strength": { "$ref": "#/$defs/property_percentage" },
 
-        "nonce": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/vehicle_location.schema.json/property/nonce" },
-        "vin": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/vehicle_location.schema.json/property/vin" }
+        "nonce": { "$ref": "#/$defs/property_nonce" },
+        "vin": { "$ref": "#/$defs/property_vin" }
     },
     "additionalProperties": false,
 
@@ -19,47 +19,39 @@
 
     "$defs": {
         "property": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/vehicle_location.schema.json/property",
             "type": "object",
             "properties": {
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
                 },
-                "failure": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/failure"
-                },
-                "availability": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/availability"
-                }
+                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
             "minProperties": 1
         },
 
 
         "property_angle": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/vehicle_location.schema.json/property/angle",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/vehicle_location.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json#/$defs/angle"
+                    "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/angle"
                 }
             }
         },
 
         "property_coordinates": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/vehicle_location.schema.json/property/coordinates",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/vehicle_location.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/coordinates"
+                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/coordinates"
                 }
             }
         },
 
         "property_gps_source": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/vehicle_location.schema.json/property/gps_source",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/vehicle_location.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
                     "type": "string",
@@ -69,18 +61,16 @@
         },
 
         "property_length": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/vehicle_location.schema.json/property/length",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/vehicle_location.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json#/$defs/length"
+                    "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/length"
                 }
             }
         },
 
         "property_nonce": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/vehicle_location.schema.json/property/nonce",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/vehicle_location.schema.json/property/bytes",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
                     "type": "array",
@@ -96,18 +86,16 @@
         },
 
         "property_percentage": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/vehicle_location.schema.json/property/percentage",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/vehicle_location.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/percentage"
+                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/percentage"
                 }
             }
         },
 
         "property_vin": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/vehicle_location.schema.json/property/vin",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/vehicle_location.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
                     "type": "string",

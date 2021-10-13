@@ -3,15 +3,15 @@
     "$schema": "https://json-schema.org/draft/2019-09/schema",
     "type": "object",
     "properties": {
-        "dimming": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/rooftop_control.schema.json/property/percentage" },
-        "position": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/rooftop_control.schema.json/property/percentage" },
-        "convertible_roof_state": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/rooftop_control.schema.json/property/convertible_roof_state" },
-        "sunroof_tilt_state": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/rooftop_control.schema.json/property/sunroof_tilt_state" },
-        "sunroof_state": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/rooftop_control.schema.json/property/sunroof_state" },
-        "sunroof_rain_event": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/rooftop_control.schema.json/property/sunroof_rain_event" },
+        "dimming": { "$ref": "#/$defs/property_percentage" },
+        "position": { "$ref": "#/$defs/property_percentage" },
+        "convertible_roof_state": { "$ref": "#/$defs/property_convertible_roof_state" },
+        "sunroof_tilt_state": { "$ref": "#/$defs/property_sunroof_tilt_state" },
+        "sunroof_state": { "$ref": "#/$defs/property_sunroof_state" },
+        "sunroof_rain_event": { "$ref": "#/$defs/property_sunroof_rain_event" },
 
-        "nonce": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/rooftop_control.schema.json/property/nonce" },
-        "vin": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/rooftop_control.schema.json/property/vin" }
+        "nonce": { "$ref": "#/$defs/property_nonce" },
+        "vin": { "$ref": "#/$defs/property_vin" }
     },
     "additionalProperties": false,
 
@@ -19,27 +19,21 @@
 
     "$defs": {
         "property": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/rooftop_control.schema.json/property",
             "type": "object",
             "properties": {
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
                 },
-                "failure": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/failure"
-                },
-                "availability": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/availability"
-                }
+                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
             "minProperties": 1
         },
 
 
         "property_convertible_roof_state": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/rooftop_control.schema.json/property/convertible_roof_state",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/rooftop_control.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
                     "type": "string",
@@ -49,8 +43,7 @@
         },
 
         "property_nonce": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/rooftop_control.schema.json/property/nonce",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/rooftop_control.schema.json/property/bytes",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
                     "type": "array",
@@ -66,18 +59,16 @@
         },
 
         "property_percentage": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/rooftop_control.schema.json/property/percentage",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/rooftop_control.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/percentage"
+                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/percentage"
                 }
             }
         },
 
         "property_sunroof_rain_event": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/rooftop_control.schema.json/property/sunroof_rain_event",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/rooftop_control.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
                     "type": "string",
@@ -87,8 +78,7 @@
         },
 
         "property_sunroof_state": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/rooftop_control.schema.json/property/sunroof_state",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/rooftop_control.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
                     "type": "string",
@@ -98,8 +88,7 @@
         },
 
         "property_sunroof_tilt_state": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/rooftop_control.schema.json/property/sunroof_tilt_state",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/rooftop_control.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
                     "type": "string",
@@ -109,8 +98,7 @@
         },
 
         "property_vin": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/rooftop_control.schema.json/property/vin",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/rooftop_control.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
                     "type": "string",

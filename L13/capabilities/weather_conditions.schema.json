@@ -3,10 +3,10 @@
     "$schema": "https://json-schema.org/draft/2019-09/schema",
     "type": "object",
     "properties": {
-        "rain_intensity": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/weather_conditions.schema.json/property/percentage" },
+        "rain_intensity": { "$ref": "#/$defs/property_percentage" },
 
-        "nonce": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/weather_conditions.schema.json/property/nonce" },
-        "vin": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/weather_conditions.schema.json/property/vin" }
+        "nonce": { "$ref": "#/$defs/property_nonce" },
+        "vin": { "$ref": "#/$defs/property_vin" }
     },
     "additionalProperties": false,
 
@@ -14,27 +14,21 @@
 
     "$defs": {
         "property": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/weather_conditions.schema.json/property",
             "type": "object",
             "properties": {
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
                 },
-                "failure": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/failure"
-                },
-                "availability": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/availability"
-                }
+                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
             "minProperties": 1
         },
 
 
         "property_nonce": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/weather_conditions.schema.json/property/nonce",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/weather_conditions.schema.json/property/bytes",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
                     "type": "array",
@@ -50,18 +44,16 @@
         },
 
         "property_percentage": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/weather_conditions.schema.json/property/percentage",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/weather_conditions.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/percentage"
+                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/percentage"
                 }
             }
         },
 
         "property_vin": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/weather_conditions.schema.json/property/vin",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/weather_conditions.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
                     "type": "string",

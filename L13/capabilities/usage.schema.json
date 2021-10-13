@@ -3,52 +3,52 @@
     "$schema": "https://json-schema.org/draft/2019-09/schema",
     "type": "object",
     "properties": {
-        "average_weekly_distance": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property/length" },
-        "average_weekly_distance_long_run": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property/length" },
-        "acceleration_evaluation": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property/percentage" },
-        "driving_style_evaluation": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property/percentage" },
-        "driving_modes_activation_periods": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property/driving_mode_activation_period" },
-        "driving_modes_energy_consumptions": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property/driving_mode_energy_consumption" },
-        "last_trip_energy_consumption": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property/energy" },
-        "last_trip_fuel_consumption": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property/volume" },
+        "average_weekly_distance": { "$ref": "#/$defs/property_length" },
+        "average_weekly_distance_long_run": { "$ref": "#/$defs/property_length" },
+        "acceleration_evaluation": { "$ref": "#/$defs/property_percentage" },
+        "driving_style_evaluation": { "$ref": "#/$defs/property_percentage" },
+        "driving_modes_activation_periods": { "$ref": "#/$defs/property_driving_mode_activation_period" },
+        "driving_modes_energy_consumptions": { "$ref": "#/$defs/property_driving_mode_energy_consumption" },
+        "last_trip_energy_consumption": { "$ref": "#/$defs/property_energy" },
+        "last_trip_fuel_consumption": { "$ref": "#/$defs/property_volume" },
         "mileage_after_last_trip": {
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property/length",
+            "$ref": "#/$defs/property_length",
             "deprecated": true
         },
-        "last_trip_electric_portion": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property/percentage" },
-        "last_trip_average_energy_recuperation": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property/energy_efficiency" },
-        "last_trip_battery_remaining": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property/percentage" },
-        "last_trip_date": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property/timestamp" },
-        "average_fuel_consumption": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property/fuel_efficiency" },
-        "current_fuel_consumption": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property/fuel_efficiency" },
-        "odometer_after_last_trip": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property/length" },
-        "safety_driving_score": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property/percentage" },
-        "rapid_acceleration_grade": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property/grade" },
-        "rapid_deceleration_grade": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property/grade" },
-        "late_night_grade": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property/grade" },
-        "distance_over_time": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property/distance_over_time" },
-        "electric_consumption_rate_since_start": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property/energy_efficiency" },
-        "electric_consumption_rate_since_reset": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property/energy_efficiency" },
-        "electric_distance_last_trip": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property/length" },
-        "electric_distance_since_reset": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property/length" },
-        "electric_duration_last_trip": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property/duration" },
-        "electric_duration_since_reset": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property/duration" },
-        "fuel_consumption_rate_last_trip": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property/fuel_efficiency" },
-        "fuel_consumption_rate_since_reset": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property/fuel_efficiency" },
-        "average_speed_last_trip": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property/speed" },
-        "average_speed_since_reset": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property/speed" },
-        "fuel_distance_last_trip": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property/length" },
-        "fuel_distance_since_reset": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property/length" },
-        "driving_duration_last_trip": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property/duration" },
-        "driving_duration_since_reset": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property/duration" },
-        "eco_score_total": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property/percentage" },
-        "eco_score_free_wheel": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property/percentage" },
-        "eco_score_constant": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property/percentage" },
-        "eco_score_bonus_range": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property/length" },
-        "trip_meters": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property/trip_meter" },
+        "last_trip_electric_portion": { "$ref": "#/$defs/property_percentage" },
+        "last_trip_average_energy_recuperation": { "$ref": "#/$defs/property_energy_efficiency" },
+        "last_trip_battery_remaining": { "$ref": "#/$defs/property_percentage" },
+        "last_trip_date": { "$ref": "#/$defs/property_timestamp" },
+        "average_fuel_consumption": { "$ref": "#/$defs/property_fuel_efficiency" },
+        "current_fuel_consumption": { "$ref": "#/$defs/property_fuel_efficiency" },
+        "odometer_after_last_trip": { "$ref": "#/$defs/property_length" },
+        "safety_driving_score": { "$ref": "#/$defs/property_percentage" },
+        "rapid_acceleration_grade": { "$ref": "#/$defs/property_grade" },
+        "rapid_deceleration_grade": { "$ref": "#/$defs/property_grade" },
+        "late_night_grade": { "$ref": "#/$defs/property_grade" },
+        "distance_over_time": { "$ref": "#/$defs/property_distance_over_time" },
+        "electric_consumption_rate_since_start": { "$ref": "#/$defs/property_energy_efficiency" },
+        "electric_consumption_rate_since_reset": { "$ref": "#/$defs/property_energy_efficiency" },
+        "electric_distance_last_trip": { "$ref": "#/$defs/property_length" },
+        "electric_distance_since_reset": { "$ref": "#/$defs/property_length" },
+        "electric_duration_last_trip": { "$ref": "#/$defs/property_duration" },
+        "electric_duration_since_reset": { "$ref": "#/$defs/property_duration" },
+        "fuel_consumption_rate_last_trip": { "$ref": "#/$defs/property_fuel_efficiency" },
+        "fuel_consumption_rate_since_reset": { "$ref": "#/$defs/property_fuel_efficiency" },
+        "average_speed_last_trip": { "$ref": "#/$defs/property_speed" },
+        "average_speed_since_reset": { "$ref": "#/$defs/property_speed" },
+        "fuel_distance_last_trip": { "$ref": "#/$defs/property_length" },
+        "fuel_distance_since_reset": { "$ref": "#/$defs/property_length" },
+        "driving_duration_last_trip": { "$ref": "#/$defs/property_duration" },
+        "driving_duration_since_reset": { "$ref": "#/$defs/property_duration" },
+        "eco_score_total": { "$ref": "#/$defs/property_percentage" },
+        "eco_score_free_wheel": { "$ref": "#/$defs/property_percentage" },
+        "eco_score_constant": { "$ref": "#/$defs/property_percentage" },
+        "eco_score_bonus_range": { "$ref": "#/$defs/property_length" },
+        "trip_meters": { "$ref": "#/$defs/property_trip_meter" },
 
-        "nonce": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property/nonce" },
-        "vin": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property/vin" }
+        "nonce": { "$ref": "#/$defs/property_nonce" },
+        "vin": { "$ref": "#/$defs/property_vin" }
     },
     "additionalProperties": false,
 
@@ -56,117 +56,102 @@
 
     "$defs": {
         "property": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property",
             "type": "object",
             "properties": {
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
                 },
-                "failure": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/failure"
-                },
-                "availability": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/availability"
-                }
+                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
             "minProperties": 1
         },
 
 
         "property_distance_over_time": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property/distance_over_time",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/distance_over_time"
+                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/distance_over_time"
                 }
             }
         },
 
         "property_driving_mode_activation_period": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property/driving_mode_activation_period",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/driving_mode_activation_period"
+                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/driving_mode_activation_period"
                 }
             }
         },
 
         "property_driving_mode_energy_consumption": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property/driving_mode_energy_consumption",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/driving_mode_energy_consumption"
+                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/driving_mode_energy_consumption"
                 }
             }
         },
 
         "property_duration": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property/duration",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json#/$defs/duration"
+                    "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/duration"
                 }
             }
         },
 
         "property_energy": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property/energy",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json#/$defs/energy"
+                    "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/energy"
                 }
             }
         },
 
         "property_energy_efficiency": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property/energy_efficiency",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json#/$defs/energy_efficiency"
+                    "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/energy_efficiency"
                 }
             }
         },
 
         "property_fuel_efficiency": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property/fuel_efficiency",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json#/$defs/fuel_efficiency"
+                    "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/fuel_efficiency"
                 }
             }
         },
 
         "property_grade": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property/grade",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/grade"
+                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/grade"
                 }
             }
         },
 
         "property_length": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property/length",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json#/$defs/length"
+                    "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/length"
                 }
             }
         },
 
         "property_nonce": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property/nonce",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property/bytes",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
                     "type": "array",
@@ -182,28 +167,25 @@
         },
 
         "property_percentage": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property/percentage",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/percentage"
+                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/percentage"
                 }
             }
         },
 
         "property_speed": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property/speed",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json#/$defs/speed"
+                    "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/speed"
                 }
             }
         },
 
         "property_timestamp": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property/timestamp",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
                     "type": "string",
@@ -213,18 +195,16 @@
         },
 
         "property_trip_meter": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property/trip_meter",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/trip_meter"
+                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/trip_meter"
                 }
             }
         },
 
         "property_vin": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property/vin",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
                     "type": "string",
@@ -235,11 +215,10 @@
         },
 
         "property_volume": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property/volume",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/usage.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json#/$defs/volume"
+                    "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/volume"
                 }
             }
         }

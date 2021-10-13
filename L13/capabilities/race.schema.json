@@ -3,27 +3,27 @@
     "$schema": "https://json-schema.org/draft/2019-09/schema",
     "type": "object",
     "properties": {
-        "accelerations": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/race.schema.json/property/acceleration" },
-        "understeering": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/race.schema.json/property/percentage" },
-        "oversteering": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/race.schema.json/property/percentage" },
-        "gas_pedal_position": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/race.schema.json/property/percentage" },
-        "steering_angle": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/race.schema.json/property/angle" },
-        "brake_pressure": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/race.schema.json/property/pressure" },
-        "yaw_rate": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/race.schema.json/property/angular_velocity" },
-        "rear_suspension_steering": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/race.schema.json/property/angle" },
-        "electronic_stability_program": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/race.schema.json/property/active_state" },
-        "brake_torque_vectorings": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/race.schema.json/property/brake_torque_vectoring" },
-        "gear_mode": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/race.schema.json/property/gear_mode" },
-        "selected_gear": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/race.schema.json/property/integer" },
-        "brake_pedal_position": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/race.schema.json/property/percentage" },
-        "brake_pedal_switch": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/race.schema.json/property/active_state" },
-        "clutch_pedal_switch": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/race.schema.json/property/active_state" },
-        "accelerator_pedal_idle_switch": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/race.schema.json/property/active_state" },
-        "accelerator_pedal_kickdown_switch": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/race.schema.json/property/active_state" },
-        "vehicle_moving": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/race.schema.json/property/vehicle_moving" },
+        "accelerations": { "$ref": "#/$defs/property_acceleration" },
+        "understeering": { "$ref": "#/$defs/property_percentage" },
+        "oversteering": { "$ref": "#/$defs/property_percentage" },
+        "gas_pedal_position": { "$ref": "#/$defs/property_percentage" },
+        "steering_angle": { "$ref": "#/$defs/property_angle" },
+        "brake_pressure": { "$ref": "#/$defs/property_pressure" },
+        "yaw_rate": { "$ref": "#/$defs/property_angular_velocity" },
+        "rear_suspension_steering": { "$ref": "#/$defs/property_angle" },
+        "electronic_stability_program": { "$ref": "#/$defs/property_active_state" },
+        "brake_torque_vectorings": { "$ref": "#/$defs/property_brake_torque_vectoring" },
+        "gear_mode": { "$ref": "#/$defs/property_gear_mode" },
+        "selected_gear": { "$ref": "#/$defs/property_integer" },
+        "brake_pedal_position": { "$ref": "#/$defs/property_percentage" },
+        "brake_pedal_switch": { "$ref": "#/$defs/property_active_state" },
+        "clutch_pedal_switch": { "$ref": "#/$defs/property_active_state" },
+        "accelerator_pedal_idle_switch": { "$ref": "#/$defs/property_active_state" },
+        "accelerator_pedal_kickdown_switch": { "$ref": "#/$defs/property_active_state" },
+        "vehicle_moving": { "$ref": "#/$defs/property_vehicle_moving" },
 
-        "nonce": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/race.schema.json/property/nonce" },
-        "vin": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/race.schema.json/property/vin" }
+        "nonce": { "$ref": "#/$defs/property_nonce" },
+        "vin": { "$ref": "#/$defs/property_vin" }
     },
     "additionalProperties": false,
 
@@ -31,77 +31,66 @@
 
     "$defs": {
         "property": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/race.schema.json/property",
             "type": "object",
             "properties": {
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
                 },
-                "failure": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/failure"
-                },
-                "availability": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/availability"
-                }
+                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
             "minProperties": 1
         },
 
 
         "property_acceleration": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/race.schema.json/property/acceleration",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/race.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/acceleration"
+                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/acceleration"
                 }
             }
         },
 
         "property_active_state": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/race.schema.json/property/active_state",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/race.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/active_state"
+                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/active_state"
                 }
             }
         },
 
         "property_angle": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/race.schema.json/property/angle",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/race.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json#/$defs/angle"
+                    "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/angle"
                 }
             }
         },
 
         "property_angular_velocity": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/race.schema.json/property/angular_velocity",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/race.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json#/$defs/angular_velocity"
+                    "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/angular_velocity"
                 }
             }
         },
 
         "property_brake_torque_vectoring": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/race.schema.json/property/brake_torque_vectoring",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/race.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/brake_torque_vectoring"
+                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/brake_torque_vectoring"
                 }
             }
         },
 
         "property_gear_mode": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/race.schema.json/property/gear_mode",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/race.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
                     "type": "string",
@@ -111,8 +100,7 @@
         },
 
         "property_integer": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/race.schema.json/property/integer",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/race.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
                     "type": "integer",
@@ -123,8 +111,7 @@
         },
 
         "property_nonce": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/race.schema.json/property/nonce",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/race.schema.json/property/bytes",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
                     "type": "array",
@@ -140,28 +127,25 @@
         },
 
         "property_percentage": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/race.schema.json/property/percentage",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/race.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/percentage"
+                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/percentage"
                 }
             }
         },
 
         "property_pressure": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/race.schema.json/property/pressure",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/race.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json#/$defs/pressure"
+                    "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/pressure"
                 }
             }
         },
 
         "property_vehicle_moving": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/race.schema.json/property/vehicle_moving",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/race.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
                     "type": "string",
@@ -171,8 +155,7 @@
         },
 
         "property_vin": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/race.schema.json/property/vin",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/race.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
                     "type": "string",

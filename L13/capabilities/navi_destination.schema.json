@@ -3,15 +3,15 @@
     "$schema": "https://json-schema.org/draft/2019-09/schema",
     "type": "object",
     "properties": {
-        "coordinates": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/navi_destination.schema.json/property/coordinates" },
-        "destination_name": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/navi_destination.schema.json/property/string" },
-        "data_slots_free": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/navi_destination.schema.json/property/uinteger" },
-        "data_slots_max": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/navi_destination.schema.json/property/uinteger" },
-        "arrival_duration": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/navi_destination.schema.json/property/duration" },
-        "distance_to_destination": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/navi_destination.schema.json/property/length" },
+        "coordinates": { "$ref": "#/$defs/property_coordinates" },
+        "destination_name": { "$ref": "#/$defs/property_string" },
+        "data_slots_free": { "$ref": "#/$defs/property_uinteger" },
+        "data_slots_max": { "$ref": "#/$defs/property_uinteger" },
+        "arrival_duration": { "$ref": "#/$defs/property_duration" },
+        "distance_to_destination": { "$ref": "#/$defs/property_length" },
 
-        "nonce": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/navi_destination.schema.json/property/nonce" },
-        "vin": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/navi_destination.schema.json/property/vin" }
+        "nonce": { "$ref": "#/$defs/property_nonce" },
+        "vin": { "$ref": "#/$defs/property_vin" }
     },
     "additionalProperties": false,
 
@@ -19,57 +19,48 @@
 
     "$defs": {
         "property": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/navi_destination.schema.json/property",
             "type": "object",
             "properties": {
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
                 },
-                "failure": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/failure"
-                },
-                "availability": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json/availability"
-                }
+                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
             "minProperties": 1
         },
 
 
         "property_coordinates": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/navi_destination.schema.json/property/coordinates",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/navi_destination.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/coordinates"
+                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/coordinates"
                 }
             }
         },
 
         "property_duration": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/navi_destination.schema.json/property/duration",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/navi_destination.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json#/$defs/duration"
+                    "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/duration"
                 }
             }
         },
 
         "property_length": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/navi_destination.schema.json/property/length",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/navi_destination.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
-                    "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json#/$defs/length"
+                    "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/length"
                 }
             }
         },
 
         "property_nonce": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/navi_destination.schema.json/property/nonce",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/navi_destination.schema.json/property/bytes",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
                     "type": "array",
@@ -85,8 +76,7 @@
         },
 
         "property_string": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/navi_destination.schema.json/property/string",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/navi_destination.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
                     "type": "string"
@@ -95,8 +85,7 @@
         },
 
         "property_uinteger": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/navi_destination.schema.json/property/uinteger",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/navi_destination.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
                     "type": "integer",
@@ -107,8 +96,7 @@
         },
 
         "property_vin": {
-            "$id": "https://highmobility.github.io/auto-api-json-schema/L13/navi_destination.schema.json/property/vin",
-            "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/navi_destination.schema.json/property",
+            "$ref": "#/$defs/property",
             "properties": {
                 "data": {
                     "type": "string",
