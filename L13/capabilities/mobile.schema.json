@@ -1,5 +1,5 @@
 {
-    "$id": "https://highmobility.github.io/auto-api-json-schema/L13/mobile.schema.json",
+    "$id": "https://highmobility.github.io/auto-api-json-schema/L13/capabilities/mobile.schema.json",
     "$schema": "https://json-schema.org/draft/2019-09/schema",
     "type": "object",
     "properties": {
