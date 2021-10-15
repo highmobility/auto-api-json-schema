@@ -69,7 +69,9 @@
                 },
                 "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
                 "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
-            }
+            },
+            "minProperties": 1,
+            "additionalProperties": false
         },
 
         "property_string": {
@@ -122,7 +124,9 @@
                 },
                 "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
                 "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
-            }
+            },
+            "minProperties": 1,
+            "additionalProperties": false
         }
     }
 }
