@@ -15,9 +15,10 @@
                         "gravity"
                     ]
                 },
-                "value": { "type": "number" },
-                "additionalProperties": false
-            }
+                "value": { "type": "number" }
+            },
+            "additionalProperties": false,
+            "required": [ "unit", "value" ]
         },
 
         "angle": {
@@ -31,9 +32,10 @@
                         "revolutions"
                     ]
                 },
-                "value": { "type": "number" },
-                "additionalProperties": false
-            }
+                "value": { "type": "number" }
+            },
+            "additionalProperties": false,
+            "required": [ "unit", "value" ]
         },
 
         "angular_velocity": {
@@ -47,9 +49,10 @@
                         "radians_per_second"
                     ]
                 },
-                "value": { "type": "number" },
-                "additionalProperties": false
-            }
+                "value": { "type": "number" }
+            },
+            "additionalProperties": false,
+            "required": [ "unit", "value" ]
         },
 
         "duration": {
@@ -66,9 +69,10 @@
                         "months"
                     ]
                 },
-                "value": { "type": "number" },
-                "additionalProperties": false
-            }
+                "value": { "type": "number" }
+            },
+            "additionalProperties": false,
+            "required": [ "unit", "value" ]
         },
 
         "electric_current": {
@@ -82,9 +86,10 @@
                         "kiloamperes"
                     ]
                 },
-                "value": { "type": "number" },
-                "additionalProperties": false
-            }
+                "value": { "type": "number" }
+            },
+            "additionalProperties": false,
+            "required": [ "unit", "value" ]
         },
 
         "electric_potential_difference": {
@@ -98,9 +103,10 @@
                         "kilovolts"
                     ]
                 },
-                "value": { "type": "number" },
-                "additionalProperties": false
-            }
+                "value": { "type": "number" }
+            },
+            "additionalProperties": false,
+            "required": [ "unit", "value" ]
         },
 
         "energy": {
@@ -115,9 +121,10 @@
                         "kilowatt_hours"
                     ]
                 },
-                "value": { "type": "number" },
-                "additionalProperties": false
-            }
+                "value": { "type": "number" }
+            },
+            "additionalProperties": false,
+            "required": [ "unit", "value" ]
         },
 
         "energy_efficiency": {
@@ -130,9 +137,10 @@
                         "miles_per_kwh"
                     ]
                 },
-                "value": { "type": "number" },
-                "additionalProperties": false
-            }
+                "value": { "type": "number" }
+            },
+            "additionalProperties": false,
+            "required": [ "unit", "value" ]
         },
 
         "frequency": {
@@ -151,9 +159,10 @@
                         "times_per_day"
                     ]
                 },
-                "value": { "type": "number" },
-                "additionalProperties": false
-            }
+                "value": { "type": "number" }
+            },
+            "additionalProperties": false,
+            "required": [ "unit", "value" ]
         },
 
         "fuel_efficiency": {
@@ -167,9 +176,10 @@
                         "miles_per_gallon"
                     ]
                 },
-                "value": { "type": "number" },
-                "additionalProperties": false
-            }
+                "value": { "type": "number" }
+            },
+            "additionalProperties": false,
+            "required": [ "unit", "value" ]
         },
 
         "illuminance": {
@@ -181,9 +191,10 @@
                         "lux"
                     ]
                 },
-                "value": { "type": "number" },
-                "additionalProperties": false
-            }
+                "value": { "type": "number" }
+            },
+            "additionalProperties": false,
+            "required": [ "unit", "value" ]
         },
 
         "length": {
@@ -206,9 +217,10 @@
                         "nautical_miles"
                     ]
                 },
-                "value": { "type": "number" },
-                "additionalProperties": false
-            }
+                "value": { "type": "number" }
+            },
+            "additionalProperties": false,
+            "required": [ "unit", "value" ]
         },
 
         "power": {
@@ -224,9 +236,10 @@
                         "horsepower"
                     ]
                 },
-                "value": { "type": "number" },
-                "additionalProperties": false
-            }
+                "value": { "type": "number" }
+            },
+            "additionalProperties": false,
+            "required": [ "unit", "value" ]
         },
 
         "pressure": {
@@ -244,9 +257,10 @@
                         "pounds_force_per_square_inch"
                     ]
                 },
-                "value": { "type": "number" },
-                "additionalProperties": false
-            }
+                "value": { "type": "number" }
+            },
+            "additionalProperties": false,
+            "required": [ "unit", "value" ]
         },
 
         "speed": {
@@ -261,9 +275,10 @@
                         "knots"
                     ]
                 },
-                "value": { "type": "number" },
-                "additionalProperties": false
-            }
+                "value": { "type": "number" }
+            },
+            "additionalProperties": false,
+            "required": [ "unit", "value" ]
         },
 
         "temperature": {
@@ -277,9 +292,10 @@
                         "fahrenheit"
                     ]
                 },
-                "value": { "type": "number" },
-                "additionalProperties": false
-            }
+                "value": { "type": "number" }
+            },
+            "additionalProperties": false,
+            "required": [ "unit", "value" ]
         },
 
         "torque": {
@@ -293,9 +309,10 @@
                         "pound_feet"
                     ]
                 },
-                "value": { "type": "number" },
-                "additionalProperties": false
-            }
+                "value": { "type": "number" }
+            },
+            "additionalProperties": false,
+            "required": [ "unit", "value" ]
         },
 
         "volume": {
@@ -320,9 +337,10 @@
                         "imperial_gallons"
                     ]
                 },
-                "value": { "type": "number" },
-                "additionalProperties": false
-            }
+                "value": { "type": "number" }
+            },
+            "additionalProperties": false,
+            "required": [ "unit", "value" ]
         }
     }
 }
