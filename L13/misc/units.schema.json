@@ -1,19 +1,12 @@
 {
     "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json",
-    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$schema": "https://json-schema.org/draft-07/schema",
     "type": "object",
     "description": "AutoAPI unit types",
 
     "$defs": {
-        "unit": {
-            "type": "object",
-            "properties": {
-                "value": { "type": "number" }
-            }
-        },
-
         "acceleration": {
-            "$ref": "#/$defs/unit",
+            "type": "object",
             "properties": {
                 "unit": {
                     "type": "string",
@@ -21,12 +14,14 @@
                         "meters_per_second_squared",
                         "gravity"
                     ]
-                }
+                },
+                "value": { "type": "number" },
+                "additionalProperties": false
             }
         },
 
         "angle": {
-            "$ref": "#/$defs/unit",
+            "type": "object",
             "properties": {
                 "unit": {
                     "type": "string",
@@ -35,12 +30,14 @@
                         "radians",
                         "revolutions"
                     ]
-                }
+                },
+                "value": { "type": "number" },
+                "additionalProperties": false
             }
         },
 
         "angular_velocity": {
-            "$ref": "#/$defs/unit",
+            "type": "object",
             "properties": {
                 "unit": {
                     "type": "string",
@@ -49,12 +46,14 @@
                         "degrees_per_second",
                         "radians_per_second"
                     ]
-                }
+                },
+                "value": { "type": "number" },
+                "additionalProperties": false
             }
         },
 
         "duration": {
-            "$ref": "#/$defs/unit",
+            "type": "object",
             "properties": {
                 "unit": {
                     "type": "string",
@@ -66,12 +65,14 @@
                         "weeks",
                         "months"
                     ]
-                }
+                },
+                "value": { "type": "number" },
+                "additionalProperties": false
             }
         },
 
         "electric_current": {
-            "$ref": "#/$defs/unit",
+            "type": "object",
             "properties": {
                 "unit": {
                     "type": "string",
@@ -80,12 +81,14 @@
                         "milliamperes",
                         "kiloamperes"
                     ]
-                }
+                },
+                "value": { "type": "number" },
+                "additionalProperties": false
             }
         },
 
         "electric_potential_difference": {
-            "$ref": "#/$defs/unit",
+            "type": "object",
             "properties": {
                 "unit": {
                     "type": "string",
@@ -94,12 +97,14 @@
                         "millivolts",
                         "kilovolts"
                     ]
-                }
+                },
+                "value": { "type": "number" },
+                "additionalProperties": false
             }
         },
 
         "energy": {
-            "$ref": "#/$defs/unit",
+            "type": "object",
             "properties": {
                 "unit": {
                     "type": "string",
@@ -109,12 +114,14 @@
                         "watt_hours",
                         "kilowatt_hours"
                     ]
-                }
+                },
+                "value": { "type": "number" },
+                "additionalProperties": false
             }
         },
 
         "energy_efficiency": {
-            "$ref": "#/$defs/unit",
+            "type": "object",
             "properties": {
                 "unit": {
                     "type": "string",
@@ -122,12 +129,14 @@
                         "kwh_per_100_kilometers",
                         "miles_per_kwh"
                     ]
-                }
+                },
+                "value": { "type": "number" },
+                "additionalProperties": false
             }
         },
 
         "frequency": {
-            "$ref": "#/$defs/unit",
+            "type": "object",
             "properties": {
                 "unit": {
                     "type": "string",
@@ -141,12 +150,14 @@
                         "times_per_hour",
                         "times_per_day"
                     ]
-                }
+                },
+                "value": { "type": "number" },
+                "additionalProperties": false
             }
         },
 
         "fuel_efficiency": {
-            "$ref": "#/$defs/unit",
+            "type": "object",
             "properties": {
                 "unit": {
                     "type": "string",
@@ -155,24 +166,28 @@
                         "miles_per_imperial_gallon",
                         "miles_per_gallon"
                     ]
-                }
+                },
+                "value": { "type": "number" },
+                "additionalProperties": false
             }
         },
 
         "illuminance": {
-            "$ref": "#/$defs/unit",
+            "type": "object",
             "properties": {
                 "unit": {
                     "type": "string",
                     "enum": [
                         "lux"
                     ]
-                }
+                },
+                "value": { "type": "number" },
+                "additionalProperties": false
             }
         },
 
         "length": {
-            "$ref": "#/$defs/unit",
+            "type": "object",
             "properties": {
                 "unit": {
                     "type": "string",
@@ -190,12 +205,14 @@
                         "scandinavian_miles",
                         "nautical_miles"
                     ]
-                }
+                },
+                "value": { "type": "number" },
+                "additionalProperties": false
             }
         },
 
         "power": {
-            "$ref": "#/$defs/unit",
+            "type": "object",
             "properties": {
                 "unit": {
                     "type": "string",
@@ -206,12 +223,14 @@
                         "megawatts",
                         "horsepower"
                     ]
-                }
+                },
+                "value": { "type": "number" },
+                "additionalProperties": false
             }
         },
 
         "pressure": {
-            "$ref": "#/$defs/unit",
+            "type": "object",
             "properties": {
                 "unit": {
                     "type": "string",
@@ -224,12 +243,14 @@
                         "millimeters_of_mercury",
                         "pounds_force_per_square_inch"
                     ]
-                }
+                },
+                "value": { "type": "number" },
+                "additionalProperties": false
             }
         },
 
         "speed": {
-            "$ref": "#/$defs/unit",
+            "type": "object",
             "properties": {
                 "unit": {
                     "type": "string",
@@ -239,12 +260,14 @@
                         "miles_per_hour",
                         "knots"
                     ]
-                }
+                },
+                "value": { "type": "number" },
+                "additionalProperties": false
             }
         },
 
         "temperature": {
-            "$ref": "#/$defs/unit",
+            "type": "object",
             "properties": {
                 "unit": {
                     "type": "string",
@@ -253,12 +276,14 @@
                         "celsius",
                         "fahrenheit"
                     ]
-                }
+                },
+                "value": { "type": "number" },
+                "additionalProperties": false
             }
         },
 
         "torque": {
-            "$ref": "#/$defs/unit",
+            "type": "object",
             "properties": {
                 "unit": {
                     "type": "string",
@@ -267,12 +292,14 @@
                         "newton_millimeters",
                         "pound_feet"
                     ]
-                }
+                },
+                "value": { "type": "number" },
+                "additionalProperties": false
             }
         },
 
         "volume": {
-            "$ref": "#/$defs/unit",
+            "type": "object",
             "properties": {
                 "unit": {
                     "type": "string",
@@ -292,7 +319,9 @@
                         "imperial_fluid_ounces",
                         "imperial_gallons"
                     ]
-                }
+                },
+                "value": { "type": "number" },
+                "additionalProperties": false
             }
         }
     }
