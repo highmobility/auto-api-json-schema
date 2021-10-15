@@ -17,9 +17,12 @@
 
 
     "$defs": {
-        "property": {
+        "property_crash_incident": {
             "type": "object",
             "properties": {
+                "data": {
+                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/crash_incident"
+                }
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -30,32 +33,37 @@
             "minProperties": 1
         },
 
-        "property_crash_incident": {
-            "$ref": "#/$defs/property",
-            "properties": {
-                "data": {
-                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/crash_incident"
-                }
-            }
-        },
-
         "property_enabled_state": {
-            "$ref": "#/$defs/property",
+            "type": "object",
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/enabled_state"
                 }
-            }
+                "timestamp": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+            },
+            "minProperties": 1
         },
 
         "property_impact_zone": {
-            "$ref": "#/$defs/property",
+            "type": "object",
             "properties": {
                 "data": {
                     "type": "string",
                     "enum": ["pedestrian_protection", "rollover", "rear_passenger_side", "rear_driver_side", "side_passeger_side", "side_driver_side", "front_passenger_side", "front_driver_side"]
                 }
-            }
+                "timestamp": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+            },
+            "minProperties": 1
         },
 
         "property_nonce": {
@@ -75,34 +83,55 @@
         },
 
         "property_tipped_state": {
-            "$ref": "#/$defs/property",
+            "type": "object",
             "properties": {
                 "data": {
                     "type": "string",
                     "enum": ["tipped_over", "not_tipped"]
                 }
-            }
+                "timestamp": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+            },
+            "minProperties": 1
         },
 
         "property_type": {
-            "$ref": "#/$defs/property",
+            "type": "object",
             "properties": {
                 "data": {
                     "type": "string",
                     "enum": ["pedestrian", "non_pedestrian"]
                 }
-            }
+                "timestamp": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+            },
+            "minProperties": 1
         },
 
         "property_uinteger": {
-            "$ref": "#/$defs/property",
+            "type": "object",
             "properties": {
                 "data": {
                     "type": "integer",
                     "minimum": 0,
                     "maximum": 255
                 }
-            }
+                "timestamp": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+            },
+            "minProperties": 1
         },
 
         "property_vin": {

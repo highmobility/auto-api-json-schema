@@ -16,9 +16,12 @@
 
 
     "$defs": {
-        "property": {
+        "property_door_position": {
             "type": "object",
             "properties": {
+                "data": {
+                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/door_position"
+                }
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -29,31 +32,36 @@
             "minProperties": 1
         },
 
-        "property_door_position": {
-            "$ref": "#/$defs/property",
-            "properties": {
-                "data": {
-                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/door_position"
-                }
-            }
-        },
-
         "property_lock": {
-            "$ref": "#/$defs/property",
+            "type": "object",
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/lock"
                 }
-            }
+                "timestamp": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+            },
+            "minProperties": 1
         },
 
         "property_lock_state": {
-            "$ref": "#/$defs/property",
+            "type": "object",
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/lock_state"
                 }
-            }
+                "timestamp": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+            },
+            "minProperties": 1
         },
 
         "property_nonce": {

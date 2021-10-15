@@ -22,9 +22,12 @@
 
 
     "$defs": {
-        "property": {
+        "property_active_state": {
             "type": "object",
             "properties": {
+                "data": {
+                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/active_state"
+                }
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -35,32 +38,37 @@
             "minProperties": 1
         },
 
-        "property_active_state": {
-            "$ref": "#/$defs/property",
-            "properties": {
-                "data": {
-                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/active_state"
-                }
-            }
-        },
-
         "property_blind_spot_warning_system_coverage": {
-            "$ref": "#/$defs/property",
+            "type": "object",
             "properties": {
                 "data": {
                     "type": "string",
                     "enum": ["regular", "trailer"]
                 }
-            }
+                "timestamp": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+            },
+            "minProperties": 1
         },
 
         "property_lane_keep_assist_state": {
-            "$ref": "#/$defs/property",
+            "type": "object",
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/lane_keep_assist_state"
                 }
-            }
+                "timestamp": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+            },
+            "minProperties": 1
         },
 
         "property_nonce": {
@@ -80,21 +88,35 @@
         },
 
         "property_on_off_state": {
-            "$ref": "#/$defs/property",
+            "type": "object",
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/on_off_state"
                 }
-            }
+                "timestamp": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+            },
+            "minProperties": 1
         },
 
         "property_park_assist": {
-            "$ref": "#/$defs/property",
+            "type": "object",
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/park_assist"
                 }
-            }
+                "timestamp": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+            },
+            "minProperties": 1
         },
 
         "property_vin": {

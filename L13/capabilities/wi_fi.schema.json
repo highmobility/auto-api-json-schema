@@ -15,9 +15,12 @@
 
 
     "$defs": {
-        "property": {
+        "property_connection_state": {
             "type": "object",
             "properties": {
+                "data": {
+                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/connection_state"
+                }
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -28,31 +31,36 @@
             "minProperties": 1
         },
 
-        "property_connection_state": {
-            "$ref": "#/$defs/property",
-            "properties": {
-                "data": {
-                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/connection_state"
-                }
-            }
-        },
-
         "property_enabled_state": {
-            "$ref": "#/$defs/property",
+            "type": "object",
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/enabled_state"
                 }
-            }
+                "timestamp": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+            },
+            "minProperties": 1
         },
 
         "property_network_security": {
-            "$ref": "#/$defs/property",
+            "type": "object",
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/network_security"
                 }
-            }
+                "timestamp": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+            },
+            "minProperties": 1
         },
 
         "property_nonce": {
@@ -72,12 +80,19 @@
         },
 
         "property_string": {
-            "$ref": "#/$defs/property",
+            "type": "object",
             "properties": {
                 "data": {
                     "type": "string"
                 }
-            }
+                "timestamp": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+            },
+            "minProperties": 1
         },
 
         "property_vin": {

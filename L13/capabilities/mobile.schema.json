@@ -12,9 +12,12 @@
 
 
     "$defs": {
-        "property": {
+        "property_connection_state": {
             "type": "object",
             "properties": {
+                "data": {
+                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/connection_state"
+                }
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -23,15 +26,6 @@
                 "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
             "minProperties": 1
-        },
-
-        "property_connection_state": {
-            "$ref": "#/$defs/property",
-            "properties": {
-                "data": {
-                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/connection_state"
-                }
-            }
         },
 
         "property_nonce": {

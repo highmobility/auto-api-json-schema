@@ -20,9 +20,12 @@
 
 
     "$defs": {
-        "property": {
+        "property_ignition_state": {
             "type": "object",
             "properties": {
+                "data": {
+                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/ignition_state"
+                }
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -31,15 +34,6 @@
                 "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
             "minProperties": 1
-        },
-
-        "property_ignition_state": {
-            "$ref": "#/$defs/property",
-            "properties": {
-                "data": {
-                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/ignition_state"
-                }
-            }
         },
 
         "property_nonce": {
