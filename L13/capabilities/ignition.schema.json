@@ -25,7 +25,7 @@
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/ignition_state"
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"

@@ -34,7 +34,7 @@
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/acceleration"
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -51,7 +51,7 @@
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/active_state"
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -68,7 +68,7 @@
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/angle"
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -85,7 +85,7 @@
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/angular_velocity"
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -102,7 +102,7 @@
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/brake_torque_vectoring"
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -120,7 +120,7 @@
                 "data": {
                     "type": "string",
                     "enum": ["manual", "park", "reverse", "neutral", "drive", "low_gear", "sport"]
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -139,7 +139,7 @@
                     "type": "integer",
                     "minimum": -128,
                     "maximum": 127
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -172,7 +172,7 @@
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/percentage"
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -189,7 +189,7 @@
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/pressure"
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -207,7 +207,7 @@
                 "data": {
                     "type": "string",
                     "enum": ["not_moving", "moving"]
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"

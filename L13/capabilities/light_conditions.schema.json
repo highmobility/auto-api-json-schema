@@ -18,7 +18,7 @@
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/illuminance"
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"

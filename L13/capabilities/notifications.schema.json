@@ -20,7 +20,7 @@
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/action_item"
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -38,7 +38,7 @@
                 "data": {
                     "type": "string",
                     "enum": ["clear"]
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -71,7 +71,7 @@
             "properties": {
                 "data": {
                     "type": "string"
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -90,7 +90,7 @@
                     "type": "integer",
                     "minimum": 0,
                     "maximum": 255
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"

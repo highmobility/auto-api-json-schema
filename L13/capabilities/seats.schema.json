@@ -34,7 +34,7 @@
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/person_detected"
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -51,7 +51,7 @@
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/seatbelt_state"
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"

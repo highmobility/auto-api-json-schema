@@ -64,7 +64,7 @@
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/active_state"
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -82,7 +82,7 @@
                 "data": {
                     "type": "string",
                     "enum": ["immediate", "timer_based", "inductive"]
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -100,7 +100,7 @@
                 "data": {
                     "type": "string",
                     "enum": ["not_chosen", "chosen"]
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -118,7 +118,7 @@
                 "data": {
                     "type": "string",
                     "enum": ["alternating_current", "direct_current"]
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -135,7 +135,7 @@
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/departure_time"
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -152,7 +152,7 @@
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/duration"
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -169,7 +169,7 @@
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/electric_current"
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -186,7 +186,7 @@
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/electric_potential_difference"
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -203,7 +203,7 @@
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/enabled_state"
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -220,7 +220,7 @@
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/energy"
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -237,7 +237,7 @@
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/length"
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -270,7 +270,7 @@
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/percentage"
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -288,7 +288,7 @@
                 "data": {
                     "type": "string",
                     "enum": ["type_1", "type_2", "ccs", "chademo"]
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -306,7 +306,7 @@
                 "data": {
                     "type": "string",
                     "enum": ["disconnected", "plugged_in"]
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -323,7 +323,7 @@
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/position"
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -340,7 +340,7 @@
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/power"
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -358,7 +358,7 @@
                 "data": {
                     "type": "string",
                     "enum": ["no_change", "not_possible_low", "not_possible_finished", "available_after_engine_restart", "general_error"]
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -375,7 +375,7 @@
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/reduction_time"
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -393,7 +393,7 @@
                 "data": {
                     "type": "string",
                     "enum": ["wallbox_is_active", "scc_is_active", "peak_setting_active"]
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -411,7 +411,7 @@
                 "data": {
                     "type": "string",
                     "enum": ["red", "yellow", "green"]
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -429,7 +429,7 @@
                 "data": {
                     "type": "string",
                     "enum": ["not_charging", "charging", "charging_complete", "initialising", "charging_paused", "charging_error", "cable_unplugged", "slow_charging", "fast_charging", "discharging", "foreign_object_detected"]
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -446,7 +446,7 @@
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/temperature"
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -463,7 +463,7 @@
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/timer"
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"

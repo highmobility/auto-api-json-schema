@@ -34,7 +34,7 @@
             "properties": {
                 "data": {
                     "type": "string"
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"

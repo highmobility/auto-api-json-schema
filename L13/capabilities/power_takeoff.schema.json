@@ -18,7 +18,7 @@
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/active_state"
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -36,7 +36,7 @@
                 "data": {
                     "type": "string",
                     "enum": ["not_engaged", "engaged"]
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"

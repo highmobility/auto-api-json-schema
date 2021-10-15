@@ -22,7 +22,7 @@
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/angle"
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -39,7 +39,7 @@
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/coordinates"
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -57,7 +57,7 @@
                 "data": {
                     "type": "string",
                     "enum": ["dead_reckoning", "real", "none"]
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -74,7 +74,7 @@
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/length"
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -107,7 +107,7 @@
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/percentage"
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"

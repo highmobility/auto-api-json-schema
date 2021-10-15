@@ -21,7 +21,7 @@
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/door_position"
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -38,7 +38,7 @@
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/lock"
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -55,7 +55,7 @@
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/lock_state"
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"

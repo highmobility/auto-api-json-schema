@@ -45,7 +45,7 @@
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/window_open_percentage"
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -62,7 +62,7 @@
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/window_position"
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"

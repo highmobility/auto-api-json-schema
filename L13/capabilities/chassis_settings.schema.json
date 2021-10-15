@@ -24,7 +24,7 @@
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/driving_mode"
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -41,7 +41,7 @@
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/length"
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -75,7 +75,7 @@
                 "data": {
                     "type": "string",
                     "enum": ["inactive", "active", "reset"]
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -92,7 +92,7 @@
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/spring_rate"
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"

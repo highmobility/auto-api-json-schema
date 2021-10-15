@@ -75,7 +75,7 @@
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/active_state"
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -92,7 +92,7 @@
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/angular_velocity"
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -109,7 +109,7 @@
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/check_control_message"
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -126,7 +126,7 @@
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/confirmed_trouble_code"
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -143,7 +143,7 @@
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/diesel_exhaust_filter_status"
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -160,7 +160,7 @@
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/duration"
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -177,7 +177,7 @@
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/electric_potential_difference"
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -195,7 +195,7 @@
                 "data": {
                     "type": "string",
                     "enum": ["low", "normal", "high", "low_soft", "low_hard", "no_sensor", "system_fault"]
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -212,7 +212,7 @@
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/fluid_level"
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -230,7 +230,7 @@
                 "data": {
                     "type": "string",
                     "enum": ["measured", "calculated"]
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -247,7 +247,7 @@
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/length"
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -265,7 +265,7 @@
                 "data": {
                     "type": "string",
                     "enum": ["ok", "deactivation_level_1", "deactivation_level_2", "deactivation_level_3"]
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -298,7 +298,7 @@
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/oem_trouble_code_value"
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -315,7 +315,7 @@
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/percentage"
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -332,7 +332,7 @@
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/speed"
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -349,7 +349,7 @@
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/temperature"
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -366,7 +366,7 @@
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/tire_pressure"
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -383,7 +383,7 @@
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/tire_pressure_status"
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -400,7 +400,7 @@
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/tire_temperature"
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -417,7 +417,7 @@
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/trouble_code"
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -445,7 +445,7 @@
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/volume"
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -462,7 +462,7 @@
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/wheel_rpm"
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"

@@ -38,7 +38,7 @@
                 "data": {
                     "type": "string",
                     "enum": ["ended", "started"]
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -55,7 +55,7 @@
             "properties": {
                 "data": {
                     "type": "string"
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
@@ -73,7 +73,7 @@
                 "data": {
                     "type": "string",
                     "format": "date-time"
-                }
+                },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
