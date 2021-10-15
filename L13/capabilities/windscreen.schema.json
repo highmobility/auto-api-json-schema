@@ -1,6 +1,6 @@
 {
     "$id": "https://highmobility.github.io/auto-api-json-schema/L13/capabilities/windscreen.schema.json",
-    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$schema": "https://json-schema.org/draft-07/schema",
     "type": "object",
     "properties": {
         "wipers_status": { "$ref": "#/$defs/property_wipers_status" },
@@ -48,7 +48,8 @@
                 "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
                 "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
-            "minProperties": 1
+            "minProperties": 1,
+            "additionalProperties": false
         },
 
         "property_timestamp": {
@@ -65,7 +66,8 @@
                 "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
                 "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
-            "minProperties": 1
+            "minProperties": 1,
+            "additionalProperties": false
         },
 
         "property_vin": {
@@ -93,7 +95,8 @@
                 "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
                 "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
-            "minProperties": 1
+            "minProperties": 1,
+            "additionalProperties": false
         },
 
         "property_windscreen_needs_replacement": {
@@ -110,7 +113,8 @@
                 "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
                 "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
-            "minProperties": 1
+            "minProperties": 1,
+            "additionalProperties": false
         },
 
         "property_wipers_intensity": {
@@ -127,7 +131,8 @@
                 "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
                 "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
-            "minProperties": 1
+            "minProperties": 1,
+            "additionalProperties": false
         },
 
         "property_wipers_status": {
@@ -144,7 +149,8 @@
                 "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
                 "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
-            "minProperties": 1
+            "minProperties": 1,
+            "additionalProperties": false
         },
 
         "property_zone": {
@@ -160,7 +166,8 @@
                 "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
                 "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
-            "minProperties": 1
+            "minProperties": 1,
+            "additionalProperties": false
         }
     }
 }

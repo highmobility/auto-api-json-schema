@@ -1,6 +1,6 @@
 {
     "$id": "https://highmobility.github.io/auto-api-json-schema/L13/capabilities/charging.schema.json",
-    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$schema": "https://json-schema.org/draft-07/schema",
     "type": "object",
     "properties": {
         "estimated_range": { "$ref": "#/$defs/property_length" },
@@ -72,7 +72,8 @@
                 "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
                 "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
-            "minProperties": 1
+            "minProperties": 1,
+            "additionalProperties": false
         },
 
         "property_charge_mode": {
@@ -89,7 +90,8 @@
                 "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
                 "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
-            "minProperties": 1
+            "minProperties": 1,
+            "additionalProperties": false
         },
 
         "property_charging_window_chosen": {
@@ -106,7 +108,8 @@
                 "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
                 "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
-            "minProperties": 1
+            "minProperties": 1,
+            "additionalProperties": false
         },
 
         "property_current_type": {
@@ -123,7 +126,8 @@
                 "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
                 "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
-            "minProperties": 1
+            "minProperties": 1,
+            "additionalProperties": false
         },
 
         "property_departure_time": {
@@ -139,7 +143,8 @@
                 "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
                 "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
-            "minProperties": 1
+            "minProperties": 1,
+            "additionalProperties": false
         },
 
         "property_duration": {
@@ -155,7 +160,8 @@
                 "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
                 "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
-            "minProperties": 1
+            "minProperties": 1,
+            "additionalProperties": false
         },
 
         "property_electric_current": {
@@ -171,7 +177,8 @@
                 "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
                 "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
-            "minProperties": 1
+            "minProperties": 1,
+            "additionalProperties": false
         },
 
         "property_electric_potential_difference": {
@@ -187,7 +194,8 @@
                 "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
                 "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
-            "minProperties": 1
+            "minProperties": 1,
+            "additionalProperties": false
         },
 
         "property_enabled_state": {
@@ -203,7 +211,8 @@
                 "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
                 "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
-            "minProperties": 1
+            "minProperties": 1,
+            "additionalProperties": false
         },
 
         "property_energy": {
@@ -219,7 +228,8 @@
                 "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
                 "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
-            "minProperties": 1
+            "minProperties": 1,
+            "additionalProperties": false
         },
 
         "property_length": {
@@ -235,7 +245,8 @@
                 "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
                 "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
-            "minProperties": 1
+            "minProperties": 1,
+            "additionalProperties": false
         },
 
         "property_nonce": {
@@ -267,7 +278,8 @@
                 "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
                 "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
-            "minProperties": 1
+            "minProperties": 1,
+            "additionalProperties": false
         },
 
         "property_plug_type": {
@@ -284,7 +296,8 @@
                 "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
                 "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
-            "minProperties": 1
+            "minProperties": 1,
+            "additionalProperties": false
         },
 
         "property_plugged_in": {
@@ -301,7 +314,8 @@
                 "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
                 "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
-            "minProperties": 1
+            "minProperties": 1,
+            "additionalProperties": false
         },
 
         "property_position": {
@@ -317,7 +331,8 @@
                 "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
                 "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
-            "minProperties": 1
+            "minProperties": 1,
+            "additionalProperties": false
         },
 
         "property_power": {
@@ -333,7 +348,8 @@
                 "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
                 "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
-            "minProperties": 1
+            "minProperties": 1,
+            "additionalProperties": false
         },
 
         "property_preconditioning_error": {
@@ -350,7 +366,8 @@
                 "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
                 "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
-            "minProperties": 1
+            "minProperties": 1,
+            "additionalProperties": false
         },
 
         "property_reduction_time": {
@@ -366,7 +383,8 @@
                 "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
                 "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
-            "minProperties": 1
+            "minProperties": 1,
+            "additionalProperties": false
         },
 
         "property_smart_charging_status": {
@@ -383,7 +401,8 @@
                 "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
                 "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
-            "minProperties": 1
+            "minProperties": 1,
+            "additionalProperties": false
         },
 
         "property_starter_battery_state": {
@@ -400,7 +419,8 @@
                 "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
                 "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
-            "minProperties": 1
+            "minProperties": 1,
+            "additionalProperties": false
         },
 
         "property_status": {
@@ -417,7 +437,8 @@
                 "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
                 "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
-            "minProperties": 1
+            "minProperties": 1,
+            "additionalProperties": false
         },
 
         "property_temperature": {
@@ -433,7 +454,8 @@
                 "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
                 "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
-            "minProperties": 1
+            "minProperties": 1,
+            "additionalProperties": false
         },
 
         "property_timer": {
@@ -449,7 +471,8 @@
                 "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
                 "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
-            "minProperties": 1
+            "minProperties": 1,
+            "additionalProperties": false
         },
 
         "property_vin": {

@@ -1,6 +1,6 @@
 {
     "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json",
-    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$schema": "https://json-schema.org/draft-07/schema",
     "type": "object",
     "description": "AutoAPI custom types",
 
@@ -30,7 +30,8 @@
             "properties": {
                 "latitude": { "type": "number" },
                 "longitude": { "type": "number" }
-            }
+            },
+            "additionalProperties": false
         },
 
         "detected": {
@@ -73,7 +74,8 @@
             "properties": {
                 "key": { "type": "string" },
                 "value": { "type": "string" }
-            }
+            },
+            "additionalProperties": false
         },
 
         "location": {
@@ -143,7 +145,8 @@
                   "type": "array",
                   "items": { "type": "integer" }
                 }
-            }
+            },
+            "additionalProperties": false
         },
 
         "time": {
@@ -151,7 +154,8 @@
             "properties": {
                 "hour": { "type": "integer" },
                 "minute": { "type": "integer" }
-            }
+            },
+            "additionalProperties": false
         },
 
         "weekday": {
@@ -169,7 +173,8 @@
             "properties": {
                 "horizontal": { "type": "integer" },
                 "vertical": { "type": "integer" }
-            }
+            },
+            "additionalProperties": false
         },
 
         "acceleration": {
@@ -180,7 +185,8 @@
                     "enum": ["longitudinal", "lateral", "front_lateral", "rear_lateral"]
                 },
                 "acceleration": { "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/acceleration" }
-            }
+            },
+            "additionalProperties": false
         },
 
         "action_item": {
@@ -188,7 +194,8 @@
             "properties": {
                 "id": { "type": "integer" },
                 "name": { "type": "string" }
-            }
+            },
+            "additionalProperties": false
         },
 
         "address_component": {
@@ -199,7 +206,8 @@
                     "enum": ["city", "country", "country_short", "district", "postal_code", "street", "state_province", "other"]
                 },
                 "value": { "type": "string" }
-            }
+            },
+            "additionalProperties": false
         },
 
         "availability": {
@@ -214,7 +222,8 @@
                     "type": "string",
                     "enum": ["app", "vehicle"]
                 }
-            }
+            },
+            "additionalProperties": false
         },
 
         "brake_torque_vectoring": {
@@ -222,7 +231,8 @@
             "properties": {
                 "axle": { "$ref": "#/$defs/axle" },
                 "state": { "$ref": "#/$defs/active_state" }
-            }
+            },
+            "additionalProperties": false
         },
 
         "charging_cost": {
@@ -232,7 +242,8 @@
                 "calculated_charging_cost": { "type": "number" },
                 "calculated_savings": { "type": "number" },
                 "simulated_immediate_charging_cost": { "type": "number" }
-            }
+            },
+            "additionalProperties": false
         },
 
         "charging_location": {
@@ -241,7 +252,8 @@
                 "municipality": { "type": "string" },
                 "formatted_address": { "type": "string" },
                 "street_address": { "type": "string" }
-            }
+            },
+            "additionalProperties": false
         },
 
         "charging_point": {
@@ -251,7 +263,8 @@
                 "postal_code": { "type": "string" },
                 "street": { "type": "string" },
                 "provider": { "type": "string" }
-            }
+            },
+            "additionalProperties": false
         },
 
         "check_control_message": {
@@ -261,7 +274,8 @@
                 "remaining_time": { "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/duration" },
                 "text": { "type": "string" },
                 "status": { "type": "string" }
-            }
+            },
+            "additionalProperties": false
         },
 
         "condition_based_service": {
@@ -276,7 +290,8 @@
                 },
                 "text": { "type": "string" },
                 "description": { "type": "string" }
-            }
+            },
+            "additionalProperties": false
         },
 
         "confirmed_trouble_code": {
@@ -286,7 +301,8 @@
                 "ecu_address": { "type": "string" },
                 "ecu_variant_name": { "type": "string" },
                 "status": { "type": "string" }
-            }
+            },
+            "additionalProperties": false
         },
 
         "crash_incident": {
@@ -304,7 +320,8 @@
                     "type": "string",
                     "enum": ["unknown", "needed", "not_needed"]
                 }
-            }
+            },
+            "additionalProperties": false
         },
 
         "dashboard_light": {
@@ -315,7 +332,8 @@
                     "enum": ["high_beam", "low_beam", "hazard_warning", "brake_failure", "hatch_open", "fuel_level", "engine_coolant_temperature", "battery_charging_condition", "engine_oil", "position_lights", "front_fog_light", "rear_fog_light", "park_heating", "engine_indicator", "service_call", "transmission_fluid_temperature", "transmission_failure", "anti_lock_brake_failure", "worn_brake_linings", "windscreen_washer_fluid", "tire_failure", "engine_oil_level", "engine_coolant_level", "steering_failure", "esc_indication", "brake_lights", "adblue_level", "fuel_filter_diff_pressure", "seat_belt", "advanced_braking", "acc", "trailer_connected", "airbag", "esc_switched_off", "lane_departure_warning_off", "air_filter_minder", "air_suspension_ride_control_fault", "all_wheel_drive_disabled", "anti_theft", "blind_spot_detection", "charge_system_fault", "check_fuel_cap", "check_fuel_fill_inlet", "check_fuel_filter", "dc_temp_warning", "dc_warning_status", "diesel_engine_idle_shutdown", "diesel_engine_warning", "diesel_exhaust_fluid_system_fault", "diesel_exhaust_over_temp", "diesel_exhaust_fluid_quality", "diesel_filter_regeneration", "diesel_particulate_filter", "diesel_pre_heat", "electric_trailer_brake_connection", "ev_battery_cell_max_volt_warning", "ev_battery_cell_min_volt_warning", "ev_battery_charge_energy_storage_warning", "ev_battery_high_level_warning", "ev_battery_high_temperature_warning", "ev_battery_insulation_resist_warning", "ev_battery_jump_level_warning", "ev_battery_low_level_warning", "ev_battery_max_volt_veh_energy_warning", "ev_battery_min_volt_veh_energy_warning", "ev_battery_over_charge_warning", "ev_battery_poor_cell_warning", "ev_battery_temp_diff_warning", "forward_collision_warning", "fuel_door_open", "hill_descent_control_fault", "hill_start_assist_warning", "hv_interlocking_status_warning", "lighting_system_failure", "malfunction_indicator", "motor_controller_temp_warning", "park_aid_malfunction", "passive_entry_passive_start", "powertrain_malfunction", "restraints_indicator_warning", "start_stop_engine_warning", "traction_control_disabled", "traction_control_active", "traction_motor_temp_warning", "tire_pressure_monitor_system_warning", "water_in_fuel", "tire_warning_front_right", "tire_warning_front_left", "tire_warning_rear_right", "tire_warning_rear_left", "tire_warning_system_error", "battery_low_warning", "brake_fluid_warning", "active_hood_fault", "active_spoiler_fault", "adjust_tire_pressure", "steering_lock_alert", "anti_pollution_failure_engine_start_impossible", "anti_pollution_system_failure", "anti_reverse_system_failing", "auto_parking_brake", "automatic_braking_deactive", "automatic_braking_system_fault", "automatic_lights_settings_failure", "keyfob_battery_alarm", "trunk_open", "check_reversing_lamp", "crossing_line_system_alert_failure", "dipped_beam_headlamps_front_left_failure", "dipped_beam_headlamps_front_right_failure", "directional_headlamps_failure", "directional_light_failure", "dsg_failing", "electric_mode_not_available", "electronic_lock_failure", "engine_control_system_failure", "engine_oil_pressure_alert", "esp_failure", "excessive_oil_temperature", "tire_front_left_flat", "tire_front_right_flat", "tire_rear_left_flat", "tire_rear_right_flat", "fog_light_front_left_failure", "fog_light_front_right_failure", "fog_light_rear_left_failure", "fog_light_rear_right_failure", "fog_light_front_fault", "door_front_left_open", "door_front_left_open_high_speed", "tire_front_left_not_monitored", "door_front_right_open", "door_front_right_open_high_speed", "tire_front_right_not_monitored", "headlights_left_failure", "headlights_right_failure", "hybrid_system_fault", "hybrid_system_fault_repaired_vehicle", "hydraulic_pressure_or_brake_fuild_insufficient", "lane_departure_fault", "limited_visibility_aids_camera", "tire_pressure_low", "maintenance_date_exceeded", "maintenance_odometer_exceeded", "other_failing_system", "parking_brake_control_failing", "parking_space_measuring_system_failure", "place_gear_to_parking", "power_steering_assitance_failure", "power_steering_failure", "preheating_deactivated_battery_too_low", "preheating_deactivated_fuel_level_too_low", "preheating_deactivated_battery_set_the_clock", "fog_light_rear_fault", "door_rear_left_open", "door_rear_left_open_high_speed", "tire_rear_left_not_monitored", "door_rear_right_open", "door_rear_right_open_high_speed", "tire_rear_right_not_monitored", "screen_rear_open", "retractable_roof_mechanism_fault", "reverse_light_left_failure", "reverse_light_right_failure", "risk_of_ice", "roof_operation_impossible_apply_parking_break", "roof_operation_impossible_apply_start_engine", "roof_operation_impossible_temperature_too_high", "seatbelt_passenger_front_right_unbuckled", "seatbelt_passenger_rear_left_unbuckled", "seatbelt_passenger_rear_center_unbuckled", "seatbelt_passenger_rear_right_unbuckled", "battery_secondary_low", "shock_sensor_failing", "side_lights_front_left_failure", "side_lights_front_right_failure", "side_lights_rear_left_failure", "side_lights_rear_right_failure", "spare_wheel_fitter_driving_aids_deactivated", "speed_control_failure", "stop_light_left_failure", "stop_light_right_failure", "suspension_failure", "suspension_failure_reduce_speed", "suspension_fault_limited_to_90kmh", "tire_pressure_sensor_failure", "trunk_open_high_speed", "trunk_window_open", "turn_signal_front_left_failure", "turn_signal_front_right_failure", "turn_signal_rear_left_failure", "turn_signal_rear_right_failure", "tire_under_inflation", "wheel_pressure_fault", "oil_change_warning", "inspection_warning"]
                 },
                 "state": { "$ref": "#/$defs/on_off_state" }
-            }
+            },
+            "additionalProperties": false
         },
 
         "departure_time": {
@@ -326,7 +344,8 @@
                     "type": "object",
                     "$ref": "#/$defs/time"
                 }
-            }
+            },
+            "additionalProperties": false
         },
 
         "diesel_exhaust_filter_status": {
@@ -344,7 +363,8 @@
                     "type": "string",
                     "enum": ["unknown", "in_progress", "complete", "interrupted"]
                 }
-            }
+            },
+            "additionalProperties": false
         },
 
         "distance_over_time": {
@@ -352,7 +372,8 @@
             "properties": {
                 "distance": { "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/length" },
                 "time": { "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/duration" }
-            }
+            },
+            "additionalProperties": false
         },
 
         "door_position": {
@@ -363,7 +384,8 @@
                     "enum": ["front_left", "front_right", "rear_right", "rear_left", "all"]
                 },
                 "position": { "$ref": "#/$defs/position" }
-            }
+            },
+            "additionalProperties": false
         },
 
         "driver_card_present": {
@@ -374,7 +396,8 @@
                     "type": "string",
                     "enum": ["not_present", "present"]
                 }
-            }
+            },
+            "additionalProperties": false
         },
 
         "driver_time_state": {
@@ -385,7 +408,8 @@
                     "type": "string",
                     "enum": ["normal", "fifteen_min_before_four", "four_reached", "fifteen_min_before_nine", "nine_reached", "fifteen_min_before_sixteen", "sixteen_reached"]
                 }
-            }
+            },
+            "additionalProperties": false
         },
 
         "driver_working_state": {
@@ -396,7 +420,8 @@
                     "type": "string",
                     "enum": ["resting", "driver_available", "working", "driving"]
                 }
-            }
+            },
+            "additionalProperties": false
         },
 
         "driving_mode_activation_period": {
@@ -404,7 +429,8 @@
             "properties": {
                 "driving_mode": { "$ref": "#/$defs/driving_mode" },
                 "period": { "type": "number" }
-            }
+            },
+            "additionalProperties": false
         },
 
         "driving_mode_energy_consumption": {
@@ -412,7 +438,8 @@
             "properties": {
                 "driving_mode": { "$ref": "#/$defs/driving_mode" },
                 "consumption": { "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/energy" }
-            }
+            },
+            "additionalProperties": false
         },
 
         "eco_driving_threshold": {
@@ -423,7 +450,8 @@
                     "enum": ["zero", "one"]
                 },
                 "value": { "type": "number" }
-            }
+            },
+            "additionalProperties": false
         },
 
         "failure": {
@@ -434,7 +462,8 @@
                     "enum": ["rate_limit", "execution_timeout", "format_error", "unauthorised", "unknown", "pending", "oem_error", "privacy_mode_active"]
                 },
                 "description": { "type": "string" }
-            }
+            },
+            "additionalProperties": false
         },
 
         "hmkit_version": {
@@ -443,7 +472,8 @@
                 "major": { "type": "integer" },
                 "minor": { "type": "integer" },
                 "patch": { "type": "integer" }
-            }
+            },
+            "additionalProperties": false
         },
 
         "hvac_weekday_starting_time": {
@@ -454,7 +484,8 @@
                     "type": "object",
                     "$ref": "#/$defs/time"
                 }
-            }
+            },
+            "additionalProperties": false
         },
 
         "lane_keep_assist_state": {
@@ -465,7 +496,8 @@
                     "enum": ["left", "right"]
                 },
                 "state": { "$ref": "#/$defs/active_state" }
-            }
+            },
+            "additionalProperties": false
         },
 
         "light": {
@@ -473,7 +505,8 @@
             "properties": {
                 "location": { "$ref": "#/$defs/location_longitudinal" },
                 "state": { "$ref": "#/$defs/active_state" }
-            }
+            },
+            "additionalProperties": false
         },
 
         "lock": {
@@ -481,7 +514,8 @@
             "properties": {
                 "location": { "$ref": "#/$defs/location" },
                 "lock_state": { "$ref": "#/$defs/lock_state" }
-            }
+            },
+            "additionalProperties": false
         },
 
         "oem_trouble_code_value": {
@@ -492,7 +526,8 @@
                     "type": "object",
                     "$ref": "#/$defs/key_value"
                 }
-            }
+            },
+            "additionalProperties": false
         },
 
         "park_assist": {
@@ -501,7 +536,8 @@
                 "location": { "$ref": "#/$defs/location_longitudinal" },
                 "alarm": { "$ref": "#/$defs/active_state" },
                 "muted": { "$ref": "#/$defs/muted" }
-            }
+            },
+            "additionalProperties": false
         },
 
         "person_detected": {
@@ -509,7 +545,8 @@
             "properties": {
                 "location": { "$ref": "#/$defs/seat_location" },
                 "detected": { "$ref": "#/$defs/detected" }
-            }
+            },
+            "additionalProperties": false
         },
 
         "price_tariff": {
@@ -521,7 +558,8 @@
                 },
                 "price": { "type": "number" },
                 "currency": { "type": "string" }
-            }
+            },
+            "additionalProperties": false
         },
 
         "reading_lamp": {
@@ -529,7 +567,8 @@
             "properties": {
                 "location": { "$ref": "#/$defs/location" },
                 "state": { "$ref": "#/$defs/active_state" }
-            }
+            },
+            "additionalProperties": false
         },
 
         "reduction_time": {
@@ -540,7 +579,8 @@
                     "type": "object",
                     "$ref": "#/$defs/time"
                 }
-            }
+            },
+            "additionalProperties": false
         },
 
         "rgb_colour": {
@@ -549,7 +589,8 @@
                 "red": { "type": "integer" },
                 "green": { "type": "integer" },
                 "blue": { "type": "integer" }
-            }
+            },
+            "additionalProperties": false
         },
 
         "seatbelt_state": {
@@ -560,7 +601,8 @@
                     "type": "string",
                     "enum": ["not_fastened", "fastened"]
                 }
-            }
+            },
+            "additionalProperties": false
         },
 
         "spring_rate": {
@@ -568,7 +610,8 @@
             "properties": {
                 "axle": { "$ref": "#/$defs/axle" },
                 "spring_rate": { "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/torque" }
-            }
+            },
+            "additionalProperties": false
         },
 
         "timer": {
@@ -582,7 +625,8 @@
                     "type": "string",
                     "format": "date-time"
                 }
-            }
+            },
+            "additionalProperties": false
         },
 
         "tire_pressure": {
@@ -590,7 +634,8 @@
             "properties": {
                 "location": { "$ref": "#/$defs/location_wheel" },
                 "pressure": { "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/pressure" }
-            }
+            },
+            "additionalProperties": false
         },
 
         "tire_pressure_status": {
@@ -601,7 +646,8 @@
                     "type": "string",
                     "enum": ["normal", "low", "alert"]
                 }
-            }
+            },
+            "additionalProperties": false
         },
 
         "tire_temperature": {
@@ -609,7 +655,8 @@
             "properties": {
                 "location": { "$ref": "#/$defs/location_wheel" },
                 "temperature": { "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/temperature" }
-            }
+            },
+            "additionalProperties": false
         },
 
         "trip_meter": {
@@ -617,7 +664,8 @@
             "properties": {
                 "id": { "type": "integer" },
                 "distance": { "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/length" }
-            }
+            },
+            "additionalProperties": false
         },
 
         "trouble_code": {
@@ -631,7 +679,8 @@
                     "type": "string",
                     "enum": ["unknown", "body", "chassis", "powertrain", "network"]
                 }
-            }
+            },
+            "additionalProperties": false
         },
 
         "webhook": {
@@ -642,7 +691,8 @@
                     "enum": ["unavailable", "available"]
                 },
                 "event": { "$ref": "#/$defs/event" }
-            }
+            },
+            "additionalProperties": false
         },
 
         "wheel_rpm": {
@@ -650,7 +700,8 @@
             "properties": {
                 "location": { "$ref": "#/$defs/location_wheel" },
                 "rpm": { "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/angular_velocity" }
-            }
+            },
+            "additionalProperties": false
         },
 
         "window_open_percentage": {
@@ -658,7 +709,8 @@
             "properties": {
                 "location": { "$ref": "#/$defs/window_location" },
                 "open_percentage": { "type": "number" }
-            }
+            },
+            "additionalProperties": false
         },
 
         "window_position": {
@@ -669,7 +721,8 @@
                     "type": "string",
                     "enum": ["closed", "open", "intermediate"]
                 }
-            }
+            },
+            "additionalProperties": false
         },
 
         "event": {

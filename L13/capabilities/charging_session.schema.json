@@ -1,6 +1,6 @@
 {
     "$id": "https://highmobility.github.io/auto-api-json-schema/L13/capabilities/charging_session.schema.json",
-    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$schema": "https://json-schema.org/draft-07/schema",
     "type": "object",
     "properties": {
         "public_charging_points": { "$ref": "#/$defs/property_charging_point" },
@@ -38,7 +38,8 @@
                 "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
                 "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
-            "minProperties": 1
+            "minProperties": 1,
+            "additionalProperties": false
         },
 
         "property_charging_cost": {
@@ -54,7 +55,8 @@
                 "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
                 "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
-            "minProperties": 1
+            "minProperties": 1,
+            "additionalProperties": false
         },
 
         "property_charging_location": {
@@ -70,7 +72,8 @@
                 "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
                 "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
-            "minProperties": 1
+            "minProperties": 1,
+            "additionalProperties": false
         },
 
         "property_charging_point": {
@@ -86,7 +89,8 @@
                 "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
                 "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
-            "minProperties": 1
+            "minProperties": 1,
+            "additionalProperties": false
         },
 
         "property_duration": {
@@ -102,7 +106,8 @@
                 "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
                 "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
-            "minProperties": 1
+            "minProperties": 1,
+            "additionalProperties": false
         },
 
         "property_energy": {
@@ -118,7 +123,8 @@
                 "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
                 "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
-            "minProperties": 1
+            "minProperties": 1,
+            "additionalProperties": false
         },
 
         "property_length": {
@@ -134,7 +140,8 @@
                 "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
                 "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
-            "minProperties": 1
+            "minProperties": 1,
+            "additionalProperties": false
         },
 
         "property_nonce": {
@@ -166,7 +173,8 @@
                 "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
                 "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
-            "minProperties": 1
+            "minProperties": 1,
+            "additionalProperties": false
         },
 
         "property_string": {
@@ -182,7 +190,8 @@
                 "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
                 "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
-            "minProperties": 1
+            "minProperties": 1,
+            "additionalProperties": false
         },
 
         "property_timestamp": {
@@ -199,7 +208,8 @@
                 "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
                 "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
-            "minProperties": 1
+            "minProperties": 1,
+            "additionalProperties": false
         },
 
         "property_vin": {

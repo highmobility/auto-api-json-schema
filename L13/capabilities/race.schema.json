@@ -1,6 +1,6 @@
 {
     "$id": "https://highmobility.github.io/auto-api-json-schema/L13/capabilities/race.schema.json",
-    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$schema": "https://json-schema.org/draft-07/schema",
     "type": "object",
     "properties": {
         "accelerations": { "$ref": "#/$defs/property_acceleration" },
@@ -42,7 +42,8 @@
                 "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
                 "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
-            "minProperties": 1
+            "minProperties": 1,
+            "additionalProperties": false
         },
 
         "property_active_state": {
@@ -58,7 +59,8 @@
                 "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
                 "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
-            "minProperties": 1
+            "minProperties": 1,
+            "additionalProperties": false
         },
 
         "property_angle": {
@@ -74,7 +76,8 @@
                 "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
                 "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
-            "minProperties": 1
+            "minProperties": 1,
+            "additionalProperties": false
         },
 
         "property_angular_velocity": {
@@ -90,7 +93,8 @@
                 "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
                 "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
-            "minProperties": 1
+            "minProperties": 1,
+            "additionalProperties": false
         },
 
         "property_brake_torque_vectoring": {
@@ -106,7 +110,8 @@
                 "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
                 "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
-            "minProperties": 1
+            "minProperties": 1,
+            "additionalProperties": false
         },
 
         "property_gear_mode": {
@@ -123,7 +128,8 @@
                 "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
                 "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
-            "minProperties": 1
+            "minProperties": 1,
+            "additionalProperties": false
         },
 
         "property_integer": {
@@ -141,7 +147,8 @@
                 "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
                 "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
-            "minProperties": 1
+            "minProperties": 1,
+            "additionalProperties": false
         },
 
         "property_nonce": {
@@ -173,7 +180,8 @@
                 "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
                 "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
-            "minProperties": 1
+            "minProperties": 1,
+            "additionalProperties": false
         },
 
         "property_pressure": {
@@ -189,7 +197,8 @@
                 "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
                 "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
-            "minProperties": 1
+            "minProperties": 1,
+            "additionalProperties": false
         },
 
         "property_vehicle_moving": {
@@ -206,7 +215,8 @@
                 "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
                 "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
-            "minProperties": 1
+            "minProperties": 1,
+            "additionalProperties": false
         },
 
         "property_vin": {

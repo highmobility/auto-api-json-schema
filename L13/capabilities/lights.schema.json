@@ -1,6 +1,6 @@
 {
     "$id": "https://highmobility.github.io/auto-api-json-schema/L13/capabilities/lights.schema.json",
-    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$schema": "https://json-schema.org/draft-07/schema",
     "type": "object",
     "properties": {
         "front_exterior_light": { "$ref": "#/$defs/property_front_exterior_light" },
@@ -34,7 +34,8 @@
                 "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
                 "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
-            "minProperties": 1
+            "minProperties": 1,
+            "additionalProperties": false
         },
 
         "property_front_exterior_light": {
@@ -51,7 +52,8 @@
                 "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
                 "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
-            "minProperties": 1
+            "minProperties": 1,
+            "additionalProperties": false
         },
 
         "property_light": {
@@ -67,7 +69,8 @@
                 "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
                 "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
-            "minProperties": 1
+            "minProperties": 1,
+            "additionalProperties": false
         },
 
         "property_nonce": {
@@ -100,7 +103,8 @@
                 "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
                 "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
-            "minProperties": 1
+            "minProperties": 1,
+            "additionalProperties": false
         },
 
         "property_reading_lamp": {
@@ -116,7 +120,8 @@
                 "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
                 "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
-            "minProperties": 1
+            "minProperties": 1,
+            "additionalProperties": false
         },
 
         "property_rgb_colour": {
@@ -132,7 +137,8 @@
                 "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
                 "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
-            "minProperties": 1
+            "minProperties": 1,
+            "additionalProperties": false
         },
 
         "property_switch_position": {
@@ -149,7 +155,8 @@
                 "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
                 "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
-            "minProperties": 1
+            "minProperties": 1,
+            "additionalProperties": false
         },
 
         "property_vin": {
