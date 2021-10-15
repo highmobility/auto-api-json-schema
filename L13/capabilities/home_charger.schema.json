@@ -170,7 +170,7 @@
         },
 
         "property_nonce": {
-            "$ref": "#/$defs/property",
+            "type": "object",
             "properties": {
                 "data": {
                     "type": "array",
@@ -181,7 +181,13 @@
                     },
                     "minItems": 9,
                     "maxItems": 9
-                }
+                },
+                "timestamp": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             }
         },
 
@@ -255,13 +261,19 @@
         },
 
         "property_vin": {
-            "$ref": "#/$defs/property",
+            "type": "object",
             "properties": {
                 "data": {
                     "type": "string",
                     "minLength": 17,
                     "maxLength": 17
-                }
+                },
+                "timestamp": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             }
         }
     }
