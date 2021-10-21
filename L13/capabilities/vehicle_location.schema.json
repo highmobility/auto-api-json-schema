@@ -3,12 +3,30 @@
     "$schema": "https://json-schema.org/draft-07/schema",
     "type": "object",
     "properties": {
-        "coordinates": { "$ref": "#/$defs/property_coordinates" },
-        "heading": { "$ref": "#/$defs/property_angle" },
-        "altitude": { "$ref": "#/$defs/property_length" },
-        "precision": { "$ref": "#/$defs/property_length" },
-        "gps_source": { "$ref": "#/$defs/property_gps_source" },
-        "gps_signal_strength": { "$ref": "#/$defs/property_percentage" },
+        "coordinates": {
+            "description": "Coordinates",
+            "$ref": "#/$defs/property_coordinates"
+        },
+        "heading": {
+            "description": "Heading angle",
+            "$ref": "#/$defs/property_angle"
+        },
+        "altitude": {
+            "description": "Altitude above the WGS 84 reference ellipsoid",
+            "$ref": "#/$defs/property_length"
+        },
+        "precision": {
+            "description": "Precision",
+            "$ref": "#/$defs/property_length"
+        },
+        "gps_source": {
+            "description": "Type of GPS source",
+            "$ref": "#/$defs/property_gps_source"
+        },
+        "gps_signal_strength": {
+            "description": "GPS signal strength percentage between 0.0-1.0",
+            "$ref": "#/$defs/property_percentage"
+        },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },
         "vin": { "$ref": "#/$defs/property_vin" }

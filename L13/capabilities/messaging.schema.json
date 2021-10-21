@@ -3,8 +3,14 @@
     "$schema": "https://json-schema.org/draft-07/schema",
     "type": "object",
     "properties": {
-        "text": { "$ref": "#/$defs/property_string" },
-        "handle": { "$ref": "#/$defs/property_string" },
+        "text": {
+            "description": "The text",
+            "$ref": "#/$defs/property_string"
+        },
+        "handle": {
+            "description": "The optional handle of message",
+            "$ref": "#/$defs/property_string"
+        },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },
         "vin": { "$ref": "#/$defs/property_vin" }

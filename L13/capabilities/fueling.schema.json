@@ -3,8 +3,14 @@
     "$schema": "https://json-schema.org/draft-07/schema",
     "type": "object",
     "properties": {
-        "gas_flap_lock": { "$ref": "#/$defs/property_lock_state" },
-        "gas_flap_position": { "$ref": "#/$defs/property_position" },
+        "gas_flap_lock": {
+            "description": "Gas flap lock",
+            "$ref": "#/$defs/property_lock_state"
+        },
+        "gas_flap_position": {
+            "description": "Gas flap position",
+            "$ref": "#/$defs/property_position"
+        },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },
         "vin": { "$ref": "#/$defs/property_vin" }

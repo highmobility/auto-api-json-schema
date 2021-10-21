@@ -3,7 +3,10 @@
     "$schema": "https://json-schema.org/draft-07/schema",
     "type": "object",
     "properties": {
-        "rain_intensity": { "$ref": "#/$defs/property_percentage" },
+        "rain_intensity": {
+            "description": "Measured raining intensity percentage, whereas 0% is no rain and 100% is maximum rain",
+            "$ref": "#/$defs/property_percentage"
+        },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },
         "vin": { "$ref": "#/$defs/property_vin" }

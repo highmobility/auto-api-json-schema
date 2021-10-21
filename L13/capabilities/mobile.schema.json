@@ -3,7 +3,10 @@
     "$schema": "https://json-schema.org/draft-07/schema",
     "type": "object",
     "properties": {
-        "connection": { "$ref": "#/$defs/property_connection_state" },
+        "connection": {
+            "description": "Connection",
+            "$ref": "#/$defs/property_connection_state"
+        },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },
         "vin": { "$ref": "#/$defs/property_vin" }

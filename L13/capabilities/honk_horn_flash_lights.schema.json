@@ -3,7 +3,10 @@
     "$schema": "https://json-schema.org/draft-07/schema",
     "type": "object",
     "properties": {
-        "flashers": { "$ref": "#/$defs/property_flashers" },
+        "flashers": {
+            "description": "Flashers",
+            "$ref": "#/$defs/property_flashers"
+        },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },
         "vin": { "$ref": "#/$defs/property_vin" }

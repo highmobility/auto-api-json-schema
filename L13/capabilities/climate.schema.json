@@ -3,17 +3,50 @@
     "$schema": "https://json-schema.org/draft-07/schema",
     "type": "object",
     "properties": {
-        "inside_temperature": { "$ref": "#/$defs/property_temperature" },
-        "outside_temperature": { "$ref": "#/$defs/property_temperature" },
-        "driver_temperature_setting": { "$ref": "#/$defs/property_temperature" },
-        "passenger_temperature_setting": { "$ref": "#/$defs/property_temperature" },
-        "hvac_state": { "$ref": "#/$defs/property_active_state" },
-        "defogging_state": { "$ref": "#/$defs/property_active_state" },
-        "defrosting_state": { "$ref": "#/$defs/property_active_state" },
-        "ionising_state": { "$ref": "#/$defs/property_active_state" },
-        "defrosting_temperature_setting": { "$ref": "#/$defs/property_temperature" },
-        "hvac_weekday_starting_times": { "$ref": "#/$defs/property_hvac_weekday_starting_time" },
-        "rear_temperature_setting": { "$ref": "#/$defs/property_temperature" },
+        "inside_temperature": {
+            "description": "The inside temperature",
+            "$ref": "#/$defs/property_temperature"
+        },
+        "outside_temperature": {
+            "description": "The outside temperature",
+            "$ref": "#/$defs/property_temperature"
+        },
+        "driver_temperature_setting": {
+            "description": "The driver temperature setting",
+            "$ref": "#/$defs/property_temperature"
+        },
+        "passenger_temperature_setting": {
+            "description": "The passenger temperature setting",
+            "$ref": "#/$defs/property_temperature"
+        },
+        "hvac_state": {
+            "description": "HVAC state",
+            "$ref": "#/$defs/property_active_state"
+        },
+        "defogging_state": {
+            "description": "Defogging state",
+            "$ref": "#/$defs/property_active_state"
+        },
+        "defrosting_state": {
+            "description": "Defrosting state",
+            "$ref": "#/$defs/property_active_state"
+        },
+        "ionising_state": {
+            "description": "Ionising state",
+            "$ref": "#/$defs/property_active_state"
+        },
+        "defrosting_temperature_setting": {
+            "description": "The defrosting temperature setting",
+            "$ref": "#/$defs/property_temperature"
+        },
+        "hvac_weekday_starting_times": {
+            "description": "HVAC weekday starting times",
+            "$ref": "#/$defs/property_hvac_weekday_starting_time"
+        },
+        "rear_temperature_setting": {
+            "description": "The rear temperature",
+            "$ref": "#/$defs/property_temperature"
+        },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },
         "vin": { "$ref": "#/$defs/property_vin" }

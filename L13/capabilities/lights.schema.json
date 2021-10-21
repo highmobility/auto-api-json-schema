@@ -3,16 +3,46 @@
     "$schema": "https://json-schema.org/draft-07/schema",
     "type": "object",
     "properties": {
-        "front_exterior_light": { "$ref": "#/$defs/property_front_exterior_light" },
-        "rear_exterior_light": { "$ref": "#/$defs/property_active_state" },
-        "ambient_light_colour": { "$ref": "#/$defs/property_rgb_colour" },
-        "reverse_light": { "$ref": "#/$defs/property_active_state" },
-        "emergency_brake_light": { "$ref": "#/$defs/property_active_state" },
-        "fog_lights": { "$ref": "#/$defs/property_light" },
-        "reading_lamps": { "$ref": "#/$defs/property_reading_lamp" },
-        "interior_lights": { "$ref": "#/$defs/property_light" },
-        "switch_position": { "$ref": "#/$defs/property_switch_position" },
-        "parking_light_status": { "$ref": "#/$defs/property_parking_light_status" },
+        "front_exterior_light": {
+            "description": "Front exterior light",
+            "$ref": "#/$defs/property_front_exterior_light"
+        },
+        "rear_exterior_light": {
+            "description": "Rear exterior light",
+            "$ref": "#/$defs/property_active_state"
+        },
+        "ambient_light_colour": {
+            "description": "Ambient light colour",
+            "$ref": "#/$defs/property_rgb_colour"
+        },
+        "reverse_light": {
+            "description": "Reverse light",
+            "$ref": "#/$defs/property_active_state"
+        },
+        "emergency_brake_light": {
+            "description": "Emergency brake light",
+            "$ref": "#/$defs/property_active_state"
+        },
+        "fog_lights": {
+            "description": "Fog lights",
+            "$ref": "#/$defs/property_light"
+        },
+        "reading_lamps": {
+            "description": "Reading lamps",
+            "$ref": "#/$defs/property_reading_lamp"
+        },
+        "interior_lights": {
+            "description": "Interior lights",
+            "$ref": "#/$defs/property_light"
+        },
+        "switch_position": {
+            "description": "Position of the rotary light switch",
+            "$ref": "#/$defs/property_switch_position"
+        },
+        "parking_light_status": {
+            "description": "Indicates the status of the parking light.",
+            "$ref": "#/$defs/property_parking_light_status"
+        },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },
         "vin": { "$ref": "#/$defs/property_vin" }

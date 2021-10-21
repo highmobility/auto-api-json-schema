@@ -3,14 +3,38 @@
     "$schema": "https://json-schema.org/draft-07/schema",
     "type": "object",
     "properties": {
-        "driving_mode": { "$ref": "#/$defs/property_driving_mode" },
-        "sport_chrono": { "$ref": "#/$defs/property_sport_chrono" },
-        "current_spring_rates": { "$ref": "#/$defs/property_spring_rate" },
-        "maximum_spring_rates": { "$ref": "#/$defs/property_spring_rate" },
-        "minimum_spring_rates": { "$ref": "#/$defs/property_spring_rate" },
-        "current_chassis_position": { "$ref": "#/$defs/property_length" },
-        "maximum_chassis_position": { "$ref": "#/$defs/property_length" },
-        "minimum_chassis_position": { "$ref": "#/$defs/property_length" },
+        "driving_mode": {
+            "description": "Driving mode",
+            "$ref": "#/$defs/property_driving_mode"
+        },
+        "sport_chrono": {
+            "description": "Sport chrono",
+            "$ref": "#/$defs/property_sport_chrono"
+        },
+        "current_spring_rates": {
+            "description": "The current values for the spring rates",
+            "$ref": "#/$defs/property_spring_rate"
+        },
+        "maximum_spring_rates": {
+            "description": "The maximum possible values for the spring rates",
+            "$ref": "#/$defs/property_spring_rate"
+        },
+        "minimum_spring_rates": {
+            "description": "The minimum possible values for the spring rates",
+            "$ref": "#/$defs/property_spring_rate"
+        },
+        "current_chassis_position": {
+            "description": "The chassis position calculated from the lowest point",
+            "$ref": "#/$defs/property_length"
+        },
+        "maximum_chassis_position": {
+            "description": "The maximum possible value for the chassis position",
+            "$ref": "#/$defs/property_length"
+        },
+        "minimum_chassis_position": {
+            "description": "The minimum possible value for the chassis position",
+            "$ref": "#/$defs/property_length"
+        },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },
         "vin": { "$ref": "#/$defs/property_vin" }

@@ -3,7 +3,10 @@
     "$schema": "https://json-schema.org/draft-07/schema",
     "type": "object",
     "properties": {
-        "vehicle_time": { "$ref": "#/$defs/property_time" },
+        "vehicle_time": {
+            "description": "Vehicle time in a 24h format",
+            "$ref": "#/$defs/property_time"
+        },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },
         "vin": { "$ref": "#/$defs/property_vin" }

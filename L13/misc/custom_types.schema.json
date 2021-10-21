@@ -6,146 +6,188 @@
 
     "$defs": {
         "active_state": {
+            "description": "Active state",
             "type": "string",
             "enum": [ "inactive", "active" ]
         },
 
         "active_selected_state": {
+            "description": "Active selected state",
             "type": "string",
             "enum": [ "inactive_selected", "inactive_not_selected", "active" ]
         },
 
         "axle": {
+            "description": "Axle",
             "type": "string",
             "enum": [ "front", "rear" ]
         },
 
         "connection_state": {
+            "description": "Connection state",
             "type": "string",
             "enum": [ "disconnected", "connected" ]
         },
 
         "coordinates": {
+            "description": "Coordinates",
             "type": "object",
             "properties": {
-                "latitude": { "type": "number" },
-                "longitude": { "type": "number" }
+                "latitude": {
+                    "description": "Latitude",
+                    "type": "number"
+                },
+                "longitude": {
+                    "description": "Longitude",
+                    "type": "number"
+                }
             },
             "additionalProperties": false,
             "required": [ "latitude", "longitude" ]
         },
 
         "detected": {
+            "description": "Detected",
             "type": "string",
             "enum": [ "not_detected", "detected" ]
         },
 
         "driving_mode": {
+            "description": "Driving mode",
             "type": "string",
             "enum": [ "regular", "eco", "sport", "sport_plus", "ecoPlus", "comfort" ]
         },
 
         "enabled_state": {
+            "description": "Enabled state",
             "type": "string",
             "enum": [ "disabled", "enabled" ]
         },
 
         "engine_type": {
+            "description": "Engine type",
             "type": "string",
             "enum": [ "unknown", "all_electric", "combustion_engine", "phev", "hydrogen", "hydrogen_hybrid", "petrol", "electric", "gas", "diesel", "gasoline", "cng", "lpg" ]
         },
 
         "fluid_level": {
+            "description": "Fluid level",
             "type": "string",
             "enum": [ "low", "filled", "very_low", "normal", "high", "very_high" ]
         },
 
         "grade": {
+            "description": "Grade",
             "type": "string",
             "enum": [ "excellent", "normal", "warning" ]
         },
 
         "ignition_state": {
+            "description": "Ignition state",
             "type": "string",
             "enum": [ "lock", "off", "accessory", "on", "start" ]
         },
 
         "key_value": {
+            "description": "Key-value pairs like in a dictionary or hash",
             "type": "object",
             "properties": {
-                "key": { "type": "string" },
-                "value": { "type": "string" }
+                "key": {
+                    "description": "Key for the value",
+                    "type": "string"
+                },
+                "value": {
+                    "description": "Value for the key",
+                    "type": "string"
+                }
             },
             "additionalProperties": false,
             "required": [ "key", "value" ]
         },
 
         "location": {
+            "description": "Location",
             "type": "string",
             "enum": [ "front_left", "front_right", "rear_right", "rear_left" ]
         },
 
         "location_longitudinal": {
+            "description": "Location longitudinal",
             "type": "string",
             "enum": [ "front", "rear" ]
         },
 
         "location_wheel": {
+            "description": "Location wheel",
             "type": "string",
             "enum": [ "front_left", "front_right", "rear_right", "rear_left", "rear_right_outer", "rear_left_outer", "spare" ]
         },
 
         "lock_state": {
+            "description": "Lock state",
             "type": "string",
             "enum": [ "unlocked", "locked" ]
         },
 
         "lock_safety": {
+            "description": "Lock safety",
             "type": "string",
             "enum": [ "safe", "unsafe" ]
         },
 
         "muted": {
+            "description": "Muted",
             "type": "string",
             "enum": [ "not_muted", "muted" ]
         },
 
         "network_security": {
+            "description": "Network security",
             "type": "string",
             "enum": [ "none", "wep", "wpa", "wpa2_personal" ]
         },
 
         "on_off_state": {
+            "description": "On-Off State",
             "type": "string",
             "enum": [ "off", "on" ]
         },
 
         "percentage": {
+            "description": "Percentage value between 0.0 - 1.0 (0% - 100%)",
             "type": "number"
         },
 
         "position": {
+            "description": "Position",
             "type": "string",
             "enum": [ "closed", "open" ]
         },
 
         "seat_location": {
+            "description": "Seat location",
             "type": "string",
             "enum": [ "front_left", "front_right", "rear_right", "rear_left", "rear_center" ]
         },
 
         "start_stop": {
+            "description": "Start-Stop",
             "type": "string",
             "enum": [ "start", "stop" ]
         },
 
         "supported_capability": {
+            "description": "Supported capability",
             "type": "object",
             "properties": {
-                "capability_id": { "type": "integer" },
+                "capability_id": {
+                    "description": "The identifier of the supported capability",
+                    "type": "integer"
+                },
                 "supported_property_ids": {
-                  "type": "array",
-                  "items": { "type": "integer" }
+                    "description": "Array of supported property identifiers",
+                    "type": "array",
+                    "items": { "type": "integer" }
                 }
             },
             "additionalProperties": false,
@@ -153,80 +195,119 @@
         },
 
         "time": {
+            "description": "Time",
             "type": "object",
             "properties": {
-                "hour": { "type": "integer" },
-                "minute": { "type": "integer" }
+                "hour": {
+                    "description": "Value between 0 and 23",
+                    "type": "integer"
+                },
+                "minute": {
+                    "description": "Value between 0 and 59",
+                    "type": "integer"
+                }
             },
             "additionalProperties": false,
             "required": [ "hour", "minute" ]
         },
 
         "weekday": {
+            "description": "Weekday",
             "type": "string",
             "enum": [ "monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday", "automatic" ]
         },
 
         "window_location": {
+            "description": "Window location",
             "type": "string",
             "enum": [ "front_left", "front_right", "rear_right", "rear_left", "hatch" ]
         },
 
         "zone": {
+            "description": "Zone",
             "type": "object",
             "properties": {
-                "horizontal": { "type": "integer" },
-                "vertical": { "type": "integer" }
+                "horizontal": {
+                    "description": "Horizontal component of the matrix",
+                    "type": "integer"
+                },
+                "vertical": {
+                    "description": "Vertical component of the matrix",
+                    "type": "integer"
+                }
             },
             "additionalProperties": false,
             "required": [ "horizontal", "vertical" ]
         },
 
         "acceleration": {
+            "description": "Acceleration",
             "type": "object",
             "properties": {
                 "direction": {
+                    "description": "Direction",
                     "type": "string",
                     "enum": [ "longitudinal", "lateral", "front_lateral", "rear_lateral" ]
                 },
-                "acceleration": { "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/acceleration" }
+                "acceleration": {
+                    "description": "The accelaration",
+                    "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/acceleration"
+                }
             },
             "additionalProperties": false,
             "required": [ "direction", "acceleration" ]
         },
 
         "action_item": {
+            "description": "Action item",
             "type": "object",
             "properties": {
-                "id": { "type": "integer" },
-                "name": { "type": "string" }
+                "id": {
+                    "description": "Action identifier",
+                    "type": "integer"
+                },
+                "name": {
+                    "description": "Name of the action",
+                    "type": "string"
+                }
             },
             "additionalProperties": false,
             "required": [ "id", "name" ]
         },
 
         "address_component": {
+            "description": "A single component of the full address",
             "type": "object",
             "properties": {
                 "type": {
+                    "description": "Component type",
                     "type": "string",
                     "enum": [ "city", "country", "country_short", "district", "postal_code", "street", "state_province", "other" ]
                 },
-                "value": { "type": "string" }
+                "value": {
+                    "description": "Value for the component",
+                    "type": "string"
+                }
             },
             "additionalProperties": false,
             "required": [ "type", "value" ]
         },
 
         "availability": {
+            "description": "Availability",
             "type": "object",
             "properties": {
                 "update_rate": {
+                    "description": "Update rate",
                     "type": "string",
                     "enum": [ "trip_high", "trip", "trip_start_end", "trip_end", "unknown", "not_available", "on_change" ]
                 },
-                "rate_limit": { "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/frequency" },
+                "rate_limit": {
+                    "description": "Frequency denoting the rate limit",
+                    "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/frequency"
+                },
                 "applies_per": {
+                    "description": "Rate limit applies per",
                     "type": "string",
                     "enum": [ "app", "vehicle" ]
                 }
@@ -236,103 +317,193 @@
         },
 
         "brake_torque_vectoring": {
+            "description": "Brake torque vectoring",
             "type": "object",
             "properties": {
-                "axle": { "$ref": "#/$defs/axle" },
-                "state": { "$ref": "#/$defs/active_state" }
+                "axle": {
+                    "description": "Axle",
+                    "$ref": "#/$defs/axle"
+                },
+                "state": {
+                    "description": "Active state",
+                    "$ref": "#/$defs/active_state"
+                }
             },
             "additionalProperties": false,
             "required": [ "axle", "state" ]
         },
 
         "charging_cost": {
+            "description": "Charging cost information",
             "type": "object",
             "properties": {
-                "currency": { "type": "string" },
-                "calculated_charging_cost": { "type": "number" },
-                "calculated_savings": { "type": "number" },
-                "simulated_immediate_charging_cost": { "type": "number" }
+                "currency": {
+                    "description": "Currency ISO code",
+                    "type": "string"
+                },
+                "calculated_charging_cost": {
+                    "description": "Calculated charging cost",
+                    "type": "number"
+                },
+                "calculated_savings": {
+                    "description": "Calculated savings from charging",
+                    "type": "number"
+                },
+                "simulated_immediate_charging_cost": {
+                    "description": "Simulated charging costs",
+                    "type": "number"
+                }
             },
             "additionalProperties": false,
             "required": [ "currency", "calculated_charging_cost", "calculated_savings", "simulated_immediate_charging_cost" ]
         },
 
         "charging_location": {
+            "description": "Charging location address",
             "type": "object",
             "properties": {
-                "municipality": { "type": "string" },
-                "formatted_address": { "type": "string" },
-                "street_address": { "type": "string" }
+                "municipality": {
+                    "description": "Municipality component of the address",
+                    "type": "string"
+                },
+                "formatted_address": {
+                    "description": "Full formatted address",
+                    "type": "string"
+                },
+                "street_address": {
+                    "description": "Street address component",
+                    "type": "string"
+                }
             },
             "additionalProperties": false,
             "required": [ "municipality", "formatted_address", "street_address" ]
         },
 
         "charging_point": {
+            "description": "Charging point",
             "type": "object",
             "properties": {
-                "city": { "type": "string" },
-                "postal_code": { "type": "string" },
-                "street": { "type": "string" },
-                "provider": { "type": "string" }
+                "city": {
+                    "description": "City the charging point is in.",
+                    "type": "string"
+                },
+                "postal_code": {
+                    "description": "Postal code the charging point is at.",
+                    "type": "string"
+                },
+                "street": {
+                    "description": "Street address the chargin point is at.",
+                    "type": "string"
+                },
+                "provider": {
+                    "description": "The provider name of the charging point.",
+                    "type": "string"
+                }
             },
             "additionalProperties": false,
             "required": [ "city", "postal_code", "street", "provider" ]
         },
 
         "check_control_message": {
+            "description": "Check control message",
             "type": "object",
             "properties": {
-                "id": { "type": "integer" },
-                "remaining_time": { "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/duration" },
-                "text": { "type": "string" },
-                "status": { "type": "string" }
+                "id": {
+                    "description": "Check Control Message identifier",
+                    "type": "integer"
+                },
+                "remaining_time": {
+                    "description": "Remaining time of the message",
+                    "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/duration"
+                },
+                "text": {
+                    "description": "CCM text",
+                    "type": "string"
+                },
+                "status": {
+                    "description": "CCM status",
+                    "type": "string"
+                }
             },
             "additionalProperties": false,
             "required": [ "id", "remaining_time", "text", "status" ]
         },
 
         "condition_based_service": {
+            "description": "Condition based service",
             "type": "object",
             "properties": {
-                "year": { "type": "integer" },
-                "month": { "type": "integer" },
-                "id": { "type": "integer" },
+                "year": {
+                    "description": "The year",
+                    "type": "integer"
+                },
+                "month": {
+                    "description": "Value between 1 and 12",
+                    "type": "integer"
+                },
+                "id": {
+                    "description": "CBS identifier",
+                    "type": "integer"
+                },
                 "due_status": {
+                    "description": "Due status",
                     "type": "string",
                     "enum": [ "ok", "pending", "overdue" ]
                 },
-                "text": { "type": "string" },
-                "description": { "type": "string" }
+                "text": {
+                    "description": "CBS text",
+                    "type": "string"
+                },
+                "description": {
+                    "description": "Description",
+                    "type": "string"
+                }
             },
             "additionalProperties": false,
             "required": [ "year", "month", "id", "due_status", "text", "description" ]
         },
 
         "confirmed_trouble_code": {
+            "description": "Confirmed trouble code",
             "type": "object",
             "properties": {
-                "id": { "type": "string" },
-                "ecu_address": { "type": "string" },
-                "ecu_variant_name": { "type": "string" },
-                "status": { "type": "string" }
+                "id": {
+                    "description": "Identifier",
+                    "type": "string"
+                },
+                "ecu_address": {
+                    "description": "Electronic Control Unit address",
+                    "type": "string"
+                },
+                "ecu_variant_name": {
+                    "description": "Electronic Control Unit variant name",
+                    "type": "string"
+                },
+                "status": {
+                    "description": "Status",
+                    "type": "string"
+                }
             },
             "additionalProperties": false,
             "required": [ "id", "ecu_address", "ecu_variant_name", "status" ]
         },
 
         "crash_incident": {
+            "description": "Crash incident",
             "type": "object",
             "properties": {
                 "location": {
+                    "description": "Location",
                     "type": "string",
                     "enum": [ "front", "lateral", "rear" ]
                 },
                 "severity": {
+                    "description": "Severity",
                     "type": "string",
                     "enum": [ "very_high", "high", "medium", "low" ]
                 },
                 "repairs": {
+                    "description": "Repairs",
                     "type": "string",
                     "enum": [ "unknown", "needed", "not_needed" ]
                 }
@@ -342,23 +513,33 @@
         },
 
         "dashboard_light": {
+            "description": "Dashboard light",
             "type": "object",
             "properties": {
                 "name": {
+                    "description": "Name",
                     "type": "string",
                     "enum": [ "high_beam", "low_beam", "hazard_warning", "brake_failure", "hatch_open", "fuel_level", "engine_coolant_temperature", "battery_charging_condition", "engine_oil", "position_lights", "front_fog_light", "rear_fog_light", "park_heating", "engine_indicator", "service_call", "transmission_fluid_temperature", "transmission_failure", "anti_lock_brake_failure", "worn_brake_linings", "windscreen_washer_fluid", "tire_failure", "engine_oil_level", "engine_coolant_level", "steering_failure", "esc_indication", "brake_lights", "adblue_level", "fuel_filter_diff_pressure", "seat_belt", "advanced_braking", "acc", "trailer_connected", "airbag", "esc_switched_off", "lane_departure_warning_off", "air_filter_minder", "air_suspension_ride_control_fault", "all_wheel_drive_disabled", "anti_theft", "blind_spot_detection", "charge_system_fault", "check_fuel_cap", "check_fuel_fill_inlet", "check_fuel_filter", "dc_temp_warning", "dc_warning_status", "diesel_engine_idle_shutdown", "diesel_engine_warning", "diesel_exhaust_fluid_system_fault", "diesel_exhaust_over_temp", "diesel_exhaust_fluid_quality", "diesel_filter_regeneration", "diesel_particulate_filter", "diesel_pre_heat", "electric_trailer_brake_connection", "ev_battery_cell_max_volt_warning", "ev_battery_cell_min_volt_warning", "ev_battery_charge_energy_storage_warning", "ev_battery_high_level_warning", "ev_battery_high_temperature_warning", "ev_battery_insulation_resist_warning", "ev_battery_jump_level_warning", "ev_battery_low_level_warning", "ev_battery_max_volt_veh_energy_warning", "ev_battery_min_volt_veh_energy_warning", "ev_battery_over_charge_warning", "ev_battery_poor_cell_warning", "ev_battery_temp_diff_warning", "forward_collision_warning", "fuel_door_open", "hill_descent_control_fault", "hill_start_assist_warning", "hv_interlocking_status_warning", "lighting_system_failure", "malfunction_indicator", "motor_controller_temp_warning", "park_aid_malfunction", "passive_entry_passive_start", "powertrain_malfunction", "restraints_indicator_warning", "start_stop_engine_warning", "traction_control_disabled", "traction_control_active", "traction_motor_temp_warning", "tire_pressure_monitor_system_warning", "water_in_fuel", "tire_warning_front_right", "tire_warning_front_left", "tire_warning_rear_right", "tire_warning_rear_left", "tire_warning_system_error", "battery_low_warning", "brake_fluid_warning", "active_hood_fault", "active_spoiler_fault", "adjust_tire_pressure", "steering_lock_alert", "anti_pollution_failure_engine_start_impossible", "anti_pollution_system_failure", "anti_reverse_system_failing", "auto_parking_brake", "automatic_braking_deactive", "automatic_braking_system_fault", "automatic_lights_settings_failure", "keyfob_battery_alarm", "trunk_open", "check_reversing_lamp", "crossing_line_system_alert_failure", "dipped_beam_headlamps_front_left_failure", "dipped_beam_headlamps_front_right_failure", "directional_headlamps_failure", "directional_light_failure", "dsg_failing", "electric_mode_not_available", "electronic_lock_failure", "engine_control_system_failure", "engine_oil_pressure_alert", "esp_failure", "excessive_oil_temperature", "tire_front_left_flat", "tire_front_right_flat", "tire_rear_left_flat", "tire_rear_right_flat", "fog_light_front_left_failure", "fog_light_front_right_failure", "fog_light_rear_left_failure", "fog_light_rear_right_failure", "fog_light_front_fault", "door_front_left_open", "door_front_left_open_high_speed", "tire_front_left_not_monitored", "door_front_right_open", "door_front_right_open_high_speed", "tire_front_right_not_monitored", "headlights_left_failure", "headlights_right_failure", "hybrid_system_fault", "hybrid_system_fault_repaired_vehicle", "hydraulic_pressure_or_brake_fuild_insufficient", "lane_departure_fault", "limited_visibility_aids_camera", "tire_pressure_low", "maintenance_date_exceeded", "maintenance_odometer_exceeded", "other_failing_system", "parking_brake_control_failing", "parking_space_measuring_system_failure", "place_gear_to_parking", "power_steering_assitance_failure", "power_steering_failure", "preheating_deactivated_battery_too_low", "preheating_deactivated_fuel_level_too_low", "preheating_deactivated_battery_set_the_clock", "fog_light_rear_fault", "door_rear_left_open", "door_rear_left_open_high_speed", "tire_rear_left_not_monitored", "door_rear_right_open", "door_rear_right_open_high_speed", "tire_rear_right_not_monitored", "screen_rear_open", "retractable_roof_mechanism_fault", "reverse_light_left_failure", "reverse_light_right_failure", "risk_of_ice", "roof_operation_impossible_apply_parking_break", "roof_operation_impossible_apply_start_engine", "roof_operation_impossible_temperature_too_high", "seatbelt_passenger_front_right_unbuckled", "seatbelt_passenger_rear_left_unbuckled", "seatbelt_passenger_rear_center_unbuckled", "seatbelt_passenger_rear_right_unbuckled", "battery_secondary_low", "shock_sensor_failing", "side_lights_front_left_failure", "side_lights_front_right_failure", "side_lights_rear_left_failure", "side_lights_rear_right_failure", "spare_wheel_fitter_driving_aids_deactivated", "speed_control_failure", "stop_light_left_failure", "stop_light_right_failure", "suspension_failure", "suspension_failure_reduce_speed", "suspension_fault_limited_to_90kmh", "tire_pressure_sensor_failure", "trunk_open_high_speed", "trunk_window_open", "turn_signal_front_left_failure", "turn_signal_front_right_failure", "turn_signal_rear_left_failure", "turn_signal_rear_right_failure", "tire_under_inflation", "wheel_pressure_fault", "oil_change_warning", "inspection_warning" ]
                 },
-                "state": { "$ref": "#/$defs/on_off_state" }
+                "state": {
+                    "description": "On-Off State",
+                    "$ref": "#/$defs/on_off_state"
+                }
             },
             "additionalProperties": false,
             "required": [ "name", "state" ]
         },
 
         "departure_time": {
+            "description": "Departure time",
             "type": "object",
             "properties": {
-                "state": { "$ref": "#/$defs/active_state" },
+                "state": {
+                    "description": "Active state",
+                    "$ref": "#/$defs/active_state"
+                },
                 "time": {
+                    "description": "Time",
                     "type": "object",
                     "$ref": "#/$defs/time"
                 }
@@ -368,17 +549,21 @@
         },
 
         "diesel_exhaust_filter_status": {
+            "description": "Diesel exhaust filter status",
             "type": "object",
             "properties": {
                 "status": {
+                    "description": "Status",
                     "type": "string",
                     "enum": [ "unknown", "normal_operation", "overloaded", "at_limit", "over_limit" ]
                 },
                 "component": {
+                    "description": "Component",
                     "type": "string",
                     "enum": [ "unknown", "exhaust_filter", "diesel_particulate_filter", "overboost_code_regulator", "off_board_regeneration" ]
                 },
                 "cleaning": {
+                    "description": "Cleaning",
                     "type": "string",
                     "enum": [ "unknown", "in_progress", "complete", "interrupted" ]
                 }
@@ -388,33 +573,50 @@
         },
 
         "distance_over_time": {
+            "description": "distance over time",
             "type": "object",
             "properties": {
-                "distance": { "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/length" },
-                "time": { "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/duration" }
+                "distance": {
+                    "description": "Distance driven",
+                    "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/length"
+                },
+                "time": {
+                    "description": "Duration of time for the given distance",
+                    "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/duration"
+                }
             },
             "additionalProperties": false,
             "required": [ "distance", "time" ]
         },
 
         "door_position": {
+            "description": "Door position",
             "type": "object",
             "properties": {
                 "location": {
+                    "description": "Location",
                     "type": "string",
                     "enum": [ "front_left", "front_right", "rear_right", "rear_left", "all" ]
                 },
-                "position": { "$ref": "#/$defs/position" }
+                "position": {
+                    "description": "Position",
+                    "$ref": "#/$defs/position"
+                }
             },
             "additionalProperties": false,
             "required": [ "location", "position" ]
         },
 
         "driver_card_present": {
+            "description": "Driver card present",
             "type": "object",
             "properties": {
-                "driver_number": { "type": "integer" },
+                "driver_number": {
+                    "description": "The driver number",
+                    "type": "integer"
+                },
                 "card_present": {
+                    "description": "Card present",
                     "type": "string",
                     "enum": [ "not_present", "present" ]
                 }
@@ -424,10 +626,15 @@
         },
 
         "driver_time_state": {
+            "description": "Driver time state",
             "type": "object",
             "properties": {
-                "driver_number": { "type": "integer" },
+                "driver_number": {
+                    "description": "The driver number",
+                    "type": "integer"
+                },
                 "time_state": {
+                    "description": "Time state",
                     "type": "string",
                     "enum": [ "normal", "fifteen_min_before_four", "four_reached", "fifteen_min_before_nine", "nine_reached", "fifteen_min_before_sixteen", "sixteen_reached" ]
                 }
@@ -437,10 +644,15 @@
         },
 
         "driver_working_state": {
+            "description": "Driving working state",
             "type": "object",
             "properties": {
-                "driver_number": { "type": "integer" },
+                "driver_number": {
+                    "description": "The driver number",
+                    "type": "integer"
+                },
                 "working_state": {
+                    "description": "Working state",
                     "type": "string",
                     "enum": [ "resting", "driver_available", "working", "driving" ]
                 }
@@ -450,67 +662,106 @@
         },
 
         "driving_mode_activation_period": {
+            "description": "Driving mode activation period",
             "type": "object",
             "properties": {
-                "driving_mode": { "$ref": "#/$defs/driving_mode" },
-                "period": { "type": "number" }
+                "driving_mode": {
+                    "description": "Driving mode",
+                    "$ref": "#/$defs/driving_mode"
+                },
+                "period": {
+                    "description": "Percentage of the period used for a driving mode",
+                    "type": "number"
+                }
             },
             "additionalProperties": false,
             "required": [ "driving_mode", "period" ]
         },
 
         "driving_mode_energy_consumption": {
+            "description": "Driving mode energy consumption",
             "type": "object",
             "properties": {
-                "driving_mode": { "$ref": "#/$defs/driving_mode" },
-                "consumption": { "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/energy" }
+                "driving_mode": {
+                    "description": "Driving mode",
+                    "$ref": "#/$defs/driving_mode"
+                },
+                "consumption": {
+                    "description": "Energy consumption in the driving mode",
+                    "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/energy"
+                }
             },
             "additionalProperties": false,
             "required": [ "driving_mode", "consumption" ]
         },
 
         "eco_driving_threshold": {
+            "description": "Eco driving threshold",
             "type": "object",
             "properties": {
                 "type": {
+                    "description": "Type",
                     "type": "string",
                     "enum": [ "zero", "one" ]
                 },
-                "value": { "type": "number" }
+                "value": {
+                    "description": "Value",
+                    "type": "number"
+                }
             },
             "additionalProperties": false,
             "required": [ "type", "value" ]
         },
 
         "failure": {
+            "description": "Failure",
             "type": "object",
             "properties": {
                 "reason": {
+                    "description": "Reason",
                     "type": "string",
                     "enum": [ "rate_limit", "execution_timeout", "format_error", "unauthorised", "unknown", "pending", "oem_error", "privacy_mode_active" ]
                 },
-                "description": { "type": "string" }
+                "description": {
+                    "description": "Failure description",
+                    "type": "string"
+                }
             },
             "additionalProperties": false,
             "required": [ "reason", "description" ]
         },
 
         "hmkit_version": {
+            "description": "HMKit version",
             "type": "object",
             "properties": {
-                "major": { "type": "integer" },
-                "minor": { "type": "integer" },
-                "patch": { "type": "integer" }
+                "major": {
+                    "description": "HMKit version major number",
+                    "type": "integer"
+                },
+                "minor": {
+                    "description": "HMKit version minor number",
+                    "type": "integer"
+                },
+                "patch": {
+                    "description": "HMKit version patch number",
+                    "type": "integer"
+                }
             },
             "additionalProperties": false,
             "required": [ "major", "minor", "patch" ]
         },
 
         "hvac_weekday_starting_time": {
+            "description": "HVAC weekday starting time",
             "type": "object",
             "properties": {
-                "weekday": { "$ref": "#/$defs/weekday" },
+                "weekday": {
+                    "description": "Weekday",
+                    "$ref": "#/$defs/weekday"
+                },
                 "time": {
+                    "description": "Time",
                     "type": "object",
                     "$ref": "#/$defs/time"
                 }
@@ -520,43 +771,67 @@
         },
 
         "lane_keep_assist_state": {
+            "description": "Lane keep assist state",
             "type": "object",
             "properties": {
                 "location": {
+                    "description": "Location",
                     "type": "string",
                     "enum": [ "left", "right" ]
                 },
-                "state": { "$ref": "#/$defs/active_state" }
+                "state": {
+                    "description": "Active state",
+                    "$ref": "#/$defs/active_state"
+                }
             },
             "additionalProperties": false,
             "required": [ "location", "state" ]
         },
 
         "light": {
+            "description": "Light",
             "type": "object",
             "properties": {
-                "location": { "$ref": "#/$defs/location_longitudinal" },
-                "state": { "$ref": "#/$defs/active_state" }
+                "location": {
+                    "description": "Location longitudinal",
+                    "$ref": "#/$defs/location_longitudinal"
+                },
+                "state": {
+                    "description": "Active state",
+                    "$ref": "#/$defs/active_state"
+                }
             },
             "additionalProperties": false,
             "required": [ "location", "state" ]
         },
 
         "lock": {
+            "description": "Lock",
             "type": "object",
             "properties": {
-                "location": { "$ref": "#/$defs/location" },
-                "lock_state": { "$ref": "#/$defs/lock_state" }
+                "location": {
+                    "description": "Door location",
+                    "$ref": "#/$defs/location"
+                },
+                "lock_state": {
+                    "description": "Lock state for the door",
+                    "$ref": "#/$defs/lock_state"
+                }
             },
             "additionalProperties": false,
             "required": [ "location", "lock_state" ]
         },
 
         "oem_trouble_code_value": {
+            "description": "OEM trouble code key-pair with identifier",
             "type": "object",
             "properties": {
-                "id": { "type": "string" },
+                "id": {
+                    "description": "Identifier for the trouble code",
+                    "type": "string"
+                },
                 "key_value": {
+                    "description": "Key-value pair for the trouble code",
                     "type": "object",
                     "$ref": "#/$defs/key_value"
                 }
@@ -566,55 +841,92 @@
         },
 
         "park_assist": {
+            "description": "Park assist",
             "type": "object",
             "properties": {
-                "location": { "$ref": "#/$defs/location_longitudinal" },
-                "alarm": { "$ref": "#/$defs/active_state" },
-                "muted": { "$ref": "#/$defs/muted" }
+                "location": {
+                    "description": "Location longitudinal",
+                    "$ref": "#/$defs/location_longitudinal"
+                },
+                "alarm": {
+                    "description": "Active state",
+                    "$ref": "#/$defs/active_state"
+                },
+                "muted": {
+                    "description": "Muted",
+                    "$ref": "#/$defs/muted"
+                }
             },
             "additionalProperties": false,
             "required": [ "location", "alarm", "muted" ]
         },
 
         "person_detected": {
+            "description": "Person detected",
             "type": "object",
             "properties": {
-                "location": { "$ref": "#/$defs/seat_location" },
-                "detected": { "$ref": "#/$defs/detected" }
+                "location": {
+                    "description": "Seat location",
+                    "$ref": "#/$defs/seat_location"
+                },
+                "detected": {
+                    "description": "Detected",
+                    "$ref": "#/$defs/detected"
+                }
             },
             "additionalProperties": false,
             "required": [ "location", "detected" ]
         },
 
         "price_tariff": {
+            "description": "Price tariff",
             "type": "object",
             "properties": {
                 "pricing_type": {
+                    "description": "Pricing type",
                     "type": "string",
                     "enum": [ "starting_fee", "per_minute", "per_kwh" ]
                 },
-                "price": { "type": "number" },
-                "currency": { "type": "string" }
+                "price": {
+                    "description": "The price",
+                    "type": "number"
+                },
+                "currency": {
+                    "description": "The currency alphabetic code per ISO 4217 or crypto currency symbol",
+                    "type": "string"
+                }
             },
             "additionalProperties": false,
             "required": [ "pricing_type", "price", "currency" ]
         },
 
         "reading_lamp": {
+            "description": "Reading lamp",
             "type": "object",
             "properties": {
-                "location": { "$ref": "#/$defs/location" },
-                "state": { "$ref": "#/$defs/active_state" }
+                "location": {
+                    "description": "Location",
+                    "$ref": "#/$defs/location"
+                },
+                "state": {
+                    "description": "Active state",
+                    "$ref": "#/$defs/active_state"
+                }
             },
             "additionalProperties": false,
             "required": [ "location", "state" ]
         },
 
         "reduction_time": {
+            "description": "Reduction time",
             "type": "object",
             "properties": {
-                "start_stop": { "$ref": "#/$defs/start_stop" },
+                "start_stop": {
+                    "description": "Start-Stop",
+                    "$ref": "#/$defs/start_stop"
+                },
                 "time": {
+                    "description": "Time",
                     "type": "object",
                     "$ref": "#/$defs/time"
                 }
@@ -624,21 +936,36 @@
         },
 
         "rgb_colour": {
+            "description": "RGB colour",
             "type": "object",
             "properties": {
-                "red": { "type": "integer" },
-                "green": { "type": "integer" },
-                "blue": { "type": "integer" }
+                "red": {
+                    "description": "The red component of RGB",
+                    "type": "integer"
+                },
+                "green": {
+                    "description": "The green component of RGB",
+                    "type": "integer"
+                },
+                "blue": {
+                    "description": "The blue component of RGB",
+                    "type": "integer"
+                }
             },
             "additionalProperties": false,
             "required": [ "red", "green", "blue" ]
         },
 
         "seatbelt_state": {
+            "description": "Seatbelt state",
             "type": "object",
             "properties": {
-                "location": { "$ref": "#/$defs/seat_location" },
+                "location": {
+                    "description": "Seat location",
+                    "$ref": "#/$defs/seat_location"
+                },
                 "fastened_state": {
+                    "description": "Fastened state",
                     "type": "string",
                     "enum": [ "not_fastened", "fastened" ]
                 }
@@ -648,23 +975,33 @@
         },
 
         "spring_rate": {
+            "description": "Spring rate",
             "type": "object",
             "properties": {
-                "axle": { "$ref": "#/$defs/axle" },
-                "spring_rate": { "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/torque" }
+                "axle": {
+                    "description": "Axle",
+                    "$ref": "#/$defs/axle"
+                },
+                "spring_rate": {
+                    "description": "The suspension spring rate",
+                    "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/torque"
+                }
             },
             "additionalProperties": false,
             "required": [ "axle", "spring_rate" ]
         },
 
         "timer": {
+            "description": "Timer",
             "type": "object",
             "properties": {
                 "timer_type": {
+                    "description": "Timer type",
                     "type": "string",
                     "enum": [ "preferred_start_time", "preferred_end_time", "departure_date" ]
                 },
                 "date": {
+                    "description": "Timer date",
                     "type": "string",
                     "format": "date-time"
                 }
@@ -674,20 +1011,32 @@
         },
 
         "tire_pressure": {
+            "description": "Tire pressure",
             "type": "object",
             "properties": {
-                "location": { "$ref": "#/$defs/location_wheel" },
-                "pressure": { "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/pressure" }
+                "location": {
+                    "description": "Location wheel",
+                    "$ref": "#/$defs/location_wheel"
+                },
+                "pressure": {
+                    "description": "Tire pressure",
+                    "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/pressure"
+                }
             },
             "additionalProperties": false,
             "required": [ "location", "pressure" ]
         },
 
         "tire_pressure_status": {
+            "description": "Tire pressure status",
             "type": "object",
             "properties": {
-                "location": { "$ref": "#/$defs/location_wheel" },
+                "location": {
+                    "description": "Location wheel",
+                    "$ref": "#/$defs/location_wheel"
+                },
                 "status": {
+                    "description": "Status",
                     "type": "string",
                     "enum": [ "normal", "low", "alert" ]
                 }
@@ -697,33 +1046,61 @@
         },
 
         "tire_temperature": {
+            "description": "Tire temperature",
             "type": "object",
             "properties": {
-                "location": { "$ref": "#/$defs/location_wheel" },
-                "temperature": { "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/temperature" }
+                "location": {
+                    "description": "Location wheel",
+                    "$ref": "#/$defs/location_wheel"
+                },
+                "temperature": {
+                    "description": "Tire temperature",
+                    "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/temperature"
+                }
             },
             "additionalProperties": false,
             "required": [ "location", "temperature" ]
         },
 
         "trip_meter": {
+            "description": "Independent meter that can be reset at any time by the driver",
             "type": "object",
             "properties": {
-                "id": { "type": "integer" },
-                "distance": { "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/length" }
+                "id": {
+                    "description": "ID",
+                    "type": "integer"
+                },
+                "distance": {
+                    "description": "Distance",
+                    "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/length"
+                }
             },
             "additionalProperties": false,
             "required": [ "id", "distance" ]
         },
 
         "trouble_code": {
+            "description": "Trouble code",
             "type": "object",
             "properties": {
-                "occurrences": { "type": "integer" },
-                "id": { "type": "string" },
-                "ecu_id": { "type": "string" },
-                "status": { "type": "string" },
+                "occurrences": {
+                    "description": "Number of occurrences",
+                    "type": "integer"
+                },
+                "id": {
+                    "description": "Identifier",
+                    "type": "string"
+                },
+                "ecu_id": {
+                    "description": "Electronic Control Unit identifier",
+                    "type": "string"
+                },
+                "status": {
+                    "description": "Status",
+                    "type": "string"
+                },
                 "system": {
+                    "description": "System",
                     "type": "string",
                     "enum": [ "unknown", "body", "chassis", "powertrain", "network" ]
                 }
@@ -733,43 +1110,67 @@
         },
 
         "webhook": {
+            "description": "Webhook",
             "type": "object",
             "properties": {
                 "available": {
+                    "description": "If the specified webhook is available.",
                     "type": "string",
                     "enum": [ "unavailable", "available" ]
                 },
-                "event": { "$ref": "#/$defs/event" }
+                "event": {
+                    "description": "Triggered event",
+                    "$ref": "#/$defs/event"
+                }
             },
             "additionalProperties": false,
             "required": [ "available", "event" ]
         },
 
         "wheel_rpm": {
+            "description": "Wheel RPM",
             "type": "object",
             "properties": {
-                "location": { "$ref": "#/$defs/location_wheel" },
-                "rpm": { "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/angular_velocity" }
+                "location": {
+                    "description": "Wheel location",
+                    "$ref": "#/$defs/location_wheel"
+                },
+                "rpm": {
+                    "description": "The RPM measured at this wheel",
+                    "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/angular_velocity"
+                }
             },
             "additionalProperties": false,
             "required": [ "location", "rpm" ]
         },
 
         "window_open_percentage": {
+            "description": "Window open percentage",
             "type": "object",
             "properties": {
-                "location": { "$ref": "#/$defs/window_location" },
-                "open_percentage": { "type": "number" }
+                "location": {
+                    "description": "Window location",
+                    "$ref": "#/$defs/window_location"
+                },
+                "open_percentage": {
+                    "description": "Percentage value between 0.0 - 1.0 (0% - 100%)",
+                    "type": "number"
+                }
             },
             "additionalProperties": false,
             "required": [ "location", "open_percentage" ]
         },
 
         "window_position": {
+            "description": "Window position",
             "type": "object",
             "properties": {
-                "location": { "$ref": "#/$defs/window_location" },
+                "location": {
+                    "description": "Window location",
+                    "$ref": "#/$defs/window_location"
+                },
                 "position": {
+                    "description": "Position",
                     "type": "string",
                     "enum": [ "closed", "open", "intermediate" ]
                 }
@@ -779,6 +1180,7 @@
         },
 
         "event": {
+            "description": "Triggered event",
             "type": "string",
             "enum": [ "ping", "trip_started", "trip_ended", "vehicle_location_changed", "authorization_changed", "tire_pressure_changed", "harsh_acceleration_triggered", "harsh_acceleration_pedal_position_triggered", "harsh_braking_triggered", "harsh_cornering_triggered", "seat_belt_triggered", "maintenance_changed", "dashboard_lights_changed", "ignition_changed", "accident_reported", "emergency_reported", "breakdown_reported", "battery_guard_warning", "engine_changed", "fleet_clearance_changed" ]
         }

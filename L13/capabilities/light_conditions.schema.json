@@ -3,8 +3,14 @@
     "$schema": "https://json-schema.org/draft-07/schema",
     "type": "object",
     "properties": {
-        "outside_light": { "$ref": "#/$defs/property_illuminance" },
-        "inside_light": { "$ref": "#/$defs/property_illuminance" },
+        "outside_light": {
+            "description": "Measured outside illuminance",
+            "$ref": "#/$defs/property_illuminance"
+        },
+        "inside_light": {
+            "description": "Measured inside illuminance",
+            "$ref": "#/$defs/property_illuminance"
+        },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },
         "vin": { "$ref": "#/$defs/property_vin" }

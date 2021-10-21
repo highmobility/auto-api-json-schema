@@ -3,14 +3,38 @@
     "$schema": "https://json-schema.org/draft-07/schema",
     "type": "object",
     "properties": {
-        "wipers_status": { "$ref": "#/$defs/property_wipers_status" },
-        "wipers_intensity": { "$ref": "#/$defs/property_wipers_intensity" },
-        "windscreen_damage": { "$ref": "#/$defs/property_windscreen_damage" },
-        "windscreen_zone_matrix": { "$ref": "#/$defs/property_zone" },
-        "windscreen_damage_zone": { "$ref": "#/$defs/property_zone" },
-        "windscreen_needs_replacement": { "$ref": "#/$defs/property_windscreen_needs_replacement" },
-        "windscreen_damage_confidence": { "$ref": "#/$defs/property_percentage" },
-        "windscreen_damage_detection_time": { "$ref": "#/$defs/property_timestamp" },
+        "wipers_status": {
+            "description": "Wipers status",
+            "$ref": "#/$defs/property_wipers_status"
+        },
+        "wipers_intensity": {
+            "description": "Wipers intensity",
+            "$ref": "#/$defs/property_wipers_intensity"
+        },
+        "windscreen_damage": {
+            "description": "Windscreen damage",
+            "$ref": "#/$defs/property_windscreen_damage"
+        },
+        "windscreen_zone_matrix": {
+            "description": "Representing the size of the matrix, seen from the inside of the vehicle",
+            "$ref": "#/$defs/property_zone"
+        },
+        "windscreen_damage_zone": {
+            "description": "Representing the position in the zone, seen from the inside of the vehicle (1-based index)",
+            "$ref": "#/$defs/property_zone"
+        },
+        "windscreen_needs_replacement": {
+            "description": "Windscreen needs replacement",
+            "$ref": "#/$defs/property_windscreen_needs_replacement"
+        },
+        "windscreen_damage_confidence": {
+            "description": "Confidence of damage detection, 0% if no impact detected",
+            "$ref": "#/$defs/property_percentage"
+        },
+        "windscreen_damage_detection_time": {
+            "description": "Windscreen damage detection date",
+            "$ref": "#/$defs/property_timestamp"
+        },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },
         "vin": { "$ref": "#/$defs/property_vin" }

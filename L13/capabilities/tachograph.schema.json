@@ -3,13 +3,34 @@
     "$schema": "https://json-schema.org/draft-07/schema",
     "type": "object",
     "properties": {
-        "drivers_working_states": { "$ref": "#/$defs/property_driver_working_state" },
-        "drivers_time_states": { "$ref": "#/$defs/property_driver_time_state" },
-        "drivers_cards_present": { "$ref": "#/$defs/property_driver_card_present" },
-        "vehicle_motion": { "$ref": "#/$defs/property_detected" },
-        "vehicle_overspeed": { "$ref": "#/$defs/property_vehicle_overspeed" },
-        "vehicle_direction": { "$ref": "#/$defs/property_vehicle_direction" },
-        "vehicle_speed": { "$ref": "#/$defs/property_speed" },
+        "drivers_working_states": {
+            "description": "Drivers working states",
+            "$ref": "#/$defs/property_driver_working_state"
+        },
+        "drivers_time_states": {
+            "description": "Drivers time states",
+            "$ref": "#/$defs/property_driver_time_state"
+        },
+        "drivers_cards_present": {
+            "description": "Drivers cards present",
+            "$ref": "#/$defs/property_driver_card_present"
+        },
+        "vehicle_motion": {
+            "description": "Vehicle motion",
+            "$ref": "#/$defs/property_detected"
+        },
+        "vehicle_overspeed": {
+            "description": "Vehicle overspeed",
+            "$ref": "#/$defs/property_vehicle_overspeed"
+        },
+        "vehicle_direction": {
+            "description": "Vehicle direction",
+            "$ref": "#/$defs/property_vehicle_direction"
+        },
+        "vehicle_speed": {
+            "description": "The tachograph vehicle speed",
+            "$ref": "#/$defs/property_speed"
+        },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },
         "vin": { "$ref": "#/$defs/property_vin" }

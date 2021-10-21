@@ -3,9 +3,18 @@
     "$schema": "https://json-schema.org/draft-07/schema",
     "type": "object",
     "properties": {
-        "position": { "$ref": "#/$defs/property_position" },
-        "lock": { "$ref": "#/$defs/property_lock_state" },
-        "lock_safety": { "$ref": "#/$defs/property_lock_safety" },
+        "position": {
+            "description": "Position",
+            "$ref": "#/$defs/property_position"
+        },
+        "lock": {
+            "description": "Includes the lock state of the hood.",
+            "$ref": "#/$defs/property_lock_state"
+        },
+        "lock_safety": {
+            "description": "Indicates the safe-state of the hood.",
+            "$ref": "#/$defs/property_lock_safety"
+        },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },
         "vin": { "$ref": "#/$defs/property_vin" }

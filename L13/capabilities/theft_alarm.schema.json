@@ -3,13 +3,34 @@
     "$schema": "https://json-schema.org/draft-07/schema",
     "type": "object",
     "properties": {
-        "status": { "$ref": "#/$defs/property_status" },
-        "interior_protection_status": { "$ref": "#/$defs/property_active_selected_state" },
-        "tow_protection_status": { "$ref": "#/$defs/property_active_selected_state" },
-        "last_warning_reason": { "$ref": "#/$defs/property_last_warning_reason" },
-        "last_event": { "$ref": "#/$defs/property_timestamp" },
-        "last_event_level": { "$ref": "#/$defs/property_last_event_level" },
-        "event_type": { "$ref": "#/$defs/property_event_type" },
+        "status": {
+            "description": "Status",
+            "$ref": "#/$defs/property_status"
+        },
+        "interior_protection_status": {
+            "description": "Interior protection sensor status",
+            "$ref": "#/$defs/property_active_selected_state"
+        },
+        "tow_protection_status": {
+            "description": "Tow protection sensor status",
+            "$ref": "#/$defs/property_active_selected_state"
+        },
+        "last_warning_reason": {
+            "description": "Last warning reason",
+            "$ref": "#/$defs/property_last_warning_reason"
+        },
+        "last_event": {
+            "description": "Last event happening date",
+            "$ref": "#/$defs/property_timestamp"
+        },
+        "last_event_level": {
+            "description": "Level of impact for the last event",
+            "$ref": "#/$defs/property_last_event_level"
+        },
+        "event_type": {
+            "description": "Position of the last even relative to the vehicle",
+            "$ref": "#/$defs/property_event_type"
+        },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },
         "vin": { "$ref": "#/$defs/property_vin" }

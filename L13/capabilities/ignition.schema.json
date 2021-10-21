@@ -4,14 +4,19 @@
     "type": "object",
     "properties": {
         "status": {
+            "description": "Status",
             "$ref": "#/$defs/property_ignition_state",
             "deprecated": true
         },
         "accessories_status": {
+            "description": "Accessories status",
             "$ref": "#/$defs/property_ignition_state",
             "deprecated": true
         },
-        "state": { "$ref": "#/$defs/property_ignition_state" },
+        "state": {
+            "description": "State",
+            "$ref": "#/$defs/property_ignition_state"
+        },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },
         "vin": { "$ref": "#/$defs/property_vin" }

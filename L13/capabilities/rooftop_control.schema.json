@@ -3,12 +3,30 @@
     "$schema": "https://json-schema.org/draft-07/schema",
     "type": "object",
     "properties": {
-        "dimming": { "$ref": "#/$defs/property_percentage" },
-        "position": { "$ref": "#/$defs/property_percentage" },
-        "convertible_roof_state": { "$ref": "#/$defs/property_convertible_roof_state" },
-        "sunroof_tilt_state": { "$ref": "#/$defs/property_sunroof_tilt_state" },
-        "sunroof_state": { "$ref": "#/$defs/property_sunroof_state" },
-        "sunroof_rain_event": { "$ref": "#/$defs/property_sunroof_rain_event" },
+        "dimming": {
+            "description": "1.0 (100%) is opaque, 0.0 (0%) is transparent",
+            "$ref": "#/$defs/property_percentage"
+        },
+        "position": {
+            "description": "1.0 (100%) is fully open, 0.0 (0%) is closed",
+            "$ref": "#/$defs/property_percentage"
+        },
+        "convertible_roof_state": {
+            "description": "Convertible roof state",
+            "$ref": "#/$defs/property_convertible_roof_state"
+        },
+        "sunroof_tilt_state": {
+            "description": "Sunroof tilt state",
+            "$ref": "#/$defs/property_sunroof_tilt_state"
+        },
+        "sunroof_state": {
+            "description": "Sunroof state",
+            "$ref": "#/$defs/property_sunroof_state"
+        },
+        "sunroof_rain_event": {
+            "description": "Sunroof event happened in case of rain",
+            "$ref": "#/$defs/property_sunroof_rain_event"
+        },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },
         "vin": { "$ref": "#/$defs/property_vin" }

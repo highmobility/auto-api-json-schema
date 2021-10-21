@@ -3,12 +3,30 @@
     "$schema": "https://json-schema.org/draft-07/schema",
     "type": "object",
     "properties": {
-        "incidents": { "$ref": "#/$defs/property_crash_incident" },
-        "type": { "$ref": "#/$defs/property_type" },
-        "tipped_state": { "$ref": "#/$defs/property_tipped_state" },
-        "automatic_ecall": { "$ref": "#/$defs/property_enabled_state" },
-        "severity": { "$ref": "#/$defs/property_uinteger" },
-        "impact_zone": { "$ref": "#/$defs/property_impact_zone" },
+        "incidents": {
+            "description": "Incidents",
+            "$ref": "#/$defs/property_crash_incident"
+        },
+        "type": {
+            "description": "Type",
+            "$ref": "#/$defs/property_type"
+        },
+        "tipped_state": {
+            "description": "Tipped state",
+            "$ref": "#/$defs/property_tipped_state"
+        },
+        "automatic_ecall": {
+            "description": "Automatic emergency call enabled state",
+            "$ref": "#/$defs/property_enabled_state"
+        },
+        "severity": {
+            "description": "Severity of the crash (from 0 to 7 - very high severity)",
+            "$ref": "#/$defs/property_uinteger"
+        },
+        "impact_zone": {
+            "description": "Impact zone of the crash",
+            "$ref": "#/$defs/property_impact_zone"
+        },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },
         "vin": { "$ref": "#/$defs/property_vin" }

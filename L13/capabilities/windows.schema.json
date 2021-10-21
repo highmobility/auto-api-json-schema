@@ -3,8 +3,14 @@
     "$schema": "https://json-schema.org/draft-07/schema",
     "type": "object",
     "properties": {
-        "open_percentages": { "$ref": "#/$defs/property_window_open_percentage" },
-        "positions": { "$ref": "#/$defs/property_window_position" },
+        "open_percentages": {
+            "description": "Open percentages",
+            "$ref": "#/$defs/property_window_open_percentage"
+        },
+        "positions": {
+            "description": "Positions",
+            "$ref": "#/$defs/property_window_position"
+        },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },
         "vin": { "$ref": "#/$defs/property_vin" }

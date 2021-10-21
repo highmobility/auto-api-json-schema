@@ -3,9 +3,18 @@
     "$schema": "https://json-schema.org/draft-07/schema",
     "type": "object",
     "properties": {
-        "lock": { "$ref": "#/$defs/property_lock_state" },
-        "position": { "$ref": "#/$defs/property_position" },
-        "lock_safety": { "$ref": "#/$defs/property_lock_safety" },
+        "lock": {
+            "description": "Lock",
+            "$ref": "#/$defs/property_lock_state"
+        },
+        "position": {
+            "description": "Position",
+            "$ref": "#/$defs/property_position"
+        },
+        "lock_safety": {
+            "description": "Indicates the safe-state of the trunk.",
+            "$ref": "#/$defs/property_lock_safety"
+        },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },
         "vin": { "$ref": "#/$defs/property_vin" }

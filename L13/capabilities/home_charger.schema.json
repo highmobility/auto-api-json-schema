@@ -3,25 +3,71 @@
     "$schema": "https://json-schema.org/draft-07/schema",
     "type": "object",
     "properties": {
-        "charging_status": { "$ref": "#/$defs/property_charging_status" },
-        "authentication_mechanism": { "$ref": "#/$defs/property_authentication_mechanism" },
-        "plug_type": { "$ref": "#/$defs/property_plug_type" },
+        "charging_status": {
+            "description": "Charging status",
+            "$ref": "#/$defs/property_charging_status"
+        },
+        "authentication_mechanism": {
+            "description": "Authentication mechanism",
+            "$ref": "#/$defs/property_authentication_mechanism"
+        },
+        "plug_type": {
+            "description": "Plug type",
+            "$ref": "#/$defs/property_plug_type"
+        },
         "charging_power_kw": {
+            "description": "Charging power",
             "$ref": "#/$defs/property_power",
             "deprecated": true
         },
-        "solar_charging": { "$ref": "#/$defs/property_active_state" },
-        "wi_fi_hotspot_enabled": { "$ref": "#/$defs/property_enabled_state" },
-        "wi_fi_hotspot_ssid": { "$ref": "#/$defs/property_string" },
-        "wi_fi_hotspot_security": { "$ref": "#/$defs/property_network_security" },
-        "wi_fi_hotspot_password": { "$ref": "#/$defs/property_string" },
-        "authentication_state": { "$ref": "#/$defs/property_authentication_state" },
-        "charge_current": { "$ref": "#/$defs/property_electric_current" },
-        "maximum_charge_current": { "$ref": "#/$defs/property_electric_current" },
-        "minimum_charge_current": { "$ref": "#/$defs/property_electric_current" },
-        "coordinates": { "$ref": "#/$defs/property_coordinates" },
-        "price_tariffs": { "$ref": "#/$defs/property_price_tariff" },
-        "charging_power": { "$ref": "#/$defs/property_power" },
+        "solar_charging": {
+            "description": "Solar charging",
+            "$ref": "#/$defs/property_active_state"
+        },
+        "wi_fi_hotspot_enabled": {
+            "description": "Wi-Fi hotspot enabled",
+            "$ref": "#/$defs/property_enabled_state"
+        },
+        "wi_fi_hotspot_ssid": {
+            "description": "The Wi-Fi Hotspot SSID",
+            "$ref": "#/$defs/property_string"
+        },
+        "wi_fi_hotspot_security": {
+            "description": "Wi-Fi hotspot security",
+            "$ref": "#/$defs/property_network_security"
+        },
+        "wi_fi_hotspot_password": {
+            "description": "The Wi-Fi Hotspot password",
+            "$ref": "#/$defs/property_string"
+        },
+        "authentication_state": {
+            "description": "Authentication state",
+            "$ref": "#/$defs/property_authentication_state"
+        },
+        "charge_current": {
+            "description": "The charge current",
+            "$ref": "#/$defs/property_electric_current"
+        },
+        "maximum_charge_current": {
+            "description": "The maximum possible charge current",
+            "$ref": "#/$defs/property_electric_current"
+        },
+        "minimum_charge_current": {
+            "description": "The minimal possible charge current",
+            "$ref": "#/$defs/property_electric_current"
+        },
+        "coordinates": {
+            "description": "Coordinates",
+            "$ref": "#/$defs/property_coordinates"
+        },
+        "price_tariffs": {
+            "description": "Price tariffs",
+            "$ref": "#/$defs/property_price_tariff"
+        },
+        "charging_power": {
+            "description": "Charging power output from the charger",
+            "$ref": "#/$defs/property_power"
+        },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },
         "vin": { "$ref": "#/$defs/property_vin" }

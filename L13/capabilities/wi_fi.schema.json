@@ -3,10 +3,22 @@
     "$schema": "https://json-schema.org/draft-07/schema",
     "type": "object",
     "properties": {
-        "status": { "$ref": "#/$defs/property_enabled_state" },
-        "network_connected": { "$ref": "#/$defs/property_connection_state" },
-        "network_ssid": { "$ref": "#/$defs/property_string" },
-        "network_security": { "$ref": "#/$defs/property_network_security" },
+        "status": {
+            "description": "Status",
+            "$ref": "#/$defs/property_enabled_state"
+        },
+        "network_connected": {
+            "description": "Network connected",
+            "$ref": "#/$defs/property_connection_state"
+        },
+        "network_ssid": {
+            "description": "The network SSID",
+            "$ref": "#/$defs/property_string"
+        },
+        "network_security": {
+            "description": "Network security",
+            "$ref": "#/$defs/property_network_security"
+        },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },
         "vin": { "$ref": "#/$defs/property_vin" }

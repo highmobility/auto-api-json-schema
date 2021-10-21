@@ -3,20 +3,62 @@
     "$schema": "https://json-schema.org/draft-07/schema",
     "type": "object",
     "properties": {
-        "public_charging_points": { "$ref": "#/$defs/property_charging_point" },
-        "displayed_state_of_charge": { "$ref": "#/$defs/property_percentage" },
-        "displayed_start_state_of_charge": { "$ref": "#/$defs/property_percentage" },
-        "business_errors": { "$ref": "#/$defs/property_string" },
-        "time_zone": { "$ref": "#/$defs/property_string" },
-        "start_time": { "$ref": "#/$defs/property_timestamp" },
-        "end_time": { "$ref": "#/$defs/property_timestamp" },
-        "total_charging_duration": { "$ref": "#/$defs/property_duration" },
-        "calculated_energy_charged": { "$ref": "#/$defs/property_energy" },
-        "energy_charged": { "$ref": "#/$defs/property_energy" },
-        "preconditioning_state": { "$ref": "#/$defs/property_active_state" },
-        "odometer": { "$ref": "#/$defs/property_length" },
-        "charging_cost": { "$ref": "#/$defs/property_charging_cost" },
-        "location": { "$ref": "#/$defs/property_charging_location" },
+        "public_charging_points": {
+            "description": "Matching public charging points.",
+            "$ref": "#/$defs/property_charging_point"
+        },
+        "displayed_state_of_charge": {
+            "description": "Displayed state of charge to the driver",
+            "$ref": "#/$defs/property_percentage"
+        },
+        "displayed_start_state_of_charge": {
+            "description": "Displayed state of charge at start to the driver",
+            "$ref": "#/$defs/property_percentage"
+        },
+        "business_errors": {
+            "description": "Business errors",
+            "$ref": "#/$defs/property_string"
+        },
+        "time_zone": {
+            "description": "Time zone of the charging session",
+            "$ref": "#/$defs/property_string"
+        },
+        "start_time": {
+            "description": "Start time of the charging session",
+            "$ref": "#/$defs/property_timestamp"
+        },
+        "end_time": {
+            "description": "End time of the charging session",
+            "$ref": "#/$defs/property_timestamp"
+        },
+        "total_charging_duration": {
+            "description": "Total time charging was active during the session",
+            "$ref": "#/$defs/property_duration"
+        },
+        "calculated_energy_charged": {
+            "description": "Calculated amount of energy charged during the session",
+            "$ref": "#/$defs/property_energy"
+        },
+        "energy_charged": {
+            "description": "Energy charged during the session",
+            "$ref": "#/$defs/property_energy"
+        },
+        "preconditioning_state": {
+            "description": "Preconditioning is active or not",
+            "$ref": "#/$defs/property_active_state"
+        },
+        "odometer": {
+            "description": "The vehicle odometer value in a given units",
+            "$ref": "#/$defs/property_length"
+        },
+        "charging_cost": {
+            "description": "Charging cost information",
+            "$ref": "#/$defs/property_charging_cost"
+        },
+        "location": {
+            "description": "Charging location address",
+            "$ref": "#/$defs/property_charging_location"
+        },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },
         "vin": { "$ref": "#/$defs/property_vin" }

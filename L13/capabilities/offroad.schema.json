@@ -3,8 +3,14 @@
     "$schema": "https://json-schema.org/draft-07/schema",
     "type": "object",
     "properties": {
-        "route_incline": { "$ref": "#/$defs/property_angle" },
-        "wheel_suspension": { "$ref": "#/$defs/property_percentage" },
+        "route_incline": {
+            "description": "The route elevation incline",
+            "$ref": "#/$defs/property_angle"
+        },
+        "wheel_suspension": {
+            "description": "The wheel suspension level percentage, whereas 0.0 is no suspension and 1.0 maximum suspension",
+            "$ref": "#/$defs/property_percentage"
+        },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },
         "vin": { "$ref": "#/$defs/property_vin" }

@@ -3,27 +3,90 @@
     "$schema": "https://json-schema.org/draft-07/schema",
     "type": "object",
     "properties": {
-        "type": { "$ref": "#/$defs/property_type" },
-        "driver_name": { "$ref": "#/$defs/property_string" },
-        "description": { "$ref": "#/$defs/property_string" },
-        "start_time": { "$ref": "#/$defs/property_timestamp" },
-        "end_time": { "$ref": "#/$defs/property_timestamp" },
-        "start_address": { "$ref": "#/$defs/property_string" },
-        "end_address": { "$ref": "#/$defs/property_string" },
-        "start_coordinates": { "$ref": "#/$defs/property_coordinates" },
-        "end_coordinates": { "$ref": "#/$defs/property_coordinates" },
-        "start_odometer": { "$ref": "#/$defs/property_length" },
-        "end_odometer": { "$ref": "#/$defs/property_length" },
-        "average_fuel_consumption": { "$ref": "#/$defs/property_fuel_efficiency" },
-        "distance": { "$ref": "#/$defs/property_length" },
-        "start_address_components": { "$ref": "#/$defs/property_address_component" },
-        "end_address_components": { "$ref": "#/$defs/property_address_component" },
-        "event": { "$ref": "#/$defs/property_event" },
-        "eco_level": { "$ref": "#/$defs/property_eco_level" },
-        "thresholds": { "$ref": "#/$defs/property_eco_driving_threshold" },
-        "total_fuel_consumption": { "$ref": "#/$defs/property_volume" },
-        "total_idle_fuel_consumption": { "$ref": "#/$defs/property_volume" },
-        "maximum_speed": { "$ref": "#/$defs/property_speed" },
+        "type": {
+            "description": "Type of the trip",
+            "$ref": "#/$defs/property_type"
+        },
+        "driver_name": {
+            "description": "Name of the driver of the trip",
+            "$ref": "#/$defs/property_string"
+        },
+        "description": {
+            "description": "Description of the trip",
+            "$ref": "#/$defs/property_string"
+        },
+        "start_time": {
+            "description": "Start time of the trip",
+            "$ref": "#/$defs/property_timestamp"
+        },
+        "end_time": {
+            "description": "End time of the trip",
+            "$ref": "#/$defs/property_timestamp"
+        },
+        "start_address": {
+            "description": "Start address of the trip",
+            "$ref": "#/$defs/property_string"
+        },
+        "end_address": {
+            "description": "End address of the trip",
+            "$ref": "#/$defs/property_string"
+        },
+        "start_coordinates": {
+            "description": "Start coordinates of the trip",
+            "$ref": "#/$defs/property_coordinates"
+        },
+        "end_coordinates": {
+            "description": "End coordinates of the trip",
+            "$ref": "#/$defs/property_coordinates"
+        },
+        "start_odometer": {
+            "description": "Odometer reading at the start of the trip",
+            "$ref": "#/$defs/property_length"
+        },
+        "end_odometer": {
+            "description": "Odometer reading at the end of the trip",
+            "$ref": "#/$defs/property_length"
+        },
+        "average_fuel_consumption": {
+            "description": "Average fuel consumption during the trip",
+            "$ref": "#/$defs/property_fuel_efficiency"
+        },
+        "distance": {
+            "description": "Distance of the trip",
+            "$ref": "#/$defs/property_length"
+        },
+        "start_address_components": {
+            "description": "Start address components",
+            "$ref": "#/$defs/property_address_component"
+        },
+        "end_address_components": {
+            "description": "End address components",
+            "$ref": "#/$defs/property_address_component"
+        },
+        "event": {
+            "description": "Event",
+            "$ref": "#/$defs/property_event"
+        },
+        "eco_level": {
+            "description": "Eco level",
+            "$ref": "#/$defs/property_eco_level"
+        },
+        "thresholds": {
+            "description": "Eco driving thresholds",
+            "$ref": "#/$defs/property_eco_driving_threshold"
+        },
+        "total_fuel_consumption": {
+            "description": "Total fuel consumption during the trip",
+            "$ref": "#/$defs/property_volume"
+        },
+        "total_idle_fuel_consumption": {
+            "description": "Fuel consumed while idle since the last ignition on.",
+            "$ref": "#/$defs/property_volume"
+        },
+        "maximum_speed": {
+            "description": "Maximum speed recorded since the last igntion on.",
+            "$ref": "#/$defs/property_speed"
+        },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },
         "vin": { "$ref": "#/$defs/property_vin" }

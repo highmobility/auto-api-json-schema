@@ -3,8 +3,14 @@
     "$schema": "https://json-schema.org/draft-07/schema",
     "type": "object",
     "properties": {
-        "status": { "$ref": "#/$defs/property_active_state" },
-        "engaged": { "$ref": "#/$defs/property_engaged" },
+        "status": {
+            "description": "Status",
+            "$ref": "#/$defs/property_active_state"
+        },
+        "engaged": {
+            "description": "Engaged",
+            "$ref": "#/$defs/property_engaged"
+        },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },
         "vin": { "$ref": "#/$defs/property_vin" }

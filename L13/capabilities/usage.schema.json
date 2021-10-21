@@ -3,49 +3,167 @@
     "$schema": "https://json-schema.org/draft-07/schema",
     "type": "object",
     "properties": {
-        "average_weekly_distance": { "$ref": "#/$defs/property_length" },
-        "average_weekly_distance_long_run": { "$ref": "#/$defs/property_length" },
-        "acceleration_evaluation": { "$ref": "#/$defs/property_percentage" },
-        "driving_style_evaluation": { "$ref": "#/$defs/property_percentage" },
-        "driving_modes_activation_periods": { "$ref": "#/$defs/property_driving_mode_activation_period" },
-        "driving_modes_energy_consumptions": { "$ref": "#/$defs/property_driving_mode_energy_consumption" },
-        "last_trip_energy_consumption": { "$ref": "#/$defs/property_energy" },
-        "last_trip_fuel_consumption": { "$ref": "#/$defs/property_volume" },
+        "average_weekly_distance": {
+            "description": "Average weekly distance",
+            "$ref": "#/$defs/property_length"
+        },
+        "average_weekly_distance_long_run": {
+            "description": "Average weekyl distance over long term",
+            "$ref": "#/$defs/property_length"
+        },
+        "acceleration_evaluation": {
+            "description": "Acceleration evaluation percentage",
+            "$ref": "#/$defs/property_percentage"
+        },
+        "driving_style_evaluation": {
+            "description": "Driving style evaluation percentage",
+            "$ref": "#/$defs/property_percentage"
+        },
+        "driving_modes_activation_periods": {
+            "description": "Driving modes activation periods",
+            "$ref": "#/$defs/property_driving_mode_activation_period"
+        },
+        "driving_modes_energy_consumptions": {
+            "description": "Driving modes energy consumptions",
+            "$ref": "#/$defs/property_driving_mode_energy_consumption"
+        },
+        "last_trip_energy_consumption": {
+            "description": "Energy consumption in the last trip",
+            "$ref": "#/$defs/property_energy"
+        },
+        "last_trip_fuel_consumption": {
+            "description": "Fuel consumption in the last trip",
+            "$ref": "#/$defs/property_volume"
+        },
         "mileage_after_last_trip": {
+            "description": "Mileage after the last trip",
             "$ref": "#/$defs/property_length",
             "deprecated": true
         },
-        "last_trip_electric_portion": { "$ref": "#/$defs/property_percentage" },
-        "last_trip_average_energy_recuperation": { "$ref": "#/$defs/property_energy_efficiency" },
-        "last_trip_battery_remaining": { "$ref": "#/$defs/property_percentage" },
-        "last_trip_date": { "$ref": "#/$defs/property_timestamp" },
-        "average_fuel_consumption": { "$ref": "#/$defs/property_fuel_efficiency" },
-        "current_fuel_consumption": { "$ref": "#/$defs/property_fuel_efficiency" },
-        "odometer_after_last_trip": { "$ref": "#/$defs/property_length" },
-        "safety_driving_score": { "$ref": "#/$defs/property_percentage" },
-        "rapid_acceleration_grade": { "$ref": "#/$defs/property_grade" },
-        "rapid_deceleration_grade": { "$ref": "#/$defs/property_grade" },
-        "late_night_grade": { "$ref": "#/$defs/property_grade" },
-        "distance_over_time": { "$ref": "#/$defs/property_distance_over_time" },
-        "electric_consumption_rate_since_start": { "$ref": "#/$defs/property_energy_efficiency" },
-        "electric_consumption_rate_since_reset": { "$ref": "#/$defs/property_energy_efficiency" },
-        "electric_distance_last_trip": { "$ref": "#/$defs/property_length" },
-        "electric_distance_since_reset": { "$ref": "#/$defs/property_length" },
-        "electric_duration_last_trip": { "$ref": "#/$defs/property_duration" },
-        "electric_duration_since_reset": { "$ref": "#/$defs/property_duration" },
-        "fuel_consumption_rate_last_trip": { "$ref": "#/$defs/property_fuel_efficiency" },
-        "fuel_consumption_rate_since_reset": { "$ref": "#/$defs/property_fuel_efficiency" },
-        "average_speed_last_trip": { "$ref": "#/$defs/property_speed" },
-        "average_speed_since_reset": { "$ref": "#/$defs/property_speed" },
-        "fuel_distance_last_trip": { "$ref": "#/$defs/property_length" },
-        "fuel_distance_since_reset": { "$ref": "#/$defs/property_length" },
-        "driving_duration_last_trip": { "$ref": "#/$defs/property_duration" },
-        "driving_duration_since_reset": { "$ref": "#/$defs/property_duration" },
-        "eco_score_total": { "$ref": "#/$defs/property_percentage" },
-        "eco_score_free_wheel": { "$ref": "#/$defs/property_percentage" },
-        "eco_score_constant": { "$ref": "#/$defs/property_percentage" },
-        "eco_score_bonus_range": { "$ref": "#/$defs/property_length" },
-        "trip_meters": { "$ref": "#/$defs/property_trip_meter" },
+        "last_trip_electric_portion": {
+            "description": "Portion of the last trip used in electric mode",
+            "$ref": "#/$defs/property_percentage"
+        },
+        "last_trip_average_energy_recuperation": {
+            "description": "Energy recuperation rate for last trip",
+            "$ref": "#/$defs/property_energy_efficiency"
+        },
+        "last_trip_battery_remaining": {
+            "description": "Battery % remaining after last trip",
+            "$ref": "#/$defs/property_percentage"
+        },
+        "last_trip_date": {
+            "description": "The last trip date",
+            "$ref": "#/$defs/property_timestamp"
+        },
+        "average_fuel_consumption": {
+            "description": "Average fuel consumption for current trip",
+            "$ref": "#/$defs/property_fuel_efficiency"
+        },
+        "current_fuel_consumption": {
+            "description": "Current fuel consumption",
+            "$ref": "#/$defs/property_fuel_efficiency"
+        },
+        "odometer_after_last_trip": {
+            "description": "Odometer after the last trip",
+            "$ref": "#/$defs/property_length"
+        },
+        "safety_driving_score": {
+            "description": "Safety driving score as percentage",
+            "$ref": "#/$defs/property_percentage"
+        },
+        "rapid_acceleration_grade": {
+            "description": "Grade given for rapid acceleration over time",
+            "$ref": "#/$defs/property_grade"
+        },
+        "rapid_deceleration_grade": {
+            "description": "Grade given for rapid deceleration over time",
+            "$ref": "#/$defs/property_grade"
+        },
+        "late_night_grade": {
+            "description": "Grade given for late night driving over time",
+            "$ref": "#/$defs/property_grade"
+        },
+        "distance_over_time": {
+            "description": "Distance driven over a given time period",
+            "$ref": "#/$defs/property_distance_over_time"
+        },
+        "electric_consumption_rate_since_start": {
+            "description": "Electric energy consumption rate since the start of a trip",
+            "$ref": "#/$defs/property_energy_efficiency"
+        },
+        "electric_consumption_rate_since_reset": {
+            "description": "Electric energy consumption rate since a reset",
+            "$ref": "#/$defs/property_energy_efficiency"
+        },
+        "electric_distance_last_trip": {
+            "description": "Distance travelled with electricity in last trip",
+            "$ref": "#/$defs/property_length"
+        },
+        "electric_distance_since_reset": {
+            "description": "Distance travelled with electricity since reset",
+            "$ref": "#/$defs/property_length"
+        },
+        "electric_duration_last_trip": {
+            "description": "Duration of travelling using electricity during last trip",
+            "$ref": "#/$defs/property_duration"
+        },
+        "electric_duration_since_reset": {
+            "description": "Duration of travelling using electricity since reset",
+            "$ref": "#/$defs/property_duration"
+        },
+        "fuel_consumption_rate_last_trip": {
+            "description": "Liquid fuel consumption rate during last trip",
+            "$ref": "#/$defs/property_fuel_efficiency"
+        },
+        "fuel_consumption_rate_since_reset": {
+            "description": "Liquid fuel consumption rate since reset",
+            "$ref": "#/$defs/property_fuel_efficiency"
+        },
+        "average_speed_last_trip": {
+            "description": "Average speed during last trip",
+            "$ref": "#/$defs/property_speed"
+        },
+        "average_speed_since_reset": {
+            "description": "Average speed since reset",
+            "$ref": "#/$defs/property_speed"
+        },
+        "fuel_distance_last_trip": {
+            "description": "Distance travelled with (liquid) fuel during last trip",
+            "$ref": "#/$defs/property_length"
+        },
+        "fuel_distance_since_reset": {
+            "description": "Distance travelled with (liquid) fuel since reset",
+            "$ref": "#/$defs/property_length"
+        },
+        "driving_duration_last_trip": {
+            "description": "Duration of last trip",
+            "$ref": "#/$defs/property_duration"
+        },
+        "driving_duration_since_reset": {
+            "description": "Duration of travelling since reset",
+            "$ref": "#/$defs/property_duration"
+        },
+        "eco_score_total": {
+            "description": "Overall eco-score rating",
+            "$ref": "#/$defs/property_percentage"
+        },
+        "eco_score_free_wheel": {
+            "description": "Eco-score rating for free-wheeling",
+            "$ref": "#/$defs/property_percentage"
+        },
+        "eco_score_constant": {
+            "description": "Eco-score rating constant",
+            "$ref": "#/$defs/property_percentage"
+        },
+        "eco_score_bonus_range": {
+            "description": "Eco-score bonus range",
+            "$ref": "#/$defs/property_length"
+        },
+        "trip_meters": {
+            "description": "Independent meter that can be reset at any time by the driver",
+            "$ref": "#/$defs/property_trip_meter"
+        },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },
         "vin": { "$ref": "#/$defs/property_vin" }

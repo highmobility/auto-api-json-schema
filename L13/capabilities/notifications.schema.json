@@ -3,10 +3,22 @@
     "$schema": "https://json-schema.org/draft-07/schema",
     "type": "object",
     "properties": {
-        "text": { "$ref": "#/$defs/property_string" },
-        "action_items": { "$ref": "#/$defs/property_action_item" },
-        "activated_action": { "$ref": "#/$defs/property_uinteger" },
-        "clear": { "$ref": "#/$defs/property_clear" },
+        "text": {
+            "description": "Text for the notification",
+            "$ref": "#/$defs/property_string"
+        },
+        "action_items": {
+            "description": "Action items",
+            "$ref": "#/$defs/property_action_item"
+        },
+        "activated_action": {
+            "description": "Identifier of the activated action",
+            "$ref": "#/$defs/property_uinteger"
+        },
+        "clear": {
+            "description": "Clear",
+            "$ref": "#/$defs/property_clear"
+        },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },
         "vin": { "$ref": "#/$defs/property_vin" }

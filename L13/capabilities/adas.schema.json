@@ -3,17 +3,50 @@
     "$schema": "https://json-schema.org/draft-07/schema",
     "type": "object",
     "properties": {
-        "status": { "$ref": "#/$defs/property_on_off_state" },
-        "alertness_system_status": { "$ref": "#/$defs/property_active_state" },
-        "forward_collision_warning_system": { "$ref": "#/$defs/property_active_state" },
-        "blind_spot_warning_state": { "$ref": "#/$defs/property_active_state" },
-        "blind_spot_warning_system_coverage": { "$ref": "#/$defs/property_blind_spot_warning_system_coverage" },
-        "rear_cross_warning_system": { "$ref": "#/$defs/property_active_state" },
-        "automated_parking_brake": { "$ref": "#/$defs/property_active_state" },
-        "lane_keep_assist_system": { "$ref": "#/$defs/property_on_off_state" },
-        "lane_keep_assists_states": { "$ref": "#/$defs/property_lane_keep_assist_state" },
-        "park_assists": { "$ref": "#/$defs/property_park_assist" },
-        "blind_spot_warning_system": { "$ref": "#/$defs/property_on_off_state" },
+        "status": {
+            "description": "Indicates whether the driver assistance system is active or not.",
+            "$ref": "#/$defs/property_on_off_state"
+        },
+        "alertness_system_status": {
+            "description": "Indicates if the driver alertness warning is active or inactive.",
+            "$ref": "#/$defs/property_active_state"
+        },
+        "forward_collision_warning_system": {
+            "description": "Indicates whether the forward collision warning system is active or inactive.",
+            "$ref": "#/$defs/property_active_state"
+        },
+        "blind_spot_warning_state": {
+            "description": "Indicates whether the blind spot warning system is active or not.",
+            "$ref": "#/$defs/property_active_state"
+        },
+        "blind_spot_warning_system_coverage": {
+            "description": "Blind spot warning system coverage.",
+            "$ref": "#/$defs/property_blind_spot_warning_system_coverage"
+        },
+        "rear_cross_warning_system": {
+            "description": "Indicates whether the rear cross warning system is active or not.",
+            "$ref": "#/$defs/property_active_state"
+        },
+        "automated_parking_brake": {
+            "description": "Automatic brake state",
+            "$ref": "#/$defs/property_active_state"
+        },
+        "lane_keep_assist_system": {
+            "description": "Indicates if the lane keep assist system is turned on or not.",
+            "$ref": "#/$defs/property_on_off_state"
+        },
+        "lane_keep_assists_states": {
+            "description": "Lane keeping assist state indicating the vehicle is actively controlling the wheels.",
+            "$ref": "#/$defs/property_lane_keep_assist_state"
+        },
+        "park_assists": {
+            "description": "If the alarm is active and the driver has muted or not park assists.",
+            "$ref": "#/$defs/property_park_assist"
+        },
+        "blind_spot_warning_system": {
+            "description": "Indicates whether the blind spot warning system is turned on or not.",
+            "$ref": "#/$defs/property_on_off_state"
+        },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },
         "vin": { "$ref": "#/$defs/property_vin" }

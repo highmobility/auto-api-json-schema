@@ -3,9 +3,18 @@
     "$schema": "https://json-schema.org/draft-07/schema",
     "type": "object",
     "properties": {
-        "status": { "$ref": "#/$defs/property_on_off_state" },
-        "start_stop_state": { "$ref": "#/$defs/property_active_state" },
-        "start_stop_enabled": { "$ref": "#/$defs/property_enabled_state" },
+        "status": {
+            "description": "Status",
+            "$ref": "#/$defs/property_on_off_state"
+        },
+        "start_stop_state": {
+            "description": "Indicates wheter the start-stop system is currently active or not",
+            "$ref": "#/$defs/property_active_state"
+        },
+        "start_stop_enabled": {
+            "description": "Indicates if the automatic start-stop system is enabled or not",
+            "$ref": "#/$defs/property_enabled_state"
+        },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },
         "vin": { "$ref": "#/$defs/property_vin" }

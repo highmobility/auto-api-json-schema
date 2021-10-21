@@ -4,32 +4,80 @@
     "type": "object",
     "properties": {
         "days_to_next_service": {
+            "description": "Time until next servicing of the car",
             "$ref": "#/$defs/property_duration",
             "deprecated": true
         },
         "kilometers_to_next_service": {
+            "description": "The distance until next servicing of the vehicle",
             "$ref": "#/$defs/property_length",
             "deprecated": true
         },
-        "cbs_reports_count": { "$ref": "#/$defs/property_uinteger" },
+        "cbs_reports_count": {
+            "description": "The number of CBS reports",
+            "$ref": "#/$defs/property_uinteger"
+        },
         "months_to_exhaust_inspection": {
+            "description": "Time until exhaust inspection",
             "$ref": "#/$defs/property_duration",
             "deprecated": true
         },
-        "teleservice_availability": { "$ref": "#/$defs/property_teleservice_availability" },
-        "service_distance_threshold": { "$ref": "#/$defs/property_length" },
-        "service_time_threshold": { "$ref": "#/$defs/property_duration" },
-        "automatic_teleservice_call_date": { "$ref": "#/$defs/property_timestamp" },
-        "teleservice_battery_call_date": { "$ref": "#/$defs/property_timestamp" },
-        "next_inspection_date": { "$ref": "#/$defs/property_timestamp" },
-        "condition_based_services": { "$ref": "#/$defs/property_condition_based_service" },
-        "brake_fluid_change_date": { "$ref": "#/$defs/property_timestamp" },
-        "time_to_next_service": { "$ref": "#/$defs/property_duration" },
-        "distance_to_next_service": { "$ref": "#/$defs/property_length" },
-        "time_to_exhaust_inspection": { "$ref": "#/$defs/property_duration" },
-        "last_ecall": { "$ref": "#/$defs/property_timestamp" },
-        "distance_to_next_oil_service": { "$ref": "#/$defs/property_length" },
-        "time_to_next_oil_service": { "$ref": "#/$defs/property_duration" },
+        "teleservice_availability": {
+            "description": "Teleservice availability",
+            "$ref": "#/$defs/property_teleservice_availability"
+        },
+        "service_distance_threshold": {
+            "description": "Distance threshold for service",
+            "$ref": "#/$defs/property_length"
+        },
+        "service_time_threshold": {
+            "description": "Time threshold for service",
+            "$ref": "#/$defs/property_duration"
+        },
+        "automatic_teleservice_call_date": {
+            "description": "Automatic teleservice call date",
+            "$ref": "#/$defs/property_timestamp"
+        },
+        "teleservice_battery_call_date": {
+            "description": "Teleservice batter call date",
+            "$ref": "#/$defs/property_timestamp"
+        },
+        "next_inspection_date": {
+            "description": "Next inspection date",
+            "$ref": "#/$defs/property_timestamp"
+        },
+        "condition_based_services": {
+            "description": "Condition based services",
+            "$ref": "#/$defs/property_condition_based_service"
+        },
+        "brake_fluid_change_date": {
+            "description": "Brake fluid change date",
+            "$ref": "#/$defs/property_timestamp"
+        },
+        "time_to_next_service": {
+            "description": "Time until next servicing of the vehicle",
+            "$ref": "#/$defs/property_duration"
+        },
+        "distance_to_next_service": {
+            "description": "The distance until next servicing of the vehicle",
+            "$ref": "#/$defs/property_length"
+        },
+        "time_to_exhaust_inspection": {
+            "description": "Time until exhaust inspection",
+            "$ref": "#/$defs/property_duration"
+        },
+        "last_ecall": {
+            "description": "Date-time of the last eCall",
+            "$ref": "#/$defs/property_timestamp"
+        },
+        "distance_to_next_oil_service": {
+            "description": "Indicates the remaining distance until the next oil service; if this limit was exceeded, this value indicates the distance that has been driven since then.",
+            "$ref": "#/$defs/property_length"
+        },
+        "time_to_next_oil_service": {
+            "description": "Indicates the time remaining until the next oil service; if this limit was exceeded, this value indicates the time that has passed since then.",
+            "$ref": "#/$defs/property_duration"
+        },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },
         "vin": { "$ref": "#/$defs/property_vin" }

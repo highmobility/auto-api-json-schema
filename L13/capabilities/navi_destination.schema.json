@@ -3,12 +3,30 @@
     "$schema": "https://json-schema.org/draft-07/schema",
     "type": "object",
     "properties": {
-        "coordinates": { "$ref": "#/$defs/property_coordinates" },
-        "destination_name": { "$ref": "#/$defs/property_string" },
-        "data_slots_free": { "$ref": "#/$defs/property_uinteger" },
-        "data_slots_max": { "$ref": "#/$defs/property_uinteger" },
-        "arrival_duration": { "$ref": "#/$defs/property_duration" },
-        "distance_to_destination": { "$ref": "#/$defs/property_length" },
+        "coordinates": {
+            "description": "Coordinates",
+            "$ref": "#/$defs/property_coordinates"
+        },
+        "destination_name": {
+            "description": "Destination name",
+            "$ref": "#/$defs/property_string"
+        },
+        "data_slots_free": {
+            "description": "Remaining number of POI data slots available.",
+            "$ref": "#/$defs/property_uinteger"
+        },
+        "data_slots_max": {
+            "description": "Maximum number of POI data slots.",
+            "$ref": "#/$defs/property_uinteger"
+        },
+        "arrival_duration": {
+            "description": "Remaining time until reaching the destination.",
+            "$ref": "#/$defs/property_duration"
+        },
+        "distance_to_destination": {
+            "description": "Remaining distance to reach the destination.",
+            "$ref": "#/$defs/property_length"
+        },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },
         "vin": { "$ref": "#/$defs/property_vin" }
