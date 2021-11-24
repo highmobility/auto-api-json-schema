@@ -5,13 +5,13 @@
     "properties": {
         "days_to_next_service": {
             "description": "Time until next servicing of the car",
-            "$ref": "#/$defs/property_duration",
-            "deprecated": true
+        	"deprecated": true,
+            "$ref": "#/$defs/property_duration"
         },
         "kilometers_to_next_service": {
             "description": "The distance until next servicing of the vehicle",
-            "$ref": "#/$defs/property_length",
-            "deprecated": true
+        	"deprecated": true,
+            "$ref": "#/$defs/property_length"
         },
         "cbs_reports_count": {
             "description": "The number of CBS reports",
@@ -19,8 +19,8 @@
         },
         "months_to_exhaust_inspection": {
             "description": "Time until exhaust inspection",
-            "$ref": "#/$defs/property_duration",
-            "deprecated": true
+        	"deprecated": true,
+            "$ref": "#/$defs/property_duration"
         },
         "teleservice_availability": {
             "description": "Teleservice availability",
@@ -48,7 +48,10 @@
         },
         "condition_based_services": {
             "description": "Condition based services",
-            "$ref": "#/$defs/property_condition_based_service"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_condition_based_service"
+            }
         },
         "brake_fluid_change_date": {
             "description": "Brake fluid change date",

@@ -9,7 +9,10 @@
         },
         "action_items": {
             "description": "Action items",
-            "$ref": "#/$defs/property_action_item"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_action_item"
+            }
         },
         "activated_action": {
             "description": "Identifier of the activated action",

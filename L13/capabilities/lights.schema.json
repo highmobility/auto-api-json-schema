@@ -25,15 +25,24 @@
         },
         "fog_lights": {
             "description": "Fog lights",
-            "$ref": "#/$defs/property_light"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_light"
+            }
         },
         "reading_lamps": {
             "description": "Reading lamps",
-            "$ref": "#/$defs/property_reading_lamp"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_reading_lamp"
+            }
         },
         "interior_lights": {
             "description": "Interior lights",
-            "$ref": "#/$defs/property_light"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_light"
+            }
         },
         "switch_position": {
             "description": "Position of the rotary light switch",

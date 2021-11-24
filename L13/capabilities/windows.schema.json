@@ -5,11 +5,17 @@
     "properties": {
         "open_percentages": {
             "description": "Open percentages",
-            "$ref": "#/$defs/property_window_open_percentage"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_window_open_percentage"
+            }
         },
         "positions": {
             "description": "Positions",
-            "$ref": "#/$defs/property_window_position"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_window_position"
+            }
         },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },

@@ -5,15 +5,24 @@
     "properties": {
         "inside_locks": {
             "description": "Inside lock states for the given doors",
-            "$ref": "#/$defs/property_lock"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_lock"
+            }
         },
         "locks": {
             "description": "Lock states for the given doors",
-            "$ref": "#/$defs/property_lock"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_lock"
+            }
         },
         "positions": {
             "description": "Door positions for the given doors",
-            "$ref": "#/$defs/property_door_position"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_door_position"
+            }
         },
         "inside_locks_state": {
             "description": "Inside locks state for the whole vehicle (combines all specific lock states if available)",

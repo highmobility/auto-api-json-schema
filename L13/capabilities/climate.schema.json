@@ -41,7 +41,10 @@
         },
         "hvac_weekday_starting_times": {
             "description": "HVAC weekday starting times",
-            "$ref": "#/$defs/property_hvac_weekday_starting_time"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_hvac_weekday_starting_time"
+            }
         },
         "rear_temperature_setting": {
             "description": "The rear temperature",

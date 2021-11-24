@@ -5,7 +5,10 @@
     "properties": {
         "public_charging_points": {
             "description": "Matching public charging points.",
-            "$ref": "#/$defs/property_charging_point"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_charging_point"
+            }
         },
         "displayed_state_of_charge": {
             "description": "Displayed state of charge to the driver",
@@ -17,7 +20,10 @@
         },
         "business_errors": {
             "description": "Business errors",
-            "$ref": "#/$defs/property_string"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_string"
+            }
         },
         "time_zone": {
             "description": "Time zone of the charging session",

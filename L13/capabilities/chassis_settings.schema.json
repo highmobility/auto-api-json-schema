@@ -13,15 +13,24 @@
         },
         "current_spring_rates": {
             "description": "The current values for the spring rates",
-            "$ref": "#/$defs/property_spring_rate"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_spring_rate"
+            }
         },
         "maximum_spring_rates": {
             "description": "The maximum possible values for the spring rates",
-            "$ref": "#/$defs/property_spring_rate"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_spring_rate"
+            }
         },
         "minimum_spring_rates": {
             "description": "The minimum possible values for the spring rates",
-            "$ref": "#/$defs/property_spring_rate"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_spring_rate"
+            }
         },
         "current_chassis_position": {
             "description": "The chassis position calculated from the lowest point",

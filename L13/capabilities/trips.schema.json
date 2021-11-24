@@ -57,11 +57,17 @@
         },
         "start_address_components": {
             "description": "Start address components",
-            "$ref": "#/$defs/property_address_component"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_address_component"
+            }
         },
         "end_address_components": {
             "description": "End address components",
-            "$ref": "#/$defs/property_address_component"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_address_component"
+            }
         },
         "event": {
             "description": "Event",
@@ -73,7 +79,10 @@
         },
         "thresholds": {
             "description": "Eco driving thresholds",
-            "$ref": "#/$defs/property_eco_driving_threshold"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_eco_driving_threshold"
+            }
         },
         "total_fuel_consumption": {
             "description": "Total fuel consumption during the trip",

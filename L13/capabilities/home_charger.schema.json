@@ -17,8 +17,8 @@
         },
         "charging_power_kw": {
             "description": "Charging power",
-            "$ref": "#/$defs/property_power",
-            "deprecated": true
+        	"deprecated": true,
+            "$ref": "#/$defs/property_power"
         },
         "solar_charging": {
             "description": "Solar charging",
@@ -62,7 +62,10 @@
         },
         "price_tariffs": {
             "description": "Price tariffs",
-            "$ref": "#/$defs/property_price_tariff"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_price_tariff"
+            }
         },
         "charging_power": {
             "description": "Charging power output from the charger",

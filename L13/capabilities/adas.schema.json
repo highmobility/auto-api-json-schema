@@ -37,11 +37,17 @@
         },
         "lane_keep_assists_states": {
             "description": "Lane keeping assist state indicating the vehicle is actively controlling the wheels.",
-            "$ref": "#/$defs/property_lane_keep_assist_state"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_lane_keep_assist_state"
+            }
         },
         "park_assists": {
             "description": "If the alarm is active and the driver has muted or not park assists.",
-            "$ref": "#/$defs/property_park_assist"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_park_assist"
+            }
         },
         "blind_spot_warning_system": {
             "description": "Indicates whether the blind spot warning system is turned on or not.",

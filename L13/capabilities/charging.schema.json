@@ -13,23 +13,23 @@
         },
         "battery_current_ac": {
             "description": "Battery alternating current",
-            "$ref": "#/$defs/property_electric_current",
-            "deprecated": true
+        	"deprecated": true,
+            "$ref": "#/$defs/property_electric_current"
         },
         "battery_current_dc": {
             "description": "Battery direct current",
-            "$ref": "#/$defs/property_electric_current",
-            "deprecated": true
+        	"deprecated": true,
+            "$ref": "#/$defs/property_electric_current"
         },
         "charger_voltage_ac": {
             "description": "Charger voltage for alternating current",
-            "$ref": "#/$defs/property_electric_potential_difference",
-            "deprecated": true
+        	"deprecated": true,
+            "$ref": "#/$defs/property_electric_potential_difference"
         },
         "charger_voltage_dc": {
             "description": "Charger voltage for direct current",
-            "$ref": "#/$defs/property_electric_potential_difference",
-            "deprecated": true
+        	"deprecated": true,
+            "$ref": "#/$defs/property_electric_potential_difference"
         },
         "charge_limit": {
             "description": "Charge limit percentage between 0.0-1.0",
@@ -41,8 +41,8 @@
         },
         "charging_rate_kw": {
             "description": "Charging rate",
-            "$ref": "#/$defs/property_power",
-            "deprecated": true
+        	"deprecated": true,
+            "$ref": "#/$defs/property_power"
         },
         "charge_port_state": {
             "description": "Charge port state",
@@ -66,11 +66,17 @@
         },
         "departure_times": {
             "description": "Departure times",
-            "$ref": "#/$defs/property_departure_time"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_departure_time"
+            }
         },
         "reduction_times": {
             "description": "Reduction of charging times",
-            "$ref": "#/$defs/property_reduction_time"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_reduction_time"
+            }
         },
         "battery_temperature": {
             "description": "Battery temperature",
@@ -78,7 +84,10 @@
         },
         "timers": {
             "description": "Timers",
-            "$ref": "#/$defs/property_timer"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_timer"
+            }
         },
         "plugged_in": {
             "description": "Plugged in",

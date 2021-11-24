@@ -5,7 +5,10 @@
     "properties": {
         "incidents": {
             "description": "Incidents",
-            "$ref": "#/$defs/property_crash_incident"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_crash_incident"
+            }
         },
         "type": {
             "description": "Type",
@@ -25,7 +28,10 @@
         },
         "impact_zone": {
             "description": "Impact zone of the crash",
-            "$ref": "#/$defs/property_impact_zone"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_impact_zone"
+            }
         },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },

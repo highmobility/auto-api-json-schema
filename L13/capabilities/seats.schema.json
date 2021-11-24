@@ -5,11 +5,17 @@
     "properties": {
         "persons_detected": {
             "description": "Persons detected",
-            "$ref": "#/$defs/property_person_detected"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_person_detected"
+            }
         },
         "seatbelts_state": {
             "description": "Seatbelts state",
-            "$ref": "#/$defs/property_seatbelt_state"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_seatbelt_state"
+            }
         },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },

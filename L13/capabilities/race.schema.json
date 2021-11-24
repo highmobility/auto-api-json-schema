@@ -5,7 +5,10 @@
     "properties": {
         "accelerations": {
             "description": "Accelerations",
-            "$ref": "#/$defs/property_acceleration"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_acceleration"
+            }
         },
         "understeering": {
             "description": "The understeering percentage between 0.0-1.0 whereas up to 0.2 (20%) is considered OK, up to 0.3 (30%) marginal, over 30% critical",
@@ -41,7 +44,10 @@
         },
         "brake_torque_vectorings": {
             "description": "Brake torque vectorings",
-            "$ref": "#/$defs/property_brake_torque_vectoring"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_brake_torque_vectoring"
+            }
         },
         "gear_mode": {
             "description": "Gear mode",

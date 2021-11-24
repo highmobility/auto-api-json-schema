@@ -21,11 +21,17 @@
         },
         "driving_modes_activation_periods": {
             "description": "Driving modes activation periods",
-            "$ref": "#/$defs/property_driving_mode_activation_period"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_driving_mode_activation_period"
+            }
         },
         "driving_modes_energy_consumptions": {
             "description": "Driving modes energy consumptions",
-            "$ref": "#/$defs/property_driving_mode_energy_consumption"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_driving_mode_energy_consumption"
+            }
         },
         "last_trip_energy_consumption": {
             "description": "Energy consumption in the last trip",
@@ -37,8 +43,8 @@
         },
         "mileage_after_last_trip": {
             "description": "Mileage after the last trip",
-            "$ref": "#/$defs/property_length",
-            "deprecated": true
+        	"deprecated": true,
+            "$ref": "#/$defs/property_length"
         },
         "last_trip_electric_portion": {
             "description": "Portion of the last trip used in electric mode",
@@ -162,7 +168,10 @@
         },
         "trip_meters": {
             "description": "Independent meter that can be reset at any time by the driver",
-            "$ref": "#/$defs/property_trip_meter"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_trip_meter"
+            }
         },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },

@@ -5,11 +5,17 @@
     "properties": {
         "dashboard_lights": {
             "description": "Dashboard lights",
-            "$ref": "#/$defs/property_dashboard_light"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_dashboard_light"
+            }
         },
         "bulb_failures": {
             "description": "Vehicle light bulb failure",
-            "$ref": "#/$defs/property_bulb_failures"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_bulb_failures"
+            }
         },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },

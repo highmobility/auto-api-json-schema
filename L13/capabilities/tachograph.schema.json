@@ -5,15 +5,24 @@
     "properties": {
         "drivers_working_states": {
             "description": "Drivers working states",
-            "$ref": "#/$defs/property_driver_working_state"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_driver_working_state"
+            }
         },
         "drivers_time_states": {
             "description": "Drivers time states",
-            "$ref": "#/$defs/property_driver_time_state"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_driver_time_state"
+            }
         },
         "drivers_cards_present": {
             "description": "Drivers cards present",
-            "$ref": "#/$defs/property_driver_card_present"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_driver_card_present"
+            }
         },
         "vehicle_motion": {
             "description": "Vehicle motion",
