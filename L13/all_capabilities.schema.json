@@ -40,6 +40,24 @@
         {
             "type": "object",
             "properties": {
+                "driver_fatigue": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/capabilities/driver_fatigue.schema.json" }
+            },
+            "minProperties": 1,
+            "additionalProperties": false,
+            "required": [ "driver_fatigue" ]
+        },
+        {
+            "type": "object",
+            "properties": {
+                "remote_control": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/capabilities/remote_control.schema.json" }
+            },
+            "minProperties": 1,
+            "additionalProperties": false,
+            "required": [ "remote_control" ]
+        },
+        {
+            "type": "object",
+            "properties": {
                 "fueling": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/capabilities/fueling.schema.json" }
             },
             "minProperties": 1,
@@ -310,11 +328,29 @@
         {
             "type": "object",
             "properties": {
+                "cruise_control": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/capabilities/cruise_control.schema.json" }
+            },
+            "minProperties": 1,
+            "additionalProperties": false,
+            "required": [ "cruise_control" ]
+        },
+        {
+            "type": "object",
+            "properties": {
                 "trips": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/capabilities/trips.schema.json" }
             },
             "minProperties": 1,
             "additionalProperties": false,
             "required": [ "trips" ]
+        },
+        {
+            "type": "object",
+            "properties": {
+                "keyfob_position": { "$ref": "https://highmobility.github.io/auto-api-json-schema/L13/capabilities/keyfob_position.schema.json" }
+            },
+            "minProperties": 1,
+            "additionalProperties": false,
+            "required": [ "keyfob_position" ]
         },
         {
             "type": "object",
