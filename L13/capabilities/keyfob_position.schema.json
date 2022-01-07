@@ -1,0 +1,79 @@
+{
+    "$id": "https://highmobility.github.io/auto-api-json-schema/L13/capabilities/keyfob_position.schema.json",
+    "$schema": "https://json-schema.org/draft-07/schema",
+    "type": "object",
+    "properties": {
+        "location": {
+            "description": "Location",
+            "$ref": "#/$defs/property_location"
+        },
+
+        "nonce": { "$ref": "#/$defs/property_nonce" },
+        "vin": { "$ref": "#/$defs/property_vin" }
+    },
+    "additionalProperties": false,
+
+
+    "$defs": {
+        "property_location": {
+            "type": "object",
+            "properties": {
+                "data": {
+                    "type": "string",
+                    "enum": ["out_of_range", "outside_driver_side", "outside_in_front_of_car", "outside_passenger_side", "outside_behind_car", "inside_car"]
+                },
+                "timestamp": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+            },
+            "minProperties": 1,
+            "additionalProperties": false
+        },
+
+        "property_nonce": {
+            "type": "object",
+            "properties": {
+                "data": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 255
+                    },
+                    "minItems": 9,
+                    "maxItems": 9
+                },
+                "timestamp": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+            },
+            "minProperties": 1,
+            "additionalProperties": false
+        },
+
+        "property_vin": {
+            "type": "object",
+            "properties": {
+                "data": {
+                    "type": "string",
+                    "minLength": 17,
+                    "maxLength": 17
+                },
+                "timestamp": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+            },
+            "minProperties": 1,
+            "additionalProperties": false
+        }
+    }
+}
