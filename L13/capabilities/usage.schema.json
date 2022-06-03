@@ -173,6 +173,22 @@
                 "$ref": "#/$defs/property_trip_meter"
             }
         },
+        "electric_consumption_average": {
+            "description": "Average electric energy consumption calculated based on the last 20km",
+            "$ref": "#/$defs/property_energy_efficiency"
+        },
+        "braking_evaluation": {
+            "description": "Braking evaluation percentage",
+            "$ref": "#/$defs/property_percentage"
+        },
+        "average_speed": {
+            "description": "Average speed at data collection.",
+            "$ref": "#/$defs/property_speed"
+        },
+        "recuperation_power": {
+            "description": "Recuperation energy of the drivetrain.",
+            "$ref": "#/$defs/property_power"
+        },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },
         "vin": { "$ref": "#/$defs/property_vin" }
@@ -187,12 +203,12 @@
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/distance_over_time"
                 },
-                "timestamp": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+        "timestamp": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+        "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }.indented(byLevel: 2))
             },
             "minProperties": 1,
             "additionalProperties": false
@@ -204,12 +220,12 @@
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/driving_mode_activation_period"
                 },
-                "timestamp": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+        "timestamp": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+        "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }.indented(byLevel: 2))
             },
             "minProperties": 1,
             "additionalProperties": false
@@ -221,12 +237,12 @@
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/driving_mode_energy_consumption"
                 },
-                "timestamp": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+        "timestamp": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+        "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }.indented(byLevel: 2))
             },
             "minProperties": 1,
             "additionalProperties": false
@@ -238,12 +254,12 @@
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/duration"
                 },
-                "timestamp": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+        "timestamp": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+        "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }.indented(byLevel: 2))
             },
             "minProperties": 1,
             "additionalProperties": false
@@ -255,12 +271,12 @@
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/energy"
                 },
-                "timestamp": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+        "timestamp": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+        "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }.indented(byLevel: 2))
             },
             "minProperties": 1,
             "additionalProperties": false
@@ -272,12 +288,12 @@
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/energy_efficiency"
                 },
-                "timestamp": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+        "timestamp": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+        "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }.indented(byLevel: 2))
             },
             "minProperties": 1,
             "additionalProperties": false
@@ -289,12 +305,12 @@
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/fuel_efficiency"
                 },
-                "timestamp": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+        "timestamp": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+        "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }.indented(byLevel: 2))
             },
             "minProperties": 1,
             "additionalProperties": false
@@ -306,12 +322,12 @@
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/grade"
                 },
-                "timestamp": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+        "timestamp": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+        "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }.indented(byLevel: 2))
             },
             "minProperties": 1,
             "additionalProperties": false
@@ -323,12 +339,12 @@
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/length"
                 },
-                "timestamp": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+        "timestamp": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+        "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }.indented(byLevel: 2))
             },
             "minProperties": 1,
             "additionalProperties": false
@@ -364,12 +380,29 @@
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/percentage"
                 },
-                "timestamp": {
-                    "type": "string",
-                    "format": "date-time"
+        "timestamp": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+        "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }.indented(byLevel: 2))
+            },
+            "minProperties": 1,
+            "additionalProperties": false
+        },
+
+        "property_power": {
+            "type": "object",
+            "properties": {
+                "data": {
+                    "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/power"
                 },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+        "timestamp": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+        "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }.indented(byLevel: 2))
             },
             "minProperties": 1,
             "additionalProperties": false
@@ -381,12 +414,12 @@
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/speed"
                 },
-                "timestamp": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+        "timestamp": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+        "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }.indented(byLevel: 2))
             },
             "minProperties": 1,
             "additionalProperties": false
@@ -399,12 +432,12 @@
                     "type": "string",
                     "format": "date-time"
                 },
-                "timestamp": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+        "timestamp": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+        "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }.indented(byLevel: 2))
             },
             "minProperties": 1,
             "additionalProperties": false
@@ -416,12 +449,12 @@
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/trip_meter"
                 },
-                "timestamp": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+        "timestamp": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+        "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }.indented(byLevel: 2))
             },
             "minProperties": 1,
             "additionalProperties": false
@@ -452,12 +485,12 @@
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/volume"
                 },
-                "timestamp": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+        "timestamp": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+        "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }.indented(byLevel: 2))
             },
             "minProperties": 1,
             "additionalProperties": false

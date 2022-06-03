@@ -20,14 +20,14 @@
             "properties": {
                 "data": {
                     "type": "string",
-                    "enum": ["out_of_range", "outside_driver_side", "outside_in_front_of_car", "outside_passenger_side", "outside_behind_car", "inside_car"]
+                    "enum": ["out_of_range", "outside_driver_side", "outside_in_front_of_car", "outside_passenger_side", "outside_behind_car", "inside_car", "not_inside"]
                 },
-                "timestamp": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+        "timestamp": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+        "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }.indented(byLevel: 2))
             },
             "minProperties": 1,
             "additionalProperties": false

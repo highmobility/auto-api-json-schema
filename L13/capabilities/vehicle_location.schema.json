@@ -27,6 +27,10 @@
             "description": "GPS signal strength percentage between 0.0-1.0",
             "$ref": "#/$defs/property_percentage"
         },
+        "fuzzy_coordinates": {
+            "description": "Fuzzy coordinates for the vehicle location.",
+            "$ref": "#/$defs/property_coordinates"
+        },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },
         "vin": { "$ref": "#/$defs/property_vin" }
@@ -41,12 +45,12 @@
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/angle"
                 },
-                "timestamp": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+        "timestamp": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+        "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }.indented(byLevel: 2))
             },
             "minProperties": 1,
             "additionalProperties": false
@@ -58,12 +62,12 @@
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/coordinates"
                 },
-                "timestamp": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+        "timestamp": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+        "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }.indented(byLevel: 2))
             },
             "minProperties": 1,
             "additionalProperties": false
@@ -76,12 +80,12 @@
                     "type": "string",
                     "enum": ["dead_reckoning", "real", "none"]
                 },
-                "timestamp": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+        "timestamp": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+        "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }.indented(byLevel: 2))
             },
             "minProperties": 1,
             "additionalProperties": false
@@ -93,12 +97,12 @@
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/length"
                 },
-                "timestamp": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+        "timestamp": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+        "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }.indented(byLevel: 2))
             },
             "minProperties": 1,
             "additionalProperties": false
@@ -134,12 +138,12 @@
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/percentage"
                 },
-                "timestamp": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+        "timestamp": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+        "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }.indented(byLevel: 2))
             },
             "minProperties": 1,
             "additionalProperties": false

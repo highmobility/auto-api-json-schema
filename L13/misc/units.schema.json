@@ -118,7 +118,8 @@
                         "joules",
                         "kilojoules",
                         "watt_hours",
-                        "kilowatt_hours"
+                        "kilowatt_hours",
+                        "ampere_hours"
                     ]
                 },
                 "value": { "type": "number" }
@@ -215,6 +216,36 @@
                         "miles",
                         "scandinavian_miles",
                         "nautical_miles"
+                    ]
+                },
+                "value": { "type": "number" }
+            },
+            "additionalProperties": false,
+            "required": [ "unit", "value" ]
+        },
+
+        "mass": {
+            "type": "object",
+            "properties": {
+                "unit": {
+                    "type": "string",
+                    "enum": [
+                        "kilograms",
+                        "grams",
+                        "decigrams",
+                        "centigrams",
+                        "milligrams",
+                        "micrograms",
+                        "nanograms",
+                        "picograms",
+                        "ounces",
+                        "pounds",
+                        "stones",
+                        "metricTons",
+                        "shortTons",
+                        "carats",
+                        "ouncesTroy",
+                        "slugs"
                     ]
                 },
                 "value": { "type": "number" }

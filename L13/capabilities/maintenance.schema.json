@@ -81,6 +81,83 @@
             "description": "Indicates the time remaining until the next oil service; if this limit was exceeded, this value indicates the time that has passed since then.",
             "$ref": "#/$defs/property_duration"
         },
+        "brake_fluid_remaining_distance": {
+            "description": "Indicates the remaining distance for brake fluid.",
+            "$ref": "#/$defs/property_length"
+        },
+        "brake_fluid_status": {
+            "description": "Brake fluid's service status.",
+            "$ref": "#/$defs/property_service_status"
+        },
+        "brakes_service_due_dates": {
+            "description": "Brakes servicing due dates.",
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_brake_service_due_date"
+            }
+        },
+        "brakes_service_remaining_distances": {
+            "description": "Brakes servicing remaining distances.",
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_brake_service_remaining_distance"
+            }
+        },
+        "brakes_service_statuses": {
+            "description": "Brakes servicing statuses.",
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_brake_service_status"
+            }
+        },
+        "drive_in_inspection_date": {
+            "description": "Next drive-in inspection date.",
+            "$ref": "#/$defs/property_timestamp"
+        },
+        "drive_in_inspection_status": {
+            "description": "Drive-in inspection service status.",
+            "$ref": "#/$defs/property_service_status"
+        },
+        "next_oil_service_date": {
+            "description": "Next oil service date.",
+            "$ref": "#/$defs/property_timestamp"
+        },
+        "next_inspection_distance_to": {
+            "description": "Distance until the next inspection.",
+            "$ref": "#/$defs/property_length"
+        },
+        "legal_inspection_date": {
+            "description": "Next legally required inspection date",
+            "$ref": "#/$defs/property_timestamp"
+        },
+        "service_status": {
+            "description": "Consolidated status regarding service requirements. OK: no current service requirement, WARNING: at least one service has reported requirement, CRITICAL: at least one service is overdue.",
+            "$ref": "#/$defs/property_service_status"
+        },
+        "service_date": {
+            "description": "Date of the earliest service. If this service is overdue, the date is in the past.",
+            "$ref": "#/$defs/property_timestamp"
+        },
+        "inspection_status": {
+            "description": "Vehicle inspection service status.",
+            "$ref": "#/$defs/property_service_status"
+        },
+        "drive_in_inspection_distance_to": {
+            "description": "The distance until next drive-in inspection of the vehicle",
+            "$ref": "#/$defs/property_length"
+        },
+        "vehicle_check_date": {
+            "description": "Vehicle check date (usually after a predetermined distance).",
+            "$ref": "#/$defs/property_timestamp"
+        },
+        "vehicle_check_status": {
+            "description": "Vehicle check service status.",
+            "$ref": "#/$defs/property_service_status"
+        },
+        "vehicle_check_distance_to": {
+            "description": "The distance until next vehicle check.",
+            "$ref": "#/$defs/property_length"
+        },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },
         "vin": { "$ref": "#/$defs/property_vin" }
@@ -89,18 +166,69 @@
 
 
     "$defs": {
+        "property_brake_service_due_date": {
+            "type": "object",
+            "properties": {
+                "data": {
+                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/brake_service_due_date"
+                },
+        "timestamp": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+        "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }.indented(byLevel: 2))
+            },
+            "minProperties": 1,
+            "additionalProperties": false
+        },
+
+        "property_brake_service_remaining_distance": {
+            "type": "object",
+            "properties": {
+                "data": {
+                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/brake_service_remaining_distance"
+                },
+        "timestamp": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+        "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }.indented(byLevel: 2))
+            },
+            "minProperties": 1,
+            "additionalProperties": false
+        },
+
+        "property_brake_service_status": {
+            "type": "object",
+            "properties": {
+                "data": {
+                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/brake_service_status"
+                },
+        "timestamp": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+        "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }.indented(byLevel: 2))
+            },
+            "minProperties": 1,
+            "additionalProperties": false
+        },
+
         "property_condition_based_service": {
             "type": "object",
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/condition_based_service"
                 },
-                "timestamp": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+        "timestamp": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+        "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }.indented(byLevel: 2))
             },
             "minProperties": 1,
             "additionalProperties": false
@@ -112,12 +240,12 @@
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/duration"
                 },
-                "timestamp": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+        "timestamp": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+        "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }.indented(byLevel: 2))
             },
             "minProperties": 1,
             "additionalProperties": false
@@ -129,12 +257,12 @@
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/length"
                 },
-                "timestamp": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+        "timestamp": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+        "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }.indented(byLevel: 2))
             },
             "minProperties": 1,
             "additionalProperties": false
@@ -164,6 +292,23 @@
             "additionalProperties": false
         },
 
+        "property_service_status": {
+            "type": "object",
+            "properties": {
+                "data": {
+                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/service_status"
+                },
+        "timestamp": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+        "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }.indented(byLevel: 2))
+            },
+            "minProperties": 1,
+            "additionalProperties": false
+        },
+
         "property_teleservice_availability": {
             "type": "object",
             "properties": {
@@ -171,12 +316,12 @@
                     "type": "string",
                     "enum": ["pending", "idle", "successful", "error"]
                 },
-                "timestamp": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+        "timestamp": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+        "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }.indented(byLevel: 2))
             },
             "minProperties": 1,
             "additionalProperties": false
@@ -189,12 +334,12 @@
                     "type": "string",
                     "format": "date-time"
                 },
-                "timestamp": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+        "timestamp": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+        "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }.indented(byLevel: 2))
             },
             "minProperties": 1,
             "additionalProperties": false
@@ -208,12 +353,12 @@
                     "minimum": 0,
                     "maximum": 255
                 },
-                "timestamp": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+        "timestamp": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+        "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }.indented(byLevel: 2))
             },
             "minProperties": 1,
             "additionalProperties": false

@@ -15,6 +15,30 @@
             "description": "Indicates if the automatic start-stop system is enabled or not",
             "$ref": "#/$defs/property_enabled_state"
         },
+        "preconditioning_enabled": {
+            "description": "Use of the engine pre-conditioning is enabled.",
+            "$ref": "#/$defs/property_enabled_state"
+        },
+        "preconditioning_active": {
+            "description": "Pre-conditioning is running.",
+            "$ref": "#/$defs/property_active_state"
+        },
+        "preconditioning_remaining_time": {
+            "description": "Remaining time of pre-conditioning.",
+            "$ref": "#/$defs/property_duration"
+        },
+        "preconditioning_error": {
+            "description": "Reason for not carrying out pre-conditioning.",
+            "$ref": "#/$defs/property_preconditioning_error"
+        },
+        "preconditioning_status": {
+            "description": "Status of the pre-conditioning system.",
+            "$ref": "#/$defs/property_preconditioning_status"
+        },
+        "limp_mode": {
+            "description": "Indicates wheter the engine is in fail-safe mode.",
+            "$ref": "#/$defs/property_active_state"
+        },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },
         "vin": { "$ref": "#/$defs/property_vin" }
@@ -29,12 +53,29 @@
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/active_state"
                 },
-                "timestamp": {
-                    "type": "string",
-                    "format": "date-time"
+        "timestamp": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+        "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }.indented(byLevel: 2))
+            },
+            "minProperties": 1,
+            "additionalProperties": false
+        },
+
+        "property_duration": {
+            "type": "object",
+            "properties": {
+                "data": {
+                    "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/duration"
                 },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+        "timestamp": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+        "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }.indented(byLevel: 2))
             },
             "minProperties": 1,
             "additionalProperties": false
@@ -46,12 +87,12 @@
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/enabled_state"
                 },
-                "timestamp": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+        "timestamp": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+        "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }.indented(byLevel: 2))
             },
             "minProperties": 1,
             "additionalProperties": false
@@ -87,12 +128,48 @@
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/on_off_state"
                 },
-                "timestamp": {
+        "timestamp": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+        "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }.indented(byLevel: 2))
+            },
+            "minProperties": 1,
+            "additionalProperties": false
+        },
+
+        "property_preconditioning_error": {
+            "type": "object",
+            "properties": {
+                "data": {
                     "type": "string",
-                    "format": "date-time"
+                    "enum": ["low_fuel", "low_battery", "quota_exceeded", "heater_failure", "component_failure", "open_or_unlocked", "ok"]
                 },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+        "timestamp": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+        "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }.indented(byLevel: 2))
+            },
+            "minProperties": 1,
+            "additionalProperties": false
+        },
+
+        "property_preconditioning_status": {
+            "type": "object",
+            "properties": {
+                "data": {
+                    "type": "string",
+                    "enum": ["standby", "heating", "cooling", "ventilation", "inactive"]
+                },
+        "timestamp": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+        "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }.indented(byLevel: 2))
             },
             "minProperties": 1,
             "additionalProperties": false

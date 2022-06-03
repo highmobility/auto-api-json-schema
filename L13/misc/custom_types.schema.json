@@ -43,7 +43,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "latitude", "longitude" ]
+            "required": [ latitude, longitude ]
         },
 
         "detected": {
@@ -55,7 +55,7 @@
         "driving_mode": {
             "description": "Driving mode",
             "type": "string",
-            "enum": [ "regular", "eco", "sport", "sport_plus", "ecoPlus", "comfort" ]
+            "enum": [ "regular", "eco", "sport", "sport_plus", "eco_plus", "comfort" ]
         },
 
         "enabled_state": {
@@ -67,7 +67,7 @@
         "engine_type": {
             "description": "Engine type",
             "type": "string",
-            "enum": [ "unknown", "all_electric", "combustion_engine", "phev", "hydrogen", "hydrogen_hybrid", "petrol", "electric", "gas", "diesel", "gasoline", "cng", "lpg" ]
+            "enum": [ "unknown", "all_electric", "combustion_engine", "phev", "hydrogen", "hydrogen_hybrid", "petrol", "electric", "gas", "diesel", "gasoline", "cng", "lpg", "hybrid" ]
         },
 
         "fluid_level": {
@@ -102,7 +102,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "key", "value" ]
+            "required": [ key, value ]
         },
 
         "location": {
@@ -170,6 +170,12 @@
             "enum": [ "front_left", "front_right", "rear_right", "rear_left", "rear_center" ]
         },
 
+        "service_status": {
+            "description": "Service-Status",
+            "type": "string",
+            "enum": [ "ok", "warning", "critical" ]
+        },
+
         "start_stop": {
             "description": "Start-Stop",
             "type": "string",
@@ -191,7 +197,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "capability_id", "supported_property_ids" ]
+            "required": [ capability_id, supported_property_ids ]
         },
 
         "time": {
@@ -208,7 +214,13 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "hour", "minute" ]
+            "required": [ hour, minute ]
+        },
+
+        "triggered": {
+            "description": "Triggered",
+            "type": "string",
+            "enum": [ "not_triggered", "triggered" ]
         },
 
         "weekday": {
@@ -237,7 +249,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "horizontal", "vertical" ]
+            "required": [ horizontal, vertical ]
         },
 
         "acceleration": {
@@ -255,7 +267,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "direction", "acceleration" ]
+            "required": [ direction, acceleration ]
         },
 
         "action_item": {
@@ -272,7 +284,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "id", "name" ]
+            "required": [ id, name ]
         },
 
         "address_component": {
@@ -290,7 +302,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "type", "value" ]
+            "required": [ type, value ]
         },
 
         "availability": {
@@ -313,7 +325,59 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "update_rate", "rate_limit", "applies_per" ]
+            "required": [ update_rate, rate_limit, applies_per ]
+        },
+
+        "brake_service_due_date": {
+            "description": "Brake service due date",
+            "type": "object",
+            "properties": {
+                "axle": {
+                    "description": "Axle",
+                    "$ref": "#/$defs/axle"
+                },
+                "due_date": {
+                    "description": "Due date",
+                    "type": "string",
+                    "format": "date-time"
+                }
+            },
+            "additionalProperties": false,
+            "required": [ axle, due_date ]
+        },
+
+        "brake_service_remaining_distance": {
+            "description": "Brake service remaining distance",
+            "type": "object",
+            "properties": {
+                "axle": {
+                    "description": "Axle",
+                    "$ref": "#/$defs/axle"
+                },
+                "distance": {
+                    "description": "Distance",
+                    "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/length"
+                }
+            },
+            "additionalProperties": false,
+            "required": [ axle, distance ]
+        },
+
+        "brake_service_status": {
+            "description": "Brake service status",
+            "type": "object",
+            "properties": {
+                "axle": {
+                    "description": "Axle",
+                    "$ref": "#/$defs/axle"
+                },
+                "status": {
+                    "description": "Service-Status",
+                    "$ref": "#/$defs/service_status"
+                }
+            },
+            "additionalProperties": false,
+            "required": [ axle, status ]
         },
 
         "brake_torque_vectoring": {
@@ -330,7 +394,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "axle", "state" ]
+            "required": [ axle, state ]
         },
 
         "charging_cost": {
@@ -355,7 +419,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "currency", "calculated_charging_cost", "calculated_savings", "simulated_immediate_charging_cost" ]
+            "required": [ currency, calculated_charging_cost, calculated_savings, simulated_immediate_charging_cost ]
         },
 
         "charging_location": {
@@ -376,7 +440,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "municipality", "formatted_address", "street_address" ]
+            "required": [ municipality, formatted_address, street_address ]
         },
 
         "charging_point": {
@@ -401,7 +465,25 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "city", "postal_code", "street", "provider" ]
+            "required": [ city, postal_code, street, provider ]
+        },
+
+        "charging_restriction": {
+            "description": "Charging restriction",
+            "type": "object",
+            "properties": {
+                "active": {
+                    "description": "Indicates whether the charging current used to charge the vehicle is limited.",
+                    "$ref": "#/$defs/active_state"
+                },
+                "limit": {
+                    "description": "Limit",
+                    "type": "string",
+                    "enum": [ "max", "reduced", "min" ]
+                }
+            },
+            "additionalProperties": false,
+            "required": [ active, limit ]
         },
 
         "check_control_message": {
@@ -426,7 +508,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "id", "remaining_time", "text", "status" ]
+            "required": [ id, remaining_time, text, status ]
         },
 
         "condition_based_service": {
@@ -460,7 +542,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "year", "month", "id", "due_status", "text", "description" ]
+            "required": [ year, month, id, due_status, text, description ]
         },
 
         "confirmed_trouble_code": {
@@ -485,7 +567,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "id", "ecu_address", "ecu_variant_name", "status" ]
+            "required": [ id, ecu_address, ecu_variant_name, status ]
         },
 
         "crash_incident": {
@@ -500,7 +582,7 @@
                 "severity": {
                     "description": "Severity",
                     "type": "string",
-                    "enum": [ "very_high", "high", "medium", "low" ]
+                    "enum": [ "very_high", "high", "medium", "low", "unknown" ]
                 },
                 "repairs": {
                     "description": "Repairs",
@@ -509,7 +591,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "location", "severity", "repairs" ]
+            "required": [ location, severity, repairs ]
         },
 
         "dashboard_light": {
@@ -527,7 +609,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "name", "state" ]
+            "required": [ name, state ]
         },
 
         "departure_time": {
@@ -545,7 +627,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "state", "time" ]
+            "required": [ state, time ]
         },
 
         "diesel_exhaust_filter_status": {
@@ -569,7 +651,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "status", "component", "cleaning" ]
+            "required": [ status, component, cleaning ]
         },
 
         "distance_over_time": {
@@ -586,7 +668,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "distance", "time" ]
+            "required": [ distance, time ]
         },
 
         "door_position": {
@@ -604,7 +686,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "location", "position" ]
+            "required": [ location, position ]
         },
 
         "driver_card_present": {
@@ -622,7 +704,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "driver_number", "card_present" ]
+            "required": [ driver_number, card_present ]
         },
 
         "driver_time_state": {
@@ -640,7 +722,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "driver_number", "time_state" ]
+            "required": [ driver_number, time_state ]
         },
 
         "driver_working_state": {
@@ -658,7 +740,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "driver_number", "working_state" ]
+            "required": [ driver_number, working_state ]
         },
 
         "driving_mode_activation_period": {
@@ -675,7 +757,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "driving_mode", "period" ]
+            "required": [ driving_mode, period ]
         },
 
         "driving_mode_energy_consumption": {
@@ -692,7 +774,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "driving_mode", "consumption" ]
+            "required": [ driving_mode, consumption ]
         },
 
         "eco_driving_threshold": {
@@ -710,7 +792,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "type", "value" ]
+            "required": [ type, value ]
         },
 
         "failure": {
@@ -728,7 +810,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "reason", "description" ]
+            "required": [ reason, description ]
         },
 
         "hmkit_version": {
@@ -749,25 +831,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "major", "minor", "patch" ]
-        },
-
-        "hvac_weekday_starting_time": {
-            "description": "HVAC weekday starting time",
-            "type": "object",
-            "properties": {
-                "weekday": {
-                    "description": "Weekday",
-                    "$ref": "#/$defs/weekday"
-                },
-                "time": {
-                    "description": "Time",
-                    "type": "object",
-                    "$ref": "#/$defs/time"
-                }
-            },
-            "additionalProperties": false,
-            "required": [ "weekday", "time" ]
+            "required": [ major, minor, patch ]
         },
 
         "lane_keep_assist_state": {
@@ -785,7 +849,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "location", "state" ]
+            "required": [ location, state ]
         },
 
         "light": {
@@ -802,7 +866,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "location", "state" ]
+            "required": [ location, state ]
         },
 
         "lock": {
@@ -819,7 +883,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "location", "lock_state" ]
+            "required": [ location, lock_state ]
         },
 
         "oem_trouble_code_value": {
@@ -837,7 +901,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "id", "key_value" ]
+            "required": [ id, key_value ]
         },
 
         "park_assist": {
@@ -858,7 +922,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "location", "alarm", "muted" ]
+            "required": [ location, alarm, muted ]
         },
 
         "person_detected": {
@@ -875,7 +939,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "location", "detected" ]
+            "required": [ location, detected ]
         },
 
         "price_tariff": {
@@ -897,7 +961,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "pricing_type", "price", "currency" ]
+            "required": [ pricing_type, price, currency ]
         },
 
         "reading_lamp": {
@@ -914,7 +978,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "location", "state" ]
+            "required": [ location, state ]
         },
 
         "reduction_time": {
@@ -932,7 +996,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "start_stop", "time" ]
+            "required": [ start_stop, time ]
         },
 
         "rgb_colour": {
@@ -953,7 +1017,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "red", "green", "blue" ]
+            "required": [ red, green, blue ]
         },
 
         "seatbelt_state": {
@@ -971,7 +1035,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "location", "fastened_state" ]
+            "required": [ location, fastened_state ]
         },
 
         "spring_rate": {
@@ -988,7 +1052,25 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "axle", "spring_rate" ]
+            "required": [ axle, spring_rate ]
+        },
+
+        "temperature_extreme": {
+            "description": "Temperature extreme",
+            "type": "object",
+            "properties": {
+                "extreme": {
+                    "description": "Extreme",
+                    "type": "string",
+                    "enum": [ "highest", "lowest" ]
+                },
+                "temperature": {
+                    "description": "Temperature",
+                    "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/temperature"
+                }
+            },
+            "additionalProperties": false,
+            "required": [ extreme, temperature ]
         },
 
         "timer": {
@@ -1007,7 +1089,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "timer_type", "date" ]
+            "required": [ timer_type, date ]
         },
 
         "tire_pressure": {
@@ -1024,7 +1106,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "location", "pressure" ]
+            "required": [ location, pressure ]
         },
 
         "tire_pressure_status": {
@@ -1038,11 +1120,11 @@
                 "status": {
                     "description": "Status",
                     "type": "string",
-                    "enum": [ "normal", "low", "alert" ]
+                    "enum": [ "normal", "low", "alert", "soft", "deflation" ]
                 }
             },
             "additionalProperties": false,
-            "required": [ "location", "status" ]
+            "required": [ location, status ]
         },
 
         "tire_temperature": {
@@ -1059,7 +1141,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "location", "temperature" ]
+            "required": [ location, temperature ]
         },
 
         "trip_meter": {
@@ -1076,7 +1158,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "id", "distance" ]
+            "required": [ id, distance ]
         },
 
         "trouble_code": {
@@ -1106,7 +1188,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "occurrences", "id", "ecu_id", "status", "system" ]
+            "required": [ occurrences, id, ecu_id, status, system ]
         },
 
         "webhook": {
@@ -1124,7 +1206,25 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "available", "event" ]
+            "required": [ available, event ]
+        },
+
+        "weekday_time": {
+            "description": "Weekday time",
+            "type": "object",
+            "properties": {
+                "weekday": {
+                    "description": "Weekday",
+                    "$ref": "#/$defs/weekday"
+                },
+                "time": {
+                    "description": "Time",
+                    "type": "object",
+                    "$ref": "#/$defs/time"
+                }
+            },
+            "additionalProperties": false,
+            "required": [ weekday, time ]
         },
 
         "wheel_rpm": {
@@ -1141,7 +1241,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "location", "rpm" ]
+            "required": [ location, rpm ]
         },
 
         "window_open_percentage": {
@@ -1158,7 +1258,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "location", "open_percentage" ]
+            "required": [ location, open_percentage ]
         },
 
         "window_position": {
@@ -1176,13 +1276,13 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "location", "position" ]
+            "required": [ location, position ]
         },
 
         "event": {
             "description": "Triggered event",
             "type": "string",
-            "enum": [ "ping", "trip_started", "trip_ended", "vehicle_location_changed", "authorization_changed", "tire_pressure_changed", "harsh_acceleration_triggered", "harsh_acceleration_pedal_position_triggered", "harsh_braking_triggered", "harsh_cornering_triggered", "seat_belt_triggered", "maintenance_changed", "dashboard_lights_changed", "ignition_changed", "accident_reported", "emergency_reported", "breakdown_reported", "battery_guard_warning", "engine_changed", "fleet_clearance_changed" ]
+            "enum": [ "ping", "trip_started", "trip_ended", "vehicle_location_changed", "authorization_changed", "tire_pressure_changed", "seat_belt_triggered", "maintenance_changed", "dashboard_lights_changed", "ignition_changed", "accident_reported", "emergency_reported", "breakdown_reported", "battery_guard_warning", "engine_changed", "fleet_clearance_changed" ]
         }
     }
 }
