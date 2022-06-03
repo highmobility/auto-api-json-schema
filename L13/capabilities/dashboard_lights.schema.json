@@ -32,12 +32,12 @@
                     "type": "string",
                     "enum": ["turn_signal_left", "turn_signal_right", "low_beam", "low_beam_left", "low_beam_right", "high_beam", "high_beam_left", "high_beam_right", "fog_light_front", "fog_light_rear", "stop", "position", "day_running", "trailer_turn", "trailer_turn_left", "trailer_turn_right", "trailer_stop", "trailer_electrical_failure", "multiple"]
                 },
-        "timestamp": {
-            "type": "string",
-            "format": "date-time"
-        },
-        "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-        "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }.indented(byLevel: 2))
+                "timestamp": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
             "minProperties": 1,
             "additionalProperties": false
@@ -49,12 +49,12 @@
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/dashboard_light"
                 },
-        "timestamp": {
-            "type": "string",
-            "format": "date-time"
-        },
-        "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-        "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }.indented(byLevel: 2))
+                "timestamp": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
             "minProperties": 1,
             "additionalProperties": false
