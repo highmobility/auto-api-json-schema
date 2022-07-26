@@ -258,7 +258,7 @@
             "properties": {
                 "data": {
                     "type": "string",
-                    "enum": ["private_or_gravel", "local", "county", "rural", "federal_highway", "highway"]
+                    "enum": ["private_or_gravel", "local", "county", "rural", "federal_highway", "highway", "country", "national"]
                 },
                 "timestamp": {
                     "type": "string",

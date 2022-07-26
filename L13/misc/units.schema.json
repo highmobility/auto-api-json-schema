@@ -241,10 +241,10 @@
                         "ounces",
                         "pounds",
                         "stones",
-                        "metricTons",
-                        "shortTons",
+                        "metric_tons",
+                        "short_tons",
                         "carats",
-                        "ouncesTroy",
+                        "ounces_troy",
                         "slugs"
                     ]
                 },

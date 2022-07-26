@@ -243,6 +243,7 @@
         },
         "battery_tempretature_extremes": {
             "description": "Current highest-lowest temperature inside the battery.",
+        	"deprecated": true,
             "$ref": "#/$defs/property_temperature_extreme"
         },
         "battery_temperature_control_demand": {
@@ -264,6 +265,10 @@
         "battery_cooling_temperature": {
             "description": "Battery cooling temperature.",
             "$ref": "#/$defs/property_temperature"
+        },
+        "battery_temperature_extremes": {
+            "description": "Current highest-lowest temperature inside the battery.",
+            "$ref": "#/$defs/property_temperature_extreme"
         },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },
@@ -331,7 +336,7 @@
             "properties": {
                 "data": {
                     "type": "string",
-                    "enum": ["inactive", "active", "balancing", "external_load", "load", "error", "initialising"]
+                    "enum": ["inactive", "active", "balancing", "external_load", "load", "error", "initialising", "conditioning"]
                 },
                 "timestamp": {
                     "type": "string",
