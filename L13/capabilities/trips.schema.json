@@ -100,6 +100,10 @@
             "description": "Type of road travelled on.",
             "$ref": "#/$defs/property_road_type"
         },
+        "braking_count": {
+            "description": "Number of times the brakes were applied during the trip.",
+            "$ref": "#/$defs/property_uinteger"
+        },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },
         "vin": { "$ref": "#/$defs/property_vin" }
@@ -182,7 +186,7 @@
             "properties": {
                 "data": {
                     "type": "string",
-                    "enum": ["harsh_braking", "harsh_acceleration", "sharp_turn", "over_rpm", "overspeed", "idling_engine_on"]
+                    "enum": ["harsh_braking", "harsh_acceleration", "sharp_turn", "over_rpm", "overspeed", "idling_engine_on", "emergency_braking"]
                 },
                 "timestamp": {
                     "type": "string",
@@ -329,6 +333,25 @@
                 "data": {
                     "type": "string",
                     "enum": ["single", "multi", "eco"]
+                },
+                "timestamp": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+            },
+            "minProperties": 1,
+            "additionalProperties": false
+        },
+
+        "property_uinteger": {
+            "type": "object",
+            "properties": {
+                "data": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 255
                 },
                 "timestamp": {
                     "type": "string",

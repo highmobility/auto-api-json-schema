@@ -243,6 +243,10 @@
             "description": "Engine oil service status",
             "$ref": "#/$defs/property_service_status"
         },
+        "passenger_airbag_status": {
+            "description": "Passenger airbag is activated or not",
+            "$ref": "#/$defs/property_active_state"
+        },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },
         "vin": { "$ref": "#/$defs/property_vin" }

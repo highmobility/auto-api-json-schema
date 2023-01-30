@@ -66,7 +66,8 @@
                         "hours",
                         "days",
                         "weeks",
-                        "months"
+                        "months",
+                        "milliseconds"
                     ]
                 },
                 "value": { "type": "number" }

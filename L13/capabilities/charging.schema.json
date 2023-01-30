@@ -270,6 +270,14 @@
             "description": "Current highest-lowest temperature inside the battery.",
             "$ref": "#/$defs/property_temperature_extreme"
         },
+        "driving_mode_phev": {
+            "description": "Indicates the current driving mode for Plug-In Hybrid Vehicle.",
+            "$ref": "#/$defs/property_driving_mode_phev"
+        },
+        "battery_charge_type": {
+            "description": "Battery charge type.",
+            "$ref": "#/$defs/property_battery_charge_type"
+        },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },
         "vin": { "$ref": "#/$defs/property_vin" }
@@ -301,6 +309,24 @@
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/active_state"
+                },
+                "timestamp": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+            },
+            "minProperties": 1,
+            "additionalProperties": false
+        },
+
+        "property_battery_charge_type": {
+            "type": "object",
+            "properties": {
+                "data": {
+                    "type": "string",
+                    "enum": ["no_charge", "normal", "accelerated", "fast", "quick", "ultra_fast", "not_used", "vehicle_to_home", "vehicle_to_grid"]
                 },
                 "timestamp": {
                     "type": "string",
@@ -515,6 +541,23 @@
                 "data": {
                     "type": "string",
                     "enum": ["no_display", "reachable", "not_reachable"]
+                },
+                "timestamp": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+            },
+            "minProperties": 1,
+            "additionalProperties": false
+        },
+
+        "property_driving_mode_phev": {
+            "type": "object",
+            "properties": {
+                "data": {
+                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/driving_mode_phev"
                 },
                 "timestamp": {
                     "type": "string",
@@ -851,7 +894,7 @@
             "properties": {
                 "data": {
                     "type": "string",
-                    "enum": ["not_charging", "charging", "charging_complete", "initialising", "charging_paused", "charging_error", "cable_unplugged", "slow_charging", "fast_charging", "discharging", "foreign_object_detected"]
+                    "enum": ["not_charging", "charging", "charging_complete", "initialising", "charging_paused", "charging_error", "cable_unplugged", "slow_charging", "fast_charging", "discharging", "foreign_object_detected", "conditioning", "flap_open"]
                 },
                 "timestamp": {
                     "type": "string",

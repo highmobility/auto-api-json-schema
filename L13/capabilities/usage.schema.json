@@ -189,6 +189,13 @@
             "description": "Recuperation energy of the drivetrain.",
             "$ref": "#/$defs/property_power"
         },
+        "acceleration_durations": {
+            "description": "Durations of normal or other accelerations.",
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_acceleration_duration"
+            }
+        },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },
         "vin": { "$ref": "#/$defs/property_vin" }
@@ -197,6 +204,23 @@
 
 
     "$defs": {
+        "property_acceleration_duration": {
+            "type": "object",
+            "properties": {
+                "data": {
+                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/acceleration_duration"
+                },
+                "timestamp": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+            },
+            "minProperties": 1,
+            "additionalProperties": false
+        },
+
         "property_distance_over_time": {
             "type": "object",
             "properties": {
