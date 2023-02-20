@@ -278,6 +278,10 @@
             "description": "Battery charge type.",
             "$ref": "#/$defs/property_battery_charge_type"
         },
+        "distance_to_complete_charge": {
+            "description": "Distance until charging completed",
+            "$ref": "#/$defs/property_length"
+        },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },
         "vin": { "$ref": "#/$defs/property_vin" }
