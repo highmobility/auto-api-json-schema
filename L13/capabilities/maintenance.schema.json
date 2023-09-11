@@ -1,50 +1,80 @@
 {
-    "$id": "https://highmobility.github.io/auto-api-json-schema/L13/capabilities/maintenance.schema.json",
+    "$id": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/all-properties-multiple/L13/capabilities/maintenance.schema.json",
     "$schema": "https://json-schema.org/draft-07/schema",
     "type": "object",
     "properties": {
         "days_to_next_service": {
             "description": "Time until next servicing of the car",
         	"deprecated": true,
-            "$ref": "#/$defs/property_duration"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_duration"
+            }
         },
         "kilometers_to_next_service": {
             "description": "The distance until next servicing of the vehicle",
         	"deprecated": true,
-            "$ref": "#/$defs/property_length"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_length"
+            }
         },
         "cbs_reports_count": {
             "description": "The number of CBS reports",
-            "$ref": "#/$defs/property_uinteger"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_uinteger"
+            }
         },
         "months_to_exhaust_inspection": {
             "description": "Time until exhaust inspection",
         	"deprecated": true,
-            "$ref": "#/$defs/property_duration"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_duration"
+            }
         },
         "teleservice_availability": {
             "description": "Teleservice availability",
-            "$ref": "#/$defs/property_teleservice_availability"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_teleservice_availability"
+            }
         },
         "service_distance_threshold": {
             "description": "Distance threshold for service",
-            "$ref": "#/$defs/property_length"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_length"
+            }
         },
         "service_time_threshold": {
             "description": "Time threshold for service",
-            "$ref": "#/$defs/property_duration"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_duration"
+            }
         },
         "automatic_teleservice_call_date": {
             "description": "Automatic teleservice call date",
-            "$ref": "#/$defs/property_timestamp"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_timestamp"
+            }
         },
         "teleservice_battery_call_date": {
             "description": "Teleservice batter call date",
-            "$ref": "#/$defs/property_timestamp"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_timestamp"
+            }
         },
         "next_inspection_date": {
             "description": "Next inspection date",
-            "$ref": "#/$defs/property_timestamp"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_timestamp"
+            }
         },
         "condition_based_services": {
             "description": "Condition based services",
@@ -55,39 +85,66 @@
         },
         "brake_fluid_change_date": {
             "description": "Brake fluid change date",
-            "$ref": "#/$defs/property_timestamp"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_timestamp"
+            }
         },
         "time_to_next_service": {
             "description": "Time until next servicing of the vehicle",
-            "$ref": "#/$defs/property_duration"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_duration"
+            }
         },
         "distance_to_next_service": {
             "description": "The distance until next servicing of the vehicle",
-            "$ref": "#/$defs/property_length"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_length"
+            }
         },
         "time_to_exhaust_inspection": {
             "description": "Time until exhaust inspection",
-            "$ref": "#/$defs/property_duration"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_duration"
+            }
         },
         "last_ecall": {
             "description": "Date-time of the last eCall",
-            "$ref": "#/$defs/property_timestamp"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_timestamp"
+            }
         },
         "distance_to_next_oil_service": {
             "description": "Indicates the remaining distance until the next oil service; if this limit was exceeded, this value indicates the distance that has been driven since then.",
-            "$ref": "#/$defs/property_length"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_length"
+            }
         },
         "time_to_next_oil_service": {
             "description": "Indicates the time remaining until the next oil service; if this limit was exceeded, this value indicates the time that has passed since then.",
-            "$ref": "#/$defs/property_duration"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_duration"
+            }
         },
         "brake_fluid_remaining_distance": {
             "description": "Indicates the remaining distance for brake fluid.",
-            "$ref": "#/$defs/property_length"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_length"
+            }
         },
         "brake_fluid_status": {
             "description": "Brake fluid's service status.",
-            "$ref": "#/$defs/property_service_status"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_service_status"
+            }
         },
         "brakes_service_due_dates": {
             "description": "Brakes servicing due dates.",
@@ -112,51 +169,87 @@
         },
         "drive_in_inspection_date": {
             "description": "Next drive-in inspection date.",
-            "$ref": "#/$defs/property_timestamp"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_timestamp"
+            }
         },
         "drive_in_inspection_status": {
             "description": "Drive-in inspection service status.",
-            "$ref": "#/$defs/property_service_status"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_service_status"
+            }
         },
         "next_oil_service_date": {
             "description": "Next oil service date.",
-            "$ref": "#/$defs/property_timestamp"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_timestamp"
+            }
         },
         "next_inspection_distance_to": {
             "description": "Distance until the next inspection.",
-            "$ref": "#/$defs/property_length"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_length"
+            }
         },
         "legal_inspection_date": {
             "description": "Next legally required inspection date",
-            "$ref": "#/$defs/property_timestamp"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_timestamp"
+            }
         },
         "service_status": {
             "description": "Consolidated status regarding service requirements. OK: no current service requirement, WARNING: at least one service has reported requirement, CRITICAL: at least one service is overdue.",
-            "$ref": "#/$defs/property_service_status"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_service_status"
+            }
         },
         "service_date": {
             "description": "Date of the earliest service. If this service is overdue, the date is in the past.",
-            "$ref": "#/$defs/property_timestamp"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_timestamp"
+            }
         },
         "inspection_status": {
             "description": "Vehicle inspection service status.",
-            "$ref": "#/$defs/property_service_status"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_service_status"
+            }
         },
         "drive_in_inspection_distance_to": {
             "description": "The distance until next drive-in inspection of the vehicle",
-            "$ref": "#/$defs/property_length"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_length"
+            }
         },
         "vehicle_check_date": {
             "description": "Vehicle check date (usually after a predetermined distance).",
-            "$ref": "#/$defs/property_timestamp"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_timestamp"
+            }
         },
         "vehicle_check_status": {
             "description": "Vehicle check service status.",
-            "$ref": "#/$defs/property_service_status"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_service_status"
+            }
         },
         "vehicle_check_distance_to": {
             "description": "The distance until next vehicle check.",
-            "$ref": "#/$defs/property_length"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_length"
+            }
         },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },
@@ -170,14 +263,14 @@
             "type": "object",
             "properties": {
                 "data": {
-                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/brake_service_due_date"
+                    "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/brake_service_due_date"
                 },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
                 },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+                "failure": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
             "minProperties": 1,
             "additionalProperties": false
@@ -187,14 +280,14 @@
             "type": "object",
             "properties": {
                 "data": {
-                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/brake_service_remaining_distance"
+                    "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/brake_service_remaining_distance"
                 },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
                 },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+                "failure": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
             "minProperties": 1,
             "additionalProperties": false
@@ -204,14 +297,14 @@
             "type": "object",
             "properties": {
                 "data": {
-                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/brake_service_status"
+                    "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/brake_service_status"
                 },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
                 },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+                "failure": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
             "minProperties": 1,
             "additionalProperties": false
@@ -221,14 +314,14 @@
             "type": "object",
             "properties": {
                 "data": {
-                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/condition_based_service"
+                    "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/condition_based_service"
                 },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
                 },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+                "failure": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
             "minProperties": 1,
             "additionalProperties": false
@@ -238,14 +331,14 @@
             "type": "object",
             "properties": {
                 "data": {
-                    "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/duration"
+                    "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/units.schema.json#/$defs/duration"
                 },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
                 },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+                "failure": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
             "minProperties": 1,
             "additionalProperties": false
@@ -255,14 +348,14 @@
             "type": "object",
             "properties": {
                 "data": {
-                    "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/length"
+                    "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/units.schema.json#/$defs/length"
                 },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
                 },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+                "failure": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
             "minProperties": 1,
             "additionalProperties": false
@@ -285,8 +378,8 @@
                     "type": "string",
                     "format": "date-time"
                 },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+                "failure": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
             "minProperties": 1,
             "additionalProperties": false
@@ -296,14 +389,14 @@
             "type": "object",
             "properties": {
                 "data": {
-                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/service_status"
+                    "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/service_status"
                 },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
                 },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+                "failure": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
             "minProperties": 1,
             "additionalProperties": false
@@ -320,8 +413,8 @@
                     "type": "string",
                     "format": "date-time"
                 },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+                "failure": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
             "minProperties": 1,
             "additionalProperties": false
@@ -338,8 +431,8 @@
                     "type": "string",
                     "format": "date-time"
                 },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+                "failure": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
             "minProperties": 1,
             "additionalProperties": false
@@ -357,8 +450,8 @@
                     "type": "string",
                     "format": "date-time"
                 },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+                "failure": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
             "minProperties": 1,
             "additionalProperties": false
@@ -376,8 +469,8 @@
                     "type": "string",
                     "format": "date-time"
                 },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+                "failure": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
             "minProperties": 1,
             "additionalProperties": false

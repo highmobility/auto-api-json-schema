@@ -1,27 +1,42 @@
 {
-    "$id": "https://highmobility.github.io/auto-api-json-schema/L13/capabilities/cruise_control.schema.json",
+    "$id": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/all-properties-multiple/L13/capabilities/cruise_control.schema.json",
     "$schema": "https://json-schema.org/draft-07/schema",
     "type": "object",
     "properties": {
         "cruise_control": {
             "description": "Cruise control",
-            "$ref": "#/$defs/property_active_state"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_active_state"
+            }
         },
         "limiter": {
             "description": "Limiter",
-            "$ref": "#/$defs/property_limiter"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_limiter"
+            }
         },
         "target_speed": {
             "description": "The target speed",
-            "$ref": "#/$defs/property_speed"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_speed"
+            }
         },
         "adaptive_cruise_control": {
             "description": "Adaptive Cruise Control",
-            "$ref": "#/$defs/property_active_state"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_active_state"
+            }
         },
         "acc_target_speed": {
             "description": "The target speed of the Adaptive Cruise Control",
-            "$ref": "#/$defs/property_speed"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_speed"
+            }
         },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },
@@ -35,14 +50,14 @@
             "type": "object",
             "properties": {
                 "data": {
-                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/active_state"
+                    "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/active_state"
                 },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
                 },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+                "failure": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
             "minProperties": 1,
             "additionalProperties": false
@@ -59,8 +74,8 @@
                     "type": "string",
                     "format": "date-time"
                 },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+                "failure": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
             "minProperties": 1,
             "additionalProperties": false
@@ -83,8 +98,8 @@
                     "type": "string",
                     "format": "date-time"
                 },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+                "failure": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
             "minProperties": 1,
             "additionalProperties": false
@@ -94,14 +109,14 @@
             "type": "object",
             "properties": {
                 "data": {
-                    "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/speed"
+                    "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/units.schema.json#/$defs/speed"
                 },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
                 },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+                "failure": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
             "minProperties": 1,
             "additionalProperties": false
@@ -119,8 +134,8 @@
                     "type": "string",
                     "format": "date-time"
                 },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+                "failure": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
             "minProperties": 1,
             "additionalProperties": false

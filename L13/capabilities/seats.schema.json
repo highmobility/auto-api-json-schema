@@ -1,5 +1,5 @@
 {
-    "$id": "https://highmobility.github.io/auto-api-json-schema/L13/capabilities/seats.schema.json",
+    "$id": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/all-properties-multiple/L13/capabilities/seats.schema.json",
     "$schema": "https://json-schema.org/draft-07/schema",
     "type": "object",
     "properties": {
@@ -42,8 +42,8 @@
                     "type": "string",
                     "format": "date-time"
                 },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+                "failure": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
             "minProperties": 1,
             "additionalProperties": false
@@ -53,14 +53,14 @@
             "type": "object",
             "properties": {
                 "data": {
-                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/person_detected"
+                    "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/person_detected"
                 },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
                 },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+                "failure": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
             "minProperties": 1,
             "additionalProperties": false
@@ -70,14 +70,14 @@
             "type": "object",
             "properties": {
                 "data": {
-                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/seatbelt_state"
+                    "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/seatbelt_state"
                 },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
                 },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+                "failure": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
             "minProperties": 1,
             "additionalProperties": false
@@ -95,8 +95,8 @@
                     "type": "string",
                     "format": "date-time"
                 },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+                "failure": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
             "minProperties": 1,
             "additionalProperties": false

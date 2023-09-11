@@ -1,5 +1,5 @@
 {
-    "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/custom_types.schema.json",
+    "$id": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json",
     "$schema": "https://json-schema.org/draft-07/schema",
     "type": "object",
     "description": "AutoAPI custom types",
@@ -269,7 +269,7 @@
                 },
                 "acceleration": {
                     "description": "The accelaration",
-                    "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/acceleration"
+                    "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/units.schema.json#/$defs/acceleration"
                 }
             },
             "additionalProperties": false,
@@ -292,7 +292,7 @@
                 },
                 "duration": {
                     "description": "The duration of the acceleration",
-                    "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/duration"
+                    "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/units.schema.json#/$defs/duration"
                 }
             },
             "additionalProperties": false,
@@ -309,7 +309,7 @@
                 },
                 "duration": {
                     "description": "The duration of the accelerator pedal position",
-                    "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/duration"
+                    "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/units.schema.json#/$defs/duration"
                 }
             },
             "additionalProperties": false,
@@ -362,7 +362,7 @@
                 },
                 "rate_limit": {
                     "description": "Frequency denoting the rate limit",
-                    "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/frequency"
+                    "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/units.schema.json#/$defs/frequency"
                 },
                 "applies_per": {
                     "description": "Rate limit applies per",
@@ -402,7 +402,7 @@
                 },
                 "distance": {
                     "description": "Distance",
-                    "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/length"
+                    "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/units.schema.json#/$defs/length"
                 }
             },
             "additionalProperties": false,
@@ -542,7 +542,7 @@
                 },
                 "remaining_time": {
                     "description": "Remaining time of the message",
-                    "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/duration"
+                    "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/units.schema.json#/$defs/duration"
                 },
                 "text": {
                     "description": "CCM text",
@@ -706,11 +706,11 @@
             "properties": {
                 "distance": {
                     "description": "Distance driven",
-                    "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/length"
+                    "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/units.schema.json#/$defs/length"
                 },
                 "time": {
                     "description": "Duration of time for the given distance",
-                    "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/duration"
+                    "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/units.schema.json#/$defs/duration"
                 }
             },
             "additionalProperties": false,
@@ -816,7 +816,7 @@
                 },
                 "consumption": {
                     "description": "Energy consumption in the driving mode",
-                    "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/energy"
+                    "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/units.schema.json#/$defs/energy"
                 }
             },
             "additionalProperties": false,
@@ -1094,7 +1094,7 @@
                 },
                 "spring_rate": {
                     "description": "The suspension spring rate",
-                    "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/torque"
+                    "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/units.schema.json#/$defs/torque"
                 }
             },
             "additionalProperties": false,
@@ -1112,7 +1112,7 @@
                 },
                 "temperature": {
                     "description": "Temperature",
-                    "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/temperature"
+                    "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/units.schema.json#/$defs/temperature"
                 }
             },
             "additionalProperties": false,
@@ -1148,7 +1148,7 @@
                 },
                 "pressure": {
                     "description": "Tire pressure",
-                    "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/pressure"
+                    "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/units.schema.json#/$defs/pressure"
                 }
             },
             "additionalProperties": false,
@@ -1183,7 +1183,7 @@
                 },
                 "temperature": {
                     "description": "Tire temperature",
-                    "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/temperature"
+                    "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/units.schema.json#/$defs/temperature"
                 }
             },
             "additionalProperties": false,
@@ -1200,7 +1200,7 @@
                 },
                 "distance": {
                     "description": "Distance",
-                    "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/length"
+                    "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/units.schema.json#/$defs/length"
                 }
             },
             "additionalProperties": false,
@@ -1283,7 +1283,7 @@
                 },
                 "rpm": {
                     "description": "The RPM measured at this wheel",
-                    "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/angular_velocity"
+                    "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/units.schema.json#/$defs/angular_velocity"
                 }
             },
             "additionalProperties": false,

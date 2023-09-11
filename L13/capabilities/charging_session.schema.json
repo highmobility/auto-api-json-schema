@@ -1,5 +1,5 @@
 {
-    "$id": "https://highmobility.github.io/auto-api-json-schema/L13/capabilities/charging_session.schema.json",
+    "$id": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/all-properties-multiple/L13/capabilities/charging_session.schema.json",
     "$schema": "https://json-schema.org/draft-07/schema",
     "type": "object",
     "properties": {
@@ -12,11 +12,17 @@
         },
         "displayed_state_of_charge": {
             "description": "Displayed state of charge to the driver",
-            "$ref": "#/$defs/property_percentage"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_percentage"
+            }
         },
         "displayed_start_state_of_charge": {
             "description": "Displayed state of charge at start to the driver",
-            "$ref": "#/$defs/property_percentage"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_percentage"
+            }
         },
         "business_errors": {
             "description": "Business errors",
@@ -27,43 +33,73 @@
         },
         "time_zone": {
             "description": "Time zone of the charging session",
-            "$ref": "#/$defs/property_string"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_string"
+            }
         },
         "start_time": {
             "description": "Start time of the charging session",
-            "$ref": "#/$defs/property_timestamp"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_timestamp"
+            }
         },
         "end_time": {
             "description": "End time of the charging session",
-            "$ref": "#/$defs/property_timestamp"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_timestamp"
+            }
         },
         "total_charging_duration": {
             "description": "Total time charging was active during the session",
-            "$ref": "#/$defs/property_duration"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_duration"
+            }
         },
         "calculated_energy_charged": {
             "description": "Calculated amount of energy charged during the session",
-            "$ref": "#/$defs/property_energy"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_energy"
+            }
         },
         "energy_charged": {
             "description": "Energy charged during the session",
-            "$ref": "#/$defs/property_energy"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_energy"
+            }
         },
         "preconditioning_state": {
             "description": "Preconditioning is active or not",
-            "$ref": "#/$defs/property_active_state"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_active_state"
+            }
         },
         "odometer": {
             "description": "The vehicle odometer value in a given units",
-            "$ref": "#/$defs/property_length"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_length"
+            }
         },
         "charging_cost": {
             "description": "Charging cost information",
-            "$ref": "#/$defs/property_charging_cost"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_charging_cost"
+            }
         },
         "location": {
             "description": "Charging location address",
-            "$ref": "#/$defs/property_charging_location"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_charging_location"
+            }
         },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },
@@ -77,14 +113,14 @@
             "type": "object",
             "properties": {
                 "data": {
-                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/active_state"
+                    "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/active_state"
                 },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
                 },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+                "failure": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
             "minProperties": 1,
             "additionalProperties": false
@@ -94,14 +130,14 @@
             "type": "object",
             "properties": {
                 "data": {
-                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/charging_cost"
+                    "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/charging_cost"
                 },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
                 },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+                "failure": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
             "minProperties": 1,
             "additionalProperties": false
@@ -111,14 +147,14 @@
             "type": "object",
             "properties": {
                 "data": {
-                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/charging_location"
+                    "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/charging_location"
                 },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
                 },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+                "failure": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
             "minProperties": 1,
             "additionalProperties": false
@@ -128,14 +164,14 @@
             "type": "object",
             "properties": {
                 "data": {
-                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/charging_point"
+                    "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/charging_point"
                 },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
                 },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+                "failure": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
             "minProperties": 1,
             "additionalProperties": false
@@ -145,14 +181,14 @@
             "type": "object",
             "properties": {
                 "data": {
-                    "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/duration"
+                    "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/units.schema.json#/$defs/duration"
                 },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
                 },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+                "failure": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
             "minProperties": 1,
             "additionalProperties": false
@@ -162,14 +198,14 @@
             "type": "object",
             "properties": {
                 "data": {
-                    "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/energy"
+                    "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/units.schema.json#/$defs/energy"
                 },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
                 },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+                "failure": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
             "minProperties": 1,
             "additionalProperties": false
@@ -179,14 +215,14 @@
             "type": "object",
             "properties": {
                 "data": {
-                    "$ref": "/auto-api-json-schema/L13/misc/units.schema.json#/$defs/length"
+                    "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/units.schema.json#/$defs/length"
                 },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
                 },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+                "failure": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
             "minProperties": 1,
             "additionalProperties": false
@@ -209,8 +245,8 @@
                     "type": "string",
                     "format": "date-time"
                 },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+                "failure": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
             "minProperties": 1,
             "additionalProperties": false
@@ -220,14 +256,14 @@
             "type": "object",
             "properties": {
                 "data": {
-                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/percentage"
+                    "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/percentage"
                 },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
                 },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+                "failure": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
             "minProperties": 1,
             "additionalProperties": false
@@ -243,8 +279,8 @@
                     "type": "string",
                     "format": "date-time"
                 },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+                "failure": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
             "minProperties": 1,
             "additionalProperties": false
@@ -261,8 +297,8 @@
                     "type": "string",
                     "format": "date-time"
                 },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+                "failure": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
             "minProperties": 1,
             "additionalProperties": false
@@ -280,8 +316,8 @@
                     "type": "string",
                     "format": "date-time"
                 },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+                "failure": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
             "minProperties": 1,
             "additionalProperties": false

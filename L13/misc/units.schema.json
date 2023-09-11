@@ -1,5 +1,5 @@
 {
-    "$id": "https://highmobility.github.io/auto-api-json-schema/L13/misc/units.schema.json",
+    "$id": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/units.schema.json",
     "$schema": "https://json-schema.org/draft-07/schema",
     "type": "object",
     "description": "AutoAPI unit types",

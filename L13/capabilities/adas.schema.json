@@ -1,39 +1,63 @@
 {
-    "$id": "https://highmobility.github.io/auto-api-json-schema/L13/capabilities/adas.schema.json",
+    "$id": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/all-properties-multiple/L13/capabilities/adas.schema.json",
     "$schema": "https://json-schema.org/draft-07/schema",
     "type": "object",
     "properties": {
         "status": {
             "description": "Indicates whether the driver assistance system is active or not.",
-            "$ref": "#/$defs/property_on_off_state"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_on_off_state"
+            }
         },
         "alertness_system_status": {
             "description": "Indicates if the driver alertness warning is active or inactive.",
-            "$ref": "#/$defs/property_active_state"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_active_state"
+            }
         },
         "forward_collision_warning_system": {
             "description": "Indicates whether the forward collision warning system is active or inactive.",
-            "$ref": "#/$defs/property_active_state"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_active_state"
+            }
         },
         "blind_spot_warning_state": {
             "description": "Indicates whether the blind spot warning system is active or not.",
-            "$ref": "#/$defs/property_active_state"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_active_state"
+            }
         },
         "blind_spot_warning_system_coverage": {
             "description": "Blind spot warning system coverage.",
-            "$ref": "#/$defs/property_blind_spot_warning_system_coverage"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_blind_spot_warning_system_coverage"
+            }
         },
         "rear_cross_warning_system": {
             "description": "Indicates whether the rear cross warning system is active or not.",
-            "$ref": "#/$defs/property_active_state"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_active_state"
+            }
         },
         "automated_parking_brake": {
             "description": "Automatic brake state",
-            "$ref": "#/$defs/property_active_state"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_active_state"
+            }
         },
         "lane_keep_assist_system": {
             "description": "Indicates if the lane keep assist system is turned on or not.",
-            "$ref": "#/$defs/property_on_off_state"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_on_off_state"
+            }
         },
         "lane_keep_assists_states": {
             "description": "Lane keeping assist state indicating the vehicle is actively controlling the wheels.",
@@ -51,11 +75,17 @@
         },
         "blind_spot_warning_system": {
             "description": "Indicates whether the blind spot warning system is turned on or not.",
-            "$ref": "#/$defs/property_on_off_state"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_on_off_state"
+            }
         },
         "launch_control": {
             "description": "State of launch control activation.",
-            "$ref": "#/$defs/property_active_state"
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_active_state"
+            }
         },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },
@@ -69,14 +99,14 @@
             "type": "object",
             "properties": {
                 "data": {
-                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/active_state"
+                    "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/active_state"
                 },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
                 },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+                "failure": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
             "minProperties": 1,
             "additionalProperties": false
@@ -93,8 +123,8 @@
                     "type": "string",
                     "format": "date-time"
                 },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+                "failure": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
             "minProperties": 1,
             "additionalProperties": false
@@ -104,14 +134,14 @@
             "type": "object",
             "properties": {
                 "data": {
-                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/lane_keep_assist_state"
+                    "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/lane_keep_assist_state"
                 },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
                 },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+                "failure": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
             "minProperties": 1,
             "additionalProperties": false
@@ -134,8 +164,8 @@
                     "type": "string",
                     "format": "date-time"
                 },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+                "failure": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
             "minProperties": 1,
             "additionalProperties": false
@@ -145,14 +175,14 @@
             "type": "object",
             "properties": {
                 "data": {
-                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/on_off_state"
+                    "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/on_off_state"
                 },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
                 },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+                "failure": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
             "minProperties": 1,
             "additionalProperties": false
@@ -162,14 +192,14 @@
             "type": "object",
             "properties": {
                 "data": {
-                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/park_assist"
+                    "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/park_assist"
                 },
                 "timestamp": {
                     "type": "string",
                     "format": "date-time"
                 },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+                "failure": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
             "minProperties": 1,
             "additionalProperties": false
@@ -187,8 +217,8 @@
                     "type": "string",
                     "format": "date-time"
                 },
-                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
-                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+                "failure": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/availability" }
             },
             "minProperties": 1,
             "additionalProperties": false
