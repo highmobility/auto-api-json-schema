@@ -5,227 +5,227 @@
         "parking_ticket": {
             "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/all-properties-multiple/L13/capabilities/parking_ticket.schema.json",
             "minProperties": 1,
-            "additionalProperties": false,
+            "additionalProperties": false
         },
         "charging_session": {
             "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/all-properties-multiple/L13/capabilities/charging_session.schema.json",
             "minProperties": 1,
-            "additionalProperties": false,
+            "additionalProperties": false
         },
         "windows": {
             "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/all-properties-multiple/L13/capabilities/windows.schema.json",
             "minProperties": 1,
-            "additionalProperties": false,
+            "additionalProperties": false
         },
         "vehicle_time": {
             "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/all-properties-multiple/L13/capabilities/vehicle_time.schema.json",
             "minProperties": 1,
-            "additionalProperties": false,
+            "additionalProperties": false
         },
         "driver_fatigue": {
             "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/all-properties-multiple/L13/capabilities/driver_fatigue.schema.json",
             "minProperties": 1,
-            "additionalProperties": false,
+            "additionalProperties": false
         },
         "remote_control": {
             "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/all-properties-multiple/L13/capabilities/remote_control.schema.json",
             "minProperties": 1,
-            "additionalProperties": false,
+            "additionalProperties": false
         },
         "fueling": {
             "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/all-properties-multiple/L13/capabilities/fueling.schema.json",
             "minProperties": 1,
-            "additionalProperties": false,
+            "additionalProperties": false
         },
         "navi_destination": {
             "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/all-properties-multiple/L13/capabilities/navi_destination.schema.json",
             "minProperties": 1,
-            "additionalProperties": false,
+            "additionalProperties": false
         },
         "light_conditions": {
             "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/all-properties-multiple/L13/capabilities/light_conditions.schema.json",
             "minProperties": 1,
-            "additionalProperties": false,
+            "additionalProperties": false
         },
         "offroad": {
             "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/all-properties-multiple/L13/capabilities/offroad.schema.json",
             "minProperties": 1,
-            "additionalProperties": false,
+            "additionalProperties": false
         },
         "trunk": {
             "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/all-properties-multiple/L13/capabilities/trunk.schema.json",
             "minProperties": 1,
-            "additionalProperties": false,
+            "additionalProperties": false
         },
         "doors": {
             "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/all-properties-multiple/L13/capabilities/doors.schema.json",
             "minProperties": 1,
-            "additionalProperties": false,
+            "additionalProperties": false
         },
         "valet_mode": {
             "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/all-properties-multiple/L13/capabilities/valet_mode.schema.json",
             "minProperties": 1,
-            "additionalProperties": false,
+            "additionalProperties": false
         },
         "dashboard_lights": {
             "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/all-properties-multiple/L13/capabilities/dashboard_lights.schema.json",
             "minProperties": 1,
-            "additionalProperties": false,
+            "additionalProperties": false
         },
         "lights": {
             "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/all-properties-multiple/L13/capabilities/lights.schema.json",
             "minProperties": 1,
-            "additionalProperties": false,
+            "additionalProperties": false
         },
         "chassis_settings": {
             "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/all-properties-multiple/L13/capabilities/chassis_settings.schema.json",
             "minProperties": 1,
-            "additionalProperties": false,
+            "additionalProperties": false
         },
         "notifications": {
             "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/all-properties-multiple/L13/capabilities/notifications.schema.json",
             "minProperties": 1,
-            "additionalProperties": false,
+            "additionalProperties": false
         },
         "hood": {
             "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/all-properties-multiple/L13/capabilities/hood.schema.json",
             "minProperties": 1,
-            "additionalProperties": false,
+            "additionalProperties": false
         },
         "charging": {
             "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/all-properties-multiple/L13/capabilities/charging.schema.json",
             "minProperties": 1,
-            "additionalProperties": false,
+            "additionalProperties": false
         },
         "mobile": {
             "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/all-properties-multiple/L13/capabilities/mobile.schema.json",
             "minProperties": 1,
-            "additionalProperties": false,
+            "additionalProperties": false
         },
         "crash": {
             "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/all-properties-multiple/L13/capabilities/crash.schema.json",
             "minProperties": 1,
-            "additionalProperties": false,
+            "additionalProperties": false
         },
         "home_charger": {
             "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/all-properties-multiple/L13/capabilities/home_charger.schema.json",
             "minProperties": 1,
-            "additionalProperties": false,
+            "additionalProperties": false
         },
         "diagnostics": {
             "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/all-properties-multiple/L13/capabilities/diagnostics.schema.json",
             "minProperties": 1,
-            "additionalProperties": false,
+            "additionalProperties": false
         },
         "usage": {
             "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/all-properties-multiple/L13/capabilities/usage.schema.json",
             "minProperties": 1,
-            "additionalProperties": false,
+            "additionalProperties": false
         },
         "power_takeoff": {
             "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/all-properties-multiple/L13/capabilities/power_takeoff.schema.json",
             "minProperties": 1,
-            "additionalProperties": false,
+            "additionalProperties": false
         },
         "wi_fi": {
             "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/all-properties-multiple/L13/capabilities/wi_fi.schema.json",
             "minProperties": 1,
-            "additionalProperties": false,
+            "additionalProperties": false
         },
         "vehicle_location": {
             "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/all-properties-multiple/L13/capabilities/vehicle_location.schema.json",
             "minProperties": 1,
-            "additionalProperties": false,
+            "additionalProperties": false
         },
         "race": {
             "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/all-properties-multiple/L13/capabilities/race.schema.json",
             "minProperties": 1,
-            "additionalProperties": false,
+            "additionalProperties": false
         },
         "theft_alarm": {
             "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/all-properties-multiple/L13/capabilities/theft_alarm.schema.json",
             "minProperties": 1,
-            "additionalProperties": false,
+            "additionalProperties": false
         },
         "seats": {
             "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/all-properties-multiple/L13/capabilities/seats.schema.json",
             "minProperties": 1,
-            "additionalProperties": false,
+            "additionalProperties": false
         },
         "tachograph": {
             "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/all-properties-multiple/L13/capabilities/tachograph.schema.json",
             "minProperties": 1,
-            "additionalProperties": false,
+            "additionalProperties": false
         },
         "parking_brake": {
             "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/all-properties-multiple/L13/capabilities/parking_brake.schema.json",
             "minProperties": 1,
-            "additionalProperties": false,
+            "additionalProperties": false
         },
         "adas": {
             "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/all-properties-multiple/L13/capabilities/adas.schema.json",
             "minProperties": 1,
-            "additionalProperties": false,
+            "additionalProperties": false
         },
         "maintenance": {
             "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/all-properties-multiple/L13/capabilities/maintenance.schema.json",
             "minProperties": 1,
-            "additionalProperties": false,
+            "additionalProperties": false
         },
         "rooftop_control": {
             "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/all-properties-multiple/L13/capabilities/rooftop_control.schema.json",
             "minProperties": 1,
-            "additionalProperties": false,
+            "additionalProperties": false
         },
         "windscreen": {
             "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/all-properties-multiple/L13/capabilities/windscreen.schema.json",
             "minProperties": 1,
-            "additionalProperties": false,
+            "additionalProperties": false
         },
         "cruise_control": {
             "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/all-properties-multiple/L13/capabilities/cruise_control.schema.json",
             "minProperties": 1,
-            "additionalProperties": false,
+            "additionalProperties": false
         },
         "trips": {
             "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/all-properties-multiple/L13/capabilities/trips.schema.json",
             "minProperties": 1,
-            "additionalProperties": false,
+            "additionalProperties": false
         },
         "keyfob_position": {
             "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/all-properties-multiple/L13/capabilities/keyfob_position.schema.json",
             "minProperties": 1,
-            "additionalProperties": false,
+            "additionalProperties": false
         },
         "honk_horn_flash_lights": {
             "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/all-properties-multiple/L13/capabilities/honk_horn_flash_lights.schema.json",
             "minProperties": 1,
-            "additionalProperties": false,
+            "additionalProperties": false
         },
         "engine": {
             "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/all-properties-multiple/L13/capabilities/engine.schema.json",
             "minProperties": 1,
-            "additionalProperties": false,
+            "additionalProperties": false
         },
         "weather_conditions": {
             "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/all-properties-multiple/L13/capabilities/weather_conditions.schema.json",
             "minProperties": 1,
-            "additionalProperties": false,
+            "additionalProperties": false
         },
         "messaging": {
             "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/all-properties-multiple/L13/capabilities/messaging.schema.json",
             "minProperties": 1,
-            "additionalProperties": false,
+            "additionalProperties": false
         },
         "ignition": {
             "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/all-properties-multiple/L13/capabilities/ignition.schema.json",
             "minProperties": 1,
-            "additionalProperties": false,
+            "additionalProperties": false
         },
         "climate": {
             "$ref": "https://raw.githubusercontent.com/highmobility/auto-api-json-schema/all-properties-multiple/L13/capabilities/climate.schema.json",
             "minProperties": 1,
-            "additionalProperties": false,
+            "additionalProperties": false
         }
     }
 }
