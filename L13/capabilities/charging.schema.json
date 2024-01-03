@@ -471,6 +471,55 @@
                 "$ref": "#/$defs/property_length"
             }
         },
+        "battery_charge_transfer_event": {
+            "description": "Indicates that the high-voltage battery lost state of charge due to an energy transfer to the 12V battery.",
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_battery_charge_transfer_event"
+            }
+        },
+        "station_status": {
+            "description": "Status of the charging station.",
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_station_status"
+            }
+        },
+        "station_power_type": {
+            "description": "The power type of the connected charging station.",
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_station_power_type"
+            }
+        },
+        "station_displayed_status": {
+            "description": "Status shown on the display of the charging station.",
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_station_displayed_status"
+            }
+        },
+        "battery_performance_status": {
+            "description": "Performance status of the xEV battery.",
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_battery_performance_status"
+            }
+        },
+        "hybrid_operating_mode": {
+            "description": "Operating mode of the hybrid vehicle.",
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_hybrid_operating_mode"
+            }
+        },
+        "charger_power": {
+            "description": "Power of the charger.",
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_power"
+            }
+        },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },
         "vin": { "$ref": "#/$defs/property_vin" }
@@ -514,6 +563,24 @@
             "additionalProperties": false
         },
 
+        "property_battery_charge_transfer_event": {
+            "type": "object",
+            "properties": {
+                "data": {
+                    "type": "string",
+                    "enum": ["low_voltage_battery_service_required", "low_voltage_battery_high_usage", "vehicle_service_required"]
+                },
+                "timestamp": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "failure": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/availability" }
+            },
+            "minProperties": 1,
+            "additionalProperties": false
+        },
+
         "property_battery_charge_type": {
             "type": "object",
             "properties": {
@@ -538,6 +605,24 @@
                 "data": {
                     "type": "string",
                     "enum": ["no_colour", "white", "yellow", "green", "red", "yellow_pulsing", "green_pulsing", "red_pulsing", "green_red_pulsing", "green_flashing", "initialising", "error"]
+                },
+                "timestamp": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "failure": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/availability" }
+            },
+            "minProperties": 1,
+            "additionalProperties": false
+        },
+
+        "property_battery_performance_status": {
+            "type": "object",
+            "properties": {
+                "data": {
+                    "type": "string",
+                    "enum": ["normal", "caution", "reduced", "severly_reduced"]
                 },
                 "timestamp": {
                     "type": "string",
@@ -848,6 +933,24 @@
             "additionalProperties": false
         },
 
+        "property_hybrid_operating_mode": {
+            "type": "object",
+            "properties": {
+                "data": {
+                    "type": "string",
+                    "enum": ["auto_charge_deplete", "auto_charge_sustain", "forced_charge_sustain", "forced_electric", "forced_non_electric", "temporary_charge_sustain", "prioritize_charge_generation"]
+                },
+                "timestamp": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "failure": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/availability" }
+            },
+            "minProperties": 1,
+            "additionalProperties": false
+        },
+
         "property_length": {
             "type": "object",
             "properties": {
@@ -1070,6 +1173,60 @@
                 "data": {
                     "type": "string",
                     "enum": ["red", "yellow", "green", "orange", "green_yellow"]
+                },
+                "timestamp": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "failure": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/availability" }
+            },
+            "minProperties": 1,
+            "additionalProperties": false
+        },
+
+        "property_station_displayed_status": {
+            "type": "object",
+            "properties": {
+                "data": {
+                    "type": "string",
+                    "enum": ["not_plugged_in", "fault", "station_not_compatible", "station_not_detected", "in_progress", "scheduled", "paused", "stopped", "completed", "discharging", "not_ready"]
+                },
+                "timestamp": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "failure": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/availability" }
+            },
+            "minProperties": 1,
+            "additionalProperties": false
+        },
+
+        "property_station_power_type": {
+            "type": "object",
+            "properties": {
+                "data": {
+                    "type": "string",
+                    "enum": ["ac_basic", "ac_smart", "dc_fast", "wireless"]
+                },
+                "timestamp": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "failure": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/availability" }
+            },
+            "minProperties": 1,
+            "additionalProperties": false
+        },
+
+        "property_station_status": {
+            "type": "object",
+            "properties": {
+                "data": {
+                    "type": "string",
+                    "enum": ["not_compatible", "not_detected", "digital_communication_established", "digital_communication_ended", "station_ready"]
                 },
                 "timestamp": {
                     "type": "string",

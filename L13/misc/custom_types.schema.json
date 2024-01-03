@@ -43,7 +43,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "latitude", "longitude" ]
+            "required": [ latitude, longitude ]
         },
 
         "detected": {
@@ -108,7 +108,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "key", "value" ]
+            "required": [ key, value ]
         },
 
         "location": {
@@ -203,7 +203,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "capability_id", "supported_property_ids" ]
+            "required": [ capability_id, supported_property_ids ]
         },
 
         "time": {
@@ -220,7 +220,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "hour", "minute" ]
+            "required": [ hour, minute ]
         },
 
         "triggered": {
@@ -255,7 +255,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "horizontal", "vertical" ]
+            "required": [ horizontal, vertical ]
         },
 
         "acceleration": {
@@ -268,12 +268,12 @@
                     "enum": [ "longitudinal", "lateral", "front_lateral", "rear_lateral" ]
                 },
                 "acceleration": {
-                    "description": "The accelaration",
+                    "description": "The acceleration",
                     "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/units.schema.json#/$defs/acceleration"
                 }
             },
             "additionalProperties": false,
-            "required": [ "direction", "acceleration" ]
+            "required": [ direction, acceleration ]
         },
 
         "acceleration_duration": {
@@ -296,7 +296,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "direction", "type", "duration" ]
+            "required": [ direction, type, duration ]
         },
 
         "accelerator_duration": {
@@ -313,7 +313,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "pedal_position_threshold", "duration" ]
+            "required": [ pedal_position_threshold, duration ]
         },
 
         "action_item": {
@@ -330,7 +330,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "id", "name" ]
+            "required": [ id, name ]
         },
 
         "address_component": {
@@ -348,7 +348,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "type", "value" ]
+            "required": [ type, value ]
         },
 
         "availability": {
@@ -371,7 +371,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "update_rate", "rate_limit", "applies_per" ]
+            "required": [ update_rate, rate_limit, applies_per ]
         },
 
         "brake_service_due_date": {
@@ -389,7 +389,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "axle", "due_date" ]
+            "required": [ axle, due_date ]
         },
 
         "brake_service_remaining_distance": {
@@ -406,7 +406,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "axle", "distance" ]
+            "required": [ axle, distance ]
         },
 
         "brake_service_status": {
@@ -423,7 +423,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "axle", "status" ]
+            "required": [ axle, status ]
         },
 
         "brake_torque_vectoring": {
@@ -440,7 +440,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "axle", "state" ]
+            "required": [ axle, state ]
         },
 
         "charging_cost": {
@@ -465,7 +465,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "currency", "calculated_charging_cost", "calculated_savings", "simulated_immediate_charging_cost" ]
+            "required": [ currency, calculated_charging_cost, calculated_savings, simulated_immediate_charging_cost ]
         },
 
         "charging_location": {
@@ -486,7 +486,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "municipality", "formatted_address", "street_address" ]
+            "required": [ municipality, formatted_address, street_address ]
         },
 
         "charging_point": {
@@ -511,7 +511,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "city", "postal_code", "street", "provider" ]
+            "required": [ city, postal_code, street, provider ]
         },
 
         "charging_restriction": {
@@ -529,7 +529,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "active", "limit" ]
+            "required": [ active, limit ]
         },
 
         "check_control_message": {
@@ -554,7 +554,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "id", "remaining_time", "text", "status" ]
+            "required": [ id, remaining_time, text, status ]
         },
 
         "condition_based_service": {
@@ -588,7 +588,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "year", "month", "id", "due_status", "text", "description" ]
+            "required": [ year, month, id, due_status, text, description ]
         },
 
         "confirmed_trouble_code": {
@@ -613,7 +613,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "id", "ecu_address", "ecu_variant_name", "status" ]
+            "required": [ id, ecu_address, ecu_variant_name, status ]
         },
 
         "crash_incident": {
@@ -637,7 +637,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "location", "severity", "repairs" ]
+            "required": [ location, severity, repairs ]
         },
 
         "dashboard_light": {
@@ -647,7 +647,7 @@
                 "name": {
                     "description": "Name",
                     "type": "string",
-                    "enum": [ "high_beam", "low_beam", "hazard_warning", "brake_failure", "hatch_open", "fuel_level", "engine_coolant_temperature", "battery_charging_condition", "engine_oil", "position_lights", "front_fog_light", "rear_fog_light", "park_heating", "engine_indicator", "service_call", "transmission_fluid_temperature", "transmission_failure", "anti_lock_brake_failure", "worn_brake_linings", "windscreen_washer_fluid", "tire_failure", "engine_oil_level", "engine_coolant_level", "steering_failure", "esc_indication", "brake_lights", "adblue_level", "fuel_filter_diff_pressure", "seat_belt", "advanced_braking", "acc", "trailer_connected", "airbag", "esc_switched_off", "lane_departure_warning_off", "air_filter_minder", "air_suspension_ride_control_fault", "all_wheel_drive_disabled", "anti_theft", "blind_spot_detection", "charge_system_fault", "check_fuel_cap", "check_fuel_fill_inlet", "check_fuel_filter", "dc_temp_warning", "dc_warning_status", "diesel_engine_idle_shutdown", "diesel_engine_warning", "diesel_exhaust_fluid_system_fault", "diesel_exhaust_over_temp", "diesel_exhaust_fluid_quality", "diesel_filter_regeneration", "diesel_particulate_filter", "diesel_pre_heat", "electric_trailer_brake_connection", "ev_battery_cell_max_volt_warning", "ev_battery_cell_min_volt_warning", "ev_battery_charge_energy_storage_warning", "ev_battery_high_level_warning", "ev_battery_high_temperature_warning", "ev_battery_insulation_resist_warning", "ev_battery_jump_level_warning", "ev_battery_low_level_warning", "ev_battery_max_volt_veh_energy_warning", "ev_battery_min_volt_veh_energy_warning", "ev_battery_over_charge_warning", "ev_battery_poor_cell_warning", "ev_battery_temp_diff_warning", "forward_collision_warning", "fuel_door_open", "hill_descent_control_fault", "hill_start_assist_warning", "hv_interlocking_status_warning", "lighting_system_failure", "malfunction_indicator", "motor_controller_temp_warning", "park_aid_malfunction", "passive_entry_passive_start", "powertrain_malfunction", "restraints_indicator_warning", "start_stop_engine_warning", "traction_control_disabled", "traction_control_active", "traction_motor_temp_warning", "tire_pressure_monitor_system_warning", "water_in_fuel", "tire_warning_front_right", "tire_warning_front_left", "tire_warning_rear_right", "tire_warning_rear_left", "tire_warning_system_error", "battery_low_warning", "brake_fluid_warning", "active_hood_fault", "active_spoiler_fault", "adjust_tire_pressure", "steering_lock_alert", "anti_pollution_failure_engine_start_impossible", "anti_pollution_system_failure", "anti_reverse_system_failing", "auto_parking_brake", "automatic_braking_deactive", "automatic_braking_system_fault", "automatic_lights_settings_failure", "keyfob_battery_alarm", "trunk_open", "check_reversing_lamp", "crossing_line_system_alert_failure", "dipped_beam_headlamps_front_left_failure", "dipped_beam_headlamps_front_right_failure", "directional_headlamps_failure", "directional_light_failure", "dsg_failing", "electric_mode_not_available", "electronic_lock_failure", "engine_control_system_failure", "engine_oil_pressure_alert", "esp_failure", "excessive_oil_temperature", "tire_front_left_flat", "tire_front_right_flat", "tire_rear_left_flat", "tire_rear_right_flat", "fog_light_front_left_failure", "fog_light_front_right_failure", "fog_light_rear_left_failure", "fog_light_rear_right_failure", "fog_light_front_fault", "door_front_left_open", "door_front_left_open_high_speed", "tire_front_left_not_monitored", "door_front_right_open", "door_front_right_open_high_speed", "tire_front_right_not_monitored", "headlights_left_failure", "headlights_right_failure", "hybrid_system_fault", "hybrid_system_fault_repaired_vehicle", "hydraulic_pressure_or_brake_fuild_insufficient", "lane_departure_fault", "limited_visibility_aids_camera", "tire_pressure_low", "maintenance_date_exceeded", "maintenance_odometer_exceeded", "other_failing_system", "parking_brake_control_failing", "parking_space_measuring_system_failure", "place_gear_to_parking", "power_steering_assitance_failure", "power_steering_failure", "preheating_deactivated_battery_too_low", "preheating_deactivated_fuel_level_too_low", "preheating_deactivated_battery_set_the_clock", "fog_light_rear_fault", "door_rear_left_open", "door_rear_left_open_high_speed", "tire_rear_left_not_monitored", "door_rear_right_open", "door_rear_right_open_high_speed", "tire_rear_right_not_monitored", "screen_rear_open", "retractable_roof_mechanism_fault", "reverse_light_left_failure", "reverse_light_right_failure", "risk_of_ice", "roof_operation_impossible_apply_parking_break", "roof_operation_impossible_apply_start_engine", "roof_operation_impossible_temperature_too_high", "seatbelt_passenger_front_right_unbuckled", "seatbelt_passenger_rear_left_unbuckled", "seatbelt_passenger_rear_center_unbuckled", "seatbelt_passenger_rear_right_unbuckled", "battery_secondary_low", "shock_sensor_failing", "side_lights_front_left_failure", "side_lights_front_right_failure", "side_lights_rear_left_failure", "side_lights_rear_right_failure", "spare_wheel_fitter_driving_aids_deactivated", "speed_control_failure", "stop_light_left_failure", "stop_light_right_failure", "suspension_failure", "suspension_failure_reduce_speed", "suspension_fault_limited_to_90kmh", "tire_pressure_sensor_failure", "trunk_open_high_speed", "trunk_window_open", "turn_signal_front_left_failure", "turn_signal_front_right_failure", "turn_signal_rear_left_failure", "turn_signal_rear_right_failure", "tire_under_inflation", "wheel_pressure_fault", "oil_change_warning", "inspection_warning", "diesel_oil_filter_water_presence", "engine_drag_torque_control_failure" ]
+                    "enum": [ "high_beam", "low_beam", "hazard_warning", "brake_failure", "hatch_open", "fuel_level", "engine_coolant_temperature", "battery_charging_condition", "engine_oil", "position_lights", "front_fog_light", "rear_fog_light", "park_heating", "engine_indicator", "service_call", "transmission_fluid_temperature", "transmission_failure", "anti_lock_brake_failure", "worn_brake_linings", "windscreen_washer_fluid", "tire_failure", "engine_oil_level", "engine_coolant_level", "steering_failure", "esc_indication", "brake_lights", "adblue_level", "fuel_filter_diff_pressure", "seat_belt", "advanced_braking", "acc", "trailer_connected", "airbag", "esc_switched_off", "lane_departure_warning_off", "air_filter_minder", "air_suspension_ride_control_fault", "all_wheel_drive_disabled", "anti_theft", "blind_spot_detection", "charge_system_fault", "check_fuel_cap", "check_fuel_fill_inlet", "check_fuel_filter", "dc_temp_warning", "dc_warning_status", "diesel_engine_idle_shutdown", "diesel_engine_warning", "diesel_exhaust_fluid_system_fault", "diesel_exhaust_over_temp", "diesel_exhaust_fluid_quality", "diesel_filter_regeneration", "diesel_particulate_filter", "diesel_pre_heat", "electric_trailer_brake_connection", "ev_battery_cell_max_volt_warning", "ev_battery_cell_min_volt_warning", "ev_battery_charge_energy_storage_warning", "ev_battery_high_level_warning", "ev_battery_high_temperature_warning", "ev_battery_insulation_resist_warning", "ev_battery_jump_level_warning", "ev_battery_low_level_warning", "ev_battery_max_volt_veh_energy_warning", "ev_battery_min_volt_veh_energy_warning", "ev_battery_over_charge_warning", "ev_battery_poor_cell_warning", "ev_battery_temp_diff_warning", "forward_collision_warning", "fuel_door_open", "hill_descent_control_fault", "hill_start_assist_warning", "hv_interlocking_status_warning", "lighting_system_failure", "malfunction_indicator", "motor_controller_temp_warning", "park_aid_malfunction", "passive_entry_passive_start", "powertrain_malfunction", "restraints_indicator_warning", "start_stop_engine_warning", "traction_control_disabled", "traction_control_active", "traction_motor_temp_warning", "tire_pressure_monitor_system_warning", "water_in_fuel", "tire_warning_front_right", "tire_warning_front_left", "tire_warning_rear_right", "tire_warning_rear_left", "tire_warning_system_error", "battery_low_warning", "brake_fluid_warning", "active_hood_fault", "active_spoiler_fault", "adjust_tire_pressure", "steering_lock_alert", "anti_pollution_failure_engine_start_impossible", "anti_pollution_system_failure", "anti_reverse_system_failing", "auto_parking_brake", "automatic_braking_deactive", "automatic_braking_system_fault", "automatic_lights_settings_failure", "keyfob_battery_alarm", "trunk_open", "check_reversing_lamp", "crossing_line_system_alert_failure", "dipped_beam_headlamps_front_left_failure", "dipped_beam_headlamps_front_right_failure", "directional_headlamps_failure", "directional_light_failure", "dsg_failing", "electric_mode_not_available", "electronic_lock_failure", "engine_control_system_failure", "engine_oil_pressure_alert", "esp_failure", "excessive_oil_temperature", "tire_front_left_flat", "tire_front_right_flat", "tire_rear_left_flat", "tire_rear_right_flat", "fog_light_front_left_failure", "fog_light_front_right_failure", "fog_light_rear_left_failure", "fog_light_rear_right_failure", "fog_light_front_fault", "door_front_left_open", "door_front_left_open_high_speed", "tire_front_left_not_monitored", "door_front_right_open", "door_front_right_open_high_speed", "tire_front_right_not_monitored", "headlights_left_failure", "headlights_right_failure", "hybrid_system_fault", "hybrid_system_fault_repaired_vehicle", "hydraulic_pressure_or_brake_fluid_insufficient", "lane_departure_fault", "limited_visibility_aids_camera", "tire_pressure_low", "maintenance_date_exceeded", "maintenance_odometer_exceeded", "other_failing_system", "parking_brake_control_failing", "parking_space_measuring_system_failure", "place_gear_to_parking", "power_steering_assistance_failure", "power_steering_failure", "preheating_deactivated_battery_too_low", "preheating_deactivated_fuel_level_too_low", "preheating_deactivated_battery_set_the_clock", "fog_light_rear_fault", "door_rear_left_open", "door_rear_left_open_high_speed", "tire_rear_left_not_monitored", "door_rear_right_open", "door_rear_right_open_high_speed", "tire_rear_right_not_monitored", "screen_rear_open", "retractable_roof_mechanism_fault", "reverse_light_left_failure", "reverse_light_right_failure", "risk_of_ice", "roof_operation_impossible_apply_parking_break", "roof_operation_impossible_apply_start_engine", "roof_operation_impossible_temperature_too_high", "seatbelt_passenger_front_right_unbuckled", "seatbelt_passenger_rear_left_unbuckled", "seatbelt_passenger_rear_center_unbuckled", "seatbelt_passenger_rear_right_unbuckled", "battery_secondary_low", "shock_sensor_failing", "side_lights_front_left_failure", "side_lights_front_right_failure", "side_lights_rear_left_failure", "side_lights_rear_right_failure", "spare_wheel_fitter_driving_aids_deactivated", "speed_control_failure", "stop_light_left_failure", "stop_light_right_failure", "suspension_failure", "suspension_failure_reduce_speed", "suspension_fault_limited_to_90kmh", "tire_pressure_sensor_failure", "trunk_open_high_speed", "trunk_window_open", "turn_signal_front_left_failure", "turn_signal_front_right_failure", "turn_signal_rear_left_failure", "turn_signal_rear_right_failure", "tire_under_inflation", "wheel_pressure_fault", "oil_change_warning", "inspection_warning", "diesel_oil_filter_water_presence", "engine_drag_torque_control_failure" ]
                 },
                 "state": {
                     "description": "On-Off State",
@@ -655,7 +655,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "name", "state" ]
+            "required": [ name, state ]
         },
 
         "departure_time": {
@@ -673,7 +673,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "state", "time" ]
+            "required": [ state, time ]
         },
 
         "diesel_exhaust_filter_status": {
@@ -697,7 +697,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "status", "component", "cleaning" ]
+            "required": [ status, component, cleaning ]
         },
 
         "distance_over_time": {
@@ -714,7 +714,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "distance", "time" ]
+            "required": [ distance, time ]
         },
 
         "door_position": {
@@ -732,7 +732,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "location", "position" ]
+            "required": [ location, position ]
         },
 
         "driver_card_present": {
@@ -750,7 +750,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "driver_number", "card_present" ]
+            "required": [ driver_number, card_present ]
         },
 
         "driver_time_state": {
@@ -768,7 +768,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "driver_number", "time_state" ]
+            "required": [ driver_number, time_state ]
         },
 
         "driver_working_state": {
@@ -786,7 +786,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "driver_number", "working_state" ]
+            "required": [ driver_number, working_state ]
         },
 
         "driving_mode_activation_period": {
@@ -803,7 +803,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "driving_mode", "period" ]
+            "required": [ driving_mode, period ]
         },
 
         "driving_mode_energy_consumption": {
@@ -820,7 +820,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "driving_mode", "consumption" ]
+            "required": [ driving_mode, consumption ]
         },
 
         "eco_driving_threshold": {
@@ -838,7 +838,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "type", "value" ]
+            "required": [ type, value ]
         },
 
         "failure": {
@@ -856,7 +856,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "reason", "description" ]
+            "required": [ reason, description ]
         },
 
         "hmkit_version": {
@@ -877,7 +877,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "major", "minor", "patch" ]
+            "required": [ major, minor, patch ]
         },
 
         "lane_keep_assist_state": {
@@ -895,7 +895,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "location", "state" ]
+            "required": [ location, state ]
         },
 
         "light": {
@@ -912,7 +912,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "location", "state" ]
+            "required": [ location, state ]
         },
 
         "lock": {
@@ -929,7 +929,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "location", "lock_state" ]
+            "required": [ location, lock_state ]
         },
 
         "oem_trouble_code_value": {
@@ -947,7 +947,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "id", "key_value" ]
+            "required": [ id, key_value ]
         },
 
         "park_assist": {
@@ -968,7 +968,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "location", "alarm", "muted" ]
+            "required": [ location, alarm, muted ]
         },
 
         "person_detected": {
@@ -985,7 +985,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "location", "detected" ]
+            "required": [ location, detected ]
         },
 
         "price_tariff": {
@@ -1007,7 +1007,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "pricing_type", "price", "currency" ]
+            "required": [ pricing_type, price, currency ]
         },
 
         "reading_lamp": {
@@ -1024,7 +1024,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "location", "state" ]
+            "required": [ location, state ]
         },
 
         "reduction_time": {
@@ -1042,7 +1042,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "start_stop", "time" ]
+            "required": [ start_stop, time ]
         },
 
         "rgb_colour": {
@@ -1063,7 +1063,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "red", "green", "blue" ]
+            "required": [ red, green, blue ]
         },
 
         "seatbelt_state": {
@@ -1081,7 +1081,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "location", "fastened_state" ]
+            "required": [ location, fastened_state ]
         },
 
         "spring_rate": {
@@ -1098,7 +1098,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "axle", "spring_rate" ]
+            "required": [ axle, spring_rate ]
         },
 
         "temperature_extreme": {
@@ -1116,7 +1116,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "extreme", "temperature" ]
+            "required": [ extreme, temperature ]
         },
 
         "timer": {
@@ -1135,7 +1135,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "timer_type", "date" ]
+            "required": [ timer_type, date ]
         },
 
         "tire_pressure": {
@@ -1152,7 +1152,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "location", "pressure" ]
+            "required": [ location, pressure ]
         },
 
         "tire_pressure_status": {
@@ -1170,7 +1170,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "location", "status" ]
+            "required": [ location, status ]
         },
 
         "tire_temperature": {
@@ -1187,7 +1187,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "location", "temperature" ]
+            "required": [ location, temperature ]
         },
 
         "trip_meter": {
@@ -1204,7 +1204,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "id", "distance" ]
+            "required": [ id, distance ]
         },
 
         "trouble_code": {
@@ -1234,7 +1234,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "occurrences", "id", "ecu_id", "status", "system" ]
+            "required": [ occurrences, id, ecu_id, status, system ]
         },
 
         "webhook": {
@@ -1252,7 +1252,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "available", "event" ]
+            "required": [ available, event ]
         },
 
         "weekday_time": {
@@ -1270,7 +1270,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "weekday", "time" ]
+            "required": [ weekday, time ]
         },
 
         "wheel_rpm": {
@@ -1287,7 +1287,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "location", "rpm" ]
+            "required": [ location, rpm ]
         },
 
         "window_open_percentage": {
@@ -1304,7 +1304,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "location", "open_percentage" ]
+            "required": [ location, open_percentage ]
         },
 
         "window_position": {
@@ -1322,7 +1322,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [ "location", "position" ]
+            "required": [ location, position ]
         },
 
         "event": {
