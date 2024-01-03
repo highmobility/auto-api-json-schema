@@ -196,6 +196,10 @@
                 "$ref": "#/$defs/property_acceleration_duration"
             }
         },
+        "last_trip_battery_regenerated": {
+            "description": "Estimated electrical charge (in %) that was recovered through regeneration during a trip.",
+            "$ref": "#/$defs/property_percentage"
+        },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },
         "vin": { "$ref": "#/$defs/property_vin" }
