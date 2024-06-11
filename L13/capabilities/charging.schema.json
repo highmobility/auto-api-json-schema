@@ -310,6 +310,18 @@
             "description": "Power of the charger.",
             "$ref": "#/$defs/property_power"
         },
+        "conserving_charge": {
+            "description": "Indicates if the vehicle is conserving charge.",
+            "$ref": "#/$defs/property_active_state"
+        },
+        "charging_rate_distance": {
+            "description": "Range increase per time unit during ongoing charging process based on the average energy comsumption for driving.",
+            "$ref": "#/$defs/property_distance_over_time"
+        },
+        "charging_scenario": {
+            "description": "Charging scenario.",
+            "$ref": "#/$defs/property_charging_scenario"
+        },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },
         "vin": { "$ref": "#/$defs/property_vin" }
@@ -394,7 +406,7 @@
             "properties": {
                 "data": {
                     "type": "string",
-                    "enum": ["no_colour", "white", "yellow", "green", "red", "yellow_pulsing", "green_pulsing", "red_pulsing", "green_red_pulsing", "green_flashing", "initialising", "error"]
+                    "enum": ["no_colour", "white", "yellow", "green", "red", "yellow_pulsing", "green_pulsing", "red_pulsing", "green_red_pulsing", "green_flashing", "initialising", "error", "blue"]
                 },
                 "timestamp": {
                     "type": "string",
@@ -532,6 +544,24 @@
             "additionalProperties": false
         },
 
+        "property_charging_scenario": {
+            "type": "object",
+            "properties": {
+                "data": {
+                    "type": "string",
+                    "enum": ["off", "charging_to_departure_time_finished", "immediately_charging_finished", "optimised_charging_finished", "charging_to_departure_time_active", "immediately_charging_active", "optimised_charging_active", "charging_to_departure_time_waiting", "optimised_charging_waiting", "no_grid_voltage", "error_lock", "error_charging_system", "initialization_charging_communication", "immediately_optimised_charging_active", "immediately_optimised_charging_finished", "emergency_charging", "charging_interrupt_by_user", "plug_releasable"]
+                },
+                "timestamp": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+            },
+            "minProperties": 1,
+            "additionalProperties": false
+        },
+
         "property_charging_time_display": {
             "type": "object",
             "properties": {
@@ -609,6 +639,23 @@
                 "data": {
                     "type": "string",
                     "enum": ["no_display", "reachable", "not_reachable"]
+                },
+                "timestamp": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+            },
+            "minProperties": 1,
+            "additionalProperties": false
+        },
+
+        "property_distance_over_time": {
+            "type": "object",
+            "properties": {
+                "data": {
+                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/distance_over_time"
                 },
                 "timestamp": {
                     "type": "string",
@@ -1016,7 +1063,7 @@
             "properties": {
                 "data": {
                     "type": "string",
-                    "enum": ["not_compatible", "not_detected", "digital_communication_established", "digital_communication_ended", "station_ready"]
+                    "enum": ["not_compatible", "not_detected", "digital_communication_established", "digital_communication_ended", "station_ready", "active"]
                 },
                 "timestamp": {
                     "type": "string",
@@ -1034,7 +1081,7 @@
             "properties": {
                 "data": {
                     "type": "string",
-                    "enum": ["not_charging", "charging", "charging_complete", "initialising", "charging_paused", "charging_error", "cable_unplugged", "slow_charging", "fast_charging", "discharging", "foreign_object_detected", "conditioning", "flap_open"]
+                    "enum": ["not_charging", "charging", "charging_complete", "initialising", "charging_paused", "charging_error", "cable_unplugged", "slow_charging", "fast_charging", "discharging", "foreign_object_detected", "conditioning", "flap_open", "ready_for_charging"]
                 },
                 "timestamp": {
                     "type": "string",

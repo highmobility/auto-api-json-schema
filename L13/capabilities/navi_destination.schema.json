@@ -27,6 +27,14 @@
             "description": "Remaining distance to reach the destination.",
             "$ref": "#/$defs/property_length"
         },
+        "battery_consumption_to_destination": {
+            "description": "Required battery charge level to proceed to the next destination.",
+            "$ref": "#/$defs/property_percentage"
+        },
+        "charging_time_for_destination": {
+            "description": "Required charging time to reach the next destination.",
+            "$ref": "#/$defs/property_duration"
+        },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },
         "vin": { "$ref": "#/$defs/property_vin" }
@@ -98,6 +106,23 @@
                     },
                     "minItems": 9,
                     "maxItems": 9
+                },
+                "timestamp": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+            },
+            "minProperties": 1,
+            "additionalProperties": false
+        },
+
+        "property_percentage": {
+            "type": "object",
+            "properties": {
+                "data": {
+                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/percentage"
                 },
                 "timestamp": {
                     "type": "string",
