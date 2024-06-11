@@ -370,6 +370,13 @@
                 "$ref": "#/$defs/property_active_state"
             }
         },
+        "estimated_primary_powertrain_range": {
+            "description": "Estimated primary powertrain range",
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_length"
+            }
+        },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },
         "vin": { "$ref": "#/$defs/property_vin" }

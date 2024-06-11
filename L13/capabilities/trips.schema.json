@@ -164,6 +164,20 @@
                 "$ref": "#/$defs/property_uinteger"
             }
         },
+        "id": {
+            "description": "ID of the trip",
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_string"
+            }
+        },
+        "duration": {
+            "description": "Duration of the trip",
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_duration"
+            }
+        },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },
         "vin": { "$ref": "#/$defs/property_vin" }
@@ -194,6 +208,23 @@
             "properties": {
                 "data": {
                     "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/coordinates"
+                },
+                "timestamp": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "failure": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/availability" }
+            },
+            "minProperties": 1,
+            "additionalProperties": false
+        },
+
+        "property_duration": {
+            "type": "object",
+            "properties": {
+                "data": {
+                    "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/units.schema.json#/$defs/duration"
                 },
                 "timestamp": {
                     "type": "string",

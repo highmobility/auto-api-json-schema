@@ -823,6 +823,27 @@
             "required": [ "driving_mode", "consumption" ]
         },
 
+        "dynamic_warning": {
+            "description": "Dynamic warning",
+            "type": "object",
+            "properties": {
+                "category": {
+                    "description": "Category of the warning",
+                    "type": "string"
+                },
+                "id": {
+                    "description": "Identifier of the warning",
+                    "type": "string"
+                },
+                "description": {
+                    "description": "Description of the warning",
+                    "type": "string"
+                }
+            },
+            "additionalProperties": false,
+            "required": [ "category", "id", "description" ]
+        },
+
         "eco_driving_threshold": {
             "description": "Eco driving threshold",
             "type": "object",
