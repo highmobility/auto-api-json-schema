@@ -251,6 +251,18 @@
             "description": "Estimated primary powertrain range",
             "$ref": "#/$defs/property_length"
         },
+        "estimated_mixed_powertrain_range": {
+            "description": "Estimated distance the vehicle can travel with the current fuel level",
+            "$ref": "#/$defs/property_length"
+        },
+        "primary_energy_level": {
+            "description": "Primary energy percentage between 0.0-1.0",
+            "$ref": "#/$defs/property_percentage"
+        },
+        "secondary_energy_level": {
+            "description": "Secondary energy percentage between 0.0-1.0",
+            "$ref": "#/$defs/property_percentage"
+        },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },
         "vin": { "$ref": "#/$defs/property_vin" }
