@@ -322,6 +322,10 @@
             "description": "Charging scenario.",
             "$ref": "#/$defs/property_charging_scenario"
         },
+        "state_of_health": {
+            "description": "State of health of the high-voltage battery (can be greater than 1.0 due to production variance).",
+            "$ref": "#/$defs/property_percentage"
+        },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },
         "vin": { "$ref": "#/$defs/property_vin" }
