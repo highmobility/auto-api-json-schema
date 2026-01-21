@@ -158,6 +158,22 @@
             "description": "The distance until next vehicle check.",
             "$ref": "#/$defs/property_length"
         },
+        "service_warning": {
+            "description": "Represents the type of service required and how soon it must be performed.",
+            "$ref": "#/$defs/property_service_warning"
+        },
+        "last_service_date": {
+            "description": "Date of the last service performed on the vehicle.",
+            "$ref": "#/$defs/property_timestamp"
+        },
+        "last_service_distance": {
+            "description": "Distance reading at the time of the last service.",
+            "$ref": "#/$defs/property_length"
+        },
+        "next_inspection_distance": {
+            "description": "Distance reading at which the next inspection is due.",
+            "$ref": "#/$defs/property_length"
+        },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },
         "vin": { "$ref": "#/$defs/property_vin" }
@@ -297,6 +313,23 @@
             "properties": {
                 "data": {
                     "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/service_status"
+                },
+                "timestamp": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "failure": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/availability" }
+            },
+            "minProperties": 1,
+            "additionalProperties": false
+        },
+
+        "property_service_warning": {
+            "type": "object",
+            "properties": {
+                "data": {
+                    "$ref": "/auto-api-json-schema/L13/misc/custom_types.schema.json#/$defs/service_warning"
                 },
                 "timestamp": {
                     "type": "string",

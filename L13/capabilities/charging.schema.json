@@ -326,6 +326,10 @@
             "description": "State of health of the high-voltage battery (can be greater than 1.0 due to production variance).",
             "$ref": "#/$defs/property_percentage"
         },
+        "distance_since_charging": {
+            "description": "The distance driven since the last charging session",
+            "$ref": "#/$defs/property_length"
+        },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },
         "vin": { "$ref": "#/$defs/property_vin" }
@@ -607,7 +611,7 @@
             "properties": {
                 "data": {
                     "type": "string",
-                    "enum": ["alternating_current", "direct_current"]
+                    "enum": ["alternating_current", "direct_current", "wireless"]
                 },
                 "timestamp": {
                     "type": "string",
@@ -1067,7 +1071,7 @@
             "properties": {
                 "data": {
                     "type": "string",
-                    "enum": ["not_compatible", "not_detected", "digital_communication_established", "digital_communication_ended", "station_ready", "active"]
+                    "enum": ["not_compatible", "not_detected", "digital_communication_established", "digital_communication_ended", "station_ready", "active", "initialising", "fault", "inactive"]
                 },
                 "timestamp": {
                     "type": "string",
