@@ -195,6 +195,7 @@
         },
         "fuel_consumption_rate_last_trip": {
             "description": "Liquid fuel consumption rate during last trip",
+        	"deprecated": true,
             "type": "array",
             "items": {
                 "$ref": "#/$defs/property_fuel_efficiency"
@@ -326,6 +327,62 @@
                 "$ref": "#/$defs/property_percentage"
             }
         },
+        "energy_consumption_last_trip": {
+            "description": "Energy consumption spread across different categories for the last trip automatically detected.",
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_energy_consumption"
+            }
+        },
+        "energy_consumption_since_reset": {
+            "description": "Energy consumption spread across different categories since the last reset.",
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_energy_consumption"
+            }
+        },
+        "energy_consumption_since_charging": {
+            "description": "Energy consumption spread across different categories since the last charging session.",
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_energy_consumption"
+            }
+        },
+        "energy_consumption_percentages_last_trip": {
+            "description": "Energy consumption percentages spread across different categories for the last trip automatically detected.",
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_energy_consumption_percentage"
+            }
+        },
+        "energy_consumption_percentages_since_reset": {
+            "description": "Energy consumption percentages spread across different categories since the last reset.",
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_energy_consumption_percentage"
+            }
+        },
+        "energy_consumption_percentages_since_charging": {
+            "description": "Energy consumption percentages spread across different categories since the last charging session.",
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_energy_consumption_percentage"
+            }
+        },
+        "average_speed_since_charging": {
+            "description": "Average speed since the last charging session.",
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_speed"
+            }
+        },
+        "fuel_consumption_rate_since_start": {
+            "description": "Liquid fuel consumption rate since start",
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/property_fuel_efficiency"
+            }
+        },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },
         "vin": { "$ref": "#/$defs/property_vin" }
@@ -424,6 +481,40 @@
             "properties": {
                 "data": {
                     "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/units.schema.json#/$defs/energy"
+                },
+                "timestamp": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "failure": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/availability" }
+            },
+            "minProperties": 1,
+            "additionalProperties": false
+        },
+
+        "property_energy_consumption": {
+            "type": "object",
+            "properties": {
+                "data": {
+                    "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/energy_consumption"
+                },
+                "timestamp": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "failure": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/failure" },
+                "availability": { "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/availability" }
+            },
+            "minProperties": 1,
+            "additionalProperties": false
+        },
+
+        "property_energy_consumption_percentage": {
+            "type": "object",
+            "properties": {
+                "data": {
+                    "$ref": "/highmobility/auto-api-json-schema/all-properties-multiple/L13/misc/custom_types.schema.json#/$defs/energy_consumption_percentage"
                 },
                 "timestamp": {
                     "type": "string",

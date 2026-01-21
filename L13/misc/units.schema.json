@@ -136,7 +136,10 @@
                     "type": "string",
                     "enum": [
                         "kwh_per_100_kilometers",
-                        "miles_per_kwh"
+                        "miles_per_kwh",
+                        "kilometers_per_kwh",
+                        "miles_per_gallon_equivalent",
+                        "miles_per_imperial_gallon_equivalent"
                     ]
                 },
                 "value": { "type": "number" }
@@ -175,7 +178,8 @@
                     "enum": [
                         "liters_per_100_kilometers",
                         "miles_per_imperial_gallon",
-                        "miles_per_gallon"
+                        "miles_per_gallon",
+                        "kilometers_per_liter"
                     ]
                 },
                 "value": { "type": "number" }
