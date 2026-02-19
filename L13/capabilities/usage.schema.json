@@ -251,6 +251,14 @@
             "description": "Liquid fuel consumption rate since start",
             "$ref": "#/$defs/property_fuel_efficiency"
         },
+        "fuel_consumption_rate_since_refuel": {
+            "description": "Liquid fuel consumption rate since last refuel",
+            "$ref": "#/$defs/property_fuel_efficiency"
+        },
+        "energy_consumption_rate_since_charging": {
+            "description": "Electric energy consumption rate since the last charging session",
+            "$ref": "#/$defs/property_energy_efficiency"
+        },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },
         "vin": { "$ref": "#/$defs/property_vin" }
