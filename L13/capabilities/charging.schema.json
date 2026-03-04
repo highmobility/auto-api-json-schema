@@ -330,6 +330,10 @@
             "description": "The distance driven since the last charging session",
             "$ref": "#/$defs/property_length"
         },
+        "charging_voltage": {
+            "description": "Charging electric voltage.",
+            "$ref": "#/$defs/property_electric_potential_difference"
+        },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },
         "vin": { "$ref": "#/$defs/property_vin" }

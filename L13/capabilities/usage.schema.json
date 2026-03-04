@@ -259,6 +259,10 @@
             "description": "Electric energy consumption rate since the last charging session",
             "$ref": "#/$defs/property_energy_efficiency"
         },
+        "fuel_consumption_volume": {
+            "description": "Current fuel consumption of internal combustion engine",
+            "$ref": "#/$defs/property_volume"
+        },
 
         "nonce": { "$ref": "#/$defs/property_nonce" },
         "vin": { "$ref": "#/$defs/property_vin" }
